@@ -57,14 +57,6 @@ class FastSpacyEntityExtractor(SpacyEntityExtractor):
     Better version of sliding window extractor and spacy entity extractor.
     Combines all the entities into a single list and then uses the sliding window method to extract the entities.
     """
-    # def _predict(self, X:TextInput):
-    #     # Remove all non-alphanumeric characters
-    #     X_ = [re.sub(r'[^a-zA-Z0-9\s]', '', text) for text in X]
-    #     final_result = []
-    #     # For every entity sliding window over the text and check if the entity is found
-    #     for text in X_:
-    #         result = []
-    #         text_split = text.split()
 
     def _fit(self, X:TextInput, y:TextInput=None):
         self.entities = {entity: entity.split() for entities in y for entity in entities}
@@ -92,17 +84,57 @@ class FastSpacyEntityExtractor(SpacyEntityExtractor):
                 result.extend([" ".join(t) for t in partial_result])
             final_result.append(result)
         return final_result
+    
+class FastestSpacyEntityExtractor(FastSpacyEntityExtractor):
+    """
+    Better version of sliding window extractor and spacy entity extractor.
+    Combines all the entities into a single list and then uses the sliding window method to extract the entities.
+    """
+
+    def _fit(self, X:TextInput, y:TextInput=None):
+        self.entities = {entity: entity.split() for entities in y for entity in entities}
+        return self
+
+    def _predict(self, X: TextInput):
+        output: list[list[str]] = []
+        final_result = []
+        for text in X:
+            result = []
+            doc = self.nlp(text)
+            ents = {
+                ent.text:ent.label_
+                for ent in doc.ents
+                if ent.label_ 
+            }
+
+            for entity, _ in self.entities.items():
+                if entity in ents:
+                    result.append(entity)
+                    continue
+
+            final_result.append(result)
+        return final_result
 
 if __name__ == "__main__":
     # extract persons by default
     test_extractor(
         extractor=SpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi=SpacyEntityExtractor(labels=["PERSON"])
+        extractor_multi=SpacyEntityExtractor(labels=["PERSON"]),
+        extractor_multi_many=SpacyEntityExtractor(labels=["PERSON"])
     )
 
     print("\n\n DIFFERENT EXTRACTOR\n\n")
 
     test_extractor(
         extractor=FastSpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi=FastSpacyEntityExtractor(labels=["PERSON"])
+        extractor_multi=FastSpacyEntityExtractor(labels=["PERSON"]),
+        extractor_multi_many=FastSpacyEntityExtractor(labels=["PERSON"])
+    )
+
+    print("\n\n DIFFERENT EXTRACTOR\n\n")
+
+    test_extractor(
+        extractor=FastestSpacyEntityExtractor(labels=["PERSON"]),
+        extractor_multi=FastestSpacyEntityExtractor(labels=["PERSON"]),
+        extractor_multi_many=FastestSpacyEntityExtractor(labels=["PERSON"])
     )
