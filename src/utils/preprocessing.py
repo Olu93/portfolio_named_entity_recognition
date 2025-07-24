@@ -57,7 +57,7 @@ def convert_y_to_list(y: TextInput):
             all_data = [(idx, e, isinstance(e, str)) for idx, e in enumerate(y)]
             all_data_array = np.array(all_data)
             if np.all(all_data_array[:, 2]):
-                final_result.extend(y)
+                final_result.append(y)
             else:
                 raise ValueError(f"Unsupported type: {type(y)} in {np.where(~np.array(all_data_array[:, 2]))[0]}")
 
@@ -70,4 +70,17 @@ def take_person_or_org(x: str):
     return x.split(',')[0]
 
 
+# Test cases if run as main
+if __name__ == "__main__":
+    # TODO: Convert to pytest tests
+    # Single example case
+    X = "Hello, I am John Doe"
+    y = ["John Doe", "Jane Doe"]
+    print(convert_X_to_list(X))
+    print(convert_y_to_list(y))
 
+    # Multi example case
+    X = ["Hello, I am John Doe", "Hello, I am Jane Doe"]
+    y = [["John Doe", "Jane Doe"], ["John Doe", "Jane Doe"]]
+    print(convert_X_to_list(X))
+    print(convert_y_to_list(y))
