@@ -1,0 +1,50 @@
+[
+    {
+        "urls": "https://edition.cnn.com/2022/08/01/politics/gop-lawmakers-lose-lawsuit-capitol-security/",
+        "text": "\"articleBody\":\"A federal judge has ruled against House Republicans who tried to challenge security screening on Capitol Hill for members of Congress. Reps. Louie Gohmert of Texas, Andrew Clyde of Georgia and Lloyd Smucker of Pennsylvania were fined thousands of dollars each by the sergeant at arms after they skipped security screenings outside the House chamber that were put in place following the January 6, 2021, attack on the US Capitol. The trio then sued in DC District Court to challenge the House rules. But Judge Timothy Kelly, a Trump appointee, on Monday dismissed the case, saying he did not have jurisdiction. The House sergeant at arms and the House\u2019s top administrator were protected from the court wading into the House rules because of the Constitution\u2019s Speech or Debate Clause, the judge determined.  \u201cHere, each challenged act of the House Officers qualifies as a legislative act,\u201d Kelly wrote. \u201cThus, the Speech or Debate Clause bars the Members\u2019 claims.\u201d\",",
+        "persons": [
+            "Louie Gohmert",
+            "Timothy Kelly",
+            "Andrew Clyde",
+            "Lloyd Smucker"
+        ],
+        "organizations": [
+            "Dc District Court"
+        ],
+        "locations": [
+            "Georgia",
+            "Pennsylvania",
+            "Texas"
+        ]
+    },
+    {
+        "urls": "https://www.cnn.com/2022/08/01/media/texas-dpr-lawsuit-uvalde/",
+        "text": "\"articleBody\":\"More than a dozen major news organizations have filed a lawsuit against the Texas Department of Public Safety to obtain public records relating to the Robb Elementary School massacre. The coalition includes CNN, the Texas Tribune, and many of the state and the country\u2019s biggest news outlets.  The news organizations have been fighting for weeks to obtain information on behalf of the public amid serial falsehoods and stonewalling from Texas officials in the aftermath of the mass shooting. The lawsuit, filed in state court in Austin, arises under the Texas Public Information Act, which enables news outlets and members of the public to pursue litigation to obtain records. The news outlets cited many previous requests for information and an \u201censuing failure to disclose public records concerning this abhorrent tragedy.\u201d  \u201cThe Texas Department of Public Safety has offered inconsistent accounts of how law enforcement responded to the Uvalde tragedy, and its lack of transparency has stirred suspicion and frustration in a community that is still struggling with grief and shock,\u201d said Laura Lee Prather, a First Amendment lawyer at Haynes Boone who represents the plaintiffs. \u201cDPS has refused numerous requests by these news organizations even though it\u2019s clear under Texas law that the public is entitled to have access to these important public records. We ask that the court grant our petition so that the people of Texas can understand the truth about what happened.\u201d The suit notes that the public safety department has \u201cselectively disclosed\u201d information, but has dismissed more thorough records requests. Thus the news outlets want the court to order the department \u201cto produce all responsive records.\u201d  The other participating news organizations are ABC, CBS, NBC, The New York Times, Wall Street Journal owner Dow Jones, The Washington Post, and ProPublica; local TV and media companies Gannett, Graham Media, Scripps and TEGNA Nicole Carroll, the editor in chief of Gannett\u2019s USA Today, said on CNN\u2019s \u201cReliable Sources\u201d last month that the coalition is necessary because \u201cwe need to get to the truth. And we\u2019re fighting for these records so we can get the truth.\u201d Officials have \u201cbeen stonewalling us\u201d and changing their stories, she pointed out. \u201cWe\u2019ve been misled, documents have been withheld.\u201d\",",
+        "persons": [
+            "Laura Lee Prather",
+            "Haynes Boone",
+            "Nicole Carroll"
+        ],
+        "organizations": [
+            "Texas Department Of Public Safety",
+            "Texas Department Of Public Safety",
+            "Cnn",
+            "Cnn",
+            "Cnn",
+            "New York Times",
+            "Robb Elementary School",
+            "Gray Television",
+            "Gannett",
+            "Gannett",
+            "Dow Jones"
+        ],
+        "locations": [
+            "Robb Elementary School",
+            "Texas Department Of Public Safety",
+            "Washington",
+            "New York",
+            "Texas",
+            "Uvalde"
+        ]
+    }
+]
