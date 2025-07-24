@@ -85,6 +85,8 @@ class SingleEntityExtractor(BaseEstimator,ABC):
     def _predict(self, X:TextInput):
         return []
     
+    # TODO: Need to implement two evaluation procedures
+    # Note that names and locations should be evaluated only by matching multi-word entities, i.e., "Joe Biden" is only true if your prediction is "Joe Biden", and not if your prediction is ["Joe", "Biden"]. For organizations, please evaluate using both multi-word prediction (i.e. "Department of Agriculture" is True if the true label is “Department of Agriculture”) and single-word comparison, i.e., ["Department", “of”, "Agriculture"] compared to every single word in the true label.
     def _evaluate(self, y:TextInput, y_hat:OutputType):
         precision_macro, recall_macro, jaccard_macro, f1_macro, accuracy_macro = compute_macro_metrics(y, y_hat)
         precision_micro, recall_micro, jaccard_micro, f1_micro, accuracy_micro = compute_micro_metrics(y, y_hat)
