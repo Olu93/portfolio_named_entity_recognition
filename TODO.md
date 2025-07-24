@@ -24,3 +24,8 @@
 
 ## Considerations
 [] For evaluation, I use measure micro and macro metrics. Hence, all predictions across documents (flattened) and per document average (each doc metric)
+[] Why I choose  which models
+
+# Ideas
+[] Use embeddings to detect NER by measuring their likelihood
+[] Use finetunig

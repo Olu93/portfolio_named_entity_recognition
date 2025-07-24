@@ -34,4 +34,4 @@ class SlidingWindowExtractor(SingleEntityExtractor):
 
 # Main function to test the SlidingWindowExtractor by using simple sentence and instantiating model, then fitting and then running a prediction
 if __name__ == "__main__":
-    test_extractor(extractor=SlidingWindowExtractor(), extractor_multi=SlidingWindowExtractor())
+    test_extractor(extractor=SlidingWindowExtractor(), extractor_multi=SlidingWindowExtractor(), extractor_multi_many=SlidingWindowExtractor())

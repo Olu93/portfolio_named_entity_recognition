@@ -1,6 +1,6 @@
 import json
 
-from utils.constants import EXAMPLES_PATH
+from utils.constants import EXAMPLES_PATH, MISC_DIR
 
 
 class SingleExample:
@@ -29,7 +29,9 @@ class MultiExample:
         return SingleExample(text, person_entities, organization_entities, location_entities)
 
 
-
+class MultiExampleMany(MultiExample):
+    def __init__(self, examples_path: str = MISC_DIR / 'examples_many.json'):
+        self.examples = json.load(open(examples_path))
 
 
 

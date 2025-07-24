@@ -2,8 +2,9 @@
 import sys
 import pathlib
 
+# sys.path.append(str(pathlib.Path(__file__).parent.parent))
+sys.path.append(str(pathlib.Path(__file__).parent.parent / 'src'))
 from utils.preprocessing import take_person_or_org
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -12,8 +13,9 @@ import json
 from notebooks import FILES_DIR
 # %%
 df = pd.read_csv(FILES_DIR / 'full_data.csv')
+df
 # %%
-new_df = df[:2].copy()
+new_df = df.dropna(subset=['persons', 'organizations', 'locations']).copy()
 new_df["persons"] = new_df["persons"].apply(lambda x: x.split(';'))
 new_df["organizations"] = new_df["organizations"].apply(lambda x: x.split(';'))
 new_df["locations"] = new_df["locations"].apply(lambda x: x.split(','))
@@ -28,5 +30,7 @@ final_df
 # %%
 final_df.to_dict(orient='records')
 # %%
-json.dump(final_df.to_dict(orient='records'), open(FILES_DIR / 'misc/examples.json', 'w'), indent=4)
+json.dump(final_df[:2].to_dict(orient='records'), open(FILES_DIR / 'misc/examples.json', 'w'), indent=4)
+# %%
+json.dump(final_df[:20].to_dict(orient='records'), open(FILES_DIR / 'misc/examples_many.json', 'w'), indent=4)
 # %%

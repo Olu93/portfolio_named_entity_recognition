@@ -27,6 +27,14 @@
             "module": "adapter.ootb.spacy",
             "justMyCode": false,
             "cwd": "${workspaceFolder}/src"
+        },
+        {
+            "name": "Run Hugging Face",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "adapter.ootb.huggingface",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/src"
         }
     ]
 }

@@ -16,8 +16,17 @@ dependencies = [
     "scipy (>=1.16.0,<2.0.0)",
     "python-dotenv (>=1.1.1,<2.0.0)",
     "colorlog (>=6.9.0,<7.0.0)",
-    "spacy (>=3.8.7,<4.0.0)"
+    "spacy (>=3.8.7,<4.0.0)",
+    "transformers (>=4.53.3,<5.0.0)",
+    "langchain (>=0.3.27,<0.4.0)",
+    "langchain-openai (>=0.3.28,<0.4.0)"
     ]
+
+[tool.poetry.group.gpu]
+optional = true
+
+[tool.poetry.group.gpu.dependencies]
+torch = ">=2.4.0,<3.0.0"
 
 [build-system]
 requires    = ["poetry-core>=2.0.0,<3.0.0"]
