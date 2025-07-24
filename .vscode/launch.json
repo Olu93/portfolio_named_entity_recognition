@@ -8,15 +8,23 @@
             "name": "Run Adapter",
             "type": "debugpy",
             "request": "launch",
-            "module": "adapter.naive.${fileBasenameNoExtension}",
+            "module": "adapter.ootb.${fileBasenameNoExtension}",
             "justMyCode": false,
             "cwd": "${workspaceFolder}/src"
         },
         {
-            "name": "Run Specific",
+            "name": "Run Sliding Window",
             "type": "debugpy",
             "request": "launch",
             "module": "adapter.naive.sliding_window",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/src"
+        },
+        {
+            "name": "Run Spacy",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "adapter.ootb.spacy",
             "justMyCode": false,
             "cwd": "${workspaceFolder}/src"
         }

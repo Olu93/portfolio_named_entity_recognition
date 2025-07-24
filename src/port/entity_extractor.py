@@ -67,7 +67,6 @@ class SingleEntityExtractor(BaseEstimator,ABC):
     def evaluate(self, y:TextInput, y_hat:OutputType):
         self.logger.info(f"Evaluating {self.__class__.__name__} with {len(y)} samples")
         res = self._evaluate(y, y_hat)
-        self._stats["evaluation"] = res
         self.logger.info(f"Evaluation results: {res}")
         return res
 

@@ -8,7 +8,7 @@ def test_extractor(extractor: SingleEntityExtractor, extractor_multi: SingleEnti
     logger = logging.getLogger(__name__)
     
     if extractor is not None:
-        logger.info(" =============================== Starting the SlidingWindowExtractor - Single Example =============================== ")
+        logger.info(f" =============================== Starting the {extractor.__class__.__name__} - Single Example =============================== ")
         sentence = DefaultExample().text
         person_entities = DefaultExample().person_entities
         # Instantiate the SlidingWindowExtractor
@@ -16,13 +16,13 @@ def test_extractor(extractor: SingleEntityExtractor, extractor_multi: SingleEnti
         # Fit the extractor
         extractor.fit(sentence, person_entities)
         # Run a prediction
-        logger.info(extractor.predict(sentence))
-        logger.info(extractor.stats)
-        logger.info(extractor.stats["evaluation"]["metrics"])
-        logger.info(" =============================== Ending the SlidingWindowExtractor - Single Example =============================== ")
+        logger.info(f"PREDICTION: {extractor.predict(sentence)}")
+        logger.info(f"STATS: {extractor.stats}")
+        logger.info(f"METRICS: {extractor.stats['evaluation']['metrics']}")
+        logger.info(f" =============================== Ending the {extractor.__class__.__name__} - Single Example =============================== \n\n")
 
     if extractor_multi is not None:
-        logger.info(" =============================== Starting the SlidingWindowExtractor - Multi Example =============================== ")
+        logger.info(f" =============================== Starting the {extractor_multi.__class__.__name__} - Multi Example =============================== ")
         examples = MultiExample()
 
         sentences = [example.text for example in examples]
@@ -30,7 +30,7 @@ def test_extractor(extractor: SingleEntityExtractor, extractor_multi: SingleEnti
         
         extractor = extractor_multi
         extractor.fit(sentences, person_entities)
-        logger.info(extractor.predict(sentences))
-        logger.info(extractor.stats)
-        logger.info(extractor.stats["evaluation"]["metrics"])
-        logger.info(" =============================== Ending the SlidingWindowExtractor - Multi Example =============================== ")
+        logger.info(f"PREDICTION: {extractor.predict(sentences)}")
+        logger.info(f"STATS: {extractor.stats}")
+        logger.info(f"METRICS: {extractor.stats['evaluation']['metrics']}")
+        logger.info(f" =============================== Ending the {extractor_multi.__class__.__name__} - Multi Example =============================== ")
