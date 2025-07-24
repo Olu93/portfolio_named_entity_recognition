@@ -20,7 +20,7 @@ def convert_X_to_list(X: TextInput):
         final_result.extend(X)
     else:
         raise ValueError(f"Unsupported type: {type(X)}")
-    logger.info(f"Converted {X} to list in {time.time() - start_time} seconds")
+    logger.info(f"Converted to list of size {len(final_result)} in {time.time() - start_time} seconds")
     return final_result
 
 
@@ -63,7 +63,7 @@ def convert_y_to_list(y: TextInput):
 
     else:
         raise ValueError(f"Unsupported type: {type(y)}")
-    logger.info(f"Converted {y} to list in {time.time() - start_time} seconds")
+    logger.info(f"Converted to list of size {len(final_result)} in {time.time() - start_time} seconds")
     return final_result
 
 def take_person_or_org(x: str):

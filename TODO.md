@@ -20,3 +20,7 @@
 [] Mention link to documentation
 [] Include image for the UML architecture
 [] Include image to processing diagram
+
+
+## Considerations
+[] For evaluation, I use measure micro and macro metrics. Hence, all predictions across documents (flattened) and per document average (each doc metric)

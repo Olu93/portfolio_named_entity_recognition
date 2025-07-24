@@ -5,6 +5,7 @@ import logging
 import time
 import numpy as np
 
+from utils.misc import compute_macro_metrics, compute_micro_metrics
 from utils.preprocessing import convert_X_to_list, convert_y_to_list
 from utils.typings import TextInput, OutputType
 
@@ -51,11 +52,11 @@ class SingleEntityExtractor(BaseEstimator,ABC):
         self._stats["inference"]["words"] = sum(len(x.split()) for x in X_)
         
         start_time = time.time()
-        # self.evaluate(y_, y_hat)
+        metrics =self.evaluate(y_, y_hat)
         self._stats["evaluation"]["time"] = time.time() - start_time
         self._stats["evaluation"]["samples"] = len(X_)
         self._stats["evaluation"]["words"] = sum(len(x.split()) for x in X_)
-
+        self._stats["evaluation"]["metrics"] = metrics
         return _self
     
     def predict(self, X:TextInput) -> OutputType:
@@ -85,18 +86,24 @@ class SingleEntityExtractor(BaseEstimator,ABC):
         return []
     
     def _evaluate(self, y:TextInput, y_hat:OutputType):
-        y = np.array(y)
-        y_hat = np.array(y_hat)
-        len_y = len(y)
-        len_y_hat = len(y_hat)
-        if len_y != len_y_hat:
-            raise ValueError(f"Length of y and y_hat must be the same. Got {len_y} and {len_y_hat}")
-        
+        precision_macro, recall_macro, jaccard_macro, f1_macro, accuracy_macro = compute_macro_metrics(y, y_hat)
+        precision_micro, recall_micro, jaccard_micro, f1_micro, accuracy_micro = compute_micro_metrics(y, y_hat)
+
         return {
-            "accuracy": np.all(y == y_hat, axis=1).mean(),
-            "precision": np.all(y == y_hat, axis=1).mean(), # TODO: Implement precision
-            "recall": np.all(y == y_hat, axis=1).mean(), # TODO: Implement recall
-            "f1": np.all(y == y_hat, axis=1).mean(), # TODO: Implement f1
+            "micro": {
+                "accuracy": accuracy_micro,
+                "precision": precision_micro,
+                "recall": recall_micro,
+                "jaccard": jaccard_micro,
+                "f1": f1_micro,
+            },
+            "macro": {
+                "accuracy": accuracy_macro,
+                "precision": precision_macro,
+                "recall": recall_macro,
+                "jaccard": jaccard_macro,
+                "f1": f1_macro,
+            }
         }
     
     @property

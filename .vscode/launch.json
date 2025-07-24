@@ -11,6 +11,14 @@
             "module": "adapter.naive.${fileBasenameNoExtension}",
             "justMyCode": false,
             "cwd": "${workspaceFolder}/src"
+        },
+        {
+            "name": "Run Specific",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "adapter.naive.sliding_window",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/src"
         }
     ]
 }

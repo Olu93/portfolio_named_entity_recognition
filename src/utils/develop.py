@@ -18,6 +18,7 @@ def test_extractor(extractor: SingleEntityExtractor, extractor_multi: SingleEnti
         # Run a prediction
         logger.info(extractor.predict(sentence))
         logger.info(extractor.stats)
+        logger.info(extractor.stats["evaluation"]["metrics"])
         logger.info(" =============================== Ending the SlidingWindowExtractor - Single Example =============================== ")
 
     if extractor_multi is not None:
@@ -31,4 +32,5 @@ def test_extractor(extractor: SingleEntityExtractor, extractor_multi: SingleEnti
         extractor.fit(sentences, person_entities)
         logger.info(extractor.predict(sentences))
         logger.info(extractor.stats)
+        logger.info(extractor.stats["evaluation"]["metrics"])
         logger.info(" =============================== Ending the SlidingWindowExtractor - Multi Example =============================== ")
