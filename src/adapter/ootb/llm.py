@@ -23,7 +23,7 @@ class LLMResult(BaseModel):
 class LangChainEntityExtractor(SingleEntityExtractor):
     def __init__(
         self,
-        model_name: str = "gpt-4o",
+        model_name: str = "gpt-4o-mini",
         label: str = "PERSON",
         require_full_name: bool = True,
         temperature: float = 0.0,
@@ -42,18 +42,20 @@ class LangChainEntityExtractor(SingleEntityExtractor):
         self.parser = PydanticOutputParser(pydantic_object=LLMResult)
         self.format_instructions = self.parser.get_format_instructions()    
 
+
+    def _fit(self, X: TextInput, y: TextInput = None):
+        # TODO: Add examples
+        examples = [e for i in y for e in i]
         self.prompt = ChatPromptTemplate([
             SystemMessage(content=(
                 f"Extract full‑name entities of types {self.label} "
                 "from the user text and return JSON according to the following instructions: "
             )),
             SystemMessage(content=self.format_instructions),
+            SystemMessage(content=f"Here are some examples: {examples}"),
             MessagesPlaceholder(variable_name="messages")
         ])
         self.chain = self.prompt | self.llm | self.parser
-
-    def _fit(self, X: TextInput, y: TextInput = None):
-        # TODO: Add examples
         return self  # no training
 
     def _predict(self, X: TextInput):
