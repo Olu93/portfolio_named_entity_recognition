@@ -28,4 +28,4 @@
 
 # Ideas
 [] Use embeddings to detect NER by measuring their likelihood
-[] Use finetunig
+[] Use finetunig -> https://medium.com/@whyamit101/fine-tuning-bert-for-named-entity-recognition-ner-b42bcf55b51d

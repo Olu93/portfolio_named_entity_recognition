@@ -19,14 +19,23 @@ dependencies = [
     "spacy (>=3.8.7,<4.0.0)",
     "transformers (>=4.53.3,<5.0.0)",
     "langchain (>=0.3.27,<0.4.0)",
-    "langchain-openai (>=0.3.28,<0.4.0)"
+    "langchain-openai (>=0.3.28,<0.4.0)",
+    "markdownify (>=1.1.0,<2.0.0)"
     ]
 
 [tool.poetry.group.gpu]
 optional = true
 
 [tool.poetry.group.gpu.dependencies]
-torch = ">=2.4.0,<3.0.0"
+torch = {version = "^2.7.1", source = "torch-cu128"}
+torchvision = {version = "^0.22.1", source = "torch-cu128"}
+torchaudio = {version = "^2.7.1", source = "torch-cu128"}
+
+[[tool.poetry.source]]
+name = "torch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+priority = "supplemental"
+
 
 [build-system]
 requires    = ["poetry-core>=2.0.0,<3.0.0"]

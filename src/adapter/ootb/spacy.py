@@ -22,10 +22,16 @@ def load_spacy_model(model_name: str = "en_core_web_sm"):
         return nlp
 
 class SpacyEntityExtractor(SingleEntityExtractor):
+    MAP = {
+        "persons": ["PERSON"],
+        "organizations": ["ORG"],
+        "locations": ["LOC", "GPE"]
+    }
+
     def __init__(
         self,
         model: str = "en_core_web_sm",
-        labels: list[str] = ["PERSON"],
+        label: str = "persons",
         require_full_name: bool = True,
         *args,
         **kwargs
@@ -33,7 +39,7 @@ class SpacyEntityExtractor(SingleEntityExtractor):
         super().__init__(*args, **kwargs)
         self.nlp = load_spacy_model(model)
 
-        self.labels = set(labels)
+        self.labels = self.MAP[label]
         self.require_full_name = require_full_name
 
     def _fit(self, X: TextInput, y: TextInput = None):
@@ -118,23 +124,23 @@ class FastestSpacyEntityExtractor(FastSpacyEntityExtractor):
 if __name__ == "__main__":
     # extract persons by default
     test_extractor(
-        extractor=SpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi=SpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi_many=SpacyEntityExtractor(labels=["PERSON"])
+        extractor=SpacyEntityExtractor(label="persons"),
+        extractor_multi=SpacyEntityExtractor(label="persons"),
+        extractor_multi_many=SpacyEntityExtractor(label="persons")
     )
 
     print("\n\n DIFFERENT EXTRACTOR\n\n")
 
     test_extractor(
-        extractor=FastSpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi=FastSpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi_many=FastSpacyEntityExtractor(labels=["PERSON"])
+        extractor=FastSpacyEntityExtractor(label="persons"),
+        extractor_multi=FastSpacyEntityExtractor(label="persons"),
+        extractor_multi_many=FastSpacyEntityExtractor(label="persons")
     )
 
     print("\n\n DIFFERENT EXTRACTOR\n\n")
 
     test_extractor(
-        extractor=FastestSpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi=FastestSpacyEntityExtractor(labels=["PERSON"]),
-        extractor_multi_many=FastestSpacyEntityExtractor(labels=["PERSON"])
+        extractor=FastestSpacyEntityExtractor(label="persons"),
+        extractor_multi=FastestSpacyEntityExtractor(label="persons"),
+        extractor_multi_many=FastestSpacyEntityExtractor(label="persons")
     )
