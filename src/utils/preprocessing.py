@@ -5,7 +5,25 @@ import time
 import numpy as np
 
 logger = logging.getLogger(__name__)
-
+def extract_objects(y:list[str]):
+    final_result = []
+    for obj in y:
+        obj_result = []
+        # Check if the object contains semicolons (case 1: elem,id;elem,id;elem,id)
+        if ';' in obj:
+            split_obj = obj.split(';')
+            for e in split_obj:
+                if e.strip():  # Skip empty strings
+                    obj_result.append(e.split(',')[0])
+        else:
+            # Case 2: elem,elem,elem (just comma-separated)
+            split_obj = obj.split(',')
+            for e in split_obj:
+                if e.strip():  # Skip empty strings
+                    obj_result.append(e.strip())
+        final_result.append(obj_result)
+    return final_result
+    
 
 def convert_X_to_list(X: TextInput):
     start_time = time.time()
@@ -28,13 +46,13 @@ def convert_y_to_list(y: TextInput):
     start_time = time.time()
     final_result = []
     if isinstance(y, str):
-        final_result.append([y])
+        final_result.extend([y])
     elif isinstance(y, pd.Series):
         # TODO: Cover cases in which the series elements are strings and not list
-        final_result.append(y.tolist())
+        final_result.extend(y.apply(lambda x: x.split(';')).tolist())
     elif isinstance(y, pd.DataFrame):
         # TODO: Cover cases in which the dataframe elements are strings and not list
-        final_result.append(y.values.tolist())
+        final_result.extend(y.apply(lambda x: x.split(';')).values.tolist())
     elif isinstance(y, list):
         all_data = []
 

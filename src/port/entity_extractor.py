@@ -12,8 +12,8 @@ from utils.typings import TextInput, OutputType
 
 
 class SingleEntityExtractor(BaseEstimator,ABC):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self):
+        # super().__init__(*args, **kwargs)
         # Taking stats for training and prediction. Prediction is list of times to compute average later on
         self._stats = {
             "training":{
@@ -38,7 +38,7 @@ class SingleEntityExtractor(BaseEstimator,ABC):
     def fit(self, X: TextInput, y: TextInput=None):
         start_time = time.time()
         X_ = convert_X_to_list(X)
-        y_ = convert_y_to_list(y) if y else None
+        y_ = None if y is None else convert_y_to_list(y)
         _self = self._fit(X_, y_)
         self.logger.info(f"Fitting {self.__class__.__name__} with {len(X_)} samples")
         self._stats["training"]["time"] = time.time() - start_time
@@ -113,8 +113,7 @@ class SingleEntityExtractor(BaseEstimator,ABC):
     
 
 class MultiEntityExtractor(BaseEstimator,ABC):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self):
         self.extractors: dict[str, SingleEntityExtractor] = {}
         self.logger = logging.getLogger(__name__)
 
@@ -134,9 +133,9 @@ class MultiEntityExtractor(BaseEstimator,ABC):
     def get_all_extractor_names(self) -> list[str]: 
         return list(self.extractors.keys())
 
-    def fit(self, X:TextInput, y:TextInput=None):
+    def fit(self, X:TextInput, Y:pd.DataFrame=None):
         self.logger.info(f"Fitting {self.__class__.__name__} with {len(X)} samples")
-        return self._fit(X, y)
+        return self._fit(X, Y)
     
     def predict(self, X:TextInput) -> OutputType:
         self.logger.info(f"Predicting {self.__class__.__name__} with {len(X)} samples")
@@ -146,9 +145,9 @@ class MultiEntityExtractor(BaseEstimator,ABC):
         self.logger.info(f"Fitting and predicting {self.__class__.__name__} with {len(X)} samples")
         return self.fit(X).predict(X)
     
-    def _fit(self, X:TextInput, y:TextInput=None):
+    def _fit(self, X:TextInput, Y:pd.DataFrame=None):
         for name, extractor in self.extractors.items():
-            extractor.fit(X, y)
+            extractor.fit(X, Y[name])
             self.extractors[name] = extractor
         return self
     
