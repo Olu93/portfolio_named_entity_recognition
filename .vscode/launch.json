@@ -35,6 +35,14 @@
             "module": "adapter.ootb.huggingface",
             "justMyCode": false,
             "cwd": "${workspaceFolder}/src"
+        },
+        {
+            "name": "Run LLM",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "adapter.ootb.llm",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/src"
         }
     ]
 }

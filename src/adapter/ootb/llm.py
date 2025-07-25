@@ -24,7 +24,7 @@ class LangChainEntityExtractor(SingleEntityExtractor):
     def __init__(
         self,
         model_name: str = "gpt-4o",
-        labels: list[str] = ["PERSON"],
+        label: str = "PERSON",
         require_full_name: bool = True,
         temperature: float = 0.0,
         *args,
@@ -32,7 +32,7 @@ class LangChainEntityExtractor(SingleEntityExtractor):
     ):
         super().__init__(*args, **kwargs)
         self.llm = ChatOpenAI(model_name=model_name, temperature=temperature)
-        self.labels = set(labels)
+        self.label = label
         self.label_map = {
             "PERSON": "persons",
             "ORG": "organizations",
@@ -40,29 +40,31 @@ class LangChainEntityExtractor(SingleEntityExtractor):
         }
         self.require_full_name = require_full_name
         self.parser = PydanticOutputParser(pydantic_object=LLMResult)
+        self.format_instructions = self.parser.get_format_instructions()    
+
         self.prompt = ChatPromptTemplate([
             SystemMessage(content=(
-                f"Extract full‑name entities of types {', '.join(self.labels)} "
+                f"Extract full‑name entities of types {self.label} "
                 "from the user text and return JSON according to the following instructions: "
-                "{schema}"
             )),
+            SystemMessage(content=self.format_instructions),
             MessagesPlaceholder(variable_name="messages")
-        ], parttial_variables={"schema": self.parser.get_format_instructions()})
+        ])
         self.chain = self.prompt | self.llm | self.parser
 
     def _fit(self, X: TextInput, y: TextInput = None):
+        # TODO: Add examples
         return self  # no training
 
     def _predict(self, X: TextInput):
-        out: dict[str, list[str]] = {}
-        
-        resp = self.chain.batch([{"messages": [HumanMessage(content=text)]} for text in X])
-        for label in self.labels:
-            for text,result in zip(X,resp):
-                if hasattr(result, self.label_map[label]):
-                    out[self.label_map[label]] = [e.text for e in result[self.label_map[label]]]
-                else:
-                    out[self.label_map[label]] = []
+        out: list[str] = []
+        all_input = [{"messages": [HumanMessage(content=text)]} for text in X]
+        resp: list[LLMResult] = self.chain.batch(all_input)
+        for _,result in zip(X,resp):
+            if hasattr(result, self.label_map[self.label]):
+                out.append([e.text for e in getattr(result, self.label_map[self.label])])
+            else:
+                out.append([])
         return out
 
 if __name__ == "__main__":
