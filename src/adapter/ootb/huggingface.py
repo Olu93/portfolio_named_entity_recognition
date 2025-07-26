@@ -21,7 +21,7 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
         model: str = "dslim/bert-base-NER",
         label: str = "persons",
         require_full_name: bool = True,
-        aggregation_strategy: str = "simple",
+        aggregation_strategy: str = "first",
         *args,
         **kwargs
     ):
@@ -34,10 +34,11 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
             logger.info("CUDA is not available. Using CPU for inference.")
         
         # HuggingFace NER pipeline groups subword tags into spans
+        self.aggregation_strategy = aggregation_strategy
         self.ner = pipeline(
             "ner",
             model=model,
-            aggregation_strategy=aggregation_strategy
+            aggregation_strategy=self.aggregation_strategy
         )
         self.labels = self.MAP[label]
         self.require_full_name = require_full_name
@@ -48,7 +49,7 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
     def _predict(self, X: TextInput):
         output: list[list[str]] = []
         for text in X:
-            spans = self.ner(text)
+            spans = self.ner(text, aggregation_strategy=self.aggregation_strategy)
             ents = [
                 span["word"]
                 for span in spans

@@ -139,7 +139,10 @@ class MultiEntityExtractor(BaseEstimator,ABC):
     
     def predict(self, X:TextInput) -> OutputType:
         self.logger.info(f"Predicting {self.__class__.__name__} with {len(X)} samples")
-        return self._predict(X)
+        df = self._predict(X)
+        for name in self.extractors.keys():
+            df[name] = df[name].apply(lambda x: ";".join(x))
+        return df
     
     def fit_predict(self, X:TextInput, y:TextInput=None):
         self.logger.info(f"Fitting and predicting {self.__class__.__name__} with {len(X)} samples")
@@ -155,4 +158,10 @@ class MultiEntityExtractor(BaseEstimator,ABC):
         df = pd.DataFrame()
         for name, extractor in self.extractors.items():
             df[name] = extractor.predict(X)
+            
         return df
+    
+    @property
+    def stats(self):
+        return {name: extractor.stats for name, extractor in self.extractors.items()}
+    
