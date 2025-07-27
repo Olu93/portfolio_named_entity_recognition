@@ -23,12 +23,22 @@ df_prep
 df_prep_clean = df_prep.copy()
 html_indices = df_prep_clean["text"].str.startswith("<html")
 df_prep_clean.loc[html_indices, 'text'] = df_prep_clean.loc[html_indices, 'text'].apply(lambda x: md(x, strip=['a']))
+article_body_indices = df_prep_clean["text"].str.startswith("\"articleBody\":\"")
+df_prep_clean.loc[article_body_indices, 'text'] = df_prep_clean.loc[article_body_indices, 'text'].apply(lambda x: x.split("\"articleBody\":\"")[1].split("\"")[0])
 df_prep_clean.head(15)
 # %%
 # Split into two to have a small dataset for fine tuning
 from sklearn.model_selection import train_test_split
 train_df, test_df = train_test_split(df_prep_clean, test_size=0.5, random_state=42)
-train_df.to_csv(FILES_DIR / 'full_data_clean_finetune_2.csv', index=False)
+# %%
+# Compute the number of tokens per line with tiktoken
+import tiktoken
+enc = tiktoken.get_encoding("cl100k_base")
+train_df["num_tokens"] = train_df["text"].apply(lambda x: len(enc.encode(x)))
+train_df["num_tokens"].hist()
+plt.show()
+# %%
+train_df.to_csv(FILES_DIR / 'full_data_clean_finetune.csv', index=False)
 test_df.to_csv(FILES_DIR / 'full_data_clean.csv', index=False)
 # %%
 # # Put train_df["text"] into a text file called "finetune_data.txt"
