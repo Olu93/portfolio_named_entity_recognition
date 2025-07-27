@@ -22,11 +22,17 @@ df_prep
 # %%
 df_prep_clean = df_prep.copy()
 html_indices = df_prep_clean["text"].str.startswith("<html")
-df_prep_clean.loc[html_indices, 'text'] = df_prep_clean.loc[html_indices, 'text'].apply(lambda x: md(x))
+df_prep_clean.loc[html_indices, 'text'] = df_prep_clean.loc[html_indices, 'text'].apply(lambda x: md(x, strip=['a']))
 df_prep_clean.head(15)
 # %%
-
-
+# Split into two to have a small dataset for fine tuning
+from sklearn.model_selection import train_test_split
+train_df, test_df = train_test_split(df_prep_clean, test_size=0.5, random_state=42)
+train_df.to_csv(FILES_DIR / 'full_data_clean_finetune_2.csv', index=False)
+test_df.to_csv(FILES_DIR / 'full_data_clean.csv', index=False)
 # %%
-df_prep_clean.to_csv(FILES_DIR / 'full_data_clean.csv', index=False)
+# # Put train_df["text"] into a text file called "finetune_data.txt"
+# with open(FILES_DIR / 'finetune_data.txt', 'w', encoding='utf-8') as f:
+#     for text in train_df["text"]:
+#         f.write(text + "\n")
 # %%
