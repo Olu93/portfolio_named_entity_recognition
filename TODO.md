@@ -8,7 +8,7 @@
 [] Add type validation to conversion of the text input 
 [] Add fit_partial function
 [] Try dslim/distilbert-NER
-[] 
+[] Create a global label map
 
 
 # Auxiliary
