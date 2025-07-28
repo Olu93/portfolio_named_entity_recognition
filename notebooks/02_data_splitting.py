@@ -179,3 +179,5 @@ print(
 )
 
 # %%
+output_df.num_tokens.hist()
+# %%

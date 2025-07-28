@@ -22,13 +22,10 @@ class Entity(BaseModel):
     entity_type: Literal["PER", "ORG", "LOC", "MISC"] = Field(description="The type of entity person=PER, organization=ORG, location=LOC, other=MISC")
     entity_value: str = Field(description="The value of the entity")
 
-class NERAnnotatedSentence(BaseModel):
+class NERAnnotation(BaseModel):
     original_text: str
     tokens: List[TokenNERPair]
     entities: list[Entity] = Field(description="List of entities found in the text")
-
-class NERAnnotation(BaseModel):
-    sentences: List[NERAnnotatedSentence]
 
 # %% Load data
 input_file = FILES_DIR / "semantic_split_complete_dataset.csv"
@@ -37,42 +34,50 @@ lines = df['text'].tolist()
 print(f"Found {len(lines)} lines to process from CSV")
 
 # %% LLM and parser
-llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.0)
-parser = PydanticOutputParser(pydantic_object=NERAnnotation)
+llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.0).with_structured_output(NERAnnotation)
+# parser = PydanticOutputParser(pydantic_object=NERAnnotation)
 
 # %% PromptTemplate version
+from langchain.prompts import PromptTemplate
+
 prompt_template = PromptTemplate.from_template("""
-You are an expert Named Entity Recognition (NER) annotator. 
-Annotate the given text in CoNLL-2003 format with BIO tagging.
+You are an expert Named Entity Recognition (NER) annotator.
+Annotate the given text in CoNLL-2003 format using BIO tagging.
 
 Entity types to identify:
-- PER: Names of people (full names ONLY)
-- ORG: Companies, institutions, government bodies, etc.
-- LOC: Countries, cities, states, addresses, etc.
+- PER: Names of people. ⚠️ ONLY include **full names** (e.g., "Barack Obama"). ❌ Do NOT include:
+  - First names only (e.g., "Barack")
+  - Last names only (e.g., "Obama")
+  - Initials or abbreviations (e.g., "B. Obama")
+  - Titles or roles (e.g., "President", "Dr.", "CEO")
+  - Name fragments or mentions without a clear full name
+
+- ORG: Companies, institutions, government bodies (e.g., Microsoft, United Nations, FBI)
+- LOC: Countries, cities, states, physical locations (e.g., Germany, New York, Kremlin)
 - MISC: Other named entities that don't fit the above categories
 
 BIO tagging:
-- B-PER, I-PER, B-ORG, I-ORG, B-LOC, I-LOC, B-MISC, I-MISC, O
+Use standard CoNLL-2003 tags:
+B-PER, I-PER, B-ORG, I-ORG, B-LOC, I-LOC, B-MISC, I-MISC, O
 
-Examples of entities:
-PERSONS: Joe Biden, Anthony Fauci, Vladimir Putin
-ORGANIZATIONS: United Nations, Microsoft, FBI
-LOCATIONS: United States, New York, Kremlin
+Reference examples:
+PERSONS: Joe Biden, Angela Merkel, Elon Musk
+ORGANIZATIONS: Google, NATO, European Commission
+LOCATIONS: Paris, Brazil, Mount Everest
 
-{format_instructions}
-
-For this text, these are example entities:
+Known entities in this text:
 - PERSONS: {persons}
 - ORGANIZATIONS: {organizations}
 - LOCATIONS: {locations}
 
-Please annotate the text accordingly.
+Now annotate the text accordingly.
 
 Text to annotate: {text}
 """)
 
+
 # %% Combine into chain
-chain = prompt_template | llm | parser
+chain = prompt_template | llm
 
 # %% Process articles one by one
 results = []
@@ -89,29 +94,21 @@ for i, (line, row) in enumerate(tqdm(zip(lines, df.itertuples()), desc="Processi
             "persons": getattr(row, 'persons', ''),
             "organizations": getattr(row, 'organizations', ''),
             "locations": getattr(row, 'locations', ''),
-            "format_instructions": parser.get_format_instructions()
+            # "format_instructions": parser.get_format_instructions()
         }
         
         # Process single article
         parsed_result = chain.invoke(input_dict)
         
-        if parsed_result and parsed_result.sentences:
-            # Process all sentences in the chunk
-            tokens_and_tags = []
-            all_entities = []
-            annotated_sentences = []
-            
-            for sentence in parsed_result.sentences:
-                sentence_tokens = [(t.token, t.tag) for t in sentence.tokens]
-                tokens_and_tags.extend(sentence_tokens)
-                all_entities.extend(sentence.entities)
-                annotated_sentences.append(sentence.model_dump(mode="python"))
+        if parsed_result:
+            # Process the chunk directly
+            tokens_and_tags = [(t.token, t.tag) for t in parsed_result.tokens]
+            all_entities = [e.model_dump(mode="python") for e in parsed_result.entities]
 
             result = {
                 "original_text": line,
                 "conll_annotations": tokens_and_tags,
-                "annotated_sentences": annotated_sentences,
-                "all_entities": [e.model_dump(mode="python") for e in all_entities]
+                "entities": all_entities
             }
         else:
             raise ValueError("Empty or malformed result")
@@ -133,8 +130,7 @@ for i, (line, row) in enumerate(tqdm(zip(lines, df.itertuples()), desc="Processi
         results.append({
             "original_text": line,
             "conll_annotations": [],
-            "annotated_sentences": [],
-            "all_entities": [],
+            "entities": [],
             "error": str(e)
         })
         
