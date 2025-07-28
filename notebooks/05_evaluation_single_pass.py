@@ -12,8 +12,6 @@ import os
 from tqdm import tqdm
 from notebooks import FILES_DIR
 from src.port.entity_extractor import MultiEntityExtractor
-from src.adapter.ootb.huggingface import HuggingFaceEntityExtractor
-from src.adapter.naive.sliding_window import SlidingWindowExtractor
 from sklearn.model_selection import train_test_split
 from notebooks.model_configs import MODEL_CONFIGS
 # %%
@@ -25,7 +23,7 @@ df.head()
 
 # %%
 # Split data into train and test
-train_df, test_df = train_test_split(df, test_size=0.6, random_state=42)
+train_df, test_df = train_test_split(df, test_size=0.3, random_state=42)
 train_df.head()
 
 # %%

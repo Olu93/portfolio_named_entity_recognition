@@ -81,7 +81,7 @@ def load_conll_data(file_path):
     return sentences
 
 # Load the CoNLL data
-conll_file = FILES_DIR / "ner_annotations.conll"
+conll_file = FILES_DIR / "ner_annotations_combined.conll"
 sentences = load_conll_data(conll_file)
 
 print(f"Loaded {len(sentences)} sentences from CoNLL file")
@@ -305,8 +305,8 @@ trainer = Trainer(
 # %%
 # Train the model
 print("Starting training...")
-trainer.train()
-
+train_results = trainer.train()
+train_results
 
 # %%
 # Evaluate on validation set
@@ -370,7 +370,7 @@ for text in test_texts:
 
 # %%
 # Save the model and tokenizer properly
-model_save_path = FILES_DIR / "bert_ner_finetuned"
+model_save_path = FILES_DIR / "pretrained" / "bert_ner_finetuned"
 trainer.save_model(str(model_save_path))
 tokenizer.save_pretrained(str(model_save_path))
 
@@ -399,7 +399,10 @@ results = {
     }
 }
 
-with open(FILES_DIR / "bert_training_results.json", 'w') as f:
+model_save_path_results = model_save_path / "results"
+model_save_path_results.mkdir(parents=True, exist_ok=True)
+
+with open(model_save_path_results / "bert_training_results.json", 'w') as f:
     json.dump(results, f, indent=2)
 
 print("Training results saved to bert_training_results.json")
@@ -410,10 +413,21 @@ print("\n" + "="*50)
 print("TRAINING COMPLETED SUCCESSFULLY!")
 print("="*50)
 print(f"Model saved to: {model_save_path}")
-print(f"Results saved to: {FILES_DIR / 'bert_training_results.json'}")
+print(f"Results saved to: {model_save_path_results / 'bert_training_results.json'}")
 print("\nTo use the model for inference:")
 print(f"from transformers import AutoTokenizer, AutoModelForTokenClassification")
 print(f"tokenizer = AutoTokenizer.from_pretrained('{model_save_path}')")
 print(f"model = AutoModelForTokenClassification.from_pretrained('{model_save_path}')")
 
 # %%
+# NOTE 520 Left
+# save training progress 
+# %%
+train_log_history = trainer.state.log_history
+with open(model_save_path_results / "bert_training_log_history.json", 'w') as f:
+    json.dump(train_log_history, f, indent=2)
+
+
+
+# %%
+# test the model

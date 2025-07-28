@@ -1,0 +1,71 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Virtual environments
+.venv
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+
+# Development files
+TODO.md
+NOTES.md
+TASK_DESCRIPTION.md
+
+# Notebooks (not needed for production)
+notebooks/
+
+# Experimental and temporary files
+experimental_results/
+predictions/
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Keep only the necessary files for the API
+# We'll copy src/ and files/ explicitly in the Dockerfile 

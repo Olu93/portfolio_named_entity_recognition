@@ -51,7 +51,7 @@ def load_model():
     global model
     
     # Look for model files in the models directory
-    models_dir = pathlib.Path(__file__).parent.parent / "models"
+    models_dir = pathlib.Path(__file__).parent.parent / "files" / "models"
     
     if not models_dir.exists():
         raise FileNotFoundError(f"Models directory not found: {models_dir}")
@@ -119,12 +119,11 @@ async def predict_entities(file: UploadFile = File(...)):
         logger.info(f"Loaded CSV with {len(df)} rows")
         
         # Validate required columns
-        required_columns = ['text', 'themes']
-        missing_columns = [col for col in required_columns if col not in df.columns]
-        if missing_columns:
+        
+        if 'text' not in df.columns:
             raise HTTPException(
                 status_code=400, 
-                detail=f"Missing required columns: {missing_columns}. Expected: {required_columns}"
+                detail=f"Missing required columns: text"
             )
         
         # Initialize output columns
@@ -134,68 +133,19 @@ async def predict_entities(file: UploadFile = File(...)):
         
         # Bulk process the dataframe
         logger.info("Processing dataframe in bulk...")
-        try:
-            # Get all texts for bulk processing
-            texts = df['text'].fillna('').astype(str).tolist()
-            
-            # Bulk predict
-            predictions = model.predict(texts)
-            
-            # Process predictions in bulk
-            for idx, prediction in enumerate(predictions):
-                try:
-                    # Extract entities based on your model's output format
-                    if hasattr(prediction, 'persons'):
-                        df.at[idx, 'persons'] = '; '.join(prediction.persons) if prediction.persons else ''
-                    if hasattr(prediction, 'organizations'):
-                        df.at[idx, 'organizations'] = '; '.join(prediction.organizations) if prediction.organizations else ''
-                    if hasattr(prediction, 'locations'):
-                        df.at[idx, 'locations'] = '; '.join(prediction.locations) if prediction.locations else ''
-                    
-                    # Alternative: if model returns a dictionary
-                    elif isinstance(prediction, dict):
-                        df.at[idx, 'persons'] = '; '.join(prediction.get('persons', []))
-                        df.at[idx, 'organizations'] = '; '.join(prediction.get('organizations', []))
-                        df.at[idx, 'locations'] = '; '.join(prediction.get('locations', []))
-                    
-                    # Alternative: if model returns a list of entity objects
-                    elif isinstance(prediction, list):
-                        persons = []
-                        organizations = []
-                        locations = []
-                        
-                        for entity in prediction:
-                            if hasattr(entity, 'type') and hasattr(entity, 'value'):
-                                if entity.type == 'PER':
-                                    persons.append(entity.value)
-                                elif entity.type == 'ORG':
-                                    organizations.append(entity.value)
-                                elif entity.type == 'LOC':
-                                    locations.append(entity.value)
-                        
-                        df.at[idx, 'persons'] = '; '.join(persons)
-                        df.at[idx, 'organizations'] = '; '.join(organizations)
-                        df.at[idx, 'locations'] = '; '.join(locations)
-                        
-                except Exception as e:
-                    logger.warning(f"Error processing prediction {idx}: {e}")
-                    # Keep empty strings for failed predictions
-                    continue
-                    
-        except Exception as e:
-            logger.error(f"Error in bulk processing: {e}")
-            raise
+        # Get all texts for bulk processing
+        texts = df['text'].fillna('').astype(str).tolist()
         
-        # Create output file
-        output_columns = ['persons', 'organizations', 'locations']
-        output_df = df[output_columns]
+        # Bulk predict
+        predictions: pd.DataFrame = model.predict(texts)
+
         
         # Save to temporary file
         with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
-            output_df.to_csv(tmp_file.name, index=False)
+            predictions.to_csv(tmp_file.name, index=False)
             output_file_path = tmp_file.name
         
-        logger.info(f"Processed {len(df)} rows successfully")
+        logger.info(f"Processed {len(predictions)} rows successfully")
         
         return PredictionResponse(
             message="Processing completed successfully",
