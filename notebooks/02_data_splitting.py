@@ -1,8 +1,5 @@
-# %%
-import sys
-import pathlib
-
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
+# %%    
+from notebook_config import FILES_DIR
 import pandas as pd
 import json
 from tqdm import tqdm
@@ -12,10 +9,8 @@ import tiktoken
 
 from langchain_openai import OpenAIEmbeddings
 from langchain_experimental.text_splitter import SemanticChunker
-from langchain_text_splitters import CharacterTextSplitter
 from langchain_text_splitters import TokenTextSplitter
 
-from notebooks import FILES_DIR
 
 # Setup
 

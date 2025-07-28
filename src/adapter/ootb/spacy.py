@@ -69,17 +69,3 @@ if __name__ == "__main__":
     )
 
     print("\n\n DIFFERENT EXTRACTOR\n\n")
-
-    test_extractor(
-        extractor=FastSpacyEntityExtractor(label="persons"),
-        extractor_multi=FastSpacyEntityExtractor(label="persons"),
-        extractor_multi_many=FastSpacyEntityExtractor(label="persons")
-    )
-
-    print("\n\n DIFFERENT EXTRACTOR\n\n")
-
-    test_extractor(
-        extractor=FastestSpacyEntityExtractor(label="persons"),
-        extractor_multi=FastestSpacyEntityExtractor(label="persons"),
-        extractor_multi_many=FastestSpacyEntityExtractor(label="persons")
-    )

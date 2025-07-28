@@ -1,17 +1,12 @@
 # %% 
-import sys
-import pathlib
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
+from notebook_config import FILES_DIR
 import pandas as pd
 import json
 from langchain_openai import ChatOpenAI
-from langchain.output_parsers import PydanticOutputParser
 from langchain.prompts import PromptTemplate
 from pydantic import BaseModel, Field
 from typing import List, Literal
 from tqdm import tqdm
-import time
-from notebooks import FILES_DIR
 
 # %% Define Pydantic schema
 class TokenNERPair(BaseModel):

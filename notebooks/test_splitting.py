@@ -14,7 +14,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_experimental.text_splitter import SemanticChunker
 from langchain_text_splitters import CharacterTextSplitter
 
-from notebooks import FILES_DIR
+from notebooks.config import FILES_DIR
 
 # Setup
 

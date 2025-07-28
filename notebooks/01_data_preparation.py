@@ -1,13 +1,7 @@
 # %% 
-import sys
-import pathlib
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
+from notebook_config import FILES_DIR
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-import json
-from notebooks import FILES_DIR
 from markdownify import markdownify as md
 # %%
 df = pd.read_csv(FILES_DIR / 'full_data.csv')

@@ -1,13 +1,9 @@
 from adapter.finetuning.pretrained import PretrainedBERTEntityExtractor
 from adapter.ootb.huggingface import HuggingFaceEntityExtractor
-from adapter.ootb.spacy import (
-    SpacyEntityExtractor,
-    FastSpacyEntityExtractor,
-    FastestSpacyEntityExtractor,
-)
+from adapter.ootb.spacy import SpacyEntityExtractor
 from adapter.ootb.llm import LangChainEntityExtractor
 from adapter.naive.sliding_window import SlidingWindowExtractor
-from utils.constants import FILES_DIR
+from constants import FILES_DIR
 
 # Configuration for all models
 MODEL_CONFIGS = [
@@ -245,46 +241,6 @@ MODEL_CONFIGS = [
         },
     },
     {
-        "name": "FastSpacyEntityExtractor",
-        "extra_info": {
-            "description": "Fast SpaCy extractor that combines sliding window with SpaCy NER",
-            "model": "en_core_web_sm",
-            "type": "hybrid",
-        },
-        "persons": {
-            "extractor": FastSpacyEntityExtractor,
-            "params": {"model": "en_core_web_sm", "label": "persons"},
-        },
-        "organizations": {
-            "extractor": FastSpacyEntityExtractor,
-            "params": {"model": "en_core_web_sm", "label": "organizations"},
-        },
-        "locations": {
-            "extractor": FastSpacyEntityExtractor,
-            "params": {"model": "en_core_web_sm", "label": "locations"},
-        },
-    },
-    {
-        "name": "FastestSpacyEntityExtractor",
-        "extra_info": {
-            "description": "Fastest SpaCy extractor with optimized performance",
-            "model": "en_core_web_sm",
-            "type": "hybrid",
-        },
-        "persons": {
-            "extractor": FastestSpacyEntityExtractor,
-            "params": {"model": "en_core_web_sm", "label": "persons"},
-        },
-        "organizations": {
-            "extractor": FastestSpacyEntityExtractor,
-            "params": {"model": "en_core_web_sm", "label": "organizations"},
-        },
-        "locations": {
-            "extractor": FastestSpacyEntityExtractor,
-            "params": {"model": "en_core_web_sm", "label": "locations"},
-        },
-    },
-    {
         "name": "LangChainEntityExtractor",
         "extra_info": {
             "description": "OpenAI GPT-4o-nano model for entity extraction using LangChain",
@@ -305,4 +261,4 @@ MODEL_CONFIGS = [
             "params": {"model_name": "gpt-4o-nano", "label": "LOC"},
         },
     },
-]
+] 

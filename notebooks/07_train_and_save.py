@@ -3,21 +3,12 @@
 Notebook to instantiate and cloud pickle the PretrainedBERTEntityExtractor model
 """
 
+from notebook_config import MODEL_CONFIGS, FILES_DIR
 import os
-import sys
-import pathlib
 import cloudpickle
 import logging
 from datetime import datetime
-# Add the project root to the path
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
-# Load environment variables
-
-
-from notebooks.model_configs import MODEL_CONFIGS
 from port.entity_extractor import MultiEntityExtractor
-from src.adapter.finetuning.pretrained import PretrainedBERTEntityExtractor
-from src.utils.constants import FILES_DIR
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
 _ = load_dotenv(find_dotenv())

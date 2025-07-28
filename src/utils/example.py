@@ -1,6 +1,6 @@
 import json
 
-from utils.constants import EXAMPLES_PATH, MISC_DIR
+from constants import EXAMPLES_PATH, MISC_DIR
 
 
 class SingleExample:

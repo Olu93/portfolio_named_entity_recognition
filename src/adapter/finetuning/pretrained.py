@@ -10,7 +10,7 @@ import sys
 # Add the project root to the path
 sys.path.append(str(pathlib.Path(__file__).parent.parent.parent.parent))
 
-from notebooks import FILES_DIR
+from constants.constants import FILES_DIR
 
 logger = logging.getLogger(__name__)
 

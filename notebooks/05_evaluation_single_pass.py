@@ -1,19 +1,11 @@
 # %% 
-import sys
-import pathlib
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
+from notebook_config import FILES_DIR, MODEL_CONFIGS
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-import json
 import time
-import os
 from tqdm import tqdm
-from notebooks import FILES_DIR
-from src.port.entity_extractor import MultiEntityExtractor
+from port.entity_extractor import MultiEntityExtractor
 from sklearn.model_selection import train_test_split
-from notebooks.model_configs import MODEL_CONFIGS
+
 # %%
 
 df = pd.read_csv(FILES_DIR / 'full_data_clean.csv').fillna('')

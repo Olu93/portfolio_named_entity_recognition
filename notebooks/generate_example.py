@@ -1,16 +1,8 @@
 # %% 
-import sys
-import pathlib
-
-# sys.path.append(str(pathlib.Path(__file__).parent.parent))
-sys.path.append(str(pathlib.Path(__file__).parent.parent / 'src'))
+from notebook_config import FILES_DIR
 from utils.preprocessing import take_person_or_org
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
 import json
-from notebooks import FILES_DIR
 # %%
 df = pd.read_csv(FILES_DIR / 'full_data.csv')
 df

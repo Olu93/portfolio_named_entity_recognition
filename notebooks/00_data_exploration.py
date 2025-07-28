@@ -1,13 +1,9 @@
 # %% 
-import sys
-import pathlib
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
+# Import notebooks package to set up the Python path
+
+from notebook_config import FILES_DIR
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
 import json
-from notebooks import FILES_DIR
 # %%
 df = pd.read_csv(FILES_DIR / 'full_data.csv')
 # %%
@@ -80,7 +76,7 @@ for i in range(len(df)):
                 entities_dict['locations'][_id] = []
             entities_dict['locations'][_id].append(l)
 print(json.dumps(entities_dict, indent=4))
-json.dump(entities_dict, open('files/misc/entities_dict.json', 'w'), indent=4)
+json.dump(entities_dict, open(FILES_DIR / 'misc' / 'entities_dict.json', 'w'), indent=4)
 # %%
 # Same as above but this time the name is the key and the value is the id we append to the  list
 entities_reversed_dict = {
@@ -95,7 +91,7 @@ for _type, elements in entities_dict.items():
                 entities_reversed_dict[_type][i] = []
             entities_reversed_dict[_type][i].append(k)
 print(json.dumps(entities_reversed_dict, indent=4))
-json.dump(entities_reversed_dict, open('files/misc/entities_reversed_dict.json', 'w'), indent=4)
+json.dump(entities_reversed_dict, open(FILES_DIR / 'misc' / 'entities_reversed_dict.json', 'w'), indent=4)
 # %%
 # %%
  

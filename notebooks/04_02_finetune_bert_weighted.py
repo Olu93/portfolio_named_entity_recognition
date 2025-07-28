@@ -1,8 +1,5 @@
 # %%
-import sys
-import pathlib
-sys.path.append(str(pathlib.Path(__file__).parent.parent))
-
+from notebook_config import FILES_DIR
 import torch
 from torch.utils.data import Dataset as TorchDataset, DataLoader
 from transformers import (
@@ -13,16 +10,9 @@ from transformers import (
     DataCollatorForTokenClassification,
     AutoConfig
 )
-from datasets import Dataset
-import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
-from tqdm import tqdm
 import json
-from notebooks import FILES_DIR
 from transformers import EarlyStoppingCallback
-import torch.nn as nn
-
 
 
 # Try to import seqeval for better evaluation metrics
