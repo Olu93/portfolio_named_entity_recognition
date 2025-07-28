@@ -3,7 +3,7 @@
 Test script to verify Toptal metrics implementation
 """
 
-from src.utils.misc import compute_toptal_metrics
+from utils.misc import compute_toptal_metrics
 
 def test_person_metrics():
     """Test person metrics (multi-word only)"""

@@ -66,110 +66,116 @@ def compute_micro_metrics(y_true_list, y_pred_list):
 
 def compute_toptal_metrics(y_true_list, y_pred_list, entity_type):
     """
-    Compute Toptal-specific metrics according to the task requirements:
-    
-    - For persons and locations: Only multi-word entity matching
-    - For organizations: Both multi-word and single-word comparison
-    
-    Args:
-        y_true_list: List of true entity lists
-        y_pred_list: List of predicted entity lists  
-        entity_type: 'person', 'location', or 'organization'
-    
+    Compute Toptal-specific metrics according to adjusted task requirements:
+
+    - For persons and locations: Only multi-word entity matching (precision and recall)
+    - For organizations:
+        - Precision uses only multi-word predicted entities
+        - Recall considers all gold entities (multi-word + single-word)
+
     Returns:
         Dictionary with toptal metrics
     """
-    
     def normalize_entity(entity):
-        """Normalize entity by removing extra whitespace and converting to lowercase"""
         return ' '.join(entity.strip().split()).lower()
-    
+
     def get_multi_word_entities(entities):
-        """Extract multi-word entities (entities with spaces)"""
-        return [entity for entity in entities if ' ' in entity.strip()]
-    
+        return [e for e in entities if ' ' in e.strip()]
+
     def get_single_words(entities):
-        """Extract single words from entities"""
         words = []
         for entity in entities:
             words.extend(entity.strip().split())
-        return list(set(words))  # Remove duplicates
-    
-    # Multi-word metrics (for all entity types)
+        return list(set(words))
+
     multi_word_tp = multi_word_pred = multi_word_true = 0
     multi_word_exact_matches = 0
-    
-    # Single-word metrics (only for organizations)
+
     single_word_tp = single_word_pred = single_word_true = 0
     single_word_exact_matches = 0
-    
+
     n_docs = len(y_true_list)
-    
+
     for yt, yp in zip(y_true_list, y_pred_list):
-        # Normalize entities
-        yt_normalized = [normalize_entity(e) for e in yt]
-        yp_normalized = [normalize_entity(e) for e in yp]
-        
-        # Multi-word entities
-        yt_multi = get_multi_word_entities(yt_normalized)
-        yp_multi = get_multi_word_entities(yp_normalized)
-        
+        yt_norm = [normalize_entity(e) for e in yt]
+        yp_norm = [normalize_entity(e) for e in yp]
+
+        # Multi-word precision: only multi-word predictions
+        yp_multi = get_multi_word_entities(yp_norm)
+
+        # Multi-word recall:
+        if entity_type == "organization":
+            # Count all gold entities (even single-word) for recall
+            yt_multi = yt_norm
+        else:
+            yt_multi = get_multi_word_entities(yt_norm)
+
         s_true_multi, s_pred_multi = set(yt_multi), set(yp_multi)
         inter_multi = len(s_true_multi & s_pred_multi)
-        
+
         multi_word_tp += inter_multi
         multi_word_pred += len(s_pred_multi)
         multi_word_true += len(s_true_multi)
         if s_true_multi == s_pred_multi:
             multi_word_exact_matches += 1
-        
-        # Single-word entities (only for organizations)
+
+        # Single-word metrics (only for organizations)
         if entity_type == "organization":
-            yt_words = get_single_words(yt_normalized)
-            yp_words = get_single_words(yp_normalized)
-            
+            yt_words = get_single_words(yt_norm)
+            yp_words = get_single_words(yp_norm)
+
             s_true_words, s_pred_words = set(yt_words), set(yp_words)
             inter_words = len(s_true_words & s_pred_words)
-            
+
             single_word_tp += inter_words
             single_word_pred += len(s_pred_words)
             single_word_true += len(s_true_words)
             if s_true_words == s_pred_words:
                 single_word_exact_matches += 1
-    
-    # Calculate multi-word metrics
+
+    # Multi-word metrics
     multi_word_p = multi_word_tp / multi_word_pred if multi_word_pred else 0.0
     multi_word_r = multi_word_tp / multi_word_true if multi_word_true else 0.0
-    multi_word_union = multi_word_pred + multi_word_true - multi_word_tp
-    multi_word_j = multi_word_tp / multi_word_union if multi_word_union else 0.0
-    multi_word_f1 = 2 * multi_word_p * multi_word_r / (multi_word_p + multi_word_r) if (multi_word_p + multi_word_r) else 0.0
+    multi_word_j = (
+        multi_word_tp / (multi_word_pred + multi_word_true - multi_word_tp)
+        if (multi_word_pred + multi_word_true - multi_word_tp) > 0 else 0.0
+    )
+    multi_word_f1 = (
+        2 * multi_word_p * multi_word_r / (multi_word_p + multi_word_r)
+        if (multi_word_p + multi_word_r) > 0 else 0.0
+    )
     multi_word_acc = multi_word_exact_matches / n_docs if n_docs else 0.0
-    
+
     result = {
         "multi_word": {
-            "precision": float(multi_word_p),
-            "recall": float(multi_word_r),
-            "jaccard": float(multi_word_j),
-            "f1": float(multi_word_f1),
-            "accuracy": float(multi_word_acc),
+            "precision": round(multi_word_p, 6),
+            "recall": round(multi_word_r, 6),
+            "jaccard": round(multi_word_j, 6),
+            "f1": round(multi_word_f1, 6),
+            "accuracy": round(multi_word_acc, 6),
         }
     }
-    
-    # Add single-word metrics for organizations
+
+    # Single-word metrics for organizations
     if entity_type == "organization":
         single_word_p = single_word_tp / single_word_pred if single_word_pred else 0.0
         single_word_r = single_word_tp / single_word_true if single_word_true else 0.0
-        single_word_union = single_word_pred + single_word_true - single_word_tp
-        single_word_j = single_word_tp / single_word_union if single_word_union else 0.0
-        single_word_f1 = 2 * single_word_p * single_word_r / (single_word_p + single_word_r) if (single_word_p + single_word_r) else 0.0
+        single_word_j = (
+            single_word_tp / (single_word_pred + single_word_true - single_word_tp)
+            if (single_word_pred + single_word_true - single_word_tp) > 0 else 0.0
+        )
+        single_word_f1 = (
+            2 * single_word_p * single_word_r / (single_word_p + single_word_r)
+            if (single_word_p + single_word_r) > 0 else 0.0
+        )
         single_word_acc = single_word_exact_matches / n_docs if n_docs else 0.0
-        
+
         result["single_word"] = {
-            "precision": float(single_word_p),
-            "recall": float(single_word_r),
-            "jaccard": float(single_word_j),
-            "f1": float(single_word_f1),
-            "accuracy": float(single_word_acc),
+            "precision": round(single_word_p, 6),
+            "recall": round(single_word_r, 6),
+            "jaccard": round(single_word_j, 6),
+            "f1": round(single_word_f1, 6),
+            "accuracy": round(single_word_acc, 6),
         }
-    
+
     return result
