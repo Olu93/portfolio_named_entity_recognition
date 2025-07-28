@@ -31,14 +31,13 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
         *args,
         **kwargs
     ):
-        super().__init__(*args, **kwargs)
+        super().__init__(label=label, *args, **kwargs)
         
         # Set default model path if not provided
         if model_path is None:
             model_path = str(FILES_DIR / "pretrained" / "bert_ner_finetuned")
         
         self.model_path = model_path
-        self.label = label
         self.require_full_name = require_full_name
         self.aggregation_strategy = aggregation_strategy
         

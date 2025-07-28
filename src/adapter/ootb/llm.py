@@ -30,9 +30,8 @@ class LangChainEntityExtractor(SingleEntityExtractor):
         *args,
         **kwargs
     ):
-        super().__init__(*args, **kwargs)
+        super().__init__(label=label, *args, **kwargs)
         self.llm = ChatOpenAI(model_name=model_name, temperature=temperature)
-        self.label = label
         self.label_map = {
             "PERSON": "persons",
             "ORG": "organizations",

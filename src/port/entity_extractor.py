@@ -5,16 +5,17 @@ import logging
 import time
 import numpy as np
 
-from utils.misc import compute_macro_metrics, compute_micro_metrics
+from utils.misc import compute_macro_metrics, compute_micro_metrics, compute_toptal_metrics
 from utils.preprocessing import convert_X_to_list, convert_y_to_list
 from utils.typings import TextInput, OutputType
 
 
 
 class SingleEntityExtractor(BaseEstimator,ABC):
-    def __init__(self):
+    def __init__(self, label=None):
         # super().__init__(*args, **kwargs)
         # Taking stats for training and prediction. Prediction is list of times to compute average later on
+        self.label = label
         self._stats = {
             "training":{
                 "time": 0,
@@ -90,7 +91,7 @@ class SingleEntityExtractor(BaseEstimator,ABC):
         precision_macro, recall_macro, jaccard_macro, f1_macro, accuracy_macro = compute_macro_metrics(y, y_hat)
         precision_micro, recall_micro, jaccard_micro, f1_micro, accuracy_micro = compute_micro_metrics(y, y_hat)
 
-        return {
+        personal_metrics = {
             "micro": {
                 "accuracy": accuracy_micro,
                 "precision": precision_micro,
@@ -105,6 +106,17 @@ class SingleEntityExtractor(BaseEstimator,ABC):
                 "jaccard": jaccard_macro,
                 "f1": f1_macro,
             }
+        }
+
+        # Compute Toptal-specific metrics according to task requirements
+        toptal_metrics = compute_toptal_metrics(y, y_hat, self.label)
+
+
+        
+        return {
+            "toptal": toptal_metrics,
+            "personal": personal_metrics,
+
         }
     
     @property

@@ -36,7 +36,7 @@ class SpacyEntityExtractor(SingleEntityExtractor):
         *args,
         **kwargs
     ):
-        super().__init__(*args, **kwargs)
+        super().__init__(label=label, *args, **kwargs)
         self.nlp = load_spacy_model(model)
 
         self.labels = self.MAP[label]

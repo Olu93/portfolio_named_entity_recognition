@@ -13,6 +13,14 @@
             "cwd": "${workspaceFolder}/src"
         },
         {
+            "name": "Run Toptal Metrics",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "test_toptal_metrics",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/src"
+        },
+        {
             "name": "Run Pretrained",
             "type": "debugpy",
             "request": "launch",

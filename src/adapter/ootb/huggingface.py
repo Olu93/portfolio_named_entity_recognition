@@ -25,7 +25,7 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
         *args,
         **kwargs
     ):
-        super().__init__(*args, **kwargs)
+        super().__init__(label=label, *args, **kwargs)
         self.labels = self.MAP[label]
         # Check CUDA availability and inform user
         if torch.cuda.is_available():
