@@ -1,5 +1,5 @@
 # %% 
-from notebook_config import FILES_DIR
+from notebook_config import DATASETS_DIR, FILES_DIR
 import pandas as pd
 import json
 from langchain_openai import ChatOpenAI
@@ -23,8 +23,8 @@ class NERAnnotation(BaseModel):
     entities: list[Entity] = Field(description="List of entities found in the text")
 
 # %% Load data
-input_file = FILES_DIR / "semantic_split_complete_dataset.csv"
-df = pd.read_csv(input_file).iloc[638:]
+input_file = DATASETS_DIR / "semantic_split_complete_dataset.csv"
+df = pd.read_csv(input_file) #.iloc[638:]
 lines = df['text'].tolist()
 print(f"Found {len(lines)} lines to process from CSV")
 

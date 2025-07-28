@@ -1,10 +1,10 @@
 # %% 
-from notebook_config import FILES_DIR
+from notebook_config import DATASETS_DIR
 import pandas as pd
 import matplotlib.pyplot as plt
 from markdownify import markdownify as md
 # %%
-df = pd.read_csv(FILES_DIR / 'full_data.csv')
+df = pd.read_csv(DATASETS_DIR / 'full_data.csv')
 df
 # %%
 df_prep = df.copy().fillna('')
@@ -32,8 +32,8 @@ train_df["num_tokens"] = train_df["text"].apply(lambda x: len(enc.encode(x)))
 train_df["num_tokens"].hist()
 plt.show()
 # %%
-train_df.to_csv(FILES_DIR / 'full_data_clean_finetune.csv', index=False)
-test_df.to_csv(FILES_DIR / 'full_data_clean.csv', index=False)
+train_df.to_csv(DATASETS_DIR / 'full_data_clean_finetune.csv', index=False)
+test_df.to_csv(DATASETS_DIR / 'full_data_clean.csv', index=False)
 # %%
 # # Put train_df["text"] into a text file called "finetune_data.txt"
 # with open(FILES_DIR / 'finetune_data.txt', 'w', encoding='utf-8') as f:

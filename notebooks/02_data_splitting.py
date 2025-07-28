@@ -1,5 +1,5 @@
 # %%    
-from notebook_config import FILES_DIR
+from notebook_config import DATASETS_DIR, FILES_DIR, MISC_DIR
 import pandas as pd
 import json
 from tqdm import tqdm
@@ -22,7 +22,7 @@ def count_tokens(text: str) -> int:
     return len(encoding.encode(text))
 
 
-df = pd.read_csv(FILES_DIR / "full_data_clean_finetune.csv")
+df = pd.read_csv(DATASETS_DIR / "full_data_clean_finetune.csv")
 articles = df["text"].tolist()
 
 # %%
@@ -81,8 +81,8 @@ for threshold_type, threshold_amount in tqdm(threshold_configs, desc="Configs"):
         )
 
 # Save evaluation results
-eval_stats_path = FILES_DIR / "semantic_eval_stats_first5.csv"
-eval_json_path = FILES_DIR / "semantic_eval_chunks_first5.json"
+eval_stats_path = MISC_DIR / "semantic_eval_stats_first5.csv"
+eval_json_path = MISC_DIRs / "semantic_eval_chunks_first5.json"
 pd.DataFrame(stats_data).to_csv(eval_stats_path, index=False)
 with open(eval_json_path, "w", encoding="utf-8") as f:
     json.dump(results_json, f, indent=2, ensure_ascii=False)
@@ -117,7 +117,7 @@ axes[1, 1].set_title("Chunk Distribution")
 axes[1, 1].tick_params(axis="x", rotation=45)
 
 plt.tight_layout()
-plot_path = FILES_DIR / "semantic_chunking_eval_first5_plot.png"
+plot_path = MISC_DIR / "semantic_chunking_eval_first5_plot.png"
 plt.savefig(plot_path, dpi=300, bbox_inches="tight")
 plt.show()
 
@@ -163,7 +163,7 @@ for i, article in enumerate(tqdm(articles, desc="Processing full corpus")):
         all_chunks.append(new_row)
 
     output_df = pd.DataFrame(all_chunks)
-    final_csv = FILES_DIR / "semantic_split_complete_dataset.csv"
+    final_csv = DATASETS_DIR / "semantic_split_complete_dataset.csv"
     output_df.to_csv(final_csv, index=False)
 
 print(f"\n✅ Saved full processed dataset: {final_csv}")

@@ -71,7 +71,7 @@ def load_conll_data(file_path):
     return sentences
 
 # Load the CoNLL data
-conll_file = FILES_DIR / "ner_annotations_combined.conll"
+conll_file = DATASETS_DIR / "ner_annotations_combined.conll"
 sentences = load_conll_data(conll_file)
 
 print(f"Loaded {len(sentences)} sentences from CoNLL file")

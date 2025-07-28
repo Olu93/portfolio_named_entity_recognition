@@ -1,5 +1,5 @@
 # %% 
-from notebook_config import FILES_DIR, MODEL_CONFIGS
+from notebook_config import DATASETS_DIR, EXPERIMENTAL_RESULTS_DIR, FILES_DIR, MODEL_CONFIGS
 import pandas as pd
 import time
 from tqdm import tqdm
@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 # %%
 
-df = pd.read_csv(FILES_DIR / 'full_data_clean.csv').fillna('')
+df = pd.read_csv(DATASETS_DIR / 'full_data_clean.csv').fillna('')
 # %%
 df.head()
 
@@ -115,7 +115,7 @@ for config in tqdm(MODEL_CONFIGS, desc="Testing models"):
         }
     
     results_df = pd.json_normalize(results.values())
-    results_df.to_csv(FILES_DIR / 'model_evaluation_results.csv', index=False)
+    results_df.to_csv(EXPERIMENTAL_RESULTS_DIR / 'model_evaluation_results.csv', index=False)
 
 # %%
 # Save results to CSV

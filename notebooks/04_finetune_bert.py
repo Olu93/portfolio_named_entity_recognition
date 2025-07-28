@@ -1,5 +1,5 @@
 # %%
-from notebook_config import FILES_DIR
+from notebook_config import FILES_DIR, DATASETS_DIR
 
 import torch
 from torch.utils.data import Dataset as TorchDataset, DataLoader
@@ -73,7 +73,7 @@ def load_conll_data(file_path):
     return sentences
 
 # Load the CoNLL data
-conll_file = FILES_DIR / "ner_annotations.conll"
+conll_file = DATASETS_DIR / "ner_annotations.conll"
 sentences = load_conll_data(conll_file)
 
 print(f"Loaded {len(sentences)} sentences from CoNLL file")

@@ -1,10 +1,10 @@
 # %% 
-from notebook_config import FILES_DIR
+from notebook_config import DATASETS_DIR, FILES_DIR
 from utils.preprocessing import take_person_or_org
 import pandas as pd
 import json
 # %%
-df = pd.read_csv(FILES_DIR / 'full_data.csv')
+df = pd.read_csv(DATASETS_DIR / 'full_data.csv')
 df
 # %%
 new_df = df.dropna(subset=['persons', 'organizations', 'locations']).copy()

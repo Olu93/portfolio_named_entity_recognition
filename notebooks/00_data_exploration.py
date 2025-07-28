@@ -1,11 +1,11 @@
 # %% 
 # Import notebooks package to set up the Python path
 
-from notebook_config import FILES_DIR
+from notebook_config import DATASETS_DIR, FILES_DIR
 import pandas as pd
 import json
 # %%
-df = pd.read_csv(FILES_DIR / 'full_data.csv')
+df = pd.read_csv(DATASETS_DIR / 'full_data.csv')
 # %%
 df.head()
 # %%
