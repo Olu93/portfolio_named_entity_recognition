@@ -29,7 +29,7 @@ class NERAnnotation(BaseModel):
 
 # %% Load data
 input_file = FILES_DIR / "semantic_split_complete_dataset.csv"
-df = pd.read_csv(input_file)
+df = pd.read_csv(input_file).iloc[638:]
 lines = df['text'].tolist()
 print(f"Found {len(lines)} lines to process from CSV")
 
@@ -81,8 +81,8 @@ chain = prompt_template | llm
 
 # %% Process articles one by one
 results = []
-output_file = FILES_DIR / "ner_annotations.conll"
-json_file = FILES_DIR / "ner_annotations.json"
+output_file = FILES_DIR / "ner_annotations_2.conll"
+json_file = FILES_DIR / "ner_annotations_2.json"
 with open(output_file, 'w', encoding='utf-8'): pass  # Empty file
 
 # %% Process one by one

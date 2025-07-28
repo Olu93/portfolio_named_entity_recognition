@@ -124,65 +124,12 @@ print(f"Prepared {len(texts)} texts for tokenization")
 # model_name = "bert-base-cased"  # Changed from uncased for better NER
 model_name = "distilbert-base-cased"  # Changed from uncased for better NER
 tokenizer = AutoTokenizer.from_pretrained(model_name)
+from notebooks.weighted_models import WeightedTokenClassifier as TokenClassifier
 
 print(f"Using tokenizer: {model_name}")
 
 # %%
-# Tokenize and align labels
-def tokenize_and_align_labels(texts, labels, tokenizer, label2id):
-    """Tokenize texts and align labels with subword tokens"""
-    tokenized_inputs = tokenizer(
-        texts,
-        truncation=True,
-        padding=True,
-        max_length=512,
-        return_tensors="pt"
-    )
-    
-    aligned_labels = []
-    
-    try:
-        for i, label in enumerate(labels):
-            word_ids = tokenized_inputs.word_ids(batch_index=i)
-            previous_word_idx = None
-            label_ids = []
-            
-            for word_idx in word_ids:
-                if word_idx is None:
-                    # Special tokens (CLS, SEP, PAD) get -100 label
-                    label_ids.append(-100)
-                elif word_idx < len(label):  # Check bounds
-                    if word_idx != previous_word_idx:
-                        # New word - use the original label
-                        label_ids.append(label2id[label[word_idx]])
-                    else:
-                        # Same word, continuation - use the same label but convert B- to I-
-                        original_label = label[word_idx]
-                        if original_label.startswith('B-'):
-                            # Convert B- to I- for continuation tokens
-                            continuation_label = 'I-' + original_label[2:]
-                            label_ids.append(label2id[continuation_label])
-                        else:
-                            # Keep I- or O labels as is
-                            label_ids.append(label2id[original_label])
-                else:
-                    # Handle case where tokenizer creates more tokens than we have labels
-                    # This can happen with truncation or special tokenization
-                    label_ids.append(-100)
-                
-                previous_word_idx = word_idx
-            
-            aligned_labels.append(label_ids)
-    except Exception as e:
-        print(f"Error processing sentence {i}: {e}")
-        print(f"Sentence: {texts[i]}")
-        print(f"Labels: {labels[i]}")
-        print(f"Label length: {len(labels[i])}")
-        print(f"Word IDs: {word_ids}")
-        print(f"Max word_idx: {max(word_ids) if word_ids else 'N/A'}")
-        raise e
-    
-    return tokenized_inputs, aligned_labels
+from notebooks.weighted_models import tokenize_and_align_labels as tokenize_and_align_labels
 
 # Tokenize the data
 print("Tokenizing and aligning labels...")
@@ -234,32 +181,7 @@ val_dataset = NERDataset(val_tokenized, val_aligned_labels)
 print(f"Train dataset size: {len(train_dataset)}")
 print(f"Validation dataset size: {len(val_dataset)}")
 
-# %%
-class WeightedTokenClassifier(AutoModelForTokenClassification):
-    def __init__(self, config, class_weights):
-        super().__init__(config)
-        self.loss_fn = nn.CrossEntropyLoss(weight=class_weights)
 
-    def forward(self, input_ids=None, attention_mask=None, labels=None, **kwargs):
-        outputs = super().forward(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            labels=None,  # don't use default loss
-            **kwargs
-        )
-        logits = outputs.logits  # (batch_size, seq_len, num_labels)
-
-        loss = None
-        if labels is not None:
-            active_loss = labels.view(-1) != -100
-            active_logits = logits.view(-1, self.num_labels)[active_loss]
-            active_labels = labels.view(-1)[active_loss]
-            loss = self.loss_fn(active_logits, active_labels)
-
-        return {
-            "loss": loss,
-            "logits": logits
-        }
 
 # %%
 # Initialize model with proper configuration
@@ -272,7 +194,7 @@ config = AutoConfig.from_pretrained(
     attention_probs_dropout_prob=0.3
 )
 
-model = AutoModelForTokenClassification.from_pretrained(
+model = TokenClassifier.from_pretrained(
     model_name,
     config=config
 )
@@ -369,7 +291,7 @@ trainer = Trainer(
     tokenizer=tokenizer,
     data_collator=data_collator,
     compute_metrics=compute_metrics,
-    callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
+    # callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
 )
 
 # %%
@@ -422,7 +344,11 @@ def predict_entities(text, model, tokenizer, id2label):
 test_texts = [
     "Joe Biden visited the White House in Washington DC.",
     "Apple CEO Tim Cook announced new products at the conference.",
-    "The United Nations met in New York to discuss climate change."
+    "The United Nations met in New York to discuss climate change.",
+    "A drug is available for monkeypox patients who have or who are at risk of severe disease, but doctors say they continue to face challenges getting access to it. The US Food and Drug Administration hasn’t approved tecovirimat – sold under the brand name Tpoxx – specifically for use against monkeypox, but the US Centers for Disease Control and Prevention has made the drug available from the Strategic National Stockpile through expanded access during the global outbreak that has caused about 5,800 probable or confirmed cases in the US.",
+    "Tpoxx was FDA-approved in 2018 as the first drug to treat smallpox, a virus in the same family as monkeypox. The World Health Organization declared smallpox eradicated in 1980, but concerns that the virus could be weaponized drove the US government to stockpile more than 1.7 million courses of the drug in case of a bioterrorism event. ",
+    "Tpoxx is approved in the European Union to treat monkeypox as well as smallpox. It can be taken intravenously or more commonly as an oral pill. Tpoxx is considered experimental when it comes to monkeypox treatment because there’s no data to prove its effectiveness against the disease in humans. Its safety was assessed in healthy humans before its FDA approval for smallpox, and its effectiveness has been tested in animals infected with viruses related to smallpox, including monkeypox. ",
+    "As the ongoing outbreak increases demand for the drug, the FDA and CDC recently eased some of the administrative requirements that health care providers face when requesting access. However, doctors across the country suggest that significant barriers remain, causing some patients to wait days for shipments or travel to find medical centers that can provide the product at all. “Patients are trying hard to get this medication, even going out of city or out of state in some cases,” said Dr. Peter Chin-Hong, an infectious disease physician at UCSF Health."
 ]
 
 print("Testing model on example texts:")
