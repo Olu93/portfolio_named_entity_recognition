@@ -13,6 +13,8 @@ df = pd.read_csv(FILES_DIR / 'full_data.csv')
 # %%
 df.head()
 # %%
+df.tail()
+# %%
 df.info()
 # %%
 df.describe()
@@ -40,6 +42,13 @@ df.iloc[10]
 # %%
 df.iloc[10]['text']
 # %%
+# Count number of rows starting with \"articlebody\"
+df[df['text'].str.startswith('\"articleBody\"')].shape[0]
+# %%
+# Count number of rows starting with <html
+df[df['text'].str.startswith('<html')].shape[0]
+
+
 # %%
 # Take all people, organisations, split  by semilcolon and put id in a dict with list of elements which are the names
 entities_dict = {

@@ -58,68 +58,7 @@ class SpacyEntityExtractor(SingleEntityExtractor):
             output.append(ents)
         return output
     
-class FastSpacyEntityExtractor(SpacyEntityExtractor):
-    """
-    Better version of sliding window extractor and spacy entity extractor.
-    Combines all the entities into a single list and then uses the sliding window method to extract the entities.
-    """
 
-    def _fit(self, X:TextInput, y:TextInput=None):
-        self.entities = {entity: entity.split() for entities in y for entity in entities}
-        return self
-
-    def _predict(self, X: TextInput):
-        output: list[list[str]] = []
-        final_result = []
-        for text in X:
-            result = []
-            doc = self.nlp(text)
-            ents = [
-                ent.text
-                for ent in doc.ents
-                if ent.label_ 
-            ]
-
-            entity_words = " ".join(ents).split()
-            for entity, entity_split in self.entities.items():
-                partial_result = []
-                for i in range(len(entity_words) - len(entity_split) + 1):
-                    current_window = entity_words[i:i+len(entity_split)]
-                    if tuple(current_window) == tuple(entity_split):    
-                        partial_result.append(current_window)
-                result.extend([" ".join(t) for t in partial_result])
-            final_result.append(result)
-        return final_result
-    
-class FastestSpacyEntityExtractor(FastSpacyEntityExtractor):
-    """
-    Better version of sliding window extractor and spacy entity extractor.
-    Combines all the entities into a single list and then uses the sliding window method to extract the entities.
-    """
-
-    def _fit(self, X:TextInput, y:TextInput=None):
-        self.entities = {entity: entity.split() for entities in y for entity in entities}
-        return self
-
-    def _predict(self, X: TextInput):
-        output: list[list[str]] = []
-        final_result = []
-        for text in X:
-            result = []
-            doc = self.nlp(text)
-            ents = {
-                ent.text:ent.label_
-                for ent in doc.ents
-                if ent.label_ 
-            }
-
-            for entity, _ in self.entities.items():
-                if entity in ents:
-                    result.append(entity)
-                    continue
-
-            final_result.append(result)
-        return final_result
 
 if __name__ == "__main__":
     # extract persons by default

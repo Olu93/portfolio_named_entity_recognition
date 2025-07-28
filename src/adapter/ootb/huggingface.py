@@ -18,7 +18,7 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
 
     def __init__(
         self,
-        model: str = "dslim/bert-base-NER",
+        model: str = "dslim/distilbert-NER",
         label: str = "persons",
         require_full_name: bool = True,
         aggregation_strategy: str = "first",
