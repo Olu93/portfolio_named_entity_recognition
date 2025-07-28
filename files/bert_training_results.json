@@ -12,17 +12,17 @@
     "B-MISC": 7,
     "I-MISC": 8
   },
-  "training_samples": 412,
-  "validation_samples": 104,
+  "training_samples": 508,
+  "validation_samples": 127,
   "eval_results": {
-    "eval_loss": 0.4184684157371521,
-    "eval_precision": 0.24675191319300238,
-    "eval_recall": 0.1473899692937564,
-    "eval_f1": 0.18425703610428998,
-    "eval_runtime": 0.8464,
-    "eval_samples_per_second": 122.873,
-    "eval_steps_per_second": 8.27,
-    "epoch": 17.0
+    "eval_loss": 0.050968486815690994,
+    "eval_precision": 0.4245181363444311,
+    "eval_recall": 0.11861313868613138,
+    "eval_f1": 0.18503470278355938,
+    "eval_runtime": 0.9133,
+    "eval_samples_per_second": 139.061,
+    "eval_steps_per_second": 8.76,
+    "epoch": 30.0
   },
   "model_save_path": "c:\\Users\\User\\Workspace\\work_practice\\interview\\toptal\\take-home-assignment\\files\\bert_ner_finetuned",
   "training_config": {
@@ -30,7 +30,7 @@
     "batch_size": 5,
     "effective_batch_size": 10,
     "epochs": 30,
-    "warmup_steps": 7,
+    "warmup_steps": 9,
     "fp16": true
   }
 }

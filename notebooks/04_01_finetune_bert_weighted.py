@@ -124,7 +124,7 @@ print(f"Prepared {len(texts)} texts for tokenization")
 # model_name = "bert-base-cased"  # Changed from uncased for better NER
 model_name = "distilbert-base-cased"  # Changed from uncased for better NER
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-from notebooks.weighted_models import WeightedTokenClassifier as TokenClassifier
+from notebooks.weighted_models import DistilBertWithHingeLoss as TokenClassifier
 
 print(f"Using tokenizer: {model_name}")
 
@@ -190,8 +190,16 @@ config = AutoConfig.from_pretrained(
     num_labels=len(label2id),
     id2label=id2label,
     label2id=label2id,
-    hidden_dropout_prob=0.3,  # if using BERT
-    attention_probs_dropout_prob=0.3
+    # Dropout settings (DistilBERT)
+    dropout=0.3,
+    attention_dropout=0.1,
+
+    # Bonus (ignored by DistilBERT but OK to include for compatibility)
+    hidden_dropout_prob=0.3,
+    attention_probs_dropout_prob=0.1,
+    classifier_dropout=0.3,
+    summary_first_dropout=0.3,
+    layerdrop=0.1,
 )
 
 model = TokenClassifier.from_pretrained(
