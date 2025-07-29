@@ -8,6 +8,27 @@ from adapter.naive.sliding_window import SlidingWindowExtractor
 # Configuration for all models
 MODEL_CONFIGS = [
     {
+        "name": "LangChainEntityExtractor",
+        "extra_info": {
+            "description": "OpenAI GPT-4.1-nano model for entity extraction using LangChain",
+            "model": "gpt-4.1-nano",
+            "type": "llm",
+            "paper": "https://openai.com/research/gpt-4o",
+        },
+        "persons": {
+            "extractor": LangChainEntityExtractor,
+            "params": {"model_name": "gpt-4.1-nano", "label": "persons"},
+        },
+        "organizations": {
+            "extractor": LangChainEntityExtractor,
+            "params": {"model_name": "gpt-4.1-nano", "label": "organizations"},
+        },
+        "locations": {
+            "extractor": LangChainEntityExtractor,
+            "params": {"model_name": "gpt-4.1-nano", "label": "locations"},
+        },
+    },
+    {
         "name": "PretrainedBERTEntityExtractor",
         "extra_info": {
             "description": "Pretrained BERT model for entity extraction",
@@ -240,25 +261,5 @@ MODEL_CONFIGS = [
             "params": {"model": "en_core_web_lg", "label": "locations"},
         },
     },
-    {
-        "name": "LangChainEntityExtractor",
-        "extra_info": {
-            "description": "OpenAI GPT-4o-nano model for entity extraction using LangChain",
-            "model": "gpt-4o-nano",
-            "type": "llm",
-            "paper": "https://openai.com/research/gpt-4o",
-        },
-        "persons": {
-            "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4o-nano", "label": "PERSON"},
-        },
-        "organizations": {
-            "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4o-nano", "label": "ORG"},
-        },
-        "locations": {
-            "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4o-nano", "label": "LOC"},
-        },
-    },
+    
 ] 

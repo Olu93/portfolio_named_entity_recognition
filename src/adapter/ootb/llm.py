@@ -13,17 +13,24 @@ from typing import Literal, Optional
 
 class Entity(BaseModel):
     text: str = Field(description="The text of the entity")
-    type: Literal["PERSON", "ORG", "LOC"] = Field(description="The type of the entity")
+    type: Literal["PER", "ORG", "LOC"] = Field(description="The type of the entity")
 
 class LLMResult(BaseModel):
-    persons: Optional[list[Entity]] = Field(description="List of full‑name entities of type PERSON")
-    organizations: Optional[list[str]] = Field(description="List of full‑name entities of type ORG")
-    locations: Optional[list[str]] = Field(description="List of full‑name entities of type LOC")
+    persons: Optional[list[Entity]] = Field(description="List of full‑name entities of type PER which are persons with their full name")
+    organizations: Optional[list[str]] = Field(description="List of full‑name entities of type ORG which are organizations")
+    locations: Optional[list[str]] = Field(description="List of full‑name entities of type LOC which are locations")
 
 class LangChainEntityExtractor(SingleEntityExtractor):
+    
+    MAP = {
+        "persons": ["PER"],
+        "organizations": ["ORG"],
+        "locations": ["LOC"]
+    }
+
     def __init__(
         self,
-        model_name: str = "gpt-4o-mini",
+        model_name: str = "gpt-4.1-nano",
         label: str = "PERSON",
         require_full_name: bool = True,
         temperature: float = 0.0,
@@ -31,12 +38,8 @@ class LangChainEntityExtractor(SingleEntityExtractor):
         **kwargs
     ):
         super().__init__(label=label, *args, **kwargs)
+        self.labels = self.MAP[label]
         self.llm = ChatOpenAI(model_name=model_name, temperature=temperature)
-        self.label_map = {
-            "PERSON": "persons",
-            "ORG": "organizations",
-            "LOC": "locations"
-        }
         self.require_full_name = require_full_name
         self.parser = PydanticOutputParser(pydantic_object=LLMResult)
         self.format_instructions = self.parser.get_format_instructions()    
@@ -47,7 +50,7 @@ class LangChainEntityExtractor(SingleEntityExtractor):
         examples = [e for i in y for e in i]
         self.prompt = ChatPromptTemplate([
             SystemMessage(content=(
-                f"Extract full‑name entities of types {self.label} "
+                f"Extract full‑name entities of types {self.labels} where        is {self.MAP['persons']}, organizations is {self.MAP['organizations']}, and locations is {self.MAP['locations']}"
                 "from the user text and return JSON according to the following instructions: "
             )),
             SystemMessage(content=self.format_instructions),
@@ -62,8 +65,8 @@ class LangChainEntityExtractor(SingleEntityExtractor):
         all_input = [{"messages": [HumanMessage(content=text)]} for text in X]
         resp: list[LLMResult] = self.chain.batch(all_input)
         for _,result in zip(X,resp):
-            if hasattr(result, self.label_map[self.label]):
-                out.append([e.text for e in getattr(result, self.label_map[self.label])])
+            if hasattr(result, self.labels):
+                out.append([e.text for e in getattr(result, self.labels)])
             else:
                 out.append([])
         return out

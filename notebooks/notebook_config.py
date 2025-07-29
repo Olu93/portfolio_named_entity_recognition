@@ -8,9 +8,9 @@ sys.path.append(str(WORK_DIR / "src"))
 
 NOTEBOOKS_DIR = WORK_DIR / "notebooks"
 FILES_DIR = WORK_DIR / "files"
-DATASETS_DIR = WORK_DIR / "datasets"
-EXPERIMENTAL_RESULTS_DIR = WORK_DIR / "experimental_results"
-MISC_DIR = WORK_DIR / "misc"
+DATASETS_DIR =FILES_DIR / "datasets"
+EXPERIMENTAL_RESULTS_DIR = FILES_DIR / "experimental_results"
+MISC_DIR = FILES_DIR / "misc"
 MODELS_DIR = WORK_DIR / "models"
 
 from constants.model_config import MODEL_CONFIGS
