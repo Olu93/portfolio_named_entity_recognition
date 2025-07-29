@@ -156,7 +156,7 @@ class MultiEntityExtractor(BaseEstimator,ABC):
         self.logger.info(f"Predicting {self.__class__.__name__} with {len(X)} samples")
         df = self._predict(X)
         for name in self.extractors.keys():
-            df[name] = df[name].apply(lambda x: ";".join(x))
+            df[name] = df[name].apply(lambda x: ";".join(x) if isinstance(x, list) and len(x) > 0 else None)
         return df
     
     def fit_predict(self, X:TextInput, y:TextInput=None):

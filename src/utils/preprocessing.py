@@ -41,6 +41,13 @@ def convert_X_to_list(X: TextInput):
     logger.info(f"Converted to list of size {len(final_result)} in {time.time() - start_time} seconds")
     return final_result
 
+def _replace_empty(e: list[str]):
+    if isinstance(e, list) and len(e) == 0:
+        return []
+    if isinstance(e, list) and len(e) == 1:
+        if e[0] == '':
+            return []
+    return e
 
 def convert_y_to_list(y: TextInput):
     start_time = time.time()
@@ -49,10 +56,10 @@ def convert_y_to_list(y: TextInput):
         final_result.extend([y])
     elif isinstance(y, pd.Series):
         # TODO: Cover cases in which the series elements are strings and not list
-        final_result.extend(y.apply(lambda x: x.split(';')).tolist())
+        final_result.extend([_replace_empty(e) for e in y.apply(lambda x: x.split(';')).tolist()])
     elif isinstance(y, pd.DataFrame):
         # TODO: Cover cases in which the dataframe elements are strings and not list
-        final_result.extend(y.apply(lambda x: x.split(';')).values.tolist())
+        final_result.extend([_replace_empty(e) for e in y.apply(lambda x: x.split(';')).values.tolist()])
     elif isinstance(y, list):
         all_data = []
 
