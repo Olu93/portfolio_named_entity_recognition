@@ -203,3 +203,52 @@ take-home-assignment/
 └── pyproject.toml        # Project dependencies
 ```
 
+## Performance Testing (Locust)
+
+We ran Locust against `http://localhost:8000` with **100 concurrent users** to validate throughput and stability. Results:
+
+| Endpoint               | Requests | Failures | Median (ms) | 90th (ms) | 99th (ms) | Avg Latency (ms) | Fail Rate |
+|------------------------|---------:|---------:|------------:|----------:|----------:|-----------------:|----------:|
+| `GET /healthz`         |       10 |        3 |       7 900 |     79 000 |     79 000 |           16 826 |    30%    |
+| `POST /predict/single` |      112 |       20 |      13 000 |     70 000 |    118 000 |           25 085 |    18%    |
+| **Total**              |      122 |       23 |      13 000 |     70 000 |    118 000 |           24 408 |    19%    |
+
+---
+
+### Bottlenecks & CPU Constraints
+
+- **Transformer on CPU**  
+  BERT‑style inference on a single CPU core is inherently slow (hundreds of ms per request), and under load this accumulates into tens of seconds.
+- **Blocking Calls & GIL**  
+  Synchronous inference blocks the event loop and is further constrained by Python’s GIL, limiting true parallelism.
+- **Cold Model Loads**  
+  If the model is reloaded or the tokenizer reinitialized per request, it adds significant overhead.
+
+---
+
+### Improvement Strategies
+
+1. **Model Optimization**  
+   - **Quantization**: Convert to 8‑bit or dynamic quantization to reduce inference time on CPU.  
+   - **Distillation / Smaller Models**: Swap to DistilBERT or a smaller transformer variant (e.g. `distilbert-base-cased`) for 2–3× speedup.  
+   - **ONNX Runtime**: Export to ONNX and run with ONNX Runtime Optimizations (e.g. OpenVINO) for further CPU acceleration.
+
+2. **Batching & Asynchronous Processing**  
+   - **Request Batching**: Aggregate multiple texts into a single batched inference call to amortize transformer overhead.  
+   - **Async Workers**: Use a pool of worker processes (via `ProcessPoolExecutor`) or FastAPI’s `BackgroundTasks` to offload inference without blocking.
+
+3. **Concurrency Tuning**  
+   - **Gunicorn + Uvicorn Workers**: Deploy with multiple worker processes (e.g. `--workers 4`) to leverage multiple CPU cores.  
+   - **Thread Pooling**: Configure a dedicated thread pool for model inference tasks to avoid blocking the main I/O loop.
+
+4. **Resource Management**  
+   - **Model Warmup**: Keep the model loaded in memory on startup; avoid per-request loading.  
+   - **Cache Results**: For repeated inputs, use an in‑memory cache (LRU) to return results instantly.
+
+5. **Horizontal Scaling**  
+   - **Microservices**: Split inference onto a separate service container with autoscaling.  
+   - **Load Balancing**: Front the API with an LB (nginx or Kubernetes Service) to distribute requests across replicas.
+
+---
+
+> **Target:** Achieve <500 ms median latency and <1% failures under ≥20 concurrent users on CPU.  
