@@ -8,6 +8,7 @@ services:
     volumes:
       # Mount the files directory to persist model files and data
       - ./files:/app/files
+      - ./models:/app/models
     environment:
       - PYTHONPATH=/app
       - PYTHONUNBUFFERED=1

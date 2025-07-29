@@ -26,6 +26,7 @@ RUN poetry install --without gpu --no-root
 # Copy the source code
 COPY src/ ./src/
 COPY files/ ./files/
+# COPY models/ ./models/
 
 # Create a non-root user for security
 RUN useradd --create-home --shell /bin/bash app && chown -R app:app /app
