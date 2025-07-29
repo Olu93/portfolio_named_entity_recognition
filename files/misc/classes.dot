@@ -1,0 +1,82 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+
+"adapter.ootb.huggingface.HuggingFaceEntityExtractor" [
+    color="black", fontcolor="black",
+    label=<{HuggingFaceEntityExtractor|
+        MAP : dict<br ALIGN="LEFT"/>
+        aggregation_strategy : str<br ALIGN="LEFT"/>
+        device : str<br ALIGN="LEFT"/>
+        labels : list<br ALIGN="LEFT"/>
+        ner<br ALIGN="LEFT"/>
+        require_full_name : bool<br ALIGN="LEFT"/>|}>, 
+    shape="record", style="solid"
+];
+
+"adapter.ootb.llm.LangChainEntityExtractor" [
+    color="black", fontcolor="black",
+    label=<{LangChainEntityExtractor|
+        MAP : dict<br ALIGN="LEFT"/>
+        chain<br ALIGN="LEFT"/>
+        labels : list<br ALIGN="LEFT"/>
+        llm<br ALIGN="LEFT"/>
+        prompt<br ALIGN="LEFT"/>
+        require_full_name : bool<br ALIGN="LEFT"/>|}>, 
+    shape="record", style="solid"
+];
+
+"port.entity_extractor.MultiEntityExtractor" [
+    color="black", fontcolor="black",
+    label=<{MultiEntityExtractor|
+        extractors : dict[str, SingleEntityExtractor]<br ALIGN="LEFT"/>
+        logger : Logger, NoneType, RootLogger<br ALIGN="LEFT"/>
+        stats<br ALIGN="LEFT"/>|
+        add_extractor(name: str, extractor: SingleEntityExtractor)<br ALIGN="LEFT"/>
+        fit(X: TextInput, Y: pd.DataFrame)<br ALIGN="LEFT"/>
+        fit_predict(X: TextInput, y: TextInput)<br ALIGN="LEFT"/>
+        get_all_extractor_names(): list[str]<br ALIGN="LEFT"/>
+        get_all_extractors(): dict[str, SingleEntityExtractor]<br ALIGN="LEFT"/>
+        get_extractor(name: str): SingleEntityExtractor<br ALIGN="LEFT"/>
+        predict(X: TextInput): OutputType<br ALIGN="LEFT"/>
+        remove_extractor(name: str)<br ALIGN="LEFT"/>
+    }>, 
+    shape="record", style="solid"
+];
+
+"port.entity_extractor.SingleEntityExtractor" [
+    color="black", fontcolor="black",
+    label=<{SingleEntityExtractor|
+        label : NoneType<br ALIGN="LEFT"/>
+        logger : NoneType, RootLogger, Logger<br ALIGN="LEFT"/>
+        stats<br ALIGN="LEFT"/>|
+        evaluate(y: TextInput, y_hat: OutputType)<br ALIGN="LEFT"/>
+        fit(X: TextInput, y: TextInput)<br ALIGN="LEFT"/>
+        fit_predict(X: TextInput, y: TextInput)<br ALIGN="LEFT"/>
+        predict(X: TextInput): OutputType<br ALIGN="LEFT"/>
+    }>, 
+    shape="record", style="solid"
+];
+
+"adapter.naive.sliding_window.SlidingWindowExtractor" [
+    color="black", fontcolor="black",
+    label=<{SlidingWindowExtractor|entities<br ALIGN="LEFT"/>|}>, 
+    shape="record", style="solid"
+];
+
+"adapter.ootb.spacy.SpacyEntityExtractor" [
+    color="black", fontcolor="black",
+    label=<{SpacyEntityExtractor|
+        MAP : dict<br ALIGN="LEFT"/>
+        labels : list<br ALIGN="LEFT"/>
+        nlp<br ALIGN="LEFT"/>
+        require_full_name : bool<br ALIGN="LEFT"/>|}>, 
+    shape="record", style="solid"
+];
+
+"adapter.naive.sliding_window.SlidingWindowExtractor" -> "port.entity_extractor.SingleEntityExtractor" [arrowhead="empty"];
+"adapter.ootb.huggingface.HuggingFaceEntityExtractor" -> "port.entity_extractor.SingleEntityExtractor" [arrowhead="empty"];
+"adapter.ootb.llm.LangChainEntityExtractor" -> "port.entity_extractor.SingleEntityExtractor" [arrowhead="empty"];
+"adapter.ootb.spacy.SpacyEntityExtractor" -> "port.entity_extractor.SingleEntityExtractor" [arrowhead="empty"];
+"port.entity_extractor.MultiEntityExtractor" -> "port.entity_extractor.SingleEntityExtractor" [label="has-a", style="dashed", arrowhead="vee"];
+}
