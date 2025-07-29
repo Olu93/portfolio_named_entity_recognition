@@ -64,6 +64,7 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
     
     def _prepare_serialization(self):
         self.ner.model.to("cpu")
+        self.ner.device = torch.device("cpu")
         return self
 
 

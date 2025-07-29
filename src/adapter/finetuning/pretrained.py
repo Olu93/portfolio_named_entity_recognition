@@ -172,6 +172,7 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
 
     def _prepare_serialization(self):
         self.ner_pipeline.model.to("cpu")
+        self.ner.device = torch.device("cpu")
         return self
 
 
