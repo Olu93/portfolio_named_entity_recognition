@@ -4,7 +4,7 @@ A comprehensive Named Entity Recognition system that extracts persons, organizat
 
 ## 📋 Technical Documentation
 
-**🔬 [TECHNICAL REPORT](https://drive.google.com/file/d/1dYhbSJpb2pVCUGEr-efEVt6YyT3nW5kk/view?usp=sharing)**
+**🔬 [TECHNICAL REPORT](tinyurl.com/4s5xp2fd)**
 
 This comprehensive technical report contains:
 - Detailed development procedures and methodology

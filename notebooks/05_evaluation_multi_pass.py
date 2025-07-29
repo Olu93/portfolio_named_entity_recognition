@@ -8,15 +8,9 @@ from sklearn.model_selection import train_test_split
 
 # %%
 
-df = pd.read_csv(DATASETS_DIR / 'full_data_clean.csv').fillna('').sample(30)
+df = pd.read_csv(DATASETS_DIR / 'full_data_clean.csv').fillna('')
 # %%
 df.head()
-
-
-# %%
-# Split data into train and test
-train_df, test_df = train_test_split(df, test_size=0.3, random_state=42)
-train_df.head()
 
 # %%
 def create_multi_entity_extractor(config):
@@ -47,9 +41,9 @@ predictions_dir.mkdir(exist_ok=True)
 
 # Test all models and collect results
 results = {}
-runs = 1
-
+runs = 5
 for run in range(runs):
+    train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
     for config in tqdm(MODEL_CONFIGS, desc="Testing models"):
         model_name = config['name']
         model_info = config['extra_info']
@@ -119,7 +113,7 @@ for run in range(runs):
             }
         
         results_df = pd.json_normalize(results.values())
-        results_df.to_csv(EXPERIMENTAL_RESULTS_DIR / 'model_evaluation_results_single_pass.csv', index=False)
+        results_df.to_csv(EXPERIMENTAL_RESULTS_DIR / 'model_evaluation_results_multi_pass.csv', index=False)
 
 # %%
 # Save results to CSV

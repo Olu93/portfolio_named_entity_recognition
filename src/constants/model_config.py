@@ -7,27 +7,27 @@ from adapter.naive.sliding_window import SlidingWindowExtractor
 
 # Configuration for all models
 MODEL_CONFIGS = [
-    {
-        "name": "LangChainEntityExtractor",
-        "extra_info": {
-            "description": "OpenAI GPT-4o-mini model for entity extraction using LangChain",
-            "model": "gpt-4o-mini",
-            "type": "llm",
-            "paper": "https://openai.com/research/gpt-4o",
-        },
-        "persons": {
-            "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4o-mini", "label": "persons"},
-        },
-        "organizations": {
-            "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4o-mini", "label": "organizations"},
-        },
-        "locations": {
-            "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4o-mini", "label": "locations"},
-        },
-    },
+    # {
+    #     "name": "LangChainEntityExtractor",
+    #     "extra_info": {
+    #         "description": "OpenAI GPT-4o-mini model for entity extraction using LangChain",
+    #         "model": "gpt-4o-mini",
+    #         "type": "llm",
+    #         "paper": "https://openai.com/research/gpt-4o",
+    #     },
+    #     "persons": {
+    #         "extractor": LangChainEntityExtractor,
+    #         "params": {"model_name": "gpt-4o-mini", "label": "persons"},
+    #     },
+    #     "organizations": {
+    #         "extractor": LangChainEntityExtractor,
+    #         "params": {"model_name": "gpt-4o-mini", "label": "organizations"},
+    #     },
+    #     "locations": {
+    #         "extractor": LangChainEntityExtractor,
+    #         "params": {"model_name": "gpt-4o-mini", "label": "locations"},
+    #     },
+    # },
     {
         "name": "PretrainedBERTEntityExtractor",
         "extra_info": {

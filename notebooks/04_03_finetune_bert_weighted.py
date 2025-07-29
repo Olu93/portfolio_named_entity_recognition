@@ -119,7 +119,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 print(f"Using tokenizer: {model_name}")
 
 # %%
-from notebooks.weighted_models import tokenize_and_align_labels as tokenize_and_align_labels
+from notebooks.notebook_finetune_utils import tokenize_and_align_labels as tokenize_and_align_labels
 
 # Tokenize the data
 print("Tokenizing and aligning labels...")
@@ -174,7 +174,7 @@ print(f"Validation dataset size: {len(val_dataset)}")
 
 
 # %%
-from notebooks.weighted_models import WeightedTokenClassifier as TokenClassifier
+from notebooks.notebook_finetune_utils import WeightedTokenClassifier as TokenClassifier
 
 
 

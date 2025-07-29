@@ -117,12 +117,12 @@ print(f"Prepared {len(texts)} texts for tokenization")
 # model_name = "bert-base-cased"  # Changed from uncased for better NER
 model_name = "distilbert-base-cased"  # Changed from uncased for better NER
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-from notebooks.weighted_models import DistilBertWithHingeLoss as TokenClassifier
+from notebooks.notebook_finetune_utils import DistilBertWithHingeLoss as TokenClassifier
 
 print(f"Using tokenizer: {model_name}")
 
 # %%
-from notebooks.weighted_models import tokenize_and_align_labels as tokenize_and_align_labels
+from notebooks.notebook_finetune_utils import tokenize_and_align_labels as tokenize_and_align_labels
 
 # Tokenize the data
 print("Tokenizing and aligning labels...")
