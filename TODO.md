@@ -30,6 +30,10 @@
 [] Open challenges
 - Ignore single word names
 
+### Performance Considerations
+[] Uvicorn only runs with 1 worker because it is intended to be deployed with auto scaling platform
+[] Locust model was run on CPU as configuring docker for GPU is more complex
+
 
 # Model Training
 [] Procedure
@@ -41,4 +45,10 @@
 
 # Ideas
 [] Use embeddings to detect NER by measuring their likelihood
-[] Use finetunig -> https://medium.com/@whyamit101/fine-tuning-bert-for-named-entity-recognition-ner-b42bcf55b51d
+[x] Use finetunig -> https://medium.com/@whyamit101/fine-tuning-bert-for-named-entity-recognition-ner-b42bcf55b51d
+[] Fine tune llama3.1 
+
+
+# Zero Hour
+[] README with install guide, .env variable description, and run guide
+[] Test python `notebooks/07_train_and_save.py`
