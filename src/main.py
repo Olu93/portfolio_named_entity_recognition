@@ -11,6 +11,8 @@ import tempfile
 import logging
 from contextlib import asynccontextmanager
 
+from constants.values import MODELS_DIR
+
 # Add the project root to the path
 sys.path.append(str(pathlib.Path(__file__).parent.parent))
 
@@ -51,7 +53,7 @@ def load_model():
     global model
     
     # Look for model files in the models directory
-    models_dir = pathlib.Path(__file__).parent.parent / "files" / "models"
+    models_dir = MODELS_DIR
     
     if not models_dir.exists():
         raise FileNotFoundError(f"Models directory not found: {models_dir}")

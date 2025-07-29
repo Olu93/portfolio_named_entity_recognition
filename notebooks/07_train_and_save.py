@@ -3,7 +3,7 @@
 Notebook to instantiate and cloud pickle the PretrainedBERTEntityExtractor model
 """
 
-from notebook_config import MODEL_CONFIGS, FILES_DIR
+from notebook_config import FILES_DIR, MODEL_CONFIGS, WORK_DIR, MODELS_DIR
 import os
 import cloudpickle
 import logging
@@ -11,6 +11,7 @@ from datetime import datetime
 from port.entity_extractor import MultiEntityExtractor
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
+# from src.constants.model_config import MODEL_CONFIGS
 _ = load_dotenv(find_dotenv())
 
 
@@ -55,14 +56,17 @@ def create_and_save_model():
     # Fit the model (this will load the pretrained weights)
     logger.info("Loading pretrained model...")
 
-    train_df = pd.read_csv(os.getenv("TRAIN_DATA_PATH")).fillna("")
+    train_df = pd.read_csv(WORK_DIR / os.getenv("TRAIN_DATA_PATH")).fillna("")
     X = train_df["text"]
     y = train_df[["persons", "organizations", "locations"]]
     model.fit(X, y)  # Empty list since we're using a pretrained model
 
     
     # Save the model using cloudpickle
-    model_path = FILES_DIR / "models" / timestamp / f"main_model.pkl"
+    model_folder = MODELS_DIR / timestamp
+    model_folder.mkdir(parents=True, exist_ok=True)
+
+    model_path = model_folder / f"main_model.pkl"
     logger.info(f"Saving model to: {model_path}")
     
     with open(model_path, 'wb') as f:

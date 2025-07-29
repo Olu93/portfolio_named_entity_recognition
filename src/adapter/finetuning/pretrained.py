@@ -1,4 +1,5 @@
 from port.entity_extractor import SingleEntityExtractor
+from utils.develop import test_extractor
 from utils.typings import TextInput
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 from langchain.text_splitter import TokenTextSplitter
@@ -10,7 +11,7 @@ import sys
 # Add the project root to the path
 sys.path.append(str(pathlib.Path(__file__).parent.parent.parent.parent))
 
-from constants.constants import FILES_DIR
+from constants.values import FILES_DIR
 
 logger = logging.getLogger(__name__)
 
@@ -174,7 +175,7 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
 
 if __name__ == "__main__":
     # Test the extractor
-    from utils.develop import test_extractor
+    
     
     # Test single entity type extractor
     test_extractor(

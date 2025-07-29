@@ -1,9 +1,9 @@
+from .values import FILES_DIR
 from adapter.finetuning.pretrained import PretrainedBERTEntityExtractor
 from adapter.ootb.huggingface import HuggingFaceEntityExtractor
 from adapter.ootb.spacy import SpacyEntityExtractor
 from adapter.ootb.llm import LangChainEntityExtractor
 from adapter.naive.sliding_window import SlidingWindowExtractor
-from constants import FILES_DIR
 
 # Configuration for all models
 MODEL_CONFIGS = [
