@@ -1,5 +1,5 @@
 [project]
-name            = "take-home-assignment"
+name            = "toptal"
 version         = "0.1.0"
 description     = ""
 authors         = [{ name = "OluPredator", email = "o.hundogan@gmail.com" }]

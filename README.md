@@ -4,7 +4,7 @@ A comprehensive Named Entity Recognition system that extracts persons, organizat
 
 ## 📋 Technical Documentation
 
-**🔬 [TECHNICAL REPORT](tinyurl.com/4s5xp2fd)**
+**🔬 [TECHNICAL REPORT](https://tinyurl.com/4s5xp2fd)**
 
 This comprehensive technical report contains:
 - Detailed development procedures and methodology
@@ -73,7 +73,7 @@ The available models are defined in `src/constants/model_config.py`. Each model 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd take-home-assignment
+   cd toptal
    ```
 
 2. **Install Poetry** (if not already installed)
@@ -149,6 +149,9 @@ The API will be available at `http://localhost:8000`
 ```bash
 # Build and run with Docker Compose
 docker-compose up --build
+
+# On linux it is most likely the command:
+docker compose up --build
 ```
 
 The API will be available at `http://localhost:8000`
@@ -191,17 +194,49 @@ The setup script will:
 ```
 take-home-assignment/
 ├── src/                    # Source code
-│   ├── adapter/           # Model adapters
-│   ├── constants/         # Configuration constants
+│   ├── adapter/           # Model adapters (BERT, SpaCy, HuggingFace, LLM)
+│   │   ├── finetuning/    # Custom fine-tuned model adapters
+│   │   ├── naive/         # Simple rule-based extractors
+│   │   └── ootb/          # Out-of-the-box model adapters
+│   ├── constants/         # Configuration constants and model configs
 │   ├── port/              # Entity extraction interface
-│   └── utils/             # Utility functions
-├── notebooks/             # Jupyter notebooks for training
+│   └── utils/             # Utility functions (logging, preprocessing, etc.)
+├── notebooks/             # Jupyter notebooks for data processing and training
+│   ├── 00_data_exploration.py          # Initial dataset analysis and exploration
+│   ├── 01_data_preparation.py          # Data cleaning and preprocessing pipeline
+│   ├── 02_data_splitting.py            # Semantic chunking and text splitting
+│   ├── 03_data_ner_conversion.py       # CoNLL-2003 format conversion using LLM
+│   ├── 04_finetune_bert.py             # BERT model fine-tuning for NER
+│   ├── 05_evaluation_multi_pass.py  # Multi-pass model evaluation
+│   ├── 06_result_analysis.py           # Comprehensive performance analysis
+│   ├── 07_train_and_save.py            # Model training and serialization
+│   └── generate_example.py             # Example generation utilities for testing
 ├── files/                 # Data files and models
-├── models/                # Saved trained models
+│   ├── datasets/          # Raw and processed datasets
+│   ├── experimental_results/ # Model evaluation results
+│   ├── misc/              # Miscellaneous files and configurations
+│   ├── predictions/       # Model prediction outputs
+│   └── pretrained/        # Pre-trained model files
+├── models/                # Saved trained models (timestamped folders)
 ├── docker-compose.yml     # Docker configuration
 ├── Dockerfile            # Container definition
-└── pyproject.toml        # Project dependencies
+├── setup.sh              # Automated setup script
+├── pyproject.toml        # Project dependencies
+└── locustfile.py         # Load testing configuration
 ```
+
+### Notebook Pipeline Overview
+
+The notebooks follow a sequential data processing. Notebooks 02, 03 and 04 are for finetuning an NER model. A brief overview:
+
+1. **`00_data_exploration.ipynb`** - Initial dataset analysis, examining data structure, entity relationships, and identifying quality issues
+2. **`01_data_preparation.ipynb`** - Data cleaning pipeline: HTML/JSON normalization, entity format standardization, and text preprocessing
+3. **`02_data_splitting.ipynb`** - Advanced semantic chunking using OpenAI embeddings to create optimally-sized text segments for NER training
+4. **`03_data_ner_conversion.ipynb`** - LLM-based NER annotation using GPT-4o-mini to convert text chunks to CoNLL-2003 format
+5. **`04_finetune_bert.ipynb`** - BERT model fine-tuning with custom loss functions and advanced training optimizations
+8. **`05_evaluation_multi_pass.ipynb`** - Multi-pass evaluation with detailed performance metrics
+9. **`06_result_analysis.ipynb`** - Comprehensive analysis of model performance, efficiency metrics, and comparative evaluation
+10. **`07_train_and_save.py`** - Final model training and serialization for API deployment
 
 ## Performance Testing (Locust)
 
@@ -233,20 +268,16 @@ We ran Locust against `http://localhost:8000` with **100 concurrent users** to v
    - **Distillation / Smaller Models**: Swap to DistilBERT or a smaller transformer variant (e.g. `distilbert-base-cased`) for 2–3× speedup.  
    - **ONNX Runtime**: Export to ONNX and run with ONNX Runtime Optimizations (e.g. OpenVINO) for further CPU acceleration.
 
-2. **Batching & Asynchronous Processing**  
-   - **Request Batching**: Aggregate multiple texts into a single batched inference call to amortize transformer overhead.  
-   - **Async Workers**: Use a pool of worker processes (via `ProcessPoolExecutor`) or FastAPI’s `BackgroundTasks` to offload inference without blocking.
 
 3. **Concurrency Tuning**  
    - **Gunicorn + Uvicorn Workers**: Deploy with multiple worker processes (e.g. `--workers 4`) to leverage multiple CPU cores.  
-   - **Thread Pooling**: Configure a dedicated thread pool for model inference tasks to avoid blocking the main I/O loop.
+   - **Use messaging system**: Save all requests in a messaging bus such as Kafka.
 
 4. **Resource Management**  
    - **Model Warmup**: Keep the model loaded in memory on startup; avoid per-request loading.  
    - **Cache Results**: For repeated inputs, use an in‑memory cache (LRU) to return results instantly.
 
 5. **Horizontal Scaling**  
-   - **Microservices**: Split inference onto a separate service container with autoscaling.  
    - **Load Balancing**: Front the API with an LB (nginx or Kubernetes Service) to distribute requests across replicas.
 
 ---
