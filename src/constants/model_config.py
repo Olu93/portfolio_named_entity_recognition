@@ -10,22 +10,22 @@ MODEL_CONFIGS = [
     {
         "name": "LangChainEntityExtractor",
         "extra_info": {
-            "description": "OpenAI GPT-4.1-nano model for entity extraction using LangChain",
-            "model": "gpt-4.1-nano",
+            "description": "OpenAI GPT-4o-mini model for entity extraction using LangChain",
+            "model": "gpt-4o-mini",
             "type": "llm",
             "paper": "https://openai.com/research/gpt-4o",
         },
         "persons": {
             "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4.1-nano", "label": "persons"},
+            "params": {"model_name": "gpt-4o-mini", "label": "persons"},
         },
         "organizations": {
             "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4.1-nano", "label": "organizations"},
+            "params": {"model_name": "gpt-4o-mini", "label": "organizations"},
         },
         "locations": {
             "extractor": LangChainEntityExtractor,
-            "params": {"model_name": "gpt-4.1-nano", "label": "locations"},
+            "params": {"model_name": "gpt-4o-mini", "label": "locations"},
         },
     },
     {

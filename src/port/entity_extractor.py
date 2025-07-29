@@ -123,6 +123,9 @@ class SingleEntityExtractor(BaseEstimator,ABC):
     def stats(self):
         return self._stats
     
+    def _prepare_serialization(self):
+        pass
+    
 
 class MultiEntityExtractor(BaseEstimator,ABC):
     def __init__(self):
@@ -177,3 +180,7 @@ class MultiEntityExtractor(BaseEstimator,ABC):
     def stats(self):
         return {name: extractor.stats for name, extractor in self.extractors.items()}
     
+    def _prepare_serialization(self):
+        for extractor in self.extractors.values():
+            extractor._prepare_serialization()
+        return self

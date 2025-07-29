@@ -1,4 +1,9 @@
 import numpy as np
+import cloudpickle
+import pathlib
+import logging
+
+logger = logging.getLogger(__name__)
 
 def compute_macro_metrics(y_true_list, y_pred_list):
     """
@@ -179,3 +184,61 @@ def compute_toptal_metrics(y_true_list, y_pred_list, entity_type):
         }
 
     return result
+
+def save_model_cross_platform(model, filepath):
+    """
+    Save a model using cloudpickle with cross-platform compatibility.
+    Converts all pathlib.Path objects to strings before saving.
+    """
+    def convert_paths_to_strings(obj):
+        """Recursively convert pathlib.Path objects to strings in the model"""
+        if isinstance(obj, pathlib.Path):
+            return str(obj)
+        elif isinstance(obj, dict):
+            return {k: convert_paths_to_strings(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [convert_paths_to_strings(item) for item in obj]
+        elif isinstance(obj, tuple):
+            return tuple(convert_paths_to_strings(item) for item in obj)
+        else:
+            return obj
+    
+    # Convert paths to strings before saving
+    model_with_string_paths = convert_paths_to_strings(model)
+    
+    with open(filepath, 'wb') as f:
+        cloudpickle.dump(model_with_string_paths, f)
+    
+    logger.info(f"Model saved with cross-platform compatibility to {filepath}")
+
+def load_model_cross_platform(filepath):
+    """
+    Load a model using cloudpickle with cross-platform compatibility.
+    Handles WindowsPath objects by converting them to the current platform's Path.
+    """
+    try:
+        with open(filepath, 'rb') as f:
+            model = cloudpickle.load(f)
+        return model
+    except Exception as e:
+        # Handle WindowsPath compatibility issue
+        if "cannot instantiate 'WindowsPath'" in str(e):
+            logger.warning("Detected WindowsPath compatibility issue, attempting to fix...")
+            try:
+                # Temporarily patch WindowsPath to use current platform's Path
+                original_windows_path = pathlib.WindowsPath
+                pathlib.WindowsPath = pathlib.Path
+                
+                with open(filepath, 'rb') as f:
+                    model = cloudpickle.load(f)
+                
+                # Restore original WindowsPath
+                pathlib.WindowsPath = original_windows_path
+                logger.info("Model loaded successfully with path compatibility fix")
+                return model
+            except Exception as e2:
+                logger.error(f"Failed to load model even with path compatibility fix: {e2}")
+                raise e2
+        else:
+            logger.error(f"Error loading model: {e}")
+            raise

@@ -30,15 +30,18 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
         # Check CUDA availability and inform user
         if torch.cuda.is_available():
             logger.info(f"CUDA is available. Using GPU: {torch.cuda.get_device_name(0)}")
+            self.device = 'cuda'
         else:
             logger.info("CUDA is not available. Using CPU for inference.")
+            self.device = 'cpu'
         
         # HuggingFace NER pipeline groups subword tags into spans
         self.aggregation_strategy = aggregation_strategy
         self.ner = pipeline(
             "ner",
             model=model,
-            aggregation_strategy=self.aggregation_strategy
+            aggregation_strategy=self.aggregation_strategy,
+            device=self.device
         )
         self.labels = self.MAP[label]
         self.require_full_name = require_full_name
@@ -58,6 +61,10 @@ class HuggingFaceEntityExtractor(SingleEntityExtractor):
             ]
             output.append(ents)
         return output
+    
+    def _prepare_serialization(self):
+        self.ner.model.to("cpu")
+        return self
 
 
 class FastHuggingFaceEntityExtractor(HuggingFaceEntityExtractor):

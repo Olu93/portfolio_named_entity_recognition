@@ -112,7 +112,7 @@ print(f"Prepared {len(texts)} texts for tokenization")
 # %%
 # Initialize tokenizer - use cased for better NER performance
 # model_name = "bert-base-cased"  # Changed from uncased for better NER
-model_name = "dslim/distilbert-NER"  # Changed from uncased for better NER
+model_name = "dslim/bert-base-NER"  # Changed from uncased for better NER
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 # from notebooks.weighted_models import DistilBertWithHingeLoss as TokenClassifier
 
@@ -174,6 +174,13 @@ print(f"Validation dataset size: {len(val_dataset)}")
 
 
 # %%
+from notebooks.weighted_models import WeightedTokenClassifier as TokenClassifier
+
+
+
+
+
+
 # Initialize model with proper configuration
 config = AutoConfig.from_pretrained(
     model_name,
@@ -192,7 +199,7 @@ config = AutoConfig.from_pretrained(
     layerdrop=0.1,
 )
 
-model = AutoModelForTokenClassification.from_pretrained(
+model = TokenClassifier.from_pretrained(
     model_name,
     config=config
 )
@@ -360,7 +367,7 @@ for text in test_texts:
 
 # %%
 # Save the model and tokenizer properly
-model_save_path = FILES_DIR / "pretrained" / "dslim_bert_ner_finetuned"
+model_save_path = FILES_DIR / "pretrained" / "dslim_bert_ner_finetuned_bert_based"
 trainer.save_model(str(model_save_path))
 tokenizer.save_pretrained(str(model_save_path))
 

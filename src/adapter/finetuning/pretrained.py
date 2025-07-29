@@ -170,7 +170,9 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
             "device": "GPU" if self.device == 0 else "CPU"
         }
 
-
+    def _prepare_serialization(self):
+        self.ner_pipeline.model.to("cpu")
+        return self
 
 
 if __name__ == "__main__":

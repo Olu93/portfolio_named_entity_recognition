@@ -11,6 +11,13 @@ from datetime import datetime
 from port.entity_extractor import MultiEntityExtractor
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
+import sys
+import pathlib
+
+# Add the project root to the path to import utils
+# sys.path.append(str(pathlib.Path(__file__).parent.parent))
+from utils.misc import save_model_cross_platform
+
 # from src.constants.model_config import MODEL_CONFIGS
 _ = load_dotenv(find_dotenv())
 
@@ -62,15 +69,16 @@ def create_and_save_model():
     model.fit(X, y)  # Empty list since we're using a pretrained model
 
     
-    # Save the model using cloudpickle
+    # Save the model using cross-platform cloudpickle
     model_folder = MODELS_DIR / timestamp
     model_folder.mkdir(parents=True, exist_ok=True)
 
     model_path = model_folder / f"main_model.pkl"
     logger.info(f"Saving model to: {model_path}")
     
-    with open(model_path, 'wb') as f:
-        cloudpickle.dump(model, f)
+    # Use cross-platform saving function
+    model._prepare_serialization()
+    save_model_cross_platform(model, model_path)
     
     logger.info(f"Model saved successfully to {model_path}")
     
