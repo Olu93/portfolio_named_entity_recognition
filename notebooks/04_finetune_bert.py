@@ -731,3 +731,228 @@ with open(model_save_path_results / "bert_training_log_history.json", 'w') as f:
 
 # %%
 # test the model
+
+# %% [markdown]
+# ## Training Progress Visualization
+# 
+# Create comprehensive visualizations of the training progress to analyze model convergence and performance metrics over time.
+
+# %%
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set up plotting style
+plt.style.use('default')
+sns.set_palette("husl")
+sns.set_style("whitegrid")
+
+# %%
+# Load training history from JSON file (or use trainer state if available)
+try:
+    # Try to load from the saved JSON file first
+    import json
+    log_file_path = model_save_path_results / "bert_training_log_history.json"
+    if log_file_path.exists():
+        with open(log_file_path, 'r') as f:
+            train_log_history = json.load(f)
+        print(f"Loaded training history from {log_file_path}")
+    else:
+        # Fallback to trainer state
+        train_log_history = trainer.state.log_history
+        print("Using trainer state for training history")
+except Exception as e:
+    print(f"Error loading training history: {e}")
+    train_log_history = []
+
+# Convert to DataFrame
+df_history = pd.DataFrame(train_log_history)
+
+print(f"Training history contains {len(df_history)} log entries")
+print(f"Columns: {list(df_history.columns)}")
+
+# %%
+# Create figure with two subplots for loss and metrics
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10))
+
+# Plot 1: Training and Evaluation Loss
+if 'loss' in df_history.columns and 'eval_loss' in df_history.columns:
+    # Separate training and evaluation data
+    train_data = df_history[['step', 'loss']].dropna()
+    eval_data = df_history[['step', 'eval_loss']].dropna()
+    
+    if len(train_data) > 0:
+        ax1.plot(train_data['step'], train_data['loss'], label='Training Loss', 
+                linewidth=2, color='blue', alpha=0.8)
+    
+    if len(eval_data) > 0:
+        ax1.plot(eval_data['step'], eval_data['eval_loss'], label='Validation Loss', 
+                linewidth=2, color='red', alpha=0.8)
+    
+    ax1.set_xlabel('Training Steps')
+    ax1.set_ylabel('Loss')
+    ax1.set_title('Training and Validation Loss Progression', fontsize=14, fontweight='bold')
+    ax1.legend()
+    ax1.grid(True, alpha=0.3)
+    
+    # Add annotations for final values
+    if len(train_data) > 0:
+        final_train_loss = train_data['loss'].iloc[-1]
+        ax1.annotate(f'Final Train Loss: {final_train_loss:.4f}', 
+                    xy=(train_data['step'].iloc[-1], final_train_loss),
+                    xytext=(10, 10), textcoords='offset points',
+                    bbox=dict(boxstyle='round,pad=0.3', facecolor='lightblue', alpha=0.8),
+                    fontsize=10)
+    
+    if len(eval_data) > 0:
+        final_eval_loss = eval_data['eval_loss'].iloc[-1]
+        ax1.annotate(f'Final Eval Loss: {final_eval_loss:.4f}', 
+                    xy=(eval_data['step'].iloc[-1], final_eval_loss),
+                    xytext=(10, -10), textcoords='offset points',
+                    bbox=dict(boxstyle='round,pad=0.3', facecolor='lightcoral', alpha=0.8),
+                    fontsize=10)
+else:
+    ax1.text(0.5, 0.5, 'No loss data available', ha='center', va='center', transform=ax1.transAxes)
+    ax1.set_title('Training and Validation Loss Progression')
+
+# Plot 2: F1, Precision, and Recall Metrics
+metrics_columns = ['eval_f1', 'eval_precision', 'eval_recall']
+available_metrics = [col for col in metrics_columns if col in df_history.columns]
+
+if available_metrics:
+    # Filter out None values and convert to numeric
+    df_metrics = df_history[['step'] + available_metrics].copy()
+    df_metrics = df_metrics.dropna()
+    
+    if len(df_metrics) > 0:
+        colors = ['green', 'orange', 'purple']
+        for i, metric in enumerate(available_metrics):
+            metric_name = metric.replace('eval_', '').title()
+            ax2.plot(df_metrics['step'], df_metrics[metric], 
+                    label=metric_name, linewidth=2, color=colors[i % len(colors)], alpha=0.8)
+        
+        ax2.set_xlabel('Training Steps')
+        ax2.set_ylabel('Score')
+        ax2.set_title('Validation Metrics Progression (F1, Precision, Recall)', fontsize=14, fontweight='bold')
+        ax2.legend()
+        ax2.grid(True, alpha=0.3)
+        ax2.set_ylim(0, 0.5)  # Adjust based on your data range
+        
+        # Add annotations for final values
+        for i, metric in enumerate(available_metrics):
+            final_value = df_metrics[metric].iloc[-1] if len(df_metrics) > 0 else None
+            if final_value is not None:
+                metric_name = metric.replace('eval_', '').title()
+                ax2.annotate(f'Final {metric_name}: {final_value:.4f}', 
+                            xy=(df_metrics['step'].iloc[-1], final_value),
+                            xytext=(10, 10 + i*15), textcoords='offset points',
+                            bbox=dict(boxstyle='round,pad=0.3', facecolor='lightgreen', alpha=0.8),
+                            fontsize=9)
+    else:
+        ax2.text(0.5, 0.5, 'No metrics data available', ha='center', va='center', transform=ax2.transAxes)
+        ax2.set_title('Validation Metrics Progression')
+else:
+    ax2.text(0.5, 0.5, 'No evaluation metrics available', ha='center', va='center', transform=ax2.transAxes)
+    ax2.set_title('Validation Metrics Progression')
+
+plt.tight_layout()
+plt.show()
+
+# %%
+# Save the plots
+plot_save_path = model_save_path_results / "training_progression_plots.png"
+plt.savefig(plot_save_path, dpi=300, bbox_inches='tight')
+print(f"Training progression plots saved to: {plot_save_path}")
+
+# %%
+# Create a comprehensive summary table of training progress
+print("\n" + "="*80)
+print("TRAINING PROGRESS SUMMARY")
+print("="*80)
+
+if len(df_history) > 0:
+    # Get the last entry to show final metrics
+    last_entry = df_history.iloc[-1]
+    
+    print(f"\n📊 Training Overview:")
+    print(f"  Total Log Entries: {len(df_history)}")
+    print(f"  Total Training Steps: {df_history['step'].max()}")
+    print(f"  Training Epochs: {df_history['epoch'].max():.1f}")
+    
+    # Show final training metrics
+    print(f"\n🎯 Final Training Metrics:")
+    if 'train_loss' in df_history.columns:
+        print(f"  Final Training Loss: {df_history['train_loss'].iloc[-1]:.6f}")
+    if 'train_runtime' in df_history.columns:
+        runtime_hours = df_history['train_runtime'].iloc[-1] / 3600
+        print(f"  Total Training Time: {runtime_hours:.2f} hours")
+    
+    # Show final evaluation metrics
+    print(f"\n📈 Final Evaluation Metrics:")
+    eval_metrics = ['eval_loss', 'eval_f1', 'eval_precision', 'eval_recall']
+    for metric in eval_metrics:
+        if metric in df_history.columns:
+            final_value = df_history[metric].iloc[-1]
+            if pd.notna(final_value):
+                metric_name = metric.replace('eval_', '').title()
+                print(f"  {metric_name}: {final_value:.6f}")
+    
+    # Show progression analysis
+    if len(df_history) > 1:
+        print(f"\n📈 Training Progression Analysis:")
+        
+        # Loss progression
+        if 'loss' in df_history.columns:
+            train_loss_data = df_history[['step', 'loss']].dropna()
+            if len(train_loss_data) > 0:
+                initial_loss = train_loss_data['loss'].iloc[0]
+                final_loss = train_loss_data['loss'].iloc[-1]
+                loss_improvement = ((initial_loss - final_loss) / initial_loss) * 100
+                
+                print(f"  Training Loss:")
+                print(f"    Initial: {initial_loss:.6f}")
+                print(f"    Final: {final_loss:.6f}")
+                print(f"    Improvement: {loss_improvement:.2f}%")
+        
+        # Evaluation loss progression
+        if 'eval_loss' in df_history.columns:
+            eval_loss_data = df_history[['step', 'eval_loss']].dropna()
+            if len(eval_loss_data) > 0:
+                initial_eval_loss = eval_loss_data['eval_loss'].iloc[0]
+                final_eval_loss = eval_loss_data['eval_loss'].iloc[-1]
+                eval_loss_improvement = ((initial_eval_loss - final_eval_loss) / initial_eval_loss) * 100
+                
+                print(f"  Validation Loss:")
+                print(f"    Initial: {initial_eval_loss:.6f}")
+                print(f"    Final: {final_eval_loss:.6f}")
+                print(f"    Improvement: {eval_loss_improvement:.2f}%")
+        
+        # F1 score progression
+        if 'eval_f1' in df_history.columns:
+            f1_data = df_history[['step', 'eval_f1']].dropna()
+            if len(f1_data) > 0:
+                initial_f1 = f1_data['eval_f1'].iloc[0]
+                final_f1 = f1_data['eval_f1'].iloc[-1]
+                f1_improvement = ((final_f1 - initial_f1) / initial_f1) * 100 if initial_f1 > 0 else 0
+                
+                print(f"  F1 Score:")
+                print(f"    Initial: {initial_f1:.6f}")
+                print(f"    Final: {final_f1:.6f}")
+                print(f"    Improvement: {f1_improvement:.2f}%")
+        
+        # Learning rate analysis
+        if 'learning_rate' in df_history.columns:
+            lr_data = df_history[['step', 'learning_rate']].dropna()
+            if len(lr_data) > 0:
+                initial_lr = lr_data['learning_rate'].iloc[0]
+                final_lr = lr_data['learning_rate'].iloc[-1]
+                print(f"  Learning Rate:")
+                print(f"    Initial: {initial_lr:.2e}")
+                print(f"    Final: {final_lr:.2e}")
+                print(f"    Range: {lr_data['learning_rate'].min():.2e} - {lr_data['learning_rate'].max():.2e}")
+
+else:
+    print("❌ No training history data available")
+
+print("\n" + "="*80)
+

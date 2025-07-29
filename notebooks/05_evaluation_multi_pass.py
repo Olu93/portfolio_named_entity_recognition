@@ -40,7 +40,7 @@ predictions_dir = FILES_DIR / 'predictions'
 predictions_dir.mkdir(exist_ok=True)
 
 # Test all models and collect results
-results = {}
+results = []
 runs = 5
 for run in range(runs):
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
@@ -82,7 +82,7 @@ for run in range(runs):
             combined_df.to_csv(predictions_file, index=False)
             
             # Store results with all metadata
-            results[model_name] = {
+            results.append({
                 'run': run,
                 'model_name': model_name,
                 **model_info,
@@ -93,13 +93,13 @@ for run in range(runs):
                 'error': None,
                 'stats': extractor.stats,
                 'predictions_file': str(predictions_file)
-            }
+            })
             
         except Exception as e:
             total_time = time.time() - start_time
             error_msg = str(e)
             
-            results[model_name] = {
+            results.append({
                 'run': run,
                 'model_name': model_name,
                 **model_info,
@@ -110,10 +110,10 @@ for run in range(runs):
                 'error': error_msg,
                 'stats': {},
                 'predictions_file': None
-            }
+            })
         
-        results_df = pd.json_normalize(results.values())
-        results_df.to_csv(EXPERIMENTAL_RESULTS_DIR / 'model_evaluation_results_multi_pass.csv', index=False)
+    results_df = pd.json_normalize(results)
+    results_df.to_csv(EXPERIMENTAL_RESULTS_DIR / 'model_evaluation_results_multi_pass.csv', index=False)
 
 # %%
 # Save results to CSV
