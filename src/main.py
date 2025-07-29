@@ -5,7 +5,7 @@ import cloudpickle
 import pandas as pd
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List, Optional
 import tempfile
 import logging
@@ -26,6 +26,7 @@ logger = logging.getLogger(__name__)
 # Global variable to store the loaded model
 model = None
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup
@@ -37,47 +38,59 @@ async def lifespan(app: FastAPI):
     # Shutdown
     pass
 
+
 app = FastAPI(
     title="NER Entity Extraction API",
     description="API for extracting persons, organizations, and locations from text",
     version="1.0.0",
-    lifespan=lifespan
+    lifespan=lifespan,
 )
 
 
-class PredictionResponse(BaseModel):
-    message: str
-    output_file_path: str
-    rows_processed: int
+class BulkPredictionResponse(BaseModel):
+    message: str = Field(..., description="The message of the response", example="Processing completed successfully")
+    output_file_path: str = Field(..., description="The path to the output file", example="/tmp/output.csv")
+    rows_processed: int = Field(..., description="The number of rows processed", example=100)
+
+
+class RequestModel(BaseModel):
+    text: str = Field(..., description="The text to predict entities from", example="John Doe is a software engineer at Google")
+
+
+class SinglePredictionResponse(BaseModel):
+    persons: List[str] = Field(..., description="The list of persons in the text", example=["John Doe", "Jane Smith"])
+    organizations: List[str] = Field(..., description="The list of organizations in the text", example=["Google", "Microsoft"])
+    locations: List[str] = Field(..., description="The list of locations in the text", example=["New York", "London"])
+
 
 def load_model():
     """Load the model from cloudpickle file"""
     global model
-    
+
     # Look for model files in the models directory
     models_dir = MODELS_DIR
-    
+
     if not models_dir.exists():
         raise FileNotFoundError(f"Models directory not found: {models_dir}")
-    
+
     # Find the most recent model folder
     model_folders = [f for f in models_dir.iterdir() if f.is_dir()]
     if not model_folders:
         raise FileNotFoundError(f"No model folders found in {models_dir}")
-    
+
     # Sort by modification time and get the most recent
     latest_model_folder = max(model_folders, key=lambda x: x.stat().st_mtime)
     logger.info(f"Loading model from: {latest_model_folder}")
-    
+
     # Look for cloudpickle files
     pickle_files = list(latest_model_folder.glob("*.pkl"))
     if not pickle_files:
         raise FileNotFoundError(f"No .pkl files found in {latest_model_folder}")
-    
+
     # Load the first pickle file found
     model_path = pickle_files[0]
     logger.info(f"Loading model from: {model_path}")
-    
+
     try:
         model = load_model_cross_platform(model_path)
         logger.info("Model loaded successfully")
@@ -86,11 +99,11 @@ def load_model():
         raise
 
 
-
 @app.get("/")
 async def root():
     """Root endpoint"""
     return {"message": "NER Entity Extraction API", "status": "running"}
+
 
 @app.get("/healthz")
 async def health_check():
@@ -98,7 +111,7 @@ async def health_check():
     try:
         # Check if model is loaded
         model_status = "loaded" if model is not None else "not_loaded"
-        
+
         # Try to load model if not loaded
         if model is None:
             try:
@@ -106,88 +119,92 @@ async def health_check():
                 model_status = "loaded"
             except Exception as e:
                 model_status = f"failed_to_load: {str(e)}"
-        
+
         return {
             "status": "healthy",
             "model_status": model_status,
-            "service": "NER Entity Extraction API"
+            "service": "NER Entity Extraction API",
         }
     except Exception as e:
         return {
             "status": "unhealthy",
             "error": str(e),
-            "service": "NER Entity Extraction API"
+            "service": "NER Entity Extraction API",
         }
 
-@app.post("/predict/bulk", response_model=PredictionResponse)
+
+@app.post("/predict/bulk", response_model=BulkPredictionResponse)
 async def predict_entities(file: UploadFile = File(...)):
     """
     Extract entities from CSV file containing text data.
-    
+
     Input CSV should have columns: ['text', 'themes']
     Output CSV will have columns: ['persons', 'organizations', 'locations']
     """
-    
+
     # Check if model is loaded
     if model is None:
         try:
             load_model()
         except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Model not available: {str(e)}")
-    
+            raise HTTPException(
+                status_code=500, detail=f"Model not available: {str(e)}"
+            )
+
     # Validate file type
-    if not file.filename.endswith('.csv'):
+    if not file.filename.endswith(".csv"):
         raise HTTPException(status_code=400, detail="File must be a CSV")
-    
+
     try:
         # Read the uploaded CSV file
         df = pd.read_csv(file.file)
         logger.info(f"Loaded CSV with {len(df)} rows")
-        
+
         # Validate required columns
-        
-        if 'text' not in df.columns:
+
+        if "text" not in df.columns:
             raise HTTPException(
-                status_code=400, 
-                detail=f"Missing required columns: text"
+                status_code=400, detail=f"Missing required columns: text"
             )
-        
+
         # Initialize output columns
-        df['persons'] = ''
-        df['organizations'] = ''
-        df['locations'] = ''
-        
+        df["persons"] = ""
+        df["organizations"] = ""
+        df["locations"] = ""
+
         # Bulk process the dataframe
         logger.info("Processing dataframe in bulk...")
         # Get all texts for bulk processing
-        texts = df['text'].fillna('').astype(str).tolist()
-        
+        texts = df["text"].fillna("").astype(str).tolist()
+
         # Bulk predict
         predictions: pd.DataFrame = model.predict(texts)
 
-        
         # Save to temporary file
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.csv', delete=False) as tmp_file:
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".csv", delete=False
+        ) as tmp_file:
             predictions.to_csv(tmp_file.name, index=False)
             output_file_path = tmp_file.name
-        
+
         logger.info(f"Processed {len(predictions)} rows successfully")
-        
-        return PredictionResponse(
+
+        return BulkPredictionResponse(
             message="Processing completed successfully",
             output_file_path=output_file_path,
-            rows_processed=len(df)
+            rows_processed=len(df),
         )
-        
+
     except Exception as e:
         logger.error(f"Error processing file: {e}")
         raise HTTPException(status_code=500, detail=f"Error processing file: {str(e)}")
 
-@app.post("/predict/single")
-async def predict_single_text(request: dict):
+
+@app.post("/predict/single", response_model=SinglePredictionResponse)
+async def predict_single_text(request: RequestModel):
     """
     Extract entities from a single text string (JSON endpoint for load testing).
-    
+
     Input: {"text": "your text here"}
     Output: {"persons": [...], "organizations": [...], "locations": [...]}
     """
@@ -196,66 +213,74 @@ async def predict_single_text(request: dict):
         try:
             load_model()
         except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Model not available: {str(e)}")
-    
-    # Validate input
-    if "text" not in request:
-        raise HTTPException(status_code=400, detail="Missing 'text' field in request")
-    
-    text = request["text"]
+            raise HTTPException(
+                status_code=500, detail=f"Model not available: {str(e)}"
+            )
+
+
+
+    text = request.text
     if not isinstance(text, str) or not text.strip():
         raise HTTPException(status_code=400, detail="Text must be a non-empty string")
-    
+
     try:
         # Predict entities for the single text
-        predictions = model.predict([text])
-        
+        predictions = model.predict(text)
+
         # Extract the first (and only) prediction
+
+        persons = predictions.iloc[0]["persons"].split(";") if predictions.iloc[0]["persons"] else []
+        organizations = predictions.iloc[0]["organizations"].split(";") if predictions.iloc[0]["organizations"] else []
+        locations = predictions.iloc[0]["locations"].split(";") if predictions.iloc[0]["locations"] else []
+
+        # Convert the predictions to a dictionary
         result = {
-            "persons": predictions.iloc[0]["persons"] if len(predictions) > 0 else [],
-            "organizations": predictions.iloc[0]["organizations"] if len(predictions) > 0 else [],
-            "locations": predictions.iloc[0]["locations"] if len(predictions) > 0 else []
+            "persons": persons,
+            "organizations": organizations,
+            "locations": locations,
         }
-        
+
         logger.info(f"Processed single text successfully")
         return result
-        
+
     except Exception as e:
         logger.error(f"Error processing text: {e}")
         raise HTTPException(status_code=500, detail=f"Error processing text: {str(e)}")
+
 
 @app.get("/download/{file_path:path}")
 async def download_file(file_path: str):
     """Download the processed CSV file"""
     try:
         # Validate file path to prevent directory traversal
-        if '..' in file_path or file_path.startswith('/'):
+        if ".." in file_path or file_path.startswith("/"):
             raise HTTPException(status_code=400, detail="Invalid file path")
-        
+
         if not os.path.exists(file_path):
             raise HTTPException(status_code=404, detail="File not found")
-        
+
         return FileResponse(
-            path=file_path,
-            filename="predictions.csv",
-            media_type="text/csv"
+            path=file_path, filename="predictions.csv", media_type="text/csv"
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error downloading file: {str(e)}")
+
 
 @app.get("/model-info")
 async def model_info():
     """Get information about the loaded model"""
     if model is None:
         return {"message": "No model loaded"}
-    
+
     return {
         "model_type": type(model).__name__,
-        "model_attributes": [attr for attr in dir(model) if not attr.startswith('_')],
-        "has_predict": hasattr(model, 'predict'),
-        "has_predict_proba": hasattr(model, 'predict_proba')
+        "model_attributes": [attr for attr in dir(model) if not attr.startswith("_")],
+        "has_predict": hasattr(model, "predict"),
+        "has_predict_proba": hasattr(model, "predict_proba"),
     }
+
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Uvicorn only runs with 1 worker because it is intended to be deployed with auto scaling platform
+    uvicorn.run(app, host="0.0.0.0", port=8000, workers=1)
