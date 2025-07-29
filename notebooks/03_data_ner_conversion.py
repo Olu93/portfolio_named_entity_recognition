@@ -147,8 +147,8 @@ chain = prompt_template | llm
 
 # %%
 results = []
-output_file = FILES_DIR / "ner_annotations_3.conll"
-json_file = FILES_DIR / "ner_annotations_3.json"
+output_file = FILES_DIR / "ner_annotations.conll"
+json_file = FILES_DIR / "ner_annotations.json"
 with open(output_file, 'w', encoding='utf-8'): pass  # Empty file
 
 # %% [markdown]
