@@ -1,2 +1,0 @@
-model_name,description,model,type,paper,status,fit_time,predict_time,total_time,error,predictions_file
-LangChainEntityExtractor,OpenAI GPT-4o-mini model for entity extraction using LangChain,gpt-4o-mini,llm,https://openai.com/research/gpt-4o,error,0,0,71.69161105155945,"attribute name must be string, not 'list'",
