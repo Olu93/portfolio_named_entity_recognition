@@ -13,12 +13,12 @@
             "cwd": "${workspaceFolder}/src"
         },
         {
-            "name": "Run Toptal Metrics",
+            "name": "Run Locust",
             "type": "debugpy",
             "request": "launch",
-            "module": "test_toptal_metrics",
+            "module": "locustfile",
             "justMyCode": false,
-            "cwd": "${workspaceFolder}/src"
+            "cwd": "${workspaceFolder}"
         },
         {
             "name": "Run Pretrained",

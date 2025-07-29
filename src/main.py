@@ -10,8 +10,10 @@ from typing import List, Optional
 import tempfile
 import logging
 from contextlib import asynccontextmanager
+import pickle
 
 from constants.values import MODELS_DIR
+from utils.misc import load_model_cross_platform
 
 # Add the project root to the path
 sys.path.append(str(pathlib.Path(__file__).parent.parent))
@@ -77,8 +79,7 @@ def load_model():
     logger.info(f"Loading model from: {model_path}")
     
     try:
-        with open(model_path, 'rb') as f:
-            model = cloudpickle.load(f)
+        model = load_model_cross_platform(model_path)
         logger.info("Model loaded successfully")
     except Exception as e:
         logger.error(f"Error loading model: {e}")
@@ -88,14 +89,37 @@ def load_model():
 
 @app.get("/")
 async def root():
-    """Health check endpoint"""
-    return {
-        "message": "NER Entity Extraction API",
-        "status": "running",
-        "model_loaded": model is not None
-    }
+    """Root endpoint"""
+    return {"message": "NER Entity Extraction API", "status": "running"}
 
-@app.post("/predict", response_model=PredictionResponse)
+@app.get("/healthz")
+async def health_check():
+    """Health check endpoint for load testing and monitoring"""
+    try:
+        # Check if model is loaded
+        model_status = "loaded" if model is not None else "not_loaded"
+        
+        # Try to load model if not loaded
+        if model is None:
+            try:
+                load_model()
+                model_status = "loaded"
+            except Exception as e:
+                model_status = f"failed_to_load: {str(e)}"
+        
+        return {
+            "status": "healthy",
+            "model_status": model_status,
+            "service": "NER Entity Extraction API"
+        }
+    except Exception as e:
+        return {
+            "status": "unhealthy",
+            "error": str(e),
+            "service": "NER Entity Extraction API"
+        }
+
+@app.post("/predict/bulk", response_model=PredictionResponse)
 async def predict_entities(file: UploadFile = File(...)):
     """
     Extract entities from CSV file containing text data.
@@ -158,6 +182,47 @@ async def predict_entities(file: UploadFile = File(...)):
     except Exception as e:
         logger.error(f"Error processing file: {e}")
         raise HTTPException(status_code=500, detail=f"Error processing file: {str(e)}")
+
+@app.post("/predict/single")
+async def predict_single_text(request: dict):
+    """
+    Extract entities from a single text string (JSON endpoint for load testing).
+    
+    Input: {"text": "your text here"}
+    Output: {"persons": [...], "organizations": [...], "locations": [...]}
+    """
+    # Check if model is loaded
+    if model is None:
+        try:
+            load_model()
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Model not available: {str(e)}")
+    
+    # Validate input
+    if "text" not in request:
+        raise HTTPException(status_code=400, detail="Missing 'text' field in request")
+    
+    text = request["text"]
+    if not isinstance(text, str) or not text.strip():
+        raise HTTPException(status_code=400, detail="Text must be a non-empty string")
+    
+    try:
+        # Predict entities for the single text
+        predictions = model.predict([text])
+        
+        # Extract the first (and only) prediction
+        result = {
+            "persons": predictions.iloc[0]["persons"] if len(predictions) > 0 else [],
+            "organizations": predictions.iloc[0]["organizations"] if len(predictions) > 0 else [],
+            "locations": predictions.iloc[0]["locations"] if len(predictions) > 0 else []
+        }
+        
+        logger.info(f"Processed single text successfully")
+        return result
+        
+    except Exception as e:
+        logger.error(f"Error processing text: {e}")
+        raise HTTPException(status_code=500, detail=f"Error processing text: {str(e)}")
 
 @app.get("/download/{file_path:path}")
 async def download_file(file_path: str):
