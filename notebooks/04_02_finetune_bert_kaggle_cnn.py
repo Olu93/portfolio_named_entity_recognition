@@ -148,10 +148,8 @@ aligned_target = align_target(labels, word_ids)
 
 # Print tokenized tokens, original labels, and aligned labels
 for sub_token, lbl, tgt in zip(token.tokens(), labels, aligned_target):
-    if tgt != -100:
-        print(f"{sub_token} \t\t {lbl} \t {label_names[tgt]} \t ({tgt})")
-    else:
-        print(f"{sub_token} \t\t {lbl} \t {None} \t ({tgt})")
+    print(f"{label_names[tgt] if tgt != -100 else None} \t {tgt} \t {sub_token}")
+
 
 
 # %%

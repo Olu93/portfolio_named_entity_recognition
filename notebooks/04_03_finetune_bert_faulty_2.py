@@ -21,7 +21,7 @@ from transformers import (
 from sklearn.model_selection import train_test_split
 import json
 from transformers import EarlyStoppingCallback
-from notebooks.notebook_finetune_utils import tokenize_and_align_labels as tokenize_and_align_labels
+# Removed problematic import that converts B- to I- tags incorrectly
 # from notebooks.notebook_finetune_utils import DistilBertWithHingeLoss as TokenClassifier
 from transformers import AutoModelForTokenClassification as TokenClassifier
 
@@ -157,8 +157,8 @@ def prepare_data_for_tokenization(sentences):
         tags = [tag for _, tag in sentence]
         
         # Join tokens with spaces for tokenization
-        text = " ".join(tokens)
-        texts.append(text)
+        # text = " ".join(tokens)
+        texts.append(tokens)
         labels.append(tags)
     
     return texts, labels
@@ -261,86 +261,86 @@ print(f"Using tokenizer: {model_name}")
 
 # %%
 # %%
-
 def tokenize_and_align_labels(texts, labels, tokenizer, label2id):
     """Tokenize texts and align labels with subword tokens"""
+
+    assert len(texts) == len(labels)
+
     tokenized_inputs = tokenizer(
         texts,
         truncation=True,
         padding=True,
         max_length=512,
-        return_tensors="pt"
+        return_tensors="pt",
+        is_split_into_words=True
     )
     
     aligned_labels = []
     token_strings = []  # New: to store actual token strings for inspection
     
     try:
-        for i, label in enumerate(labels):
-            word_ids = tokenized_inputs.word_ids(batch_index=i)
-            previous_word_idx = None
+        for sent_idx, (sent_labels) in enumerate(labels):
+            sent_word_ids = tokenized_inputs.word_ids(batch_index=sent_idx)
+            sent_token_ids = tokenized_inputs['input_ids'][sent_idx].tolist()
+            previous_word_id = None
             label_ids = []
-            sentence_tokens = []  # New: to store tokens for this sentence
-            
             # Get the actual token strings for this sentence
-            input_ids = tokenized_inputs['input_ids'][i]
-            tokens = tokenizer.convert_ids_to_tokens(input_ids)
             
-            for token_idx, word_idx in enumerate(word_ids):
-                if word_idx is None:
+            # print(f"Sentence {sent_idx}:")
+            # print(f"Input IDs: {sent_word_ids}")
+            # print(f"Labels: {sent_labels}")
+            # print(f"Token IDs: {sent_token_ids}")
+            sent_tokens = tokenizer.convert_ids_to_tokens(sent_token_ids)
+            # print(f"Tokens: {sent_tokens}")
+
+            # print(f"Input IDs length: {len(sent_word_ids)}")
+            # print(f"Labels length: {len(sent_labels)}")
+            # print(f"Token IDs length: {len(sent_token_ids)}")
+            # print(f"Tokens length: {len(sent_tokens)}")
+
+
+            for word_idx, word_id in enumerate(sent_word_ids):
+                lbl = sent_labels[word_id] if word_id is not None else None
+                if word_id is None:
                     # Special tokens (CLS, SEP, PAD) get -100 label
                     label_ids.append(-100)
-                    sentence_tokens.append(tokens[token_idx])  # Use actual token
-                elif word_idx < len(label):  # Check bounds
-                    if word_idx != previous_word_idx:
-                        # New word - use the original label
-                        label_ids.append(label2id[label[word_idx]])
-                        sentence_tokens.append(tokens[token_idx])  # Use actual token
-                    else:
-                        # Same word, continuation - ignore continuation tokens (-100)
-                        label_ids.append(-100)
-                        sentence_tokens.append(tokens[token_idx])  # Use actual token
+                elif word_id != previous_word_id:
+                    # New word - use the original label
+                    label_ids.append(label2id[lbl])
                 else:
-                    # Handle case where tokenizer creates more tokens than we have labels
-                    # This can happen with truncation or special tokenization
+                    # Same word, continuation - ignore continuation tokens (-100)
                     label_ids.append(-100)
-                    sentence_tokens.append(tokens[token_idx])  # Use actual token
                 
-                previous_word_idx = word_idx
+                previous_word_id = word_id
             
             aligned_labels.append(label_ids)
-            token_strings.append(sentence_tokens)
+            token_strings.append(sent_tokens)
     except Exception as e:
-        print(f"Error processing sentence {i}: {e}")
-        print(f"Sentence: {texts[i]}")
-        print(f"Labels: {labels[i]}")
-        print(f"Label length: {len(labels[i])}")
-        print(f"Word IDs: {word_ids}")
-        print(f"Max word_idx: {max(word_ids) if word_ids else 'N/A'}")
+        print()
+        print("--------------------------------")
+        print(f"Error processing sentence {sent_idx}: {e}")
+        print(f"Sentence: {texts[sent_idx]}")
+        print(f"Sentence labels: {sent_labels}")
+        print(f"Sentence word ids: {sent_word_ids}")
+        print(f"Sentence token ids: {sent_token_ids}")
+        print(f"Sentence tokens: {sent_tokens}")
+        print(f"Word: {word_idx}")
+        print(f"Word Id: {word_id}")
+
         raise e
     
     return tokenized_inputs, aligned_labels, token_strings
 
 # Tokenize the data
 print("Tokenizing and aligning labels...")
-tokenized_inputs, aligned_labels, token_strings = tokenize_and_align_labels(texts, labels, tokenizer, label2id)
+tokenized_inputs, aligned_labels, token_strings = tokenize_and_align_labels(texts[:1], labels[:1], tokenizer, label2id)
 
 print(f"Tokenized {len(tokenized_inputs['input_ids'])} sequences")
 
 # %%
 # Add inspection code
-print("\nAlignment inspection (first 2 sentences):")
-for i in range(min(2, len(token_strings))):
-    print(f"\nSentence {i+1}:")
-    print(f"Original text: {texts[i]}")
-    print(f"Original labels: {labels[i]}")
-    print("Token alignment:")
-    for j, (token, label_id) in enumerate(zip(token_strings[i], aligned_labels[i])):
-        if label_id != -100:
-            label_name = id2label[label_id]
-            print(f"  {token} -> {label_name}")
-        else:
-            print(f"  {token} -> IGNORED")
+for tk, tgt, string in zip(tokenized_inputs['input_ids'][0], aligned_labels[0], token_strings[0]):
+    print(f"{id2label[tgt] if tgt != -100 else None} \t {tgt} \t {string}")
 
 # %% [markdown]
 # ## Create PyTorch Dataset Class
