@@ -22,8 +22,8 @@ from sklearn.model_selection import train_test_split
 import json
 from transformers import EarlyStoppingCallback
 from notebooks.notebook_finetune_utils import tokenize_and_align_labels as tokenize_and_align_labels
-from notebooks.notebook_finetune_utils import DistilBertWithHingeLoss as TokenClassifier
-# from transformers import AutoModelForTokenClassification as TokenClassifier
+# from notebooks.notebook_finetune_utils import DistilBertWithHingeLoss as TokenClassifier
+from transformers import AutoModelForTokenClassification as TokenClassifier
 
 # Try to import seqeval for better evaluation metrics
 try:
@@ -172,6 +172,55 @@ texts, labels = prepare_data_for_tokenization(sentences)
 
 print(f"Prepared {len(texts)} texts for tokenization")
 
+# Data validation - Check BIO consistency and label distribution
+def validate_bio_consistency(labels):
+    """Validate BIO tag consistency"""
+    errors = []
+    for i, sentence_labels in enumerate(labels):
+        for j, label in enumerate(sentence_labels):
+            # Check for invalid BIO patterns
+            if j > 0:
+                prev_label = sentence_labels[j-1]
+                # I- tag cannot follow O tag
+                if label.startswith('I-') and prev_label == 'O':
+                    errors.append(f"Sentence {i}, token {j}: I- tag '{label}' follows O tag")
+                # I- tag should match previous I- or B- tag
+                if label.startswith('I-') and prev_label.startswith('I-'):
+                    if label[2:] != prev_label[2:]:  # Different entity types
+                        errors.append(f"Sentence {i}, token {j}: I- tag '{label}' follows different entity type '{prev_label}'")
+    
+    return errors
+
+def analyze_label_distribution(labels):
+    """Analyze label distribution"""
+    label_counts = {}
+    for sentence_labels in labels:
+        for label in sentence_labels:
+            label_counts[label] = label_counts.get(label, 0) + 1
+    
+    total_tokens = sum(label_counts.values())
+    print("\nLabel distribution:")
+    for label, count in sorted(label_counts.items()):
+        percentage = (count / total_tokens) * 100
+        print(f"  {label}: {count} ({percentage:.1f}%)")
+    
+    return label_counts
+
+# Validate data
+print("\nValidating BIO consistency...")
+bio_errors = validate_bio_consistency(labels)
+if bio_errors:
+    print(f"⚠ Found {len(bio_errors)} BIO consistency errors:")
+    for error in bio_errors[:5]:  # Show first 5 errors
+        print(f"  {error}")
+    if len(bio_errors) > 5:
+        print(f"  ... and {len(bio_errors) - 5} more errors")
+else:
+    print("✓ BIO consistency validation passed")
+
+# Analyze label distribution
+label_dist = analyze_label_distribution(labels)
+
 # %% [markdown]
 # ## Initialize BERT Tokenizer
 # 
@@ -192,7 +241,7 @@ print(f"Prepared {len(texts)} texts for tokenization")
 
 # Initialize tokenizer - use cased for better NER performance
 # model_name = "bert-base-cased"  # Changed from uncased for better NER
-model_name = "dslim/distilbert-NER"  # Changed from uncased for better NER
+model_name = "distilbert-base-cased"  # Use untrained base model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 # from notebooks.notebook_finetune_utils import DistilBertWithHingeLoss as TokenClassifier
 
@@ -225,39 +274,43 @@ def tokenize_and_align_labels(texts, labels, tokenizer, label2id):
     )
     
     aligned_labels = []
+    token_strings = []  # New: to store actual token strings for inspection
     
     try:
         for i, label in enumerate(labels):
             word_ids = tokenized_inputs.word_ids(batch_index=i)
             previous_word_idx = None
             label_ids = []
+            sentence_tokens = []  # New: to store tokens for this sentence
             
-            for word_idx in word_ids:
+            # Get the actual token strings for this sentence
+            input_ids = tokenized_inputs['input_ids'][i]
+            tokens = tokenizer.convert_ids_to_tokens(input_ids)
+            
+            for token_idx, word_idx in enumerate(word_ids):
                 if word_idx is None:
                     # Special tokens (CLS, SEP, PAD) get -100 label
                     label_ids.append(-100)
+                    sentence_tokens.append(tokens[token_idx])  # Use actual token
                 elif word_idx < len(label):  # Check bounds
                     if word_idx != previous_word_idx:
                         # New word - use the original label
                         label_ids.append(label2id[label[word_idx]])
+                        sentence_tokens.append(tokens[token_idx])  # Use actual token
                     else:
-                        # Same word, continuation - use the same label but convert B- to I-
-                        original_label = label[word_idx]
-                        if original_label.startswith('B-'):
-                            # Convert B- to I- for continuation tokens
-                            continuation_label = 'I-' + original_label[2:]
-                            label_ids.append(label2id[continuation_label])
-                        else:
-                            # Keep I- or O labels as is
-                            label_ids.append(label2id[original_label])
+                        # Same word, continuation - ignore continuation tokens (-100)
+                        label_ids.append(-100)
+                        sentence_tokens.append(tokens[token_idx])  # Use actual token
                 else:
                     # Handle case where tokenizer creates more tokens than we have labels
                     # This can happen with truncation or special tokenization
                     label_ids.append(-100)
+                    sentence_tokens.append(tokens[token_idx])  # Use actual token
                 
                 previous_word_idx = word_idx
             
             aligned_labels.append(label_ids)
+            token_strings.append(sentence_tokens)
     except Exception as e:
         print(f"Error processing sentence {i}: {e}")
         print(f"Sentence: {texts[i]}")
@@ -267,13 +320,28 @@ def tokenize_and_align_labels(texts, labels, tokenizer, label2id):
         print(f"Max word_idx: {max(word_ids) if word_ids else 'N/A'}")
         raise e
     
-    return tokenized_inputs, aligned_labels
+    return tokenized_inputs, aligned_labels, token_strings
 
 # Tokenize the data
 print("Tokenizing and aligning labels...")
-tokenized_inputs, aligned_labels = tokenize_and_align_labels(texts, labels, tokenizer, label2id)
+tokenized_inputs, aligned_labels, token_strings = tokenize_and_align_labels(texts, labels, tokenizer, label2id)
 
 print(f"Tokenized {len(tokenized_inputs['input_ids'])} sequences")
+
+# %%
+# Add inspection code
+print("\nAlignment inspection (first 2 sentences):")
+for i in range(min(2, len(token_strings))):
+    print(f"\nSentence {i+1}:")
+    print(f"Original text: {texts[i]}")
+    print(f"Original labels: {labels[i]}")
+    print("Token alignment:")
+    for j, (token, label_id) in enumerate(zip(token_strings[i], aligned_labels[i])):
+        if label_id != -100:
+            label_name = id2label[label_id]
+            print(f"  {token} -> {label_name}")
+        else:
+            print(f"  {token} -> IGNORED")
 
 # %% [markdown]
 # ## Create PyTorch Dataset Class
@@ -347,12 +415,12 @@ print(f"Validation set: {len(val_labels)} samples")
 
 # Tokenize train and validation sets
 print("Tokenizing training data...")
-train_tokenized, train_aligned_labels = tokenize_and_align_labels(
+train_tokenized, train_aligned_labels, train_token_strings = tokenize_and_align_labels(
     train_texts, train_labels, tokenizer, label2id
 )
 
 print("Tokenizing validation data...")
-val_tokenized, val_aligned_labels = tokenize_and_align_labels(
+val_tokenized, val_aligned_labels, val_token_strings = tokenize_and_align_labels(
     val_texts, val_labels, tokenizer, label2id
 )
 
@@ -391,16 +459,16 @@ config = AutoConfig.from_pretrained(
     num_labels=len(label2id),
     id2label=id2label,
     label2id=label2id,
-    # Dropout settings (DistilBERT)
-    dropout=0.3,
-    attention_dropout=0.1,
+    # Dropout settings (DistilBERT) - Reduced for better fine-tuning
+    dropout=0.1,
+    attention_dropout=0.05,
 
     # Bonus (ignored by DistilBERT but OK to include for compatibility)
-    hidden_dropout_prob=0.3,
-    attention_probs_dropout_prob=0.1,
-    classifier_dropout=0.3,
-    summary_first_dropout=0.3,
-    layerdrop=0.1,
+    hidden_dropout_prob=0.1,
+    attention_probs_dropout_prob=0.05,
+    classifier_dropout=0.1,
+    summary_first_dropout=0.1,
+    layerdrop=0.0,
 )
 
 model = TokenClassifier.from_pretrained(
@@ -508,28 +576,28 @@ def compute_metrics(pred):
 # %%
 # %%
 
-# Training arguments with advanced optimizations
-total_steps = len(train_dataset) // 16 * 3  # Approximate total steps
+# Training arguments with standard configuration
+total_steps = len(train_dataset) // 16 * 5  # Approximate total steps for 5 epochs
 warmup_steps = int(0.1 * total_steps)  # 10% warmup
 
 training_args = TrainingArguments(
-    output_dir="./bert-ner-model",
+    output_dir="./ft_ner_corrected",
     eval_strategy="epoch",
-    learning_rate=2e-5,
-    per_device_train_batch_size=5,
-    per_device_eval_batch_size=16,
-    num_train_epochs=30,
+    learning_rate=2e-5,  # Reduced learning rate for stable fine-tuning
+    per_device_train_batch_size=8,  # Smaller batch size for better small dataset training
+    per_device_eval_batch_size=8,
+    num_train_epochs=5,  # Reduced from 30 to 5 epochs
     weight_decay=0.01,
     warmup_steps=warmup_steps,  # Warmup for stable training
     logging_dir="./logs",
     logging_steps=10,  # More frequent logging
     save_strategy="epoch",
     load_best_model_at_end=True,
-    metric_for_best_model="precision" if SEQEVAL_AVAILABLE else "eval_loss",
+    metric_for_best_model="f1" if SEQEVAL_AVAILABLE else "eval_loss",
     greater_is_better=True if SEQEVAL_AVAILABLE else False,
     push_to_hub=False,
     fp16=True,  # Mixed precision training for speed and memory
-    gradient_accumulation_steps=2,  # Effective batch size = 16 * 2 = 32
+    gradient_accumulation_steps=1,  # No gradient accumulation needed with larger batch size
     dataloader_pin_memory=True,  # Faster data loading
     remove_unused_columns=False,  # Keep all columns for evaluation
     report_to=None,  # Disable wandb/tensorboard reporting
@@ -538,7 +606,9 @@ training_args = TrainingArguments(
 print(f"Training arguments:")
 print(f"  Total steps: ~{total_steps}")
 print(f"  Warmup steps: {warmup_steps}")
-print(f"  Effective batch size: {training_args.per_device_train_batch_size * training_args.gradient_accumulation_steps}")
+print(f"  Batch size: {training_args.per_device_train_batch_size}")
+print(f"  Learning rate: {training_args.learning_rate}")
+print(f"  Epochs: {training_args.num_train_epochs}")
 print(f"  Mixed precision: {training_args.fp16}")
 print(f"  Best metric: {training_args.metric_for_best_model}")
 
@@ -569,7 +639,7 @@ trainer = Trainer(
     tokenizer=tokenizer,
     data_collator=data_collator,
     compute_metrics=compute_metrics,
-    callbacks=[EarlyStoppingCallback(early_stopping_patience=2)]
+    # callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
 )
 
 # %% [markdown]

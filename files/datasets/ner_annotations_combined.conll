@@ -32,7 +32,7 @@ it O
 The O
 US B-LOC
 Food B-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 hasn’t O
@@ -56,10 +56,10 @@ but O
 the O
 US B-LOC
 Centers B-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 has O
 made O
@@ -439,7 +439,7 @@ because O
 of O
 conditions O
 like O
-HIV/AIDS B-MISC
+HIV/AIDS O
 , O
 those O
 with O
@@ -510,7 +510,7 @@ New B-LOC
 York I-LOC
 City I-LOC
 Department B-ORG
-of O
+of I-ORG
 Health I-ORG
 and O
 Mental O
@@ -652,7 +652,7 @@ been O
 treated O
 as O
 of O
-July B-MISC
+July O
 22, O
 but O
 the O
@@ -1125,7 +1125,7 @@ As O
 a O
 result O
 , O
-Tpoxx B-MISC
+Tpoxx O
 has O
 been O
 disproportionately O
@@ -1166,7 +1166,7 @@ county O
 that O
 doesn’t O
 have O
-Tpoxx B-MISC
+Tpoxx O
 will O
 negotiate O
 with O
@@ -1187,7 +1187,7 @@ ill O
 and O
 would O
 need O
-Tpoxx B-MISC
+Tpoxx O
 . O
 So O
 we O
@@ -1230,7 +1230,7 @@ to O
 get O
 access O
 to O
-Tpoxx B-MISC
+Tpoxx O
 . O
 Adam B-PER
 had O
@@ -1460,7 +1460,7 @@ center O
 The O
 Pennsylvania B-LOC
 Department B-ORG
-of O
+of I-ORG
 Health I-ORG
 said O
 in O
@@ -2218,7 +2218,7 @@ the O
 events O
 surrounding O
 the O
-January B-MISC
+January O
 6, O
 2021, O
 insurrection O
@@ -2269,7 +2269,7 @@ facts. O
 I O
 think O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 will O
 do O
@@ -2466,14 +2466,14 @@ over O
 emails O
 from O
 around O
-January B-MISC
+January O
 6 O
 , O
 2021 O
 , O
 writing O
 in O
-March B-MISC
+March O
 that O
 he O
 “ O
@@ -2496,7 +2496,7 @@ Session O
 of O
 Congress B-ORG
 on O
-January B-MISC
+January O
 6 O
 2021 O
 .” O
@@ -2565,7 +2565,7 @@ prepares O
 for O
 a O
 busy O
-August B-MISC
+August O
 . O
 A O
 committee O
@@ -2598,7 +2598,7 @@ department O
 criminal O
 investigation O
 into O
-January B-MISC
+January O
 6 O
 is O
 heating O
@@ -2616,7 +2616,7 @@ final O
 report O
 ahead O
 of O
-November B-MISC
+November O
 ’s O
 midterm O
 elections O
@@ -2632,7 +2632,7 @@ aligned O
 challengers O
 in O
 her O
-August B-MISC
+August O
 16 O
 primary O
 , O
@@ -2678,7 +2678,7 @@ unveiled O
 an O
 ad O
 on O
-Thursday B-MISC
+Thursday O
 in O
 which O
 the O
@@ -2890,7 +2890,7 @@ Cheney I-PER
 who O
 has O
 courted O
-Democratic B-MISC
+Democratic O
 voters O
 in O
 Wyoming’s B-LOC
@@ -3168,8 +3168,8 @@ was O
 a O
 hero O
 on O
-January B-MISC
-6 I-MISC
+January O
+6 O
 .” O
 “ O
 It’s O
@@ -3260,8 +3260,8 @@ Cheney B-PER
 faces O
 voters O
 on O
-August B-MISC
-16 I-MISC
+August O
+16 O
 Cheney B-PER
 said O
 she O
@@ -4178,7 +4178,7 @@ I O
 think O
 that O
 most O
-Democrats B-MISC
+Democrats O
 understand O
 this O
 , O
@@ -4241,7 +4241,7 @@ that’s O
 been O
 battered O
 by O
-Covid B-MISC
+Covid O
 , O
 of O
 course O
@@ -4302,7 +4302,7 @@ with O
 RNC B-ORG
 officials O
 in O
-February B-MISC
+February O
 as O
 they O
 toured O
@@ -6214,7 +6214,7 @@ the O
 President’s O
 desk O
 before O
-August B-MISC
+August O
 recess O
 . O
 And O
@@ -6272,7 +6272,7 @@ contains O
 a O
 number O
 of O
-Democrats’ B-MISC
+Democrats’ O
 goals, O
 including O
 some O
@@ -6295,9 +6295,9 @@ be O
 clear, O
 this O
 isn’t O
-Build B-MISC
-Back I-MISC
-Better I-MISC
+Build O
+Back O
+Better O
 2.0. O
 The O
 package O
@@ -6319,7 +6319,7 @@ a O
 number O
 of O
 key O
-Democratic B-MISC
+Democratic O
 priorities O
 are O
 likely O
@@ -6330,7 +6330,7 @@ out, O
 including: O
 What O
 are O
-Republicans B-MISC
+Republicans O
 saying? O
 The O
 package, O
@@ -6340,9 +6340,9 @@ stands, O
 is O
 facing O
 furious O
-GOP B-MISC
+GOP O
 opposition. O
-Republican B-MISC
+Republican O
 lawmakers O
 on O
 the O
@@ -6356,12 +6356,12 @@ the O
 nonpartisan O
 Joint B-ORG
 Committee I-ORG
-on O
+on I-ORG
 Taxation I-ORG
 that O
 showed O
 that O
-Americans B-MISC
+Americans O
 of O
 all O
 incomes O
@@ -6568,7 +6568,7 @@ law O
 as O
 soon O
 as O
-August B-MISC
+August O
 , O
 assuming O
 it O
@@ -6657,10 +6657,10 @@ CNN’s B-ORG
 Jake B-PER
 Tapper I-PER
 on O
-“State B-MISC
-of I-MISC
-the I-MISC
-Union” I-MISC
+“State O
+of O
+the O
+Union” O
 Sunday O
 he O
 hopes O
@@ -6669,7 +6669,7 @@ legislation O
 passes O
 before O
 the O
-August B-MISC
+August O
 recess O
 . O
 “I O
@@ -7268,7 +7268,7 @@ his O
 remarks O
 as O
 “pure O
-Nazi B-MISC
+Nazi O
 text.” O
 But O
 the O
@@ -7445,8 +7445,8 @@ in O
 connection O
 with O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 riot O
 and O
 eliciting O
@@ -7531,8 +7531,8 @@ the O
 audacity O
 to O
 prosecute O
-January B-MISC
-6 I-MISC
+January O
+6 O
 attackers O
 . O
 Then O
@@ -7566,8 +7566,8 @@ wearing O
 a O
 red O
 “Make O
-America B-MISC
-Great I-MISC
+America O
+Great O
 Again” O
 cap O
 . O
@@ -7586,8 +7586,8 @@ actual O
 messages O
 from O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 attackers O
 . O
 A O
@@ -7629,7 +7629,7 @@ Cabin I-ORG
 Republicans I-ORG
 , O
 an O
-LGBT B-MISC
+LGBT O
 group O
 , O
 as O
@@ -7721,8 +7721,8 @@ long O
 called O
 the O
 jailed O
-January B-MISC
-6 I-MISC
+January O
+6 O
 attackers O
 “political O
 prisoners” O
@@ -7745,8 +7745,8 @@ their O
 role O
 in O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 attack. O
 Let’s O
 put O
@@ -7860,8 +7860,8 @@ the O
 worst O
 of O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 attackers O
 . O
 The O
@@ -7874,8 +7874,8 @@ in O
 connection O
 with O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 attack O
 have O
 been O
@@ -8048,13 +8048,13 @@ us O
 الإمارات B-LOC
 تدعم O
 مبدأ O
-"الصين B-MISC
-الواحدة" I-MISC
+"الصين O
+الواحدة" O
 وتؤكد: O
 قلقون O
 من O
-"الزيارات B-MISC
-الاستفزازية" I-MISC
+"الزيارات O
+الاستفزازية" O
 - O
 CNN B-ORG
 Arabic I-ORG
@@ -8063,9 +8063,9 @@ Vulnerabilities O
 in O
 software O
 that O
-TV B-MISC
+TV O
 and O
-radio B-MISC
+radio O
 networks O
 around O
 the O
@@ -8111,10 +8111,10 @@ certain O
 unpatched O
 and O
 unsecured O
-EAS B-MISC
-[Emergency B-MISC
-Alert I-MISC
-System] I-MISC
+EAS O
+[Emergency O
+Alert O
+System] O
 devices O
 are O
 indeed O
@@ -8131,7 +8131,7 @@ for O
 Integrated B-ORG
 Public I-ORG
 Alert I-ORG
-& O
+& I-ORG
 Warning I-ORG
 System I-ORG
 , O
@@ -8184,9 +8184,9 @@ theory O
 be O
 issued O
 over O
-TV B-MISC
+TV O
 , O
-radio B-MISC
+radio O
 and O
 cable O
 networks O
@@ -8279,7 +8279,7 @@ acquired O
 several O
 of O
 the O
-EAS B-MISC
+EAS O
 devices O
 independently O
 and O
@@ -8344,7 +8344,7 @@ authorities O
 Digital B-ORG
 Alert I-ORG
 Systems I-ORG
-, O
+, I-ORG
 Inc. I-ORG
 , O
 the O
@@ -8504,7 +8504,7 @@ the O
 days O
 before O
 the O
-January B-MISC
+January O
 6 O
 2019 O
 , O
@@ -8615,7 +8615,7 @@ to O
 the O
 cellphones O
 of O
-Hawaiian B-MISC
+Hawaiian O
 residents O
 and O
 tourists O
@@ -8681,9 +8681,9 @@ between O
 Israel B-LOC
 and O
 the O
-Palestinian B-MISC
-Islamic I-MISC
-Jihad I-MISC
+Palestinian O
+Islamic O
+Jihad O
 ( O
 PIJ B-ORG
 ) O
@@ -8692,7 +8692,7 @@ what O
 didn’t O
 happen O
 : O
-Hamas’ B-MISC
+Hamas’ O
 involvement O
 . O
 A O
@@ -8855,7 +8855,7 @@ the O
 11-day O
 war O
 in O
-May B-MISC
+May O
 2021 O
 . O
 So O
@@ -8896,7 +8896,7 @@ death O
 in O
 Gaza B-LOC
 . O
-Palestinians B-MISC
+Palestinians O
 there O
 are O
 still O
@@ -8929,7 +8929,7 @@ of O
 permits O
 given O
 to O
-Gazans B-MISC
+Gazans O
 to O
 cross O
 into O
@@ -8991,7 +8991,7 @@ and O
 the O
 thousands O
 of O
-Gazans B-MISC
+Gazans O
 with O
 permits O
 can’t O
@@ -9003,7 +9003,7 @@ get O
 paid O
 . O
 On O
-Monday B-MISC
+Monday O
 , O
 a O
 senior O
@@ -9492,7 +9492,7 @@ rise O
 in O
 wages O
 
-Kuwaitis B-MISC
+Kuwaitis O
 took O
 to O
 Twitter B-ORG
@@ -9517,7 +9517,7 @@ inequality O
 in O
 pay O
 . O
-Kuwaiti B-MISC
+Kuwaiti O
 citizens O
 are O
 a O
@@ -9600,7 +9600,7 @@ without O
 conditions O
 . O
 Many O
-Kuwaitis B-MISC
+Kuwaitis O
 take O
 government O
 jobs O
@@ -9666,7 +9666,7 @@ it O
 difficult O
 to O
 lure O
-Kuwaitis B-MISC
+Kuwaitis O
 . O
 According O
 to O
@@ -9918,7 +9918,7 @@ climate O
 crisis O
 fuel’s O
 the O
-West’s B-MISC
+West’s O
 megadrought O
 . O
 Dmitri B-PER
@@ -9950,9 +9950,9 @@ in O
 — O
 particularly O
 the O
-August B-MISC
-Complex I-MISC
-Fire I-MISC
+August O
+Complex O
+Fire O
 , O
 the O
 largest O
@@ -9971,9 +9971,9 @@ research O
 . O
 
 The O
-August B-MISC
-Complex I-MISC
-Fire I-MISC
+August O
+Complex O
+Fire O
 was O
 originally O
 more O
@@ -10159,7 +10159,7 @@ the O
 journal O
 Environmental B-ORG
 Research I-ORG
-: O
+: I-ORG
 Climate I-ORG
 , O
 is O
@@ -10546,8 +10546,8 @@ wildfires O
 such O
 as O
 the O
-Bootleg B-MISC
-Fire I-MISC
+Bootleg O
+Fire O
 in O
 Oregon B-LOC
 that O
@@ -11853,7 +11853,7 @@ was O
 found O
 in O
 Town B-LOC
-and O
+and I-LOC
 Country I-LOC
 in O
 July O
@@ -13108,10 +13108,10 @@ professor O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Baltimore I-ORG
 School I-ORG
-of O
+of I-ORG
 Law I-ORG
 , O
 told O
@@ -13547,7 +13547,7 @@ President O
 . O
 During O
 the O
-Watergate B-MISC
+Watergate O
 scandal O
 , O
 then-President O
@@ -13656,7 +13656,7 @@ the O
 midterm O
 elections O
 in O
-November B-MISC
+November O
 . O
 
 But O
@@ -14008,10 +14008,10 @@ to O
 the O
 US B-ORG
 Centers I-ORG
-for O
-Disease B-ORG
+for I-ORG
+Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 , O
 “ O
@@ -14077,7 +14077,7 @@ The O
 five-day O
 course O
 of O
-Paxlovid B-MISC
+Paxlovid O
 the O
 President O
 completed O
@@ -14096,7 +14096,7 @@ from O
 the O
 US B-ORG
 Food B-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 for O
@@ -14162,7 +14162,7 @@ with O
 medications O
 such O
 as O
-Paxlovid B-MISC
+Paxlovid O
 . O
 
 The O
@@ -14206,7 +14206,7 @@ doses O
 of O
 the O
 Pfizer/BioNTech B-ORG
-Covid-19 I-MISC
+Covid-19 O
 vaccine O
 ahead O
 of O
@@ -14756,7 +14756,7 @@ Sanders I-PER
 said O
 the O
 novel O
-EU B-MISC
+EU O
 policy O
 “ O
 has O
@@ -15256,7 +15256,7 @@ promised O
 parts O
 for O
 repairing O
-Pixel B-MISC
+Pixel O
 phones O
 will O
 be O
@@ -15297,7 +15297,7 @@ the O
 e-waste O
 recycling O
 initiative O
-e-Stewards B-MISC
+e-Stewards O
 , O
 for O
 example O
@@ -15767,8 +15767,8 @@ Stephen B-PER
 Marlow I-PER
 drove O
 to O
-Interstate B-MISC
-70 I-MISC
+Interstate O
+70 O
 and O
 headed O
 west O
@@ -16054,8 +16054,8 @@ whereabouts O
 or O
 see O
 the O
-Ford B-MISC
-Edge I-MISC
+Ford O
+Edge O
 . O
 Butler B-LOC
 Township I-LOC
@@ -16488,7 +16488,7 @@ hotspots O
 In O
 the O
 Horn B-LOC
-of O
+of I-LOC
 Africa I-LOC
 , O
 a O
@@ -16616,7 +16616,7 @@ eat O
 . O
 Meanwhile O
 , O
-Afghans B-MISC
+Afghans O
 have O
 seen O
 their O
@@ -17103,7 +17103,7 @@ next O
 year O
 . O
 “If O
-Ukrainian B-MISC
+Ukrainian O
 grains O
 are O
 partially O
@@ -17403,7 +17403,7 @@ economist O
 of O
 the O
 Food B-ORG
-and O
+and I-ORG
 Agriculture I-ORG
 Organization I-ORG
 ( O
@@ -17908,7 +17908,7 @@ FAO B-ORG
 said O
 . O
 The O
-Razoni B-MISC
+Razoni O
 , O
 a O
 Sierre B-LOC
@@ -18710,7 +18710,7 @@ from O
 the O
 California B-LOC
 Department B-ORG
-of O
+of I-ORG
 Motor I-ORG
 Vehicles I-ORG
 in O
@@ -19174,14 +19174,14 @@ the O
 Institute B-ORG
 of I-ORG
 Theoretical I-ORG
-and O
-Applied O
+and I-ORG
+Applied I-ORG
 Mechanics I-ORG
 of O
 the O
 Russian B-LOC
 Academy I-ORG
-of O
+of I-ORG
 Sciences I-ORG
 ’ O
  Siberian B-LOC
@@ -19318,7 +19318,7 @@ of O
 the O
 Russian B-LOC
 Academy I-ORG
-of O
+of I-ORG
 Sciences I-ORG
 . O
 
@@ -19451,7 +19451,7 @@ practically O
 invulnerable O
 ” O
 to O
-Western B-MISC
+Western O
 air O
 defenses O
 . O
@@ -19772,8 +19772,8 @@ first O
 tested O
 positive O
 on O
-July B-MISC
-21 I-MISC
+July O
+21 O
 and O
 had O
 mild O
@@ -19786,11 +19786,11 @@ ending O
 his O
 isolation O
 on O
-Wednesday B-MISC
+Wednesday O
 following O
 two O
 negative O
-Covid-19 B-MISC
+Covid-19 O
 tests O
 . O
 He O
@@ -19815,7 +19815,7 @@ from O
 the O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 for O
@@ -19824,7 +19824,7 @@ of O
 mild O
 to O
 moderate O
-Covid-19 B-MISC
+Covid-19 O
 in O
 people O
 age O
@@ -19975,7 +19975,7 @@ of O
 the O
 people O
 carrying O
-Tiki B-MISC
+Tiki O
 torches O
 in O
 Charlottesville B-LOC
@@ -20459,7 +20459,7 @@ be O
 so O
 alarming O
 if O
-American B-MISC
+American O
 democracy O
 was O
 not O
@@ -20556,7 +20556,7 @@ the O
 state O
 of O
 the O
-American B-MISC
+American O
 conversation O
 of O
 democracy O
@@ -20665,7 +20665,7 @@ University I-ORG
 The O
 fact O
 that O
-American B-MISC
+American O
 conservatives O
 seem O
 to O
@@ -20692,7 +20692,7 @@ the O
 Republican B-ORG
 Party I-ORG
 and O
-American B-MISC
+American O
 conservative O
 movement O
 , O
@@ -20707,7 +20707,7 @@ The O
 Recurring O
 Crises O
 of O
-American B-MISC
+American O
 Democracy O
 ” O
 added O
@@ -21091,11 +21091,11 @@ Paycheck B-ORG
 Protection I-ORG
 Program I-ORG
 or O
-Covid-19 B-MISC
-Economic B-MISC
-Injury I-MISC
-Disaster I-MISC
-Loan I-MISC
+Covid-19 O
+Economic O
+Injury O
+Disaster O
+Loan O
 program O
 , O
 extending O
@@ -21300,8 +21300,8 @@ Covid-19. O
 “In O
 my O
 State B-LOC
-of O
-the O
+of I-LOC
+the I-LOC
 Union I-LOC
 address, O
 I O
@@ -21312,7 +21312,7 @@ The O
 watchdogs O
 are O
 back.” O
-“American B-MISC
+“American O
 people O
 deserve O
 to O
@@ -21867,7 +21867,7 @@ as O
 many O
 as O
 80 O
-Chinese B-MISC
+Chinese O
 warplanes O
 and O
 vessels O
@@ -21958,7 +21958,7 @@ map O
 of O
 the O
 six O
-Chinese B-MISC
+Chinese O
 exercise O
 areas O
 “ O
@@ -21967,7 +21967,7 @@ plots O
 out O
 where O
 the O
-Chinese B-MISC
+Chinese O
 think O
 the O
 key O
@@ -21990,10 +21990,10 @@ fellow O
 at O
 the O
 Center B-ORG
-for O
-Strategic O
-and O
-International O
+for I-ORG
+Strategic I-ORG
+and I-ORG
+International I-ORG
 Studies I-ORG
 and O
 former O
@@ -22040,9 +22040,9 @@ at O
 the O
 US B-ORG
 Pacific I-ORG
-Command’s O
-Joint O
-Intelligence O
+Command’s I-ORG
+Joint I-ORG
+Intelligence I-ORG
 Center I-ORG
 in O
 Hawaii B-LOC
@@ -22222,7 +22222,7 @@ expanding O
 military O
 exercise O
 and O
-Taiwan-intimidation B-MISC
+Taiwan-intimidation O
 campaign O
 . O
 He O
@@ -22328,7 +22328,7 @@ learn O
 about O
 the O
 modern O
-Chinese B-MISC
+Chinese O
 military O
 , O
 experts O
@@ -22568,7 +22568,7 @@ of O
 all O
 elements O
 of O
-Chinese B-MISC
+Chinese O
 power O
 , O
 ” O
@@ -22821,7 +22821,7 @@ nutritious O
 plant-based O
 option O
 like O
-Impossible B-MISC
+Impossible O
 Sausage.” O
 On O
 Thursday, O
@@ -22871,8 +22871,8 @@ breakfasts. O
 Cracker B-ORG
 Barrel I-ORG
 added O
-Impossible B-MISC
-Sausage I-MISC
+Impossible O
+Sausage O
 to O
 menus O
 as O
@@ -23566,7 +23566,7 @@ do O
 . O
 You’re O
 an O
-American B-MISC
+American O
 citizen O
 . O
 
@@ -23782,9 +23782,9 @@ bill O
 – O
 named O
 the O
-Inflation B-MISC
-Reduction I-MISC
-Act I-MISC
+Inflation O
+Reduction O
+Act O
 – O
 would O
 represent O
@@ -23878,7 +23878,7 @@ to O
 pass O
 the O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 . O
 
@@ -24077,7 +24077,7 @@ how O
 it O
 could O
 harm O
-US-China B-MISC
+US-China O
 relations O
 . O
 
@@ -24264,7 +24264,7 @@ Taiwan’s B-LOC
 defense O
 ministry O
 said O
-Chinese B-MISC
+Chinese O
 warships O
 and O
 aircraft O
@@ -24277,7 +24277,7 @@ the O
 island O
 and O
 that O
-Chinese B-MISC
+Chinese O
 forces O
 crossed O
 the O
@@ -24307,7 +24307,7 @@ provocative O
 act O
 .” O
 Two O
-Chinese B-MISC
+Chinese O
 drones O
 also O
 flew O
@@ -24337,7 +24337,7 @@ statement O
 from O
 Tokyo’s B-LOC
 Ministry B-ORG
-of O
+of I-ORG
 Defense I-ORG
 . O
 Kirby B-PER
@@ -24379,7 +24379,7 @@ recognizes O
 the O
 People’s B-ORG
 Republic I-ORG
-of O
+of I-ORG
 China I-ORG
 as O
 the O
@@ -24472,8 +24472,8 @@ statement O
 NSC B-ORG
 Coordinator O
 for O
-Indo B-MISC
-Pacific I-MISC
+Indo O
+Pacific O
 Affairs O
 Kurt B-PER
 Campbell I-PER
@@ -24612,7 +24612,7 @@ a O
 low O
 point O
 in O
-US-China B-MISC
+US-China O
 relations O
 and O
 despite O
@@ -24718,8 +24718,8 @@ flight O
 of O
 an O
 unarmed O
-Minuteman B-MISC
-III I-MISC
+Minuteman O
+III O
 intercontinental O
 ballistic O
 missile O
@@ -25035,7 +25035,7 @@ Hill I-LOC
 for O
 members O
 of O
-Congress B-MISC
+Congress B-ORG
 
 Reps. O
 Louie B-PER
@@ -25086,8 +25086,8 @@ January O
 attack O
 on O
 the O
-US B-MISC
-Capitol I-MISC
+US O
+Capitol O
 . O
 The O
 trio O
@@ -25150,10 +25150,10 @@ because O
 of O
 the O
 Constitution’s O
-Speech B-MISC
+Speech O
 or O
-Debate B-MISC
-Clause I-MISC
+Debate O
+Clause O
 , O
 the O
 judge O
@@ -25180,10 +25180,10 @@ wrote O
 “Thus O
 , O
 the O
-Speech B-MISC
+Speech O
 or O
-Debate B-MISC
-Clause I-MISC
+Debate O
+Clause O
 bars O
 the O
 Members’ O
@@ -25222,10 +25222,10 @@ by O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 on O
 Friday O
@@ -25251,9 +25251,9 @@ especially O
 those O
 who O
 are O
-Black B-MISC
+Black O
 and O
-Hispanic B-MISC
+Hispanic O
 . O
 There O
 were O
@@ -25347,9 +25347,9 @@ of O
 cases O
 were O
 among O
-Black B-MISC
+Black O
 and O
-Hispanic B-MISC
+Hispanic O
 people O
 , O
 a O
@@ -25374,7 +25374,7 @@ share O
 of O
 cases O
 among O
-Black B-MISC
+Black O
 people O
 has O
 grown O
@@ -25703,7 +25703,7 @@ reported O
 among O
 people O
 with O
-HIV B-MISC
+HIV O
 , O
 who O
 may O
@@ -26124,10 +26124,10 @@ report O
 داخله O
 .. O
 زوجان O
-أمريكيان B-MISC
+أمريكيان O
 يحولان O
 منزلًا O
-إيطاليًا B-MISC
+إيطاليًا O
 مهجورًا O
 إلى O
 "بيت O
@@ -26413,7 +26413,7 @@ faces O
 a O
 series O
 of O
-Republicans B-MISC
+Republicans O
 who O
 have O
 hammered O
@@ -26424,7 +26424,7 @@ vote O
 , O
 including O
 former O
-NASCAR B-MISC
+NASCAR B-ORG
 driver O
 Jerrod B-PER
 Sessler I-PER
@@ -26566,7 +26566,7 @@ both O
 districts O
 lean O
 toward O
-Republicans B-MISC
+Republicans O
 . O
 Herrera B-PER
 Beutler I-PER
@@ -26576,7 +26576,7 @@ are O
 not O
 the O
 only O
-Republicans B-MISC
+Republicans O
 who O
 backed O
 impeachment O
@@ -26676,7 +26676,7 @@ Hageman I-PER
 . O
 For O
 many O
-Republicans B-MISC
+Republicans O
 , O
 including O
 Trump B-PER
@@ -26890,7 +26890,7 @@ to O
 be O
 a O
 registered O
-Democrat B-MISC
+Democrat O
 and O
 voted O
 for O
@@ -27008,7 +27008,7 @@ is O
 also O
 possible O
 that O
-St B-MISC
+St O
 . O
 
 John B-PER
@@ -27048,7 +27048,7 @@ outside O
 group O
 Conservatives B-ORG
 for I-ORG
-a O
+a I-ORG
 Stronger I-ORG
 America I-ORG
 has O
@@ -27248,7 +27248,7 @@ from O
 Defending B-ORG
 Main I-ORG
 Street I-ORG
-super O
+super I-ORG
 PAC I-ORG
 , O
 a O
@@ -27628,7 +27628,7 @@ early O
 days O
 of O
 the O
-Covid-19 B-MISC
+Covid-19 O
 pandemic O
 – O
 when O
@@ -28409,11 +28409,11 @@ decades O
 ago O
 . O
 Between O
-October B-MISC
-1980 I-MISC
+October O
+1980 O
 and O
-May B-MISC
-1981 I-MISC
+May O
+1981 O
 , O
 five O
 young O
@@ -28431,7 +28431,7 @@ Centers I-ORG
 for O
 Disease B-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 at O
 the O
@@ -28501,9 +28501,9 @@ secretary O
 and O
 reporters O
 in O
-1982 B-MISC
+1982 O
 and O
-1983 I-MISC
+1983 O
 indicate O
 that O
 the O
@@ -28765,7 +28765,7 @@ we’ve O
 fought O
 – O
 from O
-COVID B-MISC
+COVID O
 response O
 to O
 wildfires O
@@ -28784,16 +28784,16 @@ this O
 moment O
 demands O
 . O
-Monkeypox B-MISC
+Monkeypox O
 is O
 a O
 poxvirus O
 , O
 related O
 to O
-smallpox B-MISC
+smallpox O
 and O
-cowpox B-MISC
+cowpox O
 and O
 it O
 generally O
@@ -28854,7 +28854,7 @@ may O
 be O
 confused O
 with O
-STDs B-MISC
+STDs O
 . O
 “ O
 I O
@@ -28908,7 +28908,7 @@ being O
 diagnosed O
 in O
 early O
-July B-MISC
+July O
 . O
 He O
 chronicled O
@@ -28946,7 +28946,7 @@ US B-LOC
 was O
 announced O
 on O
-May B-MISC
+May O
 18 O
 in O
 a O
@@ -29452,10 +29452,10 @@ of O
 vengeance O
 after O
 the O
-September B-MISC
-11 I-MISC
+September O
+11 O
 , O
-2001 I-MISC
+2001 O
 attacks O
 . O
 The O
@@ -29646,7 +29646,7 @@ of O
 Zawahiri B-PER
 , O
 an O
-Egyptian B-MISC
+Egyptian O
 surgeon O
 turned O
 radical O
@@ -29700,12 +29700,12 @@ a O
 new O
 age O
 of O
-al B-MISC
-Qaeda I-MISC
+al O
+Qaeda O
 terrorism O
 directed O
 against O
-Americans B-MISC
+Americans O
 . O
 
 He O
@@ -29734,7 +29734,7 @@ the O
 leaders O
 of O
 bin O
-Laden’s B-MISC
+Laden’s O
 terrorist O
 network O
 to O
@@ -29850,7 +29850,7 @@ US B-ORG
 His O
 demise O
 validates O
-American B-MISC
+American O
 vows O
 to O
 pursue O
@@ -30303,7 +30303,7 @@ strike O
 that O
 killed O
 10 O
-Afghan B-MISC
+Afghan O
 civilians O
 – O
 including O
@@ -30582,7 +30582,7 @@ could O
 provoke O
 an O
 unprecedented O
-Chinese B-MISC
+Chinese O
 response O
 . O
 
@@ -30688,8 +30688,8 @@ the O
 victims O
 were O
 of O
-South B-MISC
-Asian I-MISC
+South O
+Asian O
 descent O
 . O
 FOLLOW O
@@ -31037,7 +31037,7 @@ recent O
 homicides O
 of O
 4 O
-Muslim B-MISC
+Muslim O
 men O
 . O
 “ O
@@ -31486,7 +31486,7 @@ Hartsock B-PER
 added O
 . O
 Albuquerque’s B-LOC
-Muslim B-MISC
+Muslim O
 community O
 living O
 in O
@@ -31498,7 +31498,7 @@ have O
 put O
 the O
 city’s O
-Muslim B-MISC
+Muslim O
 community O
 on O
 edge O
@@ -31542,7 +31542,7 @@ now O
 among O
 the O
 many O
-Muslims B-MISC
+Muslims O
 in O
 New B-LOC
 Mexico I-LOC
@@ -31789,15 +31789,15 @@ fleeing O
 persecution O
 as O
 a O
-Shia B-MISC
-Muslim I-MISC
+Shia O
+Muslim O
 – O
 and O
 had O
 just O
 become O
 a O
-US B-MISC
+US O
 citizen O
 last O
 month O
@@ -32030,7 +32030,7 @@ regional O
 director O
 of O
 Organizing B-ORG
-for O
+for I-ORG
 Action I-ORG
 , O
 a O
@@ -32149,10 +32149,10 @@ signed O
 into O
 law O
 the O
-Bipartisan B-MISC
-Safer I-MISC
-Communities I-MISC
-Act I-MISC
+Bipartisan O
+Safer O
+Communities O
+Act O
 , O
 the O
 first O
@@ -32215,8 +32215,8 @@ incarceration O
 and O
 disproportionately O
 harmed O
-Black B-MISC
-Americans I-MISC
+Black O
+Americans O
 . O
 “ O
 There’s O
@@ -32452,7 +32452,7 @@ go O
 back O
 to O
 the O
-Bruen B-MISC
+Bruen O
 decision O
 in O
 New B-LOC
@@ -32477,7 +32477,7 @@ high O
 court’s O
 ruling O
 in O
-June B-MISC
+June O
 that O
 struck O
 down O
@@ -32603,7 +32603,7 @@ issue O
 . O
 Following O
 the O
-Bruen B-MISC
+Bruen O
 decision O
 , O
 New B-LOC
@@ -32691,11 +32691,11 @@ see O
 the O
 over-criminalization O
 of O
-Black B-MISC
+Black O
 and O
-brown B-MISC
-New B-MISC
-Yorkers B-MISC
+brown O
+New O
+Yorkers O
 , O
 the O
 civil O
@@ -32706,7 +32706,7 @@ Kaishian I-PER
 recently O
 told O
 City B-ORG
-& O
+& I-ORG
 State I-ORG
 . O
 Sharone B-PER
@@ -32892,7 +32892,7 @@ Also O
 , O
 there O
 are O
-PR B-MISC
+PR O
 benefits O
 to O
 being O
@@ -32937,8 +32937,8 @@ violence O
 without O
 further O
 criminalizing O
-Black B-MISC
-Americans B-MISC
+Black O
+Americans O
 , O
 especially O
 when O
@@ -32969,7 +32969,7 @@ laws O
 can O
 disproportionately O
 harm O
-Black B-MISC
+Black O
 communities O
 , O
 there’s O
@@ -33034,9 +33034,9 @@ a O
 disparate O
 impact O
 on O
-Black B-MISC
+Black O
 and O
-brown B-MISC
+brown O
 communities O
 
 of O
@@ -33206,13 +33206,13 @@ too O
 For O
 instance O
 , O
-Republican B-MISC
+Republican O
 lawmakers O
 often O
 attempt O
 to O
 paint O
-Democratic-controlled B-MISC
+Democratic-controlled O
 states O
 as O
 hellscapes O
@@ -33233,10 +33233,10 @@ from O
 the B-ORG
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 , O
 red O
@@ -33499,7 +33499,7 @@ is O
 completely O
 civil O
 . O
-Community B-MISC
+Community O
 violence O
 intervention O
 programs O
@@ -33625,7 +33625,7 @@ other O
 things O
 that O
 support O
-Black B-MISC
+Black O
 communities O
 , O
 in O
@@ -33868,9 +33868,9 @@ included O
 lyrical O
 references O
 to O
-Jesus B-MISC
+Jesus O
 and O
-Christianity B-MISC
+Christianity O
 throughout O
 , O
 according O
@@ -34065,8 +34065,8 @@ It O
 won O
 both O
 the O
-Pulitzer B-MISC
-Prize I-MISC
+Pulitzer O
+Prize O
 for O
 drama O
 and O
@@ -34168,7 +34168,7 @@ from O
 the O
 church’s O
 first O
-“Hamilton” B-MISC
+“Hamilton” O
 performance O
 was O
 scrubbed O
@@ -34215,9 +34215,9 @@ to O
 read O
 from O
 the O
-Bible B-MISC
+Bible O
 while O
-Hamilton B-MISC
+Hamilton O
 is O
 in O
 crisis O
@@ -34253,7 +34253,7 @@ sings O
 hope O
 is O
 in O
-Jesus B-MISC
+Jesus O
 . O
 If O
 you O
@@ -34289,7 +34289,7 @@ on O
 stage O
 , O
 with O
-“Hamilton” B-MISC
+“Hamilton” O
 sets O
 behind O
 him O
@@ -34331,7 +34331,7 @@ help O
 you O
 tonight O
 . O
-“Hamilton” B-MISC
+“Hamilton” O
 creator O
 Lin-Manuel B-PER
 Miranda I-PER
@@ -34348,8 +34348,8 @@ famously O
 used O
 his O
 2016 O
-Tony B-MISC
-Awards I-MISC
+Tony O
+Awards O
 acceptance O
 speech O
 to O
@@ -34406,7 +34406,7 @@ who O
 weren’t O
 attached O
 to O
-“Hamilton” B-MISC
+“Hamilton” O
 took O
 issue O
 with O
@@ -34452,7 +34452,7 @@ of O
 the O
 artists O
 behind O
-“Hamilton” B-MISC
+“Hamilton” O
 had O
 been O
 violated O
@@ -34520,7 +34520,7 @@ from O
 the O
 spokesperson O
 for O
-“Hamilton” B-MISC
+“Hamilton” O
 thanked O
 the O
 show’s O
@@ -34635,7 +34635,7 @@ of O
 the O
 Arizona B-LOC
 Chamber B-ORG
-of O
+of I-ORG
 Commerce I-ORG
 , O
 who O
@@ -35158,7 +35158,7 @@ Seiden B-PER
 said O
 National B-ORG
 Association I-ORG
-of O
+of I-ORG
 Manufacturers I-ORG
 president O
 Jay B-PER
@@ -35520,8 +35520,8 @@ the O
 celebration O
 of O
 the O
-Chips B-MISC
-Act I-MISC
+Chips O
+Act O
 is O
 short-lived O
 ” O
@@ -35634,7 +35634,7 @@ told O
 the O
 Arizona B-LOC
 Chamber B-ORG
-of O
+of I-ORG
 Commerce, I-ORG
 “I O
 am O
@@ -35844,7 +35844,7 @@ report O
 The O
 Texas B-LOC
 Department I-ORG
-of O
+of I-ORG
 Public I-ORG
 Safety I-ORG
 investigation O
@@ -35947,13 +35947,13 @@ FBI B-ORG
 and O
 the O
 Bureau B-ORG
-of O
+of I-ORG
 Alcohol I-ORG
-, O
+, I-ORG
 Tobacco I-ORG
-, O
+, I-ORG
 Firearms I-ORG
-and O
+and I-ORG
 Explosives I-ORG
 . O
 Uvalde B-LOC
@@ -36286,10 +36286,10 @@ Enforcement I-ORG
 Rapid I-ORG
 Response I-ORG
 Training I-ORG
+Center I-ORG
 ( O
 ALERRT B-ORG
 ) O
-Center I-ORG
 , O
 an O
 active O
@@ -36376,7 +36376,7 @@ filed O
 a O
 suit O
 in O
-June B-MISC
+June O
 saying O
 DPS B-ORG
 failed O
@@ -36566,9 +36566,9 @@ guerre O
 which O
 translates O
 as O
-Sword B-MISC
-of I-MISC
-Justice I-MISC
+Sword O
+of O
+Justice O
 . O
 
 It’s O
@@ -36645,7 +36645,7 @@ From O
 the O
 Death O
 of O
-bin O
+bin B-PER
 Laden I-PER
 to O
 the O
@@ -37245,7 +37245,7 @@ status O
 of O
 its O
 governing O
-Shura B-MISC
+Shura O
 ( O
 council O
 ) O
@@ -37315,7 +37315,7 @@ that O
 members O
 of O
 the O
-Shura B-MISC
+Shura O
 may O
 over O
 the O
@@ -38107,7 +38107,7 @@ hardware O
 from O
 a O
 SpaceX B-ORG
-Dragon B-MISC
+Dragon O
 capsule O
 that O
 was O
@@ -38202,7 +38202,7 @@ other O
 parts O
 of O
 the O
-Commonwealth B-MISC
+Commonwealth O
 and O
 local O
 authorities O
@@ -38227,7 +38227,7 @@ a O
 part O
 of O
 the O
-Dragon’s B-MISC
+Dragon’s O
 trunk O
 . O
 The O
@@ -38418,7 +38418,7 @@ to O
 NASA B-ORG
 . O
 The O
-Crew-1 B-MISC
+Crew-1 O
 astronauts O
 — O
 comprised O
@@ -38617,7 +38617,7 @@ boost O
 at O
 liftoff O
 . O
-Dragon B-MISC
+Dragon O
 capsules O
 ride O
 to O
@@ -38646,7 +38646,7 @@ taxes O
 the O
 state’s O
 Department B-ORG
-of O
+of I-ORG
 Revenue I-ORG
 announced O
 this O
@@ -38697,7 +38697,7 @@ Court’s I-ORG
 landmark O
 decision O
 overturning O
-Roe B-MISC
+Roe O
 v. O
 
 Wade O
@@ -38719,7 +38719,7 @@ the O
 11th O
 Circuit B-ORG
 Court I-ORG
-of O
+of I-ORG
 Appeals I-ORG
 that O
 allowed O
@@ -38746,12 +38746,12 @@ Bill I-ORG
 – O
 dubbed O
 the O
-“Living B-MISC
-Infants I-MISC
-Fairness I-MISC
-and I-MISC
-Equality I-MISC
-Act” I-MISC
+“Living O
+Infants O
+Fairness O
+and O
+Equality O
+Act” O
 – O
 was O
 signed O
@@ -38794,8 +38794,8 @@ it O
 However O
 , O
 after O
-Roe B-MISC
-v. I-MISC
+Roe O
+v. O
 
 Wade O
 was O
@@ -38982,7 +38982,7 @@ in O
 the O
 aftermath O
 of O
-Roe B-MISC
+Roe O
 v O
 
 Wade O
@@ -39349,7 +39349,7 @@ are O
 extraneous O
 to O
 the O
-JCPOA B-MISC
+JCPOA O
 , O
 ” O
 the O
@@ -39416,7 +39416,7 @@ who O
 is O
 leading O
 the O
-Iranian B-MISC
+Iranian O
 delegation O
 to O
 Vienna B-LOC
@@ -39455,7 +39455,7 @@ opportunity O
 offered O
 by O
 the O
-JCPOA B-MISC
+JCPOA O
 partners’ O
 generosity O
 ; O
@@ -39502,7 +39502,7 @@ and O
 interests O
 of O
 the O
-Iranian B-MISC
+Iranian O
 nation O
 , O
 ” O
@@ -39523,11 +39523,11 @@ formally O
 known O
 as O
 the O
-Joint B-MISC
-Comprehensive I-MISC
-Plan I-MISC
+Joint O
+Comprehensive O
+Plan O
 of O
-Action I-MISC
+Action O
 , O
 in O
 2018 O
@@ -39650,7 +39650,7 @@ countless O
 interactions O
 with O
 the O
-JCPOA B-MISC
+JCPOA O
 participants O
 and O
 the O
@@ -39852,7 +39852,7 @@ both O
 sides O
 to O
 the O
-JCPOA B-MISC
+JCPOA O
 , O
 to O
 make O
@@ -40307,7 +40307,7 @@ repeatedly O
 criticized O
 . O
 The O
-LGBTQ B-MISC
+LGBTQ O
 Victory B-ORG
 Fund’s I-ORG
 PAC I-ORG
@@ -40640,7 +40640,7 @@ remark O
 by O
 Balint B-PER
 in O
-May B-MISC
+May O
 , O
 during O
 a O
@@ -41091,7 +41091,7 @@ of O
 the O
 antiviral O
 drug O
-Paxlovid B-MISC
+Paxlovid O
 , O
 which O
 requires O
@@ -41175,7 +41175,7 @@ treated O
 with O
 medications O
 like O
-Paxlovid. B-MISC
+Paxlovid. O
 The O
 CDC B-ORG
 said O
@@ -41199,9 +41199,9 @@ illness. O
 
 National B-ORG
 Institute I-ORG
-of O
+of I-ORG
 Allergy I-ORG
-and O
+and I-ORG
 Infectious I-ORG
 Diseases I-ORG
 Director O
@@ -41249,7 +41249,7 @@ this O
 report. O
 
 An O
-American B-MISC
+American O
 dentist O
 and O
 big-game O
@@ -41268,7 +41268,7 @@ his O
 wife O
 on O
 an O
-African B-MISC
+African O
 safari O
 . O
 Lawrence B-PER
@@ -42456,7 +42456,7 @@ on O
 Thursday O
 . O
 The O
-Chinese B-MISC
+Chinese O
 missiles O
 flew O
 over O
@@ -42468,7 +42468,7 @@ first O
 time O
 , O
 a O
-Chinese B-MISC
+Chinese O
 military O
 expert O
 said O
@@ -42499,7 +42499,7 @@ over O
 airspace O
 covered O
 by O
-Taiwanese B-MISC
+Taiwanese O
 defense O
 missiles O
 , O
@@ -42540,7 +42540,7 @@ system O
 which O
 means O
 the O
-Chinese B-MISC
+Chinese O
 military O
 has O
 solved O
@@ -42560,7 +42560,7 @@ on O
 CCTV B-ORG
 . O
 The O
-Taiwanese B-MISC
+Taiwanese O
 Defense B-ORG
 Ministry I-ORG
 said O
@@ -42605,8 +42605,8 @@ the O
 trajectory O
 of O
 the O
-Dong B-MISC
-Feng-series I-MISC
+Dong O
+Feng-series O
 missiles O
 fired O
 by O
@@ -42646,7 +42646,7 @@ alerts O
 it O
 said O
 . O
-Chinese B-MISC
+Chinese O
 state O
 media O
 said O
@@ -42729,8 +42729,8 @@ final O
 stops O
 on O
 an O
-Asia B-MISC
-tour I-MISC
+Asia O
+tour O
 that O
 ends O
 in O
@@ -42796,7 +42796,7 @@ ministry O
 said O
 that O
 22 O
-Chinese B-MISC
+Chinese O
 warplanes O
 had O
 entered O
@@ -42806,7 +42806,7 @@ defense O
 identification O
 zone O
 ( O
-ADIZ B-MISC
+ADIZ O
 ) O
 on O
 Thursday O
@@ -42850,7 +42850,7 @@ islands O
 a O
 group O
 of O
-Taiwan-controlled B-MISC
+Taiwan-controlled O
 outlying O
 islands O
 close O
@@ -43073,7 +43073,7 @@ Exclusive O
 Economic O
 Zone O
 ( O
-EEZ B-MISC
+EEZ O
 ) O
 . O
 “ O
@@ -43115,14 +43115,14 @@ the O
 first O
 time O
 that O
-Chinese B-MISC
+Chinese O
 ballistic O
 missiles O
 had O
 landed O
 within O
 Japan’s B-LOC
-EEZ B-MISC
+EEZ O
 and O
 that O
 a O
@@ -43238,9 +43238,9 @@ welcome O
 . O
 The O
 ruling O
-Chinese B-MISC
-Communist I-MISC
-Party I-MISC
+Chinese O
+Communist O
+Party O
 claims O
 the O
 self-governed O
@@ -43279,7 +43279,7 @@ days O
 . O
 Taiwan’s B-LOC
 Maritime B-ORG
-and O
+and I-ORG
 Port I-ORG
 Bureau I-ORG
 said O
@@ -43308,7 +43308,7 @@ notice O
 was O
 wrong O
 . O
-Chinese B-MISC
+Chinese O
 state O
 media O
 on O
@@ -43426,11 +43426,11 @@ sophisticated O
 weaponry O
 , O
 including O
-J-20 B-MISC
+J-20 O
 stealth O
 fighters O
 and O
-DF-17 B-MISC
+DF-17 O
 hypersonic O
 missiles O
 , O
@@ -43514,7 +43514,7 @@ Accounts O
 from O
 Taiwan B-LOC
 of O
-Chinese B-MISC
+Chinese O
 military O
 movement O
 included O
@@ -43547,8 +43547,8 @@ most O
 powerful O
 warships O
 – O
-Type B-MISC
-55 I-MISC
+Type O
+55 O
 destroyers O
 – O
 were O
@@ -43956,7 +43956,7 @@ Taiwan B-LOC
 . O
 That O
 same O
-Chinese B-MISC
+Chinese O
 exercise O
 zone O
 is O
@@ -43964,7 +43964,7 @@ also O
 close O
 to O
 the O
-Japanese B-MISC
+Japanese O
 - O
 controlled O
 Senkaku B-LOC
@@ -43977,7 +43977,7 @@ chain O
 known O
 as O
 the O
-Diaoyus B-MISC
+Diaoyus O
 in O
 China B-LOC
 , O
@@ -44044,7 +44044,7 @@ was O
 silent O
 on O
 the O
-Chinese B-MISC
+Chinese O
 exercises O
 and O
 did O
@@ -44130,12 +44130,13 @@ Speaking O
 at O
 the O
 Association B-ORG
-of O
-Southeast B-LOC
-Asian I-LOC
+of I-ORG
+Southeast I-ORG
+Asian I-ORG
 Nations I-ORG
 ( O
 ASEAN B-ORG
+) O
 - O
 US B-ORG
 Ministerial O
@@ -44153,14 +44154,14 @@ to O
 its O
 “ O
 One O
-China B-MISC
+China O
 ” O
 policy O
 . O
 On O
 Wednesday O
 , O
-Chinese B-MISC
+Chinese O
 ambassador O
 to O
 France B-LOC
@@ -44193,7 +44194,7 @@ a O
 close O
 eye O
 on O
-Chinese B-MISC
+Chinese O
 military O
 movements O
 around O
@@ -44723,9 +44724,9 @@ the O
 appointment O
 of O
 a O
-Special B-MISC
-Prosecuting I-MISC
-Attorney I-MISC
+Special O
+Prosecuting O
+Attorney O
 to O
 review O
 the O
@@ -44885,7 +44886,7 @@ around O
 the O
 country O
 where O
-Trump B-MISC
+Trump O
 supporters O
 attempted O
 to O
@@ -45059,7 +45060,7 @@ no O
 evidence O
 to O
 support O
-GOP B-MISC
+GOP O
 claims O
 of O
 wrongdoing O
@@ -45136,11 +45137,11 @@ added O
 , O
 “ O
 The O
-Republican B-MISC
+Republican O
 , O
-Democratic B-MISC
+Democratic O
 and O
-nonpartisan B-MISC
+nonpartisan O
 election O
 clerks O
 of O
@@ -45263,7 +45264,7 @@ elections O
 . O
 “The O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 has O
 reached O
@@ -45326,9 +45327,9 @@ order O
 to O
 discuss O
 the O
-Inflation B-MISC
-Reduction I-MISC
-Act I-MISC
+Inflation O
+Reduction O
+Act O
 that’s O
 coming O
 to O
@@ -45560,7 +45561,7 @@ Ronna B-PER
 McDaniel I-PER
 , O
 attacked O
-Democrats B-MISC
+Democrats O
 instead O
 after O
 news O
@@ -45781,7 +45782,7 @@ concern O
 of O
 millions O
 of O
-Americans B-MISC
+Americans O
 over O
 the O
 unprecedented O
@@ -45820,7 +45821,7 @@ full O
 accounting O
 to O
 the O
-American B-MISC
+American O
 people O
 as O
 to O
@@ -45844,7 +45845,7 @@ said O
 While O
 many O
 prominent O
-Republicans B-MISC
+Republicans O
 were O
 quick O
 to O
@@ -45926,7 +45927,7 @@ Hours O
 later O
 , O
 the O
-Republican B-MISC
+Republican O
 leader O
 released O
 a O
@@ -45971,7 +45972,7 @@ Garland B-PER
 and O
 the O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 should O
 already O
@@ -45980,7 +45981,7 @@ provided O
 answers O
 to O
 the O
-American B-MISC
+American O
 people O
 and O
 must O
@@ -45988,7 +45989,7 @@ do O
 so O
 immediately O
 . O
-Democrats B-MISC
+Democrats O
 responded O
 that O
 no O
@@ -46140,7 +46141,7 @@ clear O
 that O
 the O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 must O
 fully O
@@ -46512,7 +46513,7 @@ Freedom I-ORG
 Fund I-ORG
 and O
 Americans B-ORG
-for O
+for I-ORG
 Prosperity I-ORG
 , O
 received O
@@ -46809,7 +46810,7 @@ less O
 than O
 the O
 leading O
-GOP B-MISC
+GOP O
 candidates, O
 per O
 FEC B-ORG
@@ -47160,12 +47161,12 @@ KMB O
 the O
 maker O
 of O
-Huggies B-MISC
+Huggies O
 diapers O
 , O
 produces O
-Kirkland B-MISC
-Signature I-MISC
+Kirkland O
+Signature O
 diapers O
 for O
 Costco B-ORG
@@ -47175,8 +47176,8 @@ COST O
 and O
 Duracell B-ORG
 produces O
-Kirkland B-MISC
-Signature I-MISC
+Kirkland O
+Signature O
 batteries O
 , O
 Costco B-ORG
@@ -47192,9 +47193,9 @@ Georgia-Pacific B-ORG
 the O
 maker O
 of O
-Brawny B-MISC
+Brawny O
 and O
-Dixie B-MISC
+Dixie O
 , O
 also O
 produces O
@@ -47298,7 +47299,7 @@ while O
 the O
 Great B-ORG
 Atlantic I-ORG
-& O
+& I-ORG
 Pacific I-ORG
 Tea I-ORG
 Co I-ORG
@@ -47353,7 +47354,7 @@ own O
 brands O
 than O
 Sears B-ORG
-, O
+, I-ORG
 Roebuck I-ORG
 . O
 
@@ -47448,9 +47449,9 @@ Campbell B-ORG
 Soup I-ORG
 (CPB) O
 and O
-Johnson B-PER
-& O
-Johnson I-PER
+Johnson B-ORG
+& I-ORG
+Johnson I-ORG
 (JNJ) O
 had O
 power O
@@ -47797,8 +47798,8 @@ decide O
 to O
 make O
 a O
-Kirkland B-MISC
-Signature I-MISC
+Kirkland O
+Signature O
 product O
 because O
 a O
@@ -47850,7 +47851,7 @@ by O
 launching O
 its O
 own O
-Kirkland B-MISC
+Kirkland O
 products O
 , O
 but O
@@ -49008,9 +49009,9 @@ battleground O
 of O
 the O
 Great O
-American B-MISC
-Culture I-MISC
-Wars I-MISC
+American O
+Culture O
+Wars O
 . O
 Here’s O
 the O
@@ -50417,7 +50418,7 @@ and O
 the O
 Texas B-LOC
 Department I-ORG
-of O
+of I-ORG
 Public I-ORG
 Safety I-ORG
 for O
@@ -52298,14 +52299,14 @@ with O
 the O
 Federal B-ORG
 Bureau I-ORG
-of O
+of I-ORG
 Prisons I-ORG
 rather O
 than O
 the O
 Georgia B-LOC
 Department B-ORG
-of O
+of I-ORG
 Corrections I-ORG
 . O
 Travis B-PER
@@ -53150,7 +53151,7 @@ leading O
 up O
 to O
 the O
-January B-MISC
+January O
 6 O
 , O
 2021 O
@@ -53274,8 +53275,8 @@ one O
 of O
 the O
 many O
-January B-MISC
-6 I-MISC
+January O
+6 O
 rioters O
 who O
 were O
@@ -53298,7 +53299,7 @@ and O
 pleaded O
 guilty O
 in O
-June B-MISC
+June O
 to O
 one O
 count O
@@ -53554,8 +53555,8 @@ rhetoric O
 . O
 After O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 attack O
 , O
 alternative O
@@ -53625,15 +53626,15 @@ rhetoric O
 CNN B-ORG
 reported O
 in O
-June B-MISC
+June O
 how O
 threats O
 against O
 members O
 of O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 House B-ORG
 select O
 committee O
@@ -53660,7 +53661,7 @@ a O
 surge O
 in O
 tweets O
-Monday B-MISC
+Monday O
 mentioning O
 “civil O
 war” O
@@ -53740,7 +53741,7 @@ the O
 FBI B-ORG
 raid O
 on O
-Monday B-MISC
+Monday O
 , O
 said O
 political O
@@ -53764,8 +53765,8 @@ on O
 the O
 Capitol B-LOC
 on O
-January B-MISC
-6th I-MISC
+January O
+6th O
 showed O
 that O
 we O
@@ -53905,16 +53906,16 @@ of O
 Florida B-LOC
 sometime O
 between O
-Tuesday B-MISC
+Tuesday O
 evening O
 and O
-Wednesday B-MISC
+Wednesday O
 morning O
 . O
 Reached O
 for O
 comment O
-Tuesday B-MISC
+Tuesday O
 , O
 officials O
 from O
@@ -53950,7 +53951,7 @@ Marshals I-ORG
 Service I-ORG
 . O
 On O
-Tuesday B-MISC
+Tuesday O
 , O
 on O
 pro-Trump O
@@ -53997,7 +53998,7 @@ targeting O
 the O
 judge O
 since O
-Monday B-MISC
+Monday O
 
 , O
 including O
@@ -54194,8 +54195,8 @@ O O
 O O
 O O
 O O
-Otero B-LOC
-County I-LOC
+Otero B-ORG
+County I-ORG
 Commission I-ORG
 , O
 O O
@@ -54952,7 +54953,7 @@ earlier O
 this O
 year O
 on O
-Telegram B-MISC
+Telegram O
 , O
 Clements B-PER
 discussed O
@@ -55028,7 +55029,7 @@ Biden’s B-PER
 2020 O
 victory O
 in O
-Nevada I-LOC
+Nevada B-LOC
 , O
 this O
 year O
@@ -55040,7 +55041,7 @@ in O
 Nye B-LOC
 County I-LOC
 , O
-Nevada I-LOC
+Nevada B-LOC
 – O
 a O
 rural O
@@ -55075,8 +55076,8 @@ Clerk O
 Sandra B-PER
 “ O
 Sam B-PER
-” O
 Merlino I-PER
+” O
 . O
 Merlino B-PER
 has O
@@ -55178,7 +55179,7 @@ a O
 co-founder O
 of O
 Cowboys B-ORG
-for O
+for I-ORG
 Trump I-ORG
 , O
 has O
@@ -56119,10 +56120,10 @@ CNN’s B-ORG
 Dana B-PER
 Bash I-PER
 on O
-“State B-MISC
+“State O
 of O
 the O
-Union” B-MISC
+Union” O
 on O
 Sunday O
 that O
@@ -56390,7 +56391,7 @@ resolution O
 calling O
 on O
 the O
-State I-ORG
+State B-ORG
 Department I-ORG
 to O
 designate O
@@ -56539,9 +56540,9 @@ the O
 benefits O
 of O
 the O
-Inflation B-MISC
-Reduction I-MISC
-Act I-MISC
+Inflation O
+Reduction O
+Act O
 , O
 Democrats’ B-ORG
 sweeping O
@@ -56735,7 +56736,7 @@ deliver O
 cost O
 savings O
 to O
-Americans B-MISC
+Americans O
 , O
 while O
 Graham B-PER
@@ -56768,14 +56769,14 @@ couples O
 . O
 Though O
 some O
-Republicans B-MISC
+Republicans O
 have O
 said O
 they O
 would O
 side O
 with O
-Democrats B-MISC
+Democrats O
 on O
 the O
 bill O
@@ -57106,11 +57107,11 @@ many O
 airlines O
 reported O
 in O
-April B-MISC
+April O
 , O
-May B-MISC
+May O
 and O
-June B-MISC
+June O
 came O
 via O
 very O
@@ -57209,7 +57210,7 @@ reported O
 record O
 bookings O
 in O
-June B-MISC
+June O
 for O
 travel O
 during O
@@ -57620,7 +57621,7 @@ complaints O
 to O
 the O
 Department B-ORG
-of O
+of I-ORG
 Transportation I-ORG
 have O
 soared O
@@ -57654,7 +57655,7 @@ industry O
 . O
 The O
 Department B-ORG
-of O
+of I-ORG
 Transportation I-ORG
 announced O
 new O
@@ -58115,7 +58116,7 @@ heavy O
 investments O
 from O
 competing O
-pro-Israel B-MISC
+pro-Israel O
 groups O
 . O
 Kansas B-LOC
@@ -58129,7 +58130,7 @@ of O
 the O
 first O
 major O
-post-Roe B-MISC
+post-Roe O
 votes O
 when O
 the O
@@ -58266,7 +58267,7 @@ campaign O
 with O
 Robson B-PER
 and O
-Ducey I-PER
+Ducey B-PER
 last O
 month O
 on O
@@ -58558,7 +58559,7 @@ those O
 who’ve O
 undermined O
 our O
-Republic B-MISC
+Republic O
 .” O
 Meijer B-PER
 faces O
@@ -59084,7 +59085,7 @@ the O
 Supreme B-ORG
 Court I-ORG
 overturned O
-Roe B-MISC
+Roe O
 v O
 
 Wade O
@@ -59431,12 +59432,12 @@ family O
 the O
 state O
 Chamber B-ORG
-of O
+of I-ORG
 Commerce I-ORG
 and O
 Michigan B-LOC
 Right B-ORG
-to O
+to I-ORG
 Life I-ORG
 . O
 
@@ -59580,7 +59581,7 @@ At O
 a O
 convention O
 in O
-April B-MISC
+April O
 , O
 the O
 state O
@@ -59651,7 +59652,7 @@ a O
 party O
 convention O
 in O
-August B-MISC
+August O
 . O
 Democratic O
 House O
@@ -59672,7 +59673,7 @@ the O
 groundwork O
 for O
 a O
-Stevens-Levin B-MISC
+Stevens-Levin O
 contest O
 in O
 the O
@@ -59763,7 +59764,7 @@ a O
 storied O
 history O
 in O
-Michigan I-LOC
+Michigan B-LOC
 politics O
 , O
 now O
@@ -59834,9 +59835,9 @@ lead O
 sponsor O
 of O
 the O
-Two-State B-MISC
-Solution I-MISC
-Act I-MISC
+Two-State O
+Solution O
+Act O
 , O
 has O
 been O
@@ -60183,7 +60184,7 @@ While O
 Newhouse B-PER
 faces O
 former O
-NASCAR B-MISC
+NASCAR O
 driver O
 Jarod B-PER
 Sessler I-PER
@@ -60231,7 +60232,7 @@ a O
 candidate O
 to O
 face O
-Democratic B-MISC
+Democratic O
 Sen O
 . O
 
@@ -60402,7 +60403,7 @@ international O
 concern O
 , O
 or O
-PHEIC B-MISC
+PHEIC O
 , O
 as O
 “ O
@@ -60536,7 +60537,7 @@ Daskalakis I-PER
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
 and O
@@ -60546,8 +60547,8 @@ of O
 the O
 Division O
 of O
-HIV/AIDS B-MISC
-Prevention I-MISC
+HIV/AIDS O
+Prevention O
 , O
 serves O
 as O
@@ -60664,7 +60665,7 @@ of O
 shelf O
 life O
 . O
-Monkeypox B-MISC
+Monkeypox O
 can O
 infect O
 anyone O
@@ -60812,8 +60813,8 @@ and O
 outreach O
 to O
 the O
-LGBTQ B-MISC
-community I-MISC
+LGBTQ O
+community O
 . O
 Possible O
 change O
@@ -61146,9 +61147,6 @@ doctor O
 Mother O
 : O
 Anna B-PER
-( O
-Blumenthal B-PER
-) O
 Yellen I-PER
 Marriage O
 : O
@@ -61240,7 +61238,7 @@ at O
 the O
 London B-LOC
 School I-ORG
-of O
+of I-ORG
 Economics I-ORG
 and O
 Political O
@@ -61255,10 +61253,10 @@ member O
 at O
 the O
 University B-ORG
-of O
-California B-LOC
-at O
-Berkeley I-LOC
+of I-ORG
+California I-ORG
+at I-ORG
+Berkeley I-ORG
 . O
 1994-1997 O
 - O
@@ -61303,10 +61301,10 @@ Committee O
 of O
 the O
 Organization B-ORG
-for O
-Economic O
-Cooperation O
-and O
+for I-ORG
+Economic I-ORG
+Cooperation I-ORG
+and I-ORG
 Development I-ORG
 . O
 June O
@@ -61328,7 +61326,7 @@ by O
 Yellen B-PER
 and O
 Alan B-PER
-S. O
+S. I-PER
 Blinder I-PER
 , O
 is O
@@ -61432,9 +61430,9 @@ president O
 of O
 the B-ORG
 Institute I-ORG
-for O
-Women’s O
-Policy O
+for I-ORG
+Women’s I-ORG
+Policy I-ORG
 Research I-ORG
 , O
 circulates O
@@ -61822,7 +61820,7 @@ before O
 the O
 US B-ORG
 Committee I-ORG
-on O
+on I-ORG
 Finance I-ORG
 on O
 the O
@@ -61873,9 +61871,9 @@ for O
 the O
 Biden B-PER
 administration’s O
-American B-MISC
-Rescue I-MISC
-Plan I-MISC
+American O
+Rescue O
+Plan O
 . O
 May O
 31 O
@@ -61896,7 +61894,7 @@ would O
 continue O
 to O
 plague O
-American B-MISC
+American O
 consumers O
 . O
 
@@ -62713,8 +62711,8 @@ career O
 Newton-John B-PER
 won O
 four O
-Grammy B-MISC
-Awards I-MISC
+Grammy O
+Awards O
 and O
 sold O
 more O
@@ -63034,7 +63032,7 @@ a O
 default O
 judgment O
 against O
-Jones I-PER
+Jones O
 . O
 A O
 hearing O
@@ -63084,7 +63082,7 @@ moment O
 as O
 he O
 cross-examined O
-Jones I-PER
+Jones O
 on O
 Wednesday O
 , O
@@ -63156,7 +63154,7 @@ case O
 , O
 suggested O
 to O
-Reynal I-PER
+Reynal O
 she O
 could O
 not O
@@ -63301,7 +63299,7 @@ the O
 committee O
 investigating O
 the O
-January B-MISC
+January O
 6 O
 attack O
 on O
@@ -63384,7 +63382,7 @@ in O
 reference O
 to O
 the O
-January B-MISC
+January O
 6th O
 committee O
 requesting O
@@ -63480,7 +63478,7 @@ of O
 violence O
 at O
 the O
-Capitol I-ORG
+Capitol B-ORG
 . O
 
 Jones B-PER
@@ -63489,9 +63487,9 @@ testified O
 before O
 the O
 the O
-January B-MISC
-6 I-MISC
-Committee I-MISC
+January O
+6 O
+Committee O
 . O
 But O
 he O
@@ -63504,8 +63502,8 @@ he’d O
 repeatedly O
 asserted O
 his O
-Fifth B-MISC
-Amendment I-MISC
+Fifth O
+Amendment O
 right O
 to O
 remain O
@@ -63852,7 +63850,7 @@ climate O
 crisis O
 fuel’s O
 the O
-West’s B-MISC
+West’s O
 megadrought O
 . O
 Dmitri B-PER
@@ -63884,9 +63882,9 @@ in O
 — O
 particularly O
 the O
-August B-MISC
-Complex I-MISC
-Fire I-MISC
+August O
+Complex O
+Fire O
 , O
 the O
 largest O
@@ -63905,9 +63903,9 @@ research O
 . O
 
 The O
-August B-MISC
-Complex I-MISC
-Fire I-MISC
+August O
+Complex O
+Fire O
 was O
 originally O
 more O
@@ -64104,7 +64102,7 @@ the O
 journal O
 Environmental B-ORG
 Research I-ORG
-: O
+: I-ORG
 Climate I-ORG
 , O
 is O
@@ -64471,8 +64469,8 @@ wildfires O
 such O
 as O
 the O
-Bootleg B-MISC
-Fire I-MISC
+Bootleg O
+Fire O
 in O
 Oregon B-LOC
 that O
@@ -64779,7 +64777,7 @@ remains O
 dubbed O
 Hemenway B-LOC
 Harbor I-LOC
-Doe I-MISC
+Doe I-LOC
 by O
 the O
 coroner’s O
@@ -66819,7 +66817,7 @@ Ukraine B-LOC
 Up O
 to O
 80,000 O
-Russians B-MISC
+Russians O
 have O
 been O
 killed O
@@ -66896,7 +66894,7 @@ undisclosed O
 weapons O
 to O
 aid O
-Ukrainian B-MISC
+Ukrainian O
 forces O
 . O
 Separately O
@@ -67094,7 +67092,7 @@ Olivia B-PER
 Newton-John I-PER
 , O
 the O
-Australian B-MISC
+Australian O
 singer O
 and O
 actress O
@@ -67379,7 +67377,7 @@ receives O
 backlash O
 for O
 performing O
-‘Hamilton’ B-MISC
+‘Hamilton’ O
 musical O
 A O
 church O
@@ -67391,7 +67389,7 @@ the O
 curtain O
 after O
 performing O
-“Hamilton” B-MISC
+“Hamilton” O
 with O
 edited O
 content O
@@ -67400,9 +67398,9 @@ included O
 lyrical O
 references O
 to O
-Jesus B-MISC
+Jesus O
 and O
-Christianity B-MISC
+Christianity O
 . O
 IN O
 MEMORIAM O
@@ -67410,7 +67408,7 @@ Issey B-PER
 Miyake I-PER
 , O
 the O
-Japanese B-MISC
+Japanese O
 fashion O
 designer O
 whose O
@@ -67432,7 +67430,7 @@ died O
 of O
 cancer O
 on O
-August B-MISC
+August O
 5 O
 , O
 his O
@@ -67696,7 +67694,7 @@ juggled O
 and O
 solved O
 3 O
-Rubik’s B-MISC
+Rubik’s O
 cubes O
 at O
 the O
@@ -67951,7 +67949,7 @@ Sunday O
 if O
 he O
 hopes O
-Democrats B-MISC
+Democrats O
 keep O
 control O
 of O
@@ -68814,11 +68812,11 @@ for O
 the O
 rest O
 of O
-Thursday B-MISC
+Thursday O
 night O
 and O
 into O
-Friday B-MISC
+Friday O
 afternoon O
 , O
 there O
@@ -69690,7 +69688,7 @@ ambush-style O
 shootings O
 of O
 three O
-Muslim B-MISC
+Muslim O
 men O
 and O
 the O
@@ -69705,7 +69703,7 @@ have O
 alarmed O
 the O
 city’s O
-Muslim B-MISC
+Muslim O
 community O
 , O
 leaving O
@@ -69757,7 +69755,7 @@ the O
 victims O
 were O
 all O
-Muslim B-MISC
+Muslim O
 and O
 of O
 South B-LOC
@@ -69806,13 +69804,13 @@ an O
 unsolved O
 homicide O
 from O
-November B-MISC
-2021 I-MISC
+November O
+2021 O
 . O
 Albuquerque B-LOC
 police O
 announced O
-Tuesday B-MISC
+Tuesday O
 they O
 had O
 arrested O
@@ -69860,16 +69858,16 @@ the O
 homicides O
 : O
 the O
-July B-MISC
-26 I-MISC
+July O
+26 O
 killing O
 of O
 Aftab B-PER
 Hussein I-PER
 and O
 the O
-August B-MISC
-1 I-MISC
+August O
+1 O
 killing O
 of O
 Muhammad B-PER
@@ -69952,7 +69950,7 @@ these O
 three O
 men O
 were O
-Muslim B-MISC
+Muslim O
 and O
 of O
 similar O
@@ -70053,7 +70051,7 @@ three O
 previous O
 killings O
 of O
-Muslim B-MISC
+Muslim O
 men O
 from O
 South B-LOC
@@ -70103,7 +70101,7 @@ Hussein I-PER
 , O
 were O
 both O
-Pakistani B-MISC
+Pakistani O
 men O
 and O
 were O
@@ -70289,7 +70287,7 @@ Mohammad B-PER
 Ahmadi I-PER
 , O
 a O
-Muslim B-MISC
+Muslim O
 man O
 from O
 Afghanistan B-LOC
@@ -70330,8 +70328,8 @@ fleeing O
 persecution O
 as O
 a O
-Shia B-MISC
-Muslim I-MISC
+Shia O
+Muslim O
 – O
 and O
 had O
@@ -70430,7 +70428,7 @@ management O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Punjab I-ORG
 in O
 Pakistan B-LOC
@@ -70605,7 +70603,7 @@ recent O
 homicides O
 of O
 4 O
-Muslim B-MISC
+Muslim O
 men.” O
 “We O
 have O
@@ -70920,7 +70918,7 @@ Meanwhile, O
 local O
 and O
 national O
-Muslim B-MISC
+Muslim O
 groups O
 had O
 warned O
@@ -71135,8 +71133,10 @@ source O
 familiar O
 with O
 the O
-matter. O
-Mastriano’s I-PER
+matter O
+. O
+
+Mastriano’s B-PER
 attorney O
 cut O
 off O
@@ -71487,7 +71487,7 @@ as O
 drag O
 queen O
 Aida B-PER
-H O
+H I-PER
 Dee I-PER
 , O
 of O
@@ -71708,8 +71708,8 @@ by O
 a O
 wave O
 of O
-anti-LGBTQ B-MISC
-bills I-MISC
+anti-LGBTQ O
+bills O
 and O
 Justice B-PER
 Clarence I-PER
@@ -71815,7 +71815,7 @@ director O
 at O
 the O
 Institute B-ORG
-for O
+for I-ORG
 Strategic I-ORG
 Dialogue I-ORG
 ( O
@@ -71917,7 +71917,7 @@ critical O
 activists O
 and O
 ​sympathetic O
-British B-MISC
+British O
 press O
 have O
 succeeded O
@@ -72051,7 +72051,7 @@ has O
 long O
 centered O
 around O
-LGBTQ B-MISC
+LGBTQ O
 people O
 , O
 challenging O
@@ -72424,9 +72424,9 @@ without O
 established O
 leadership O
 . O
-Alpha B-MISC
-Men I-MISC
-Assemble I-MISC
+Alpha O
+Men O
+Assemble O
 is O
 described O
 by O
@@ -72610,10 +72610,10 @@ posts O
 to O
 protest O
 against O
-Drag B-MISC
-Queen I-MISC
-Story I-MISC
-Hour I-MISC
+Drag O
+Queen O
+Story O
+Hour O
 . O
 When O
 asked O
@@ -72695,7 +72695,7 @@ moderators O
 As O
 to O
 the O
-White B-MISC
+White O
 nationalist O
 groups O
 attending O
@@ -72764,7 +72764,7 @@ rate O
 views O
 rooted O
 in O
-neo-Nazi B-MISC
+neo-Nazi O
 ideology O
 – O
 Squirrell B-PER
@@ -72814,7 +72814,7 @@ not O
 be O
 subjected O
 to O
-LGBT B-MISC
+LGBT O
 indoctrination O
 .” O
 Two O
@@ -73031,9 +73031,9 @@ British B-LOC
 TV O
 show O
 “ O
-Jim’ll B-MISC
-Fix I-MISC
-It I-MISC
+Jim’ll O
+Fix O
+It O
 ,” O
 whose O
 late O
@@ -73168,7 +73168,7 @@ of O
 40 O
 % O
 , O
-Democrats B-MISC
+Democrats O
 aren’t O
 just O
 holding O
@@ -73220,8 +73220,8 @@ unpopular O
 but O
 so O
 are O
-Republicans B-MISC
-Republicans B-MISC
+Republicans O
+Republicans O
 now O
 hold O
 an O
@@ -73269,7 +73269,7 @@ or O
 Republican B-ORG
 party O
 ?” O
-Republicans B-MISC
+Republicans O
 were O
 ahead O
 on O
@@ -73306,7 +73306,7 @@ reflected O
 this O
 tightening O
 . O
-Republicans B-MISC
+Republicans O
 were O
 ahead O
 by O
@@ -73358,11 +73358,11 @@ good O
 idea O
 of O
 why O
-Democrats B-MISC
+Democrats O
 are O
 even O
 with O
-Republicans B-MISC
+Republicans O
 on O
 the O
 generic O
@@ -73370,7 +73370,7 @@ ballot O
 . O
 It’s O
 because O
-Republicans B-MISC
+Republicans O
 are O
 also O
 unpopular O
@@ -73388,7 +73388,7 @@ either O
 Biden B-PER
 or O
 the O
-GOP B-MISC
+GOP O
 . O
 Biden B-PER
 ’s O
@@ -73456,7 +73456,7 @@ unfavorable O
 view O
 . O
 The O
-GOP B-MISC
+GOP O
 ’s O
 net O
 favorability O
@@ -73478,7 +73478,7 @@ a O
 favorable O
 view O
 of O
-Republicans B-MISC
+Republicans O
 and O
 does O
 not O
@@ -73490,7 +73490,7 @@ of O
 Biden B-PER
 . O
 The O
-Republicans B-MISC
+Republicans O
 are O
 winning O
 this O
@@ -73525,9 +73525,9 @@ a O
 favorable O
 view O
 of O
-Republicans B-MISC
+Republicans O
 . O
-Democrats B-MISC
+Democrats O
 are O
 crushing O
 among O
@@ -73565,7 +73565,7 @@ neither O
 Biden B-PER
 nor O
 the O
-Republicans B-MISC
+Republicans O
 . O
 These O
 voters O
@@ -73637,8 +73637,8 @@ can O
 possibly O
 hold O
 through O
-Election B-MISC
-Day I-MISC
+Election O
+Day O
 . O
 
 Midterms O
@@ -73814,7 +73814,7 @@ usually O
 part O
 of O
 the O
-Democratic B-MISC
+Democratic O
 base O
 . O
 Yet O
@@ -73828,7 +73828,7 @@ going O
 to O
 39% O
 for O
-Democrats B-MISC
+Democrats O
 on O
 the O
 generic O
@@ -73855,7 +73855,7 @@ Put O
 another O
 way O
 , O
-Democrats B-MISC
+Democrats O
 may O
 not O
 be O
@@ -74040,7 +74040,7 @@ select O
 committee O
 investigating O
 the O
-January B-MISC
+January O
 6 O
 , O
 2021 O
@@ -74256,7 +74256,7 @@ in O
 the O
 mid-20s O
 in O
-July B-MISC
+July O
 polling O
 . O
 Many O
@@ -74736,7 +74736,7 @@ DEVCOM B-ORG
 in O
 Natick B-LOC
 , O
-Massachusetts I-LOC
+Massachusetts B-LOC
 . O
 If O
 approved O
@@ -74981,7 +74981,7 @@ becomes O
 an O
 official O
 Program B-ORG
-of O
+of I-ORG
 Record I-ORG
 as O
 a O
@@ -75572,8 +75572,8 @@ custody O
 early O
 Friday O
 , O
-Nebraska B-LOC
-State I-LOC
+Nebraska B-ORG
+State I-ORG
 Police I-ORG
 Col. O
 John B-PER
@@ -75917,8 +75917,8 @@ gunshot O
 wounds O
 , O
 a O
-“Molotov B-MISC
-cocktail I-MISC
+“Molotov O
+cocktail O
 was O
 found O
 indicating O
@@ -76336,7 +76336,7 @@ continued O
 to O
 pursue O
 high-profile O
-Russian B-MISC
+Russian O
 cybercrime O
 suspects O
 at O
@@ -76454,7 +76454,7 @@ exchange O
 “for O
 willfully O
 violating O
-U.S. B-MISC
+U.S. O
 
 anti-money O
 laundering O
@@ -76485,9 +76485,9 @@ the O
 production O
 company O
 behind O
-“House B-MISC
+“House O
 of O
-Cards,” I-MISC
+Cards,” O
 a O
 judge O
 has O
@@ -76643,9 +76643,9 @@ members O
 of O
 the O
 “ O
-House B-MISC
-of I-MISC
-Cards I-MISC
+House O
+of O
+Cards O
 ” O
 production O
 staff O
@@ -76957,7 +76957,7 @@ Friday O
 at O
 the O
 Association B-ORG
-of O
+of I-ORG
 Southeast I-ORG
 Asian I-ORG
 Nations I-ORG
@@ -77555,7 +77555,7 @@ place O
 . O
 
 The O
-Americans B-MISC
+Americans O
 have O
 already O
 made O
@@ -77862,7 +77862,7 @@ some O
 reports O
 promoted O
 by O
-Republicans B-MISC
+Republicans O
 that O
 show O
 it O
@@ -78300,7 +78300,7 @@ Taxation B-ORG
 that O
 showed O
 that O
-Americans B-MISC
+Americans O
 of O
 all O
 incomes O
@@ -78405,7 +78405,7 @@ recess O
 which O
 is O
 what O
-Democratic B-MISC
+Democratic O
 leadership O
 is O
 hoping O
@@ -78436,7 +78436,7 @@ tax O
 provisions O
 of O
 the O
-Democratic B-MISC
+Democratic O
 economic O
 package O
 , O
@@ -78446,7 +78446,7 @@ to O
 torpedo O
 any O
 hope O
-Democrats B-MISC
+Democrats O
 had O
 of O
 passing O
@@ -78673,7 +78673,7 @@ maker O
 of O
 the O
 popular O
-Roomba B-MISC
+Roomba O
 vacuum O
 , O
 in O
@@ -79037,8 +79037,8 @@ Judith B-PER
 was O
 admitted O
 to O
-Palliative B-MISC
-Care I-MISC
+Palliative O
+Care O
 on O
 Friday O
 5 O
@@ -79197,16 +79197,16 @@ group’s O
 hits O
 included O
 “ O
-Georgy B-MISC
-Girl I-MISC
+Georgy O
+Girl O
 ” O
 and O
 “ O
 A O
-World B-MISC
+World O
 of O
 Our O
-Own I-MISC
+Own O
 .” O
 Durham B-PER
 left O
@@ -79816,9 +79816,9 @@ laid O
 out O
 in O
 the O
-Presidential B-MISC
-Records I-MISC
-Act I-MISC
+Presidential O
+Records O
+Act O
 . O
 (Under O
 the O
@@ -79874,9 +79874,9 @@ ongoing O
 investigation O
 into O
 the O
-January B-MISC
-6 I-MISC
-2021 I-MISC
+January O
+6 O
+2021 O
 , O
 riot O
 at O
@@ -79938,7 +79938,7 @@ efforts O
 to O
 overturn O
 the O
-2020 B-MISC
+2020 O
 election O
 and O
 executing O
@@ -80026,7 +80026,7 @@ likely O
 to O
 see O
 a O
-2024 B-MISC
+2024 O
 run O
 for O
 president O
@@ -80763,7 +80763,7 @@ Kelley B-PER
 said O
 in O
 a O
-July B-MISC
+July O
 GOP B-ORG
 primary O
 debate. O
@@ -80849,7 +80849,7 @@ If O
 they O
 win O
 in O
-November B-MISC
+November O
 , O
 they O
 would O
@@ -81797,8 +81797,8 @@ CNN’s B-ORG
 John B-PER
 Avlon I-PER
 on O
-“New B-MISC
-Day.” I-MISC
+“New O
+Day.” O
 “I’m O
 confident O
 this O
@@ -81930,7 +81930,7 @@ Chechen B-LOC
 fighter O
 , O
 Zelimkhan B-PER
-“Tornike” O
+“Tornike” I-PER
 Khangoshvili I-PER
 , O
 in O
@@ -82028,8 +82028,8 @@ an O
 earlier O
 interview O
 on O
-“New B-MISC
-Day” I-MISC
+“New O
+Day” O
 called O
 the O
 Russian’s B-LOC
@@ -82108,7 +82108,7 @@ Monday O
 “ O
 Holding O
 two O
-Americans B-MISC
+Americans O
 who O
 have O
 been O
@@ -82147,7 +82147,7 @@ faith O
 attempt O
 by O
 the O
-Russians B-MISC
+Russians O
 publicly O
 to O
 avoid O
@@ -82179,7 +82179,7 @@ and O
 we O
 urge O
 the O
-Russians B-MISC
+Russians O
 to O
 accept O
 it O
@@ -82515,7 +82515,7 @@ of O
 Programs O
 from O
 Women B-ORG
-for O
+for I-ORG
 Women I-ORG
 International I-ORG
 , O
@@ -82633,13 +82633,13 @@ C’s O
 of O
 Crisis O
 – O
-Conflict B-MISC
+Conflict O
 , O
-Climate B-MISC
+Climate O
 , O
-Cost B-MISC
+Cost O
 and O
-Covid B-MISC
+Covid O
 . O
 Conflict O
 The O
@@ -82659,7 +82659,7 @@ as O
 both O
 Russia B-LOC
 and O
-Ukraine I-LOC
+Ukraine B-LOC
 are O
 “ O
 breadbaskets O
@@ -82899,7 +82899,7 @@ Angelina B-PER
 Ajonye I-PER
 with O
 Women B-ORG
-for O
+for I-ORG
 Women I-ORG
 International I-ORG
 in O
@@ -83407,7 +83407,7 @@ for O
 their O
 futures O
 . O
-Covid B-MISC
+Covid O
 More O
 than O
 two O
@@ -83503,7 +83503,7 @@ Marie B-PER
 Clarke I-PER
 from O
 Women B-ORG
-for O
+for I-ORG
 Women I-ORG
 International I-ORG
 said O
@@ -83595,8 +83595,8 @@ life O
 How O
 to O
 help O
-World B-MISC
-hunger I-MISC
+World O
+hunger O
 is O
 a O
 big O
@@ -84007,9 +84007,9 @@ pharmacy O
 , O
 violated O
 Minnesota’s B-LOC
-Human B-MISC
-Rights I-MISC
-Act I-MISC
+Human O
+Rights O
+Act O
 . O
 Anderson B-PER
 is O
@@ -84046,9 +84046,9 @@ US B-ORG
 Supreme I-ORG
 Court I-ORG
 overturned O
-Roe B-MISC
+Roe O
 v. O
-Wade B-MISC
+Wade O
 on O
 June O
 24 O
@@ -84133,13 +84133,13 @@ where O
 at O
 least O
 10 O
-Republicans B-MISC
+Republicans O
 are O
 needed O
 to O
 side O
 with O
-Democrats B-MISC
+Democrats O
 to O
 overcome O
 the O
@@ -84303,7 +84303,7 @@ Taiwan B-LOC
 or O
 not, O
 the O
-Chinese B-MISC
+Chinese O
 military O
 threat O
 against O
@@ -84611,7 +84611,7 @@ and O
 much O
 discussed O
 , O
-Taiwanese B-MISC
+Taiwanese O
 officials O
 only O
 received O
@@ -84701,7 +84701,7 @@ and O
 the O
 office O
 of O
-Taiwanese B-MISC
+Taiwanese O
 President O
 Tsai B-PER
 Ing-wen I-PER
@@ -84879,7 +84879,7 @@ the O
 first O
 time O
 a O
-Taiwanese B-MISC
+Taiwanese O
 leader O
 had O
 admitted O
@@ -84899,7 +84899,7 @@ in O
 But O
 perceptions O
 of O
-American B-MISC
+American O
 support O
 sparked O
 Beijing’s B-LOC
@@ -84938,7 +84938,7 @@ the O
 political O
 foundation O
 of O
-China-US B-MISC
+China-US O
 relations O
 , O
 ” O
@@ -85127,7 +85127,7 @@ power O
 has O
 grown O
 , O
-Chinese B-MISC
+Chinese O
 leader O
 Xi B-PER
 Jinping I-PER
@@ -85203,7 +85203,7 @@ Taipei B-LOC
 . O
 Dozens O
 of O
-Chinese B-MISC
+Chinese O
 warplanes O
 crossed O
 the O
@@ -85309,8 +85309,8 @@ its O
 influence O
 across O
 the O
-Western B-MISC
-Pacific I-MISC
+Western O
+Pacific O
 , O
 Wu B-PER
 said O
@@ -85404,7 +85404,7 @@ the O
 will O
 of O
 the O
-Chinese B-MISC
+Chinese O
 leaders O
 to O
 see O
@@ -85432,7 +85432,7 @@ he O
 doesn’t O
 know O
 whether O
-Chinese B-MISC
+Chinese O
 leaders O
 “ O
 have O
@@ -85449,7 +85449,7 @@ take O
 Taiwan B-LOC
 , O
 but O
-Taiwanese B-MISC
+Taiwanese O
 officials O
 were O
 “ O
@@ -85896,9 +85896,9 @@ not O
 be O
 executed O
 . O
-Victim B-MISC
-impact I-MISC
-statements I-MISC
+Victim O
+impact O
+statements O
 add O
 another O
 layer O
@@ -86146,8 +86146,8 @@ want O
 to O
 become O
 a O
-Swedish B-MISC
-Olympian I-MISC
+Swedish O
+Olympian O
 and O
 go O
 to O
@@ -86202,7 +86202,7 @@ to O
 go O
 to O
 the O
-Olympics B-MISC
+Olympics O
 . O
 ” O
   O
@@ -86798,7 +86798,7 @@ this O
 report O
 . O
 
-Democrats’ B-MISC
+Democrats’ O
 push O
 to O
 advance O
@@ -86833,7 +86833,7 @@ the O
 final O
 obstacles O
 for O
-Democrats, B-MISC
+Democrats, O
 along O
 with O
 the O
@@ -86859,7 +86859,7 @@ distractions O
 as O
 they O
 force O
-Democrats B-MISC
+Democrats O
 to O
 vote O
 on O
@@ -86869,7 +86869,7 @@ But, O
 once O
 it’s O
 over, O
-Democrats B-MISC
+Democrats O
 have O
 the O
 opportunity O
@@ -86928,7 +86928,7 @@ reconciliation O
 process O
 – O
 which O
-Democrats B-MISC
+Democrats O
 are O
 using O
 to O
@@ -87560,7 +87560,7 @@ name O
 ? O
 All O
 : O
-Moan-Ah-Skin B-MISC
+Moan-Ah-Skin O
 ! O
 
 Santana B-PER
@@ -87641,7 +87641,7 @@ say O
 random O
 words O
 in O
-Danish B-MISC
+Danish O
 , O
 and O
 we O
@@ -87930,7 +87930,7 @@ And O
 then O
 you O
 do O
-Eurovision B-MISC
+Eurovision O
 , O
 how O
 did O
@@ -88013,7 +88013,7 @@ since O
 Italy B-LOC
 had O
 won O
-Eurovision B-MISC
+Eurovision O
 , O
 and O
 then O
@@ -88069,7 +88069,7 @@ lot O
 of O
 times O
 for O
-Eurovision B-MISC
+Eurovision O
 winners O
 , O
 they O
@@ -88115,7 +88115,7 @@ I O
 think O
 for O
 us O
-Eurovision B-MISC
+Eurovision O
 came O
 at O
 a O
@@ -88137,7 +88137,7 @@ what O
 we O
 brought O
 to O
-Eurovision B-MISC
+Eurovision O
 was O
 basically O
 just O
@@ -88181,7 +88181,7 @@ what O
 we O
 brought O
 to O
-Eurovision B-MISC
+Eurovision O
 and O
 what O
 they O
@@ -88209,7 +88209,7 @@ they O
 made O
 specifically O
 for O
-Eurovision B-MISC
+Eurovision O
 , O
 but O
 it’s O
@@ -88235,7 +88235,7 @@ Then O
 , O
 you O
 release O
-“Beggin’ B-MISC
+“Beggin’ O
 , O
 ” O
 which O
@@ -88268,10 +88268,10 @@ like O
 , O
 (sings) O
 , O
-“I’m B-MISC
-beggin’ I-MISC
+“I’m O
+beggin’ O
 , O
-beggin’ I-MISC
+beggin’ O
 you O
 … O
 (laughter) O
@@ -88992,35 +88992,35 @@ yes. O
 You O
 sing O
 in O
-English B-MISC
+English O
 and O
-Italian, B-MISC
+Italian, O
 but O
 we O
 have O
 a O
 lot O
 of O
-Italian B-MISC
+Italian O
 singers O
 who O
 are O
 huge O
 in O
-Latin B-MISC
+Latin O
 America, B-LOC
 and O
 they O
 sing O
 in O
-Spanish B-MISC
+Spanish O
 – O
 Laura B-PER
 Pausini, I-PER
 Eros B-PER
 Ramazzotti, I-PER
-Il B-MISC
-Volo I-MISC
+Il O
+Volo O
 – O
 do O
 you O
@@ -89039,7 +89039,7 @@ De O
 Angelis B-PER
 : O
 In O
-Spanish B-MISC
+Spanish O
 ? O
 David B-PER
 : O
@@ -89048,7 +89048,7 @@ basically O
 mostly O
 listen O
 to O
-Spanish B-MISC
+Spanish O
 sounding O
 music O
 , O
@@ -89071,8 +89071,8 @@ and O
 you’re O
 going O
 to O
-Latin B-MISC
-America I-MISC
+Latin O
+America O
 , O
 Santiago B-LOC
 , O
@@ -89117,8 +89117,8 @@ we’ve O
 never O
 been O
 to O
-Latin B-MISC
-America I-MISC
+Latin O
+America O
 , O
 and O
 we O
@@ -89519,13 +89519,13 @@ your O
 first O
 songs O
 was O
-“Zitti B-MISC
-E I-MISC
-Buoni,” I-MISC
+“Zitti O
+E O
+Buoni,” O
 which O
 means O
-“Shut B-MISC
-Up I-MISC
+“Shut O
+Up O
 and O
 Behave.” O
 It O
@@ -90197,7 +90197,7 @@ potential O
 obstacles O
 to O
 a O
-Ukrainian B-MISC
+Ukrainian O
 victory O
 over O
 Russia B-LOC
@@ -90263,7 +90263,7 @@ and O
 members O
 of O
 the O
-Ukrainian B-MISC
+Ukrainian O
 parliament O
 alike O
 . O
@@ -90384,7 +90384,7 @@ growing O
 skepticism O
 from O
 the O
-MAGA B-MISC
+MAGA O
 wing O
 of O
 the O
@@ -90737,11 +90737,11 @@ the O
 lives O
 of O
 ordinary O
-Ukrainians B-MISC
+Ukrainians O
 and O
 the O
 brave O
-Ukrainian B-MISC
+Ukrainian O
 military O
 . O
 
@@ -90873,7 +90873,7 @@ her O
 said O
 a O
 third O
-GOP B-MISC
+GOP O
 lawmaker O
 . O
 
@@ -91187,7 +91187,7 @@ said. O
 should O
 trouble O
 all O
-Americans B-MISC
+Americans O
 as O
 these O
 are O
@@ -91793,7 +91793,7 @@ prison O
 where O
 one O
 high-profile O
-American B-MISC
+American O
 jailed O
 in O
 Russia B-LOC
@@ -91812,7 +91812,7 @@ in O
 a O
 statement O
 in O
-July B-MISC
+July O
 he O
 had O
 heard O
@@ -91820,7 +91820,7 @@ ten O
 volunteers O
 had O
 left O
-IK17 B-MISC
+IK17 O
 in O
 Mordovia B-LOC
 for O
@@ -91859,7 +91859,7 @@ high O
 . O
 The O
 latest O
-Western B-MISC
+Western O
 assessments O
 suggest O
 up O
@@ -91977,7 +91977,7 @@ he O
 said O
 . O
 “ O
-Amnesty B-MISC
+Amnesty O
 or O
 a O
 pardon O
@@ -92033,7 +92033,7 @@ the O
 first O
 half O
 of O
-July B-MISC
+July O
 , O
 and O
 that O
@@ -92185,7 +92185,7 @@ that O
 400 O
 applied O
 . O
-Rights B-MISC
+Rights O
 activists O
 working O
 in O
@@ -92198,7 +92198,7 @@ since O
 the O
 start O
 of O
-July B-MISC
+July O
 they O
 had O
 been O
@@ -92228,7 +92228,7 @@ three O
 weeks O
 [ O
 in O
-July B-MISC
+July O
 ] O
 , O
 there O
@@ -92398,7 +92398,7 @@ soldiers O
 see O
 where O
 the O
-Ukrainians B-MISC
+Ukrainians O
 are O
 , O
 and O
@@ -92460,7 +92460,7 @@ being O
 hospitalized O
 in O
 the O
-Russian-backed B-MISC
+Russian-backed O
 separatist O
 area O
 of O
@@ -92876,7 +92876,7 @@ WhatsApp B-ORG
 number O
 on O
 10th O
-July B-MISC
+July O
 and O
 asked O
 her O
@@ -93002,7 +93002,7 @@ concerns O
 . O
 In O
 late O
-July B-MISC
+July O
 , O
 the O
 mother O
@@ -93020,7 +93020,7 @@ in O
 her O
 son’s O
 broken O
-Russian B-MISC
+Russian O
 . O
 
 It O
@@ -93868,7 +93868,7 @@ and O
 the O
 Texas B-LOC
 Department I-ORG
-of O
+of I-ORG
 Public I-ORG
 Safety I-ORG
 for O
@@ -94418,8 +94418,8 @@ House B-ORG
 select O
 committee O
 investigating O
-January B-MISC
-6 I-MISC
+January O
+6 O
 , O
 CNN B-ORG
 previously O
@@ -94439,8 +94439,8 @@ told O
 investigators O
 that O
 on O
-January B-MISC
-6 I-MISC
+January O
+6 O
 he O
 was O
 joined O
@@ -94582,9 +94582,9 @@ outlets O
 In O
 “ O
 The O
-Wizard B-MISC
+Wizard O
 of O
-Oz B-MISC
+Oz O
 ,” O
 a O
 tornado O
@@ -94598,11 +94598,11 @@ spinning O
 into O
 the O
 “ O
-Merry B-MISC
-Old I-MISC
-Land I-MISC
+Merry O
+Old O
+Land O
 of O
-Oz I-MISC
+Oz O
 .” O
 Last O
 week O
@@ -94646,7 +94646,7 @@ the O
 Supreme B-ORG
 Court’s O
 1973 O
-Roe B-MISC
+Roe O
 v O
 
 Wade O
@@ -94824,7 +94824,7 @@ for O
 Politico B-ORG
 , O
 John B-PER
-F. O
+F. I-PER
 Harris I-PER
 suggested O
 that O
@@ -94973,9 +94973,9 @@ that O
 the O
 overturning O
 of O
-Roe B-MISC
+Roe O
 v. O
-Wade I-MISC
+Wade O
 has O
 energized O
 a O
@@ -95046,7 +95046,7 @@ the O
 unpopularity O
 of O
 the O
-Roe B-MISC
+Roe O
 decision O
 may O
 mitigate O
@@ -95303,7 +95303,7 @@ and O
 fevered O
 headlines O
 , O
-Taiwanese-American B-MISC
+Taiwanese-American O
 journalist O
 Clarissa B-PER
 Wei I-PER
@@ -95430,7 +95430,7 @@ by O
 the O
 People’s B-ORG
 Republic I-ORG
-of O
+of I-ORG
 China I-ORG
 for O
 nearly O
@@ -95923,8 +95923,8 @@ down O
 and O
 elimination O
 of O
-bin I-PER
-Laden’s O
+bin B-PER
+Laden’s I-PER
 former O
 associate O
 , O
@@ -96002,7 +96002,7 @@ al O
 Qaeda B-ORG
 in O
 turning O
-bin I-PER
+bin B-PER
 Laden I-PER
 against O
 the O
@@ -96016,8 +96016,9 @@ he O
 wasn’t O
 involved O
 in O
-bin I-PER
-Laden’s O
+bin B-PER
+Laden I-PER
+’s O
 most O
 important O
 strategic O
@@ -96108,7 +96109,7 @@ sitting O
 next O
 to O
 at O
-Thanksgiving B-MISC
+Thanksgiving O
 dinner O
 . O
 Families O
@@ -96140,7 +96141,7 @@ took O
 part O
 in O
 the O
-January B-MISC
+January O
 6 O
 , O
 2021 O
@@ -96169,7 +96170,7 @@ Eve O
 2020 O
 
 The O
-Reffitts’ B-MISC
+Reffitts’ O
 story O
 is O
 tragic O
@@ -96197,7 +96198,7 @@ into O
 the O
 cult O
 of O
-Trumpism B-MISC
+Trumpism O
 , O
 as O
 Guy B-PER
@@ -96217,7 +96218,7 @@ on O
 Facebook B-ORG
 , O
 spreading O
-Trump’s B-MISC
+Trump’s O
 lie O
 that O
 the O
@@ -96242,7 +96243,7 @@ who’s O
 gone O
 down O
 a O
-QAnon B-MISC
+QAnon O
 rabbit O
 hole O
 of O
@@ -96260,7 +96261,7 @@ reality O
 The O
 carnage O
 from O
-Trump’s B-MISC
+Trump’s O
 divisive O
 rhetoric O
 , O
@@ -96272,7 +96273,7 @@ theories O
 is O
 incalculable O
 . O
-Trumpism B-MISC
+Trumpism O
 is O
 a O
 powerful O
@@ -96484,7 +96485,7 @@ movement O
 , O
 from O
 the O
-March B-MISC
+March O
 on O
 Washington B-LOC
 in O
@@ -96534,7 +96535,7 @@ years O
 , O
 he O
 chided O
-White B-MISC
+White O
 Americans O
 for O
 their O
@@ -96564,8 +96565,8 @@ systemic O
 racism O
 . O
 When O
-“Star B-MISC
-Trek” I-MISC
+“Star O
+Trek” O
 premiered O
 in O
 1966 O
@@ -96693,7 +96694,7 @@ her O
 playing O
 a O
 non-stereotypical O
-Black B-MISC
+Black O
 character O
 . O
 She O
@@ -96862,7 +96863,7 @@ school O
 this O
 year O
 David B-PER
-A. O
+A. I-PER
 Andelman I-PER
 : O
 One O
@@ -97375,7 +97376,7 @@ a O
 Trump-backed O
 challenger O
 in O
-June B-MISC
+June O
 . O
 
 Two O
@@ -97472,7 +97473,7 @@ January O
 , O
 faces O
 a O
-Trump-backed B-MISC
+Trump-backed O
 opponent O
 later O
 this O
@@ -97545,7 +97546,7 @@ was O
 the O
 beneficiary O
 of O
-Democratic B-MISC
+Democratic O
 meddling O
 . O
 The O
@@ -97608,7 +97609,7 @@ political O
 extremism O
 in O
 the O
-GOP B-MISC
+GOP O
 , O
 while O
 sparking O
@@ -97622,7 +97623,7 @@ Gibbs B-PER
 makes O
 it O
 to O
-Congress B-MISC
+Congress O
 . O
 As O
 CNN’s B-ORG
@@ -97789,7 +97790,7 @@ an O
 issue O
 that O
 national O
-Democrats B-MISC
+Democrats O
 hope O
 will O
 energize O
@@ -98099,8 +98100,8 @@ Masters I-PER
 an O
 acolyte O
 of O
-Silicon B-MISC
-Valley I-MISC
+Silicon O
+Valley O
 billionaire O
 Peter B-PER
 Thiel I-PER
@@ -98287,7 +98288,7 @@ member O
 primary O
 Besides O
 the O
-GOP B-MISC
+GOP O
 drama O
 in O
 Michigan’s B-LOC
@@ -98378,7 +98379,7 @@ AIPAC B-ORG
 , O
 spurred O
 another O
-pro-Israel B-MISC
+pro-Israel O
 group O
 , O
 the O
@@ -98417,7 +98418,7 @@ Editor’s O
 Note: O
 Lala B-PER
 Tanmoy I-PER
-(Tom) O
+(Tom) I-PER
 Das I-PER
 is O
 an O
@@ -98688,7 +98689,7 @@ Centers B-ORG
 for O
 Disease B-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 suggests O
 that O
@@ -98744,12 +98745,12 @@ early O
 days O
 of O
 the O
-HIV/AIDS B-MISC
+HIV/AIDS O
 epidemic O
 . O
 Originally O
 called O
-GRID B-MISC
+GRID O
 ( O
 gay O
 related O
@@ -98764,7 +98765,7 @@ discrimination O
 and O
 stigmatization O
 of O
-LGBTQ+ B-MISC
+LGBTQ+ O
 individuals O
 across O
 society O
@@ -98823,7 +98824,7 @@ of O
 the O
 mistrust O
 that O
-LGBTQ+ B-MISC
+LGBTQ+ O
 people O
 have O
 toward O
@@ -98864,7 +98865,7 @@ day O
 one O
 of O
 the O
-Covid-19 B-MISC
+Covid-19 O
 pandemic O
 and O
 is O
@@ -98889,8 +98890,8 @@ care O
 unit O
 during O
 the O
-Delta B-MISC
-Covid-19 B-MISC
+Delta O
+Covid-19 O
 surge O
 . O
 We O
@@ -98925,7 +98926,7 @@ ones O
 . O
 With O
 the O
-Covid-19 B-MISC
+Covid-19 O
 pandemic O
 , O
 we O
@@ -99030,7 +99031,7 @@ coming O
 off O
 of O
 the O
-Covid-19 B-MISC
+Covid-19 O
 experience O
 , O
 there O
@@ -99073,7 +99074,7 @@ the O
 stigmas O
 associated O
 with O
-monkeypox B-MISC
+monkeypox O
 – O
 is O
 twofold O
@@ -99104,7 +99105,7 @@ in O
 trainings O
 about O
 what O
-monkeypox B-MISC
+monkeypox O
 is O
 , O
 how O
@@ -99132,7 +99133,7 @@ patients O
 both O
 those O
 with O
-monkeypox B-MISC
+monkeypox O
 and O
 those O
 without O
@@ -99156,7 +99157,7 @@ access O
 to O
 materials O
 like O
-PPE B-MISC
+PPE O
 at O
 all O
 times O
@@ -99175,7 +99176,7 @@ ask O
 questions O
 about O
 how O
-monkeypox B-MISC
+monkeypox O
 impacts O
 their O
 job O
@@ -99339,7 +99340,7 @@ prevent O
 monkeypox O
 , O
 like O
-Jynneos B-MISC
+Jynneos O
 , O
 are O
 hard O
@@ -99585,7 +99586,7 @@ two O
 years O
 of O
 the O
-Covid-19 B-MISC
+Covid-19 O
 pandemic O
 . O
 
@@ -100625,8 +100626,8 @@ Griffin B-PER
 explained O
 why O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 committee O
 would O
 want O
@@ -100688,8 +100689,8 @@ the O
 idea O
 of O
 a O
-January B-MISC
-6th I-MISC
+January O
+6th O
 gathering O
 in O
 Washington B-LOC
@@ -100794,7 +100795,7 @@ was O
 being O
 led O
 by O
-Antifa B-MISC
+Antifa O
 rather O
 than O
 Trump B-PER
@@ -100816,8 +100817,8 @@ Chris B-PER
 Wallace I-PER
 on O
 “ O
-New B-MISC
-Day I-MISC
+New O
+Day O
 ” O
 on O
 Thursday O
@@ -100886,7 +100887,7 @@ and O
 starts O
 talking O
 about O
-Antifa B-MISC
+Antifa O
 . O
 About O
 the O
@@ -100924,8 +100925,8 @@ with O
 Congress B-ORG
 in O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 inquiry O
 , O
 and O
@@ -100961,7 +100962,7 @@ attempts O
 to O
 undermine O
 the O
-2020 B-MISC
+2020 O
 election O
 . O
 There O
@@ -100976,8 +100977,8 @@ Department I-ORG
 , O
 where O
 the O
-January B-MISC
-6 I-MISC
+January O
+6 O
 investigation O
 has O
 taken O
@@ -101045,8 +101046,8 @@ for O
 the O
 events O
 surrounding O
-January B-MISC
-6 I-MISC
+January O
+6 O
 , O
 or O
 any O
@@ -101205,7 +101206,7 @@ said O
 the O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 has O
@@ -101448,7 +101449,7 @@ Centers I-ORG
 for O
 Disease B-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 . O
 
@@ -101517,14 +101518,14 @@ Alaïa O
 and O
 this O
 summer’s O
-“Fire B-MISC
-Island,” I-MISC
+“Fire O
+Island,” O
 a O
 version O
 of O
-“Pride B-MISC
-and I-MISC
-Prejudice” I-MISC
+“Pride O
+and O
+Prejudice” O
 with O
 gay O
 protagonists O
@@ -101543,15 +101544,15 @@ like O
 Whit B-PER
 Stillman’s I-PER
 uproarious O
-“Love B-MISC
-and I-MISC
-Friendship” I-MISC
+“Love O
+and O
+Friendship” O
 and O
 the O
 1995 O
-“Pride B-MISC
-and I-MISC
-Prejudice” I-MISC
+“Pride O
+and O
+Prejudice” O
 miniseries O
 that O
 turned O
@@ -101669,7 +101670,7 @@ readers O
 CNN B-ORG
 consulted O
 several O
-Austen B-MISC
+Austen O
 scholars O
 and O
 devotees O
@@ -101683,7 +101684,7 @@ in O
 an O
 adaptation O
 of O
-Austen’s B-MISC
+Austen’s O
 work O
 – O
 and O
@@ -101709,12 +101710,12 @@ Why O
 we O
 love O
 adapting O
-Austen B-MISC
+Austen O
 Viewed O
 one O
 way O
 , O
-Austen’s B-MISC
+Austen’s O
 tales O
 are O
 quintessential O
@@ -101762,7 +101763,7 @@ since O
 So O
 what O
 makes O
-Austen’s B-MISC
+Austen’s O
 romances O
 so O
 ripe O
@@ -101780,7 +101781,7 @@ business O
 decision O
 to O
 revive O
-Austen B-MISC
+Austen O
 – O
 there’s O
 always O
@@ -101801,8 +101802,8 @@ hosts O
 of O
 the O
 “ O
-Pemberley B-MISC
-Podcast I-MISC
+Pemberley O
+Podcast O
 ,” O
 in O
 which O
@@ -101811,7 +101812,7 @@ analyze O
 various O
 adaptations O
 of O
-Austen’s B-MISC
+Austen’s O
 work O
 . O
 “ O
@@ -101881,7 +101882,7 @@ us O
 a O
 boom O
 of O
-Austen B-MISC
+Austen O
 adaptations O
 – O
 the O
@@ -101947,13 +101948,13 @@ Prejudice,” O
 two O
 of O
 several O
-Austen B-MISC
+Austen O
 adaptations O
 starring O
-Asian B-MISC
+Asian O
 protagonists. O
 Though O
-Austen’s B-MISC
+Austen’s O
 novels O
 always O
 folded O
@@ -101995,7 +101996,7 @@ characters O
 are O
 acutely O
 aware. O
-Austen’s B-MISC
+Austen’s O
 women O
 are O
 often O
@@ -102037,7 +102038,7 @@ North B-LOC
 Carolina, I-LOC
 Chapel I-LOC
 Hill. O
-“Austen B-MISC
+“Austen O
 is O
 a O
 way O
@@ -102056,7 +102057,7 @@ sustain O
 their O
 self-respect,” O
 said O
-Brodey, I-PER
+Brodey, O
 who’s O
 published O
 several O
@@ -102070,7 +102071,7 @@ that O
 way, O
 she O
 said, O
-Austen’s B-MISC
+Austen’s O
 tales O
 continue O
 to O
@@ -102100,13 +102101,13 @@ agency. O
 What O
 the O
 best O
-Austen B-MISC
+Austen O
 adaptations O
 get O
 right O
 A O
 strong O
-Austen B-MISC
+Austen O
 adaptation O
 doesn’t O
 need O
@@ -102139,14 +102140,14 @@ the O
 source O
 novel. O
 The O
-Austenites B-MISC
+Austenites O
 CNN B-ORG
 interviewed O
 agreed O
 – O
 for O
 an O
-Austen B-MISC
+Austen O
 adaptation O
 to O
 succeed, O
@@ -102173,7 +102174,7 @@ for O
 any O
 adapter O
 of O
-Austen B-MISC
+Austen O
 must O
 be O
 capturing O
@@ -102242,7 +102243,7 @@ find O
 any O
 adaptation O
 of O
-Austen B-MISC
+Austen O
 to O
 be O
 a O
@@ -102284,7 +102285,7 @@ candidate O
 for O
 most O
 accurate O
-Austen B-MISC
+Austen O
 adaptation O
 (the O
 lead’s O
@@ -102308,7 +102309,7 @@ but O
 both O
 Brody B-PER
 and O
-Austen B-MISC
+Austen O
 scholar O
 William B-PER
 Galperin I-PER
@@ -102331,7 +102332,7 @@ the O
 story O
 while O
 retaining O
-Austen’s B-MISC
+Austen’s O
 spirit. O
 
 Clueless O
@@ -102351,7 +102352,7 @@ women,” O
 the O
 kind O
 that O
-Austen B-MISC
+Austen O
 took O
 seriously, O
 too, O
@@ -102400,7 +102401,7 @@ modernize O
 or O
 otherwise O
 remix O
-Austen B-MISC
+Austen O
 for O
 a O
 new O
@@ -102417,7 +102418,7 @@ reveal O
 new O
 aspects O
 of O
-Austen B-MISC
+Austen O
 than O
 films O
 that O
@@ -102872,7 +102873,7 @@ for O
 adaptations O
 that O
 use O
-Austen’s B-MISC
+Austen’s O
 material O
 as O
 an O
@@ -102907,7 +102908,7 @@ new O
 yarns O
 out O
 of O
-Austen’s B-MISC
+Austen’s O
 original O
 work O
 opens O
@@ -102926,27 +102927,27 @@ people O
 of O
 color O
 and O
-LGBTQ B-MISC
+LGBTQ O
 protagonists O
 . O
-“Fire B-MISC
-Island” I-MISC
+“Fire O
+Island” O
 uses O
 the O
 loose O
 framework O
 of O
-“Pride B-MISC
+“Pride O
 and O
-Prejudice” I-MISC
+Prejudice” O
 to O
 tell O
 a O
 story O
 about O
 two O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 gay O
 men O
 , O
@@ -102957,7 +102958,7 @@ classism O
 they O
 experience O
 from O
-White B-MISC
+White O
 gay O
 men O
 and O
@@ -102972,15 +102973,15 @@ that O
 hatred O
 . O
 Both O
-“Sanditon” B-MISC
+“Sanditon” O
 and O
-“Persuasion” B-MISC
+“Persuasion” O
 cast O
 people O
 of O
 color O
 in O
-Austen’s B-MISC
+Austen’s O
 world O
 , O
 set O
@@ -103019,7 +103020,7 @@ ways O
 to O
 tell O
 an O
-Austenian B-MISC
+Austenian O
 tale O
 today O
 : O
@@ -103054,7 +103055,7 @@ impossible O
 to O
 please O
 every O
-Austen B-MISC
+Austen O
 fan O
 , O
 but O
@@ -103069,7 +103070,7 @@ as O
 an O
 adaptation O
 of O
-Austen B-MISC
+Austen O
 retains O
 what O
 makes O
@@ -103089,8 +103090,8 @@ and O
 , O
 yes O
 , O
-“capital-R B-MISC
-romance” I-MISC
+“capital-R O
+romance” O
 – O
 it O
 will O
@@ -103521,8 +103522,8 @@ reporting O
 from O
 CNNE’s B-ORG
 Jimena B-PER
-de O
-la O
+de I-PER
+la I-PER
 Quintana I-PER
 in O
 Lima B-LOC
@@ -104101,10 +104102,10 @@ School I-ORG
 at O
 the O
 University B-ORG
-of O
-Texas B-LOC
+of I-ORG
+Texas I-ORG
 at O
-Austin I-LOC
+Austin B-LOC
 . O
 “ O
 On O
@@ -104171,7 +104172,7 @@ too O
 . O
 Back O
 in O
-May B-MISC
+May O
 , O
 Abbott B-ORG
 announced O
@@ -104181,7 +104182,7 @@ states O
 where O
 it O
 held O
-WIC B-MISC
+WIC O
 contracts O
 , O
 it O
@@ -104196,7 +104197,7 @@ to O
 different O
 brands O
 through O
-August B-MISC
+August O
 30 O
 – O
 a O
@@ -104214,7 +104215,7 @@ months O
 . O
 Then O
 in O
-June B-MISC
+June O
 , O
 flooding O
 from O
@@ -104243,7 +104244,7 @@ plant O
 is O
 producing O
 specialty O
-Elecare B-MISC
+Elecare O
 formula O
 again O
 – O
@@ -104337,8 +104338,8 @@ He O
 had O
 been O
 on O
-Similac B-MISC
-Alimentum I-MISC
+Similac O
+Alimentum O
 , O
 which O
 is O
@@ -104348,7 +104349,7 @@ Abbott B-ORG
 . O
 
 By O
-June B-MISC
+June O
 , O
 they O
 were O
@@ -104376,15 +104377,15 @@ by O
 benefits O
 through O
 Virginia’s B-LOC
-Special B-MISC
-Supplemental I-MISC
-Nutrition I-MISC
-Program I-MISC
+Special O
+Supplemental O
+Nutrition O
+Program O
 for O
-Women B-MISC
-Infants I-MISC
+Women O
+Infants O
 and O
-Children I-MISC
+Children O
 , O
 or O
 WIC B-ORG
@@ -104441,11 +104442,11 @@ of O
 hypoallergenic O
 formula O
 called O
-Gerber B-MISC
-Good I-MISC
-Start I-MISC
-Extensive I-MISC
-HA I-MISC
+Gerber O
+Good O
+Start O
+Extensive O
+HA O
 , O
 which O
 is O
@@ -104842,7 +104843,7 @@ United B-LOC
 States I-LOC
 . O
 In O
-July B-MISC
+July O
 , O
 the O
 agency O
@@ -104883,7 +104884,7 @@ Formula I-ORG
 . O
 As O
 of O
-July B-MISC
+July O
 24 O
 , O
 the O
@@ -104939,7 +104940,7 @@ of O
 the O
 US B-ORG
 Food B-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 , O
@@ -105222,7 +105223,7 @@ week O
 the O
 US B-ORG
 Department I-ORG
-of O
+of I-ORG
 Agriculture I-ORG
 told O
 states O
@@ -105283,7 +105284,7 @@ the O
 nonprofit O
 Food B-ORG
 Research I-ORG
-& O
+& I-ORG
 Action I-ORG
 Center I-ORG
 in O
@@ -105365,11 +105366,11 @@ new O
 powers O
 through O
 the O
-Access B-MISC
+Access O
 to O
-Baby B-MISC
-Formula I-MISC
-Act I-MISC
+Baby O
+Formula O
+Act O
 , O
 which O
 was O
@@ -105377,7 +105378,7 @@ signed O
 into O
 law O
 in O
-May B-MISC
+May O
 . O
 The O
 agency O
@@ -105489,11 +105490,11 @@ her O
 to O
 use O
 the O
-Gerber B-MISC
-Good I-MISC
-Start I-MISC
-Extensive I-MISC
-HA I-MISC
+Gerber O
+Good O
+Start O
+Extensive O
+HA O
 , O
 she O
 could O
@@ -106198,9 +106199,9 @@ mustard-flavored O
 icing O
 to O
 celebrate O
-National B-MISC
-Mustard I-MISC
-Day I-MISC
+National O
+Mustard O
+Day O
 . O
 The O
 Frankenfood O
@@ -106464,7 +106465,7 @@ https://ads.stickyadstv.com/auto-user-sync O
 A O
 retired O
 Washington B-LOC
-, O
+, I-LOC
 DC I-LOC
 , O
 police O
@@ -106960,8 +106961,8 @@ and I-ORG
 Atmospheric I-ORG
 Administration I-ORG
 and O
-Colorado B-LOC
-State I-LOC
+Colorado B-ORG
+State I-ORG
 University I-ORG
 show O
 . O
@@ -107052,9 +107053,9 @@ season O
 – O
 the O
 next O
-Ida B-MISC
+Ida O
 or O
-Sandy B-MISC
+Sandy O
 could O
 still O
 be O
@@ -107124,11 +107125,11 @@ formed O
 this O
 season O
 : O
-Alex B-MISC
+Alex O
 , O
-Bonnie B-MISC
+Bonnie O
 and O
-Colin B-MISC
+Colin O
 . O
 Of O
 predicted O
@@ -107224,7 +107225,7 @@ after O
 the O
 1st O
 of O
-August B-MISC
+August O
 , O
 on O
 average O
@@ -107262,17 +107263,17 @@ The O
 season O
 runs O
 from O
-June B-MISC
+June O
 1 O
 to O
-November B-MISC
+November O
 30 O
 . O
 Colorado B-LOC
 State’s I-LOC
-Tropical B-MISC
-Meteorology I-MISC
-Project I-MISC
+Tropical O
+Meteorology O
+Project O
 team O
 update O
 calls O
@@ -107290,7 +107291,7 @@ than O
 it O
 forecast O
 in O
-April B-MISC
+April O
 but O
 four O
 more O
@@ -107444,9 +107445,9 @@ Matthew B-PER
 Rosencrans I-PER
 of O
 NOAA’s B-ORG
-Climate B-MISC
-Prediction I-MISC
-Center I-MISC
+Climate O
+Prediction O
+Center O
 . O
 “ O
 2021 O
@@ -107456,12 +107457,12 @@ a O
 low O
 period O
 in O
-July B-MISC
+July O
 , O
 and O
 then O
 after O
-August B-MISC
+August O
 11 O
 , O
 then O
@@ -107497,10 +107498,10 @@ as O
 sea-surface O
 temperatures O
 , O
-La B-MISC
-Niña I-MISC
+La O
+Niña O
 and O
-Saharan B-MISC
+Saharan O
 dust O
 , O
 and O
@@ -107564,8 +107565,8 @@ world O
 is O
 in O
 a O
-La B-MISC
-Niña I-MISC
+La O
+Niña O
 pattern O
 – O
 a O
@@ -107584,8 +107585,8 @@ in O
 the O
 season O
 . O
-La B-MISC
-Niña I-MISC
+La O
+Niña O
 pattern O
 is O
 a O
@@ -107617,8 +107618,8 @@ the O
 world O
 . O
 While O
-La B-MISC
-Niña I-MISC
+La O
+Niña O
 is O
 certainly O
 a O
@@ -107649,7 +107650,7 @@ forecasts O
 . O
 
 The O
-Madden-Julian B-MISC
+Madden-Julian O
 oscillation O
 can O
 either O
@@ -107666,7 +107667,7 @@ said O
 . O
 “ O
 The O
-MJO B-MISC
+MJO O
 is O
 deep O
 thunderstorm O
@@ -107701,7 +107702,7 @@ and O
 mid-level O
 moisture O
 .” O
-Saharan B-MISC
+Saharan O
 dust O
 and O
 dry O
@@ -107717,7 +107718,7 @@ last O
 month O
 . O
 The O
-MJO B-MISC
+MJO O
 has O
 prohibited O
 thunderstorm O
@@ -107787,7 +107788,7 @@ to O
 the O
 middle O
 of O
-August B-MISC
+August O
 ,” O
 Klotzbach B-PER
 reported O
@@ -107884,7 +107885,7 @@ out O
 that O
 even O
 the O
-2021 B-MISC
+2021 O
 season O
 experienced O
 a O
@@ -107892,12 +107893,12 @@ monthlong O
 summer O
 lull O
 until O
-Tropical B-MISC
-Storm I-MISC
+Tropical O
+Storm O
 Fred B-PER
 formed O
 on O
-August B-MISC
+August O
 11 O
 . O
 
@@ -108101,7 +108102,7 @@ the O
 ballot O
 box O
 in O
-November B-MISC
+November O
 – O
 and O
 beyond O
@@ -108371,8 +108372,8 @@ Court’s I-ORG
 decision O
 to O
 overturn O
-Roe B-MISC
-v. I-MISC
+Roe O
+v. O
 
 Wade O
 , O
@@ -108619,7 +108620,7 @@ to O
 respond O
 to O
 the O
-Dobbs B-MISC
+Dobbs O
 decision O
 , O
 in O
@@ -108631,7 +108632,7 @@ the O
 Supreme B-ORG
 Court I-ORG
 overturned O
-Roe B-MISC
+Roe O
 . O
 Aides O
 say O
@@ -108813,9 +108814,9 @@ the O
 Supreme B-ORG
 Court I-ORG
 overturned O
-Roe B-MISC
+Roe O
 v. O
-Wade B-MISC
+Wade O
 at O
 the O
 end O
@@ -108920,7 +108921,7 @@ and O
 calling O
 out O
 mainly O
-Republican B-MISC
+Republican O
 governors O
 in O
 a O
@@ -108955,7 +108956,7 @@ president O
 , O
 now O
 herald O
-President B-MISC
+President O
 Joe B-PER
 Biden I-PER
 for O
@@ -109064,7 +109065,7 @@ in O
 vitro O
 fertilization O
 ( O
-IVF B-MISC
+IVF O
 ) O
 , O
 access O
@@ -109100,7 +109101,7 @@ who O
 made O
 headlines O
 grilling O
-Republicans B-MISC
+Republicans O
 during O
 high-profile O
 Senate B-ORG
@@ -109382,7 +109383,7 @@ a O
 popular O
 figure O
 with O
-Black B-MISC
+Black O
 voters O
 , O
 despite O
@@ -109585,7 +109586,7 @@ previewing O
 the O
 overturning O
 of O
-Roe B-MISC
+Roe O
 v O
 
 Wade O
@@ -109657,7 +109658,7 @@ a O
 national O
 message O
 for O
-Democrats B-MISC
+Democrats O
 – O
 repeating O
 at O
@@ -110242,10 +110243,10 @@ University B-ORG
 of O
 Virginia’s O
 Salem B-LOC
-Witch B-MISC
-Trials I-MISC
-Documentary I-MISC
-Archive I-MISC
+Witch O
+Trials O
+Documentary O
+Archive O
 . O
 Some O
 of O
@@ -110851,7 +110852,7 @@ TGT O
 ) O
 , O
 Bath B-ORG
-& O
+& I-ORG
 Body I-ORG
 Works I-ORG
 and O
@@ -111030,7 +111031,7 @@ retail O
 analyst O
 at O
 Oppenheimer B-ORG
-& O
+& I-ORG
 Co I-ORG
 . O
 “ O
@@ -111261,7 +111262,7 @@ quarter O
 , O
 while O
 Bath B-ORG
-& O
+& I-ORG
 Body I-ORG
 Works I-ORG
 said O
@@ -111971,9 +111972,9 @@ curtain O
 raiser O
 at O
 the O
-Hall B-MISC
+Hall O
 of O
-Fame I-MISC
+Fame O
 game O
 , O
 signaling O
@@ -112070,12 +112071,12 @@ was O
 returning O
 to O
 the O
-Tom B-MISC
-Benson I-MISC
-Hall I-MISC
+Tom O
+Benson O
+Hall O
 of O
-Fame I-MISC
-Stadium I-MISC
+Fame O
+Stadium O
 where O
 he O
 once O
@@ -112126,10 +112127,10 @@ I’ve O
 been O
 in O
 this O
-Hall B-MISC
+Hall O
 of O
-Fame I-MISC
-Game I-MISC
+Fame O
+Game O
 in O
 22 O
 years O
@@ -112612,7 +112613,7 @@ my O
 balcony O
 . O
 For O
-Muslims B-MISC
+Muslims O
 in O
 New B-LOC
 Mexico I-LOC
@@ -112626,7 +112627,7 @@ by O
 fear O
 after O
 four O
-Muslim B-MISC
+Muslim O
 men O
 — O
 including O
@@ -112709,7 +112710,7 @@ He O
 became O
 the O
 third O
-Muslim B-MISC
+Muslim O
 man O
 killed O
 in O
@@ -112736,7 +112737,7 @@ who O
 just O
 became O
 a O
-US B-MISC
+US O
 citizen O
 – O
 attended O
@@ -113332,7 +113333,7 @@ They O
 are O
 obviously O
 targeting O
-Muslim B-MISC
+Muslim O
 men O
 , O
 and O
@@ -113363,7 +113364,7 @@ community O
 , O
 in O
 the O
-Muslim B-MISC
+Muslim O
 community O
 especially O
 , O
@@ -113578,8 +113579,8 @@ fleeing O
 persecution O
 as O
 a O
-Shia B-MISC
-Muslim I-MISC
+Shia O
+Muslim O
 – O
 and O
 had O
@@ -113706,7 +113707,7 @@ funeral O
 for O
 two O
 other O
-Muslim B-MISC
+Muslim O
 men O
 who O
 were O
@@ -114978,8 +114979,8 @@ shipwreck O
 The O
 Nuestra B-ORG
 Señora I-ORG
-de O
-las O
+de I-ORG
+las I-ORG
 Maravillas I-ORG
 ( O
 or O
@@ -115098,7 +115099,7 @@ know O
 about O
 the O
 first O
-Americans B-MISC
+Americans O
 . O
 
 – O
@@ -115166,15 +115167,15 @@ the O
 next O
 edition O
 of O
-Wonder B-MISC
-Theory, I-MISC
+Wonder O
+Theory, O
 brought O
 to O
 you O
 by O
 CNN B-ORG
 Space I-ORG
-and O
+and I-ORG
 Science I-ORG
 writers O
 Ashley B-PER
@@ -115311,9 +115312,9 @@ bill O
 – O
 named O
 the O
-Inflation B-MISC
-Reduction I-MISC
-Act I-MISC
+Inflation O
+Reduction O
+Act O
 – O
 would O
 represent O
@@ -115605,7 +115606,7 @@ Senate B-ORG
 Democrats I-ORG
 sided O
 with O
-American B-MISC
+American O
 families O
 over O
 special O
@@ -115937,7 +115938,7 @@ statement O
 it O
 would O
 “help O
-Arizonans B-MISC
+Arizonans O
 build O
 better O
 lives O
@@ -116204,7 +116205,7 @@ to O
 a O
 war O
 on O
-American B-MISC
+American O
 fossil O
 fuel O
 .” O
@@ -116251,7 +116252,7 @@ McConnell B-PER
 . O
 “ O
 The O
-American B-MISC
+American O
 people O
 are O
 clear O
@@ -116354,9 +116355,9 @@ movement O
 since O
 the O
 landmark O
-Clean B-MISC
-Air I-MISC
-Act I-MISC
+Clean O
+Air O
+Act O
 . O
 It O
 also O
@@ -116473,7 +116474,7 @@ renewables O
 and O
 spur O
 more O
-American B-MISC
+American O
 consumers O
 to O
 switch O
@@ -116937,7 +116938,7 @@ billion O
 according O
 to O
 a O
-Democratic B-MISC
+Democratic O
 aide O
 . O
 This O
@@ -116993,7 +116994,7 @@ daunting O
 But O
 for O
 most O
-Americans B-MISC
+Americans O
 , O
 it’s O
 a O
@@ -117006,7 +117007,7 @@ credit O
 About O
 92 O
 million O
-Americans B-MISC
+Americans O
 have O
 little O
 to O
@@ -118889,8 +118890,8 @@ police O
 department O
 in O
 late O
-June B-MISC
-2020 I-MISC
+June O
+2020 O
 . O
 
 The O
@@ -119274,8 +119275,8 @@ to O
 the O
 passing O
 of O
-“Breonna’s B-MISC
-Law” I-MISC
+“Breonna’s O
+Law” O
 in O
 June O
 2020 O
@@ -119698,16 +119699,16 @@ director O
 for O
 the O
 Center B-ORG
-for O
-Cannabis B-MISC
-Policy I-MISC
-, O
-Research I-MISC
-and O
-Outreach I-MISC
+for I-ORG
+Cannabis I-ORG
+Policy I-ORG
+, I-ORG
+Research I-ORG
+and I-ORG
+Outreach I-ORG
 at O
-Washington B-LOC
-State I-LOC
+Washington B-ORG
+State I-ORG
 University I-ORG
 in O
 Vancouver B-LOC
@@ -119805,7 +119806,7 @@ in O
 the O
 WSU B-ORG
 College B-ORG
-of O
+of I-ORG
 Nursing I-ORG
 . O
 However O
@@ -119852,13 +119853,13 @@ Centers I-ORG
 for O
 Disease B-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 . O
 A O
 deadly O
 problem O
-Marijuana B-MISC
+Marijuana O
 copycats O
 have O
 sent O
@@ -119895,7 +119896,7 @@ a O
 single O
 ‘hit’ O
 of O
-K2/Spice B-MISC
+K2/Spice O
 , O
 according O
 to O
@@ -119935,7 +119936,7 @@ experts O
 say O
 . O
 In O
-April B-MISC
+April O
 2018 O
 in O
 Illinois B-LOC
@@ -119968,7 +119969,7 @@ Connecticut B-LOC
 a O
 version O
 of O
-K2 B-MISC
+K2 O
 sickened O
 95 O
 people O
@@ -120628,7 +120629,7 @@ it O
 means O
 to O
 the O
-Corps B-MISC
+Corps O
 is O
 quite O
 essential O
@@ -120723,7 +120724,7 @@ before O
 ” O
 recognizing O
 Frederick B-PER
-C. O
+C. I-PER
 Branch I-PER
 , O
 the O
@@ -120734,9 +120735,9 @@ Marine O
 , O
 and O
 the O
-Montford B-MISC
-Point I-MISC
-Marines I-MISC
+Montford O
+Point O
+Marines O
 , O
 the O
 first O
@@ -120754,8 +120755,8 @@ a O
 segregated O
 facility O
 in O
-Montford B-MISC
-Point I-MISC
+Montford O
+Point O
 , O
 North B-LOC
 Carolina I-LOC
@@ -120803,7 +120804,7 @@ signed O
 by O
 President O
 Franklin B-PER
-D. O
+D. I-PER
 Roosevelt I-PER
 that O
 “ O
@@ -120839,9 +120840,9 @@ from O
 the O
 University B-ORG
 of I-ORG
-Texas B-LOC
+Texas I-ORG
 at O
-Arlington I-LOC
+Arlington B-LOC
 and O
 has O
 served O
@@ -120946,8 +120947,8 @@ a O
 column O
 called O
 The O
-Wisdom B-MISC
-Project, I-MISC
+Wisdom O
+Project, O
 to O
 which O
 you O
@@ -120963,9 +120964,9 @@ for O
 years O
 to O
 host O
-“Saturday B-MISC
-Night I-MISC
-Live.” I-MISC
+“Saturday O
+Night O
+Live.” O
 Literally. O
 I’ve O
 repeatedly O
@@ -121567,8 +121568,8 @@ medicine O
 at O
 the O
 University B-ORG
-of O
-Toronto I-LOC
+of I-ORG
+Toronto I-ORG
 . O
 There O
 are O
@@ -122001,10 +122002,10 @@ of O
 the O
 International B-ORG
 Association I-ORG
-for O
-the O
-Study O
-of O
+for I-ORG
+the I-ORG
+Study I-ORG
+of I-ORG
 Dreams I-ORG
 . O
 “ O
@@ -122029,10 +122030,10 @@ new O
 memoir O
 , O
 “ O
-Run B-MISC
-Towards I-MISC
+Run O
+Towards O
 the O
-Danger I-MISC
+Danger O
 .” O
 “ O
 After O
@@ -122298,14 +122299,14 @@ rap O
 battle O
 and O
 drove O
-Speed B-MISC
-Racer I-MISC
+Speed O
+Racer O
 ’s O
 car O
 , O
 the O
-Mach B-MISC
-5 I-MISC
+Mach O
+5 O
 . O
 In O
 still O
@@ -122342,7 +122343,7 @@ a O
 version O
 of O
 “ O
-Hamlet B-MISC
+Hamlet O
 ,” O
 using O
 a O
@@ -122385,7 +122386,7 @@ And O
 I O
 was O
 the O
-Batman B-MISC
+Batman O
 . O
 I O
 can O
@@ -122462,7 +122463,7 @@ Sam B-PER
 Neill I-PER
 and O
 Max B-PER
-von O
+von I-PER
 Sydow I-PER
 . O
 As O
@@ -122826,9 +122827,9 @@ them O
 , O
 except O
 in O
-a B-MISC
-Jungian I-MISC
-collective I-MISC
+a O
+Jungian O
+collective O
 , O
 unconscious O
 way O
@@ -122975,9 +122976,9 @@ Court’s I-ORG
 decision O
 to O
 reverse O
-Roe B-MISC
+Roe O
 v. O
-Wade I-MISC
+Wade O
 and O
 end O
 the O
@@ -123135,9 +123136,9 @@ Court I-ORG
 decided O
 to O
 overturn O
-Roe B-MISC
+Roe O
 v. O
-Wade B-MISC
+Wade O
 . O
 
 Polls O
@@ -123304,7 +123305,7 @@ has O
 told O
 us O
 : O
-Americans B-MISC
+Americans O
 support O
 abortion O
 rights O
@@ -123846,7 +123847,7 @@ state O
 CNN B-ORG
 projects O
 . O
-Democrats B-MISC
+Democrats O
 saw O
 a O
 tight O
@@ -124329,11 +124330,11 @@ resounding O
 victory O
 for O
 the O
-American B-MISC
-Israel B-MISC
-Public I-MISC
-Affairs I-MISC
-Committee, I-MISC
+American O
+Israel O
+Public O
+Affairs O
+Committee, O
 or O
 AIPAC, B-ORG
 and O
@@ -124363,7 +124364,7 @@ are O
 both O
 supportive O
 of O
-Israel, B-MISC
+Israel, O
 but O
 Levin B-PER
 – O
@@ -124389,8 +124390,8 @@ lead O
 sponsor O
 of O
 the O
-Two-State B-MISC
-Solution I-MISC
+Two-State O
+Solution O
 Act. O
 Progressive O
 Democrats, O
@@ -124798,7 +124799,7 @@ Centers B-ORG
 for O
 Disease B-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 ( O
 CDC B-ORG
@@ -124953,7 +124954,7 @@ ANSWERED O
 Q: O
 How O
 does O
-Paxlovid B-MISC
+Paxlovid O
 work O
 ? O
 A: O
@@ -124977,9 +124978,9 @@ the O
 risk O
 of O
 severe O
-Covid-19 B-MISC
+Covid-19 O
 , O
-Paxlovid B-MISC
+Paxlovid O
 – O
 in O
 combination O
@@ -125050,7 +125051,7 @@ appearing O
 Clinical O
 trials O
 of O
-Paxlovid B-MISC
+Paxlovid O
 showed O
 that O
 it O
@@ -125260,7 +125261,7 @@ years O
 ago O
 when O
 the O
-SARS-CoV-2 B-MISC
+SARS-CoV-2 O
 virus O
 started O
 to O
@@ -125295,7 +125296,7 @@ of O
 the O
 highly O
 effective O
-TPOXX B-MISC
+TPOXX O
 antiviral O
 sitting O
 in O
@@ -125408,10 +125409,10 @@ agencies O
 the O
 US B-LOC
 Department B-ORG
-of O
+of I-ORG
 Health I-ORG
-and O
-Human O
+and I-ORG
+Human I-ORG
 Services I-ORG
 said O
 Friday O
@@ -125419,7 +125420,7 @@ Friday O
 The O
 US B-LOC
 Food B-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 advised O
@@ -125616,7 +125617,7 @@ could O
 change O
 both O
 how O
-Americans B-MISC
+Americans O
 power O
 their O
 homes O
@@ -125841,7 +125842,7 @@ science O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 California I-ORG
 , O
 Santa B-LOC
@@ -126122,7 +126123,7 @@ The O
 bill O
 would O
 provide O
-Americans B-MISC
+Americans O
 with O
 tax O
 credits O
@@ -126236,7 +126237,7 @@ low- O
 and O
 moderate- O
 income O
-Americans B-MISC
+Americans O
 to O
 purchase O
 electric O
@@ -126456,7 +126457,7 @@ reduce O
 energy O
 leakage O
 : O
-Americans B-MISC
+Americans O
 could O
 receive O
 tax O
@@ -126571,9 +126572,9 @@ administered O
 by O
 the O
 Department B-ORG
-of O
+of I-ORG
 Housing I-ORG
-and O
+and I-ORG
 Urban I-ORG
 Development I-ORG
 to O
@@ -126659,8 +126660,8 @@ multi-family O
 buildings O
 for O
 constructing O
-Energy B-MISC
-Star-certified I-MISC
+Energy O
+Star-certified O
 housing O
 . O
 Developers O
@@ -127215,8 +127216,8 @@ of O
 Nichelle B-PER
 Nichols I-PER
 , O
-Star B-MISC
-Trek I-MISC
+Star O
+Trek O
 actor O
 , O
 trailblazer O
@@ -127269,8 +127270,8 @@ love O
 for O
 the O
 original O
-Star B-MISC
-Trek I-MISC
+Star O
+Trek O
 is O
 profound O
 . O
@@ -127749,7 +127750,7 @@ countering O
 the O
 threat O
 without O
-American B-MISC
+American O
 boots O
 on O
 the O
@@ -129312,7 +129313,7 @@ Ricketts B-PER
 said O
 in O
 an O
-April B-MISC
+April O
 press O
 conference O
 , O
@@ -129860,12 +129861,12 @@ Colorado B-LOC
 . O
 There’s O
 the O
-Pony B-MISC
-Express I-MISC
-Trail I-MISC
+Pony O
+Express O
+Trail O
 and O
-Fort B-MISC
-Sedgwick I-MISC
+Fort O
+Sedgwick O
 , O
 which O
 was O
@@ -129875,9 +129876,9 @@ the O
 1990 O
 movie O
 “ O
-Dances B-MISC
+Dances O
 with O
-Wolves I-MISC
+Wolves O
 .” O
 For O
 Jay B-PER
@@ -131495,7 +131496,7 @@ Fund I-ORG
 Nepal’s B-LOC
 National B-ORG
 Tiger I-ORG
-and O
+and I-ORG
 Prey I-ORG
 Survey I-ORG
 2022 O
@@ -132390,7 +132391,7 @@ getting O
 the O
 majority O
 of O
-Americans B-MISC
+Americans O
 to O
 do O
 aerobic O
@@ -132543,7 +132544,7 @@ genetically O
 bred O
 to O
 have O
-Alzheimer’s B-MISC
+Alzheimer’s O
 disease O
 and O
 found O
@@ -132563,7 +132564,7 @@ brain O
 most O
 affected O
 by O
-Alzheimer’s B-MISC
+Alzheimer’s O
 while O
 also O
 boosting O
@@ -132585,7 +132586,7 @@ of O
 interventions O
 observed O
 in O
-Alzheimer’s B-MISC
+Alzheimer’s O
 mouse O
 models O
 do O
@@ -132651,10 +132652,10 @@ Tuesday O
 at O
 the O
 2022 O
-Alzheimer’s B-MISC
-Association I-MISC
-International I-MISC
-Conference I-MISC
+Alzheimer’s O
+Association O
+International O
+Conference O
 in O
 San B-LOC
 Diego I-LOC
@@ -133376,7 +133377,7 @@ this O
 November O
 , O
 but O
-Democratic B-MISC
+Democratic O
 strategists O
 are O
 looking O
@@ -133411,9 +133412,9 @@ following O
 the O
 fall O
 of O
-Roe B-MISC
+Roe O
 v. O
-Wade B-MISC
+Wade O
 , O
 Kansas B-LOC
 is O
@@ -133464,9 +133465,9 @@ last O
 victory O
 . O
 ” O
-Democratic B-MISC
+Democratic O
 and O
-Republican B-MISC
+Republican O
 operatives O
 acknowledged O
 Wednesday O
@@ -134129,7 +134130,7 @@ economy O
 . O
 
 Some O
-Republicans B-MISC
+Republicans O
 also O
 believe O
 a O
@@ -134138,13 +134139,13 @@ on O
 abortion O
 would O
 allow O
-Republicans B-MISC
+Republicans O
 to O
 go O
 on O
 offense O
 against O
-Democrats B-MISC
+Democrats O
 who O
 oppose O
 limits O
@@ -134157,7 +134158,7 @@ You O
 need O
 to O
 press O
-Democrats B-MISC
+Democrats O
 on O
 no O
 limits O
@@ -134167,7 +134168,7 @@ Matt B-PER
 Gorman I-PER
 , O
 a O
-Republican B-MISC
+Republican O
 strategist O
 who O
 was O
@@ -134217,7 +134218,7 @@ appropriate O
 ?” O
 Polls O
 show O
-Roe B-MISC
+Roe O
 decision O
 is O
 broadly O
@@ -134233,9 +134234,9 @@ Court’s I-ORG
 decision O
 to O
 overturn O
-Roe B-MISC
+Roe O
 v. O
-Wade B-MISC
+Wade O
 is O
 broadly O
 unpopular O
@@ -134244,7 +134245,7 @@ that O
 a O
 majority O
 of O
-Americans B-MISC
+Americans O
 support O
 protecting O
 abortion O
@@ -134263,7 +134264,7 @@ that O
 nearly O
 two-thirds O
 of O
-Americans B-MISC
+Americans O
 disapproved O
 of O
 the O
@@ -134353,7 +134354,7 @@ has O
 told O
 us O
 : O
-Americans B-MISC
+Americans O
 support O
 abortion O
 rights O
@@ -134523,7 +134524,7 @@ PAC I-ORG
 the O
 leading O
 Democratic B-ORG
-super O
+super I-ORG
 PAC I-ORG
 focused O
 on O
@@ -134536,7 +134537,7 @@ issue O
 as O
 one O
 of O
-Americans B-MISC
+Americans O
 losing O
 a O
 key O
@@ -134566,7 +134567,7 @@ this O
 right O
 away O
 from O
-Americans B-MISC
+Americans O
 , O
 and O
 Democrats B-ORG
@@ -134602,13 +134603,13 @@ a O
 major O
 impact O
 on O
-Americans B-MISC
+Americans O
 across O
 the O
 country O
 . O
 And O
-Americans B-MISC
+Americans O
 don’t O
 like O
 it O
@@ -135383,8 +135384,8 @@ eight O
 , O
 some O
 Friends B-ORG
-of O
-the O
+of I-ORG
+the I-ORG
 NRA I-ORG
 merchandise O
 and O
@@ -135392,8 +135393,8 @@ a O
 choice O
 of O
 a O
-Daniel B-MISC
-Defense I-MISC
+Daniel O
+Defense O
 AR-15-style O
 rifle O
 or O
@@ -136361,7 +136362,7 @@ election O
 initiatives O
 at O
 Cybersecurity B-ORG
-and O
+and I-ORG
 Infrastructure I-ORG
 Security I-ORG
 Agency I-ORG
@@ -136458,7 +136459,7 @@ election O
 officials O
 face O
 . O
-Republicans B-MISC
+Republicans O
 on O
 the O
 committee O
@@ -136497,8 +136498,8 @@ on O
 the O
 demonstrators O
 outside O
-Supreme B-MISC
-Court I-MISC
+Supreme O
+Court O
 justices O
 or O
 threats O
@@ -136510,7 +136511,7 @@ centers O
 . O
 “The O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 is O
 not O
@@ -136528,7 +136529,7 @@ violence O
 ” O
 said O
 Iowa B-LOC
-Sen B-MISC
+Sen O
 . O
 
 Chuck O
@@ -136886,7 +136887,7 @@ developments O
 . O
 
 Ben B-ORG
-& O
+& I-ORG
 Jerry’s I-ORG
 independent O
 board O
@@ -136931,8 +136932,8 @@ the O
 matter O
 . O
 The O
-Cherry B-MISC
-Garcia I-MISC
+Cherry O
+Garcia O
 ice O
 cream O
 maker O
@@ -136966,7 +136967,7 @@ also O
 said O
 . O
 Ben B-ORG
-& O
+& I-ORG
 Jerry’s I-ORG
 sued O
 Unilever B-ORG
@@ -137003,7 +137004,7 @@ Avi B-PER
 Zinger I-PER
 . O
 Ben B-ORG
-& O
+& I-ORG
 Jerry’s I-ORG
 last O
 year O
@@ -137191,7 +137192,7 @@ comment O
 . O
 
 Ben B-ORG
-& O
+& I-ORG
 Jerry’s I-ORG
 and O
 Unilever B-ORG
@@ -137224,7 +137225,7 @@ A O
 hearing O
 on O
 Ben B-ORG
-& O
+& I-ORG
 Jerry’s I-ORG
 request O
 to O
@@ -137269,18 +137270,18 @@ than O
 brands O
 , O
 including O
-Dove B-MISC
-soap I-MISC
+Dove O
+soap O
 , O
-Hellmann’s B-MISC
-mayonnaise I-MISC
+Hellmann’s O
+mayonnaise O
 , O
-Knorr B-MISC
-soup I-MISC
+Knorr O
+soup O
 and O
-Vaseline B-MISC
-skin I-MISC
-lotion I-MISC
+Vaseline O
+skin O
+lotion O
 . O
 
 Michigan B-LOC
@@ -137944,7 +137945,7 @@ are O
 trying O
 to O
 help O
-Ukrainians B-MISC
+Ukrainians O
 come O
 to O
 the O
@@ -137959,7 +137960,7 @@ officials O
 . O
 US B-ORG
 Citizenship I-ORG
-and O
+and I-ORG
 Immigration I-ORG
 Services I-ORG
 says O
@@ -137977,9 +137978,9 @@ targeting O
 would-be O
 participants O
 in O
-Uniting B-MISC
+Uniting O
 for O
-Ukraine B-MISC
+Ukraine O
 , O
 the O
 Biden B-PER
@@ -137996,10 +137997,10 @@ the O
 opportunity O
 to O
 sponsor O
-Ukrainians B-MISC
+Ukrainians O
 fleeing O
 the O
-Russian B-MISC
+Russian O
 invasion O
 . O
 The O
@@ -138016,9 +138017,9 @@ requested O
 payment O
 from O
 prospective O
-Uniting B-MISC
+Uniting O
 for O
-Ukraine B-MISC
+Ukraine O
 supporters O
 before O
 USCIS B-ORG
@@ -138140,7 +138141,7 @@ agency O
 said O
 in O
 a O
-June B-MISC
+June O
 tweet O
 . O
 The O
@@ -138208,7 +138209,7 @@ Biden B-PER
 commitment O
 to O
 welcome O
-Ukrainians B-MISC
+Ukrainians O
 fleeing O
 Russia B-LOC
 ’s O
@@ -138217,7 +138218,7 @@ invasion O
 The O
 program O
 requires O
-Ukrainians B-MISC
+Ukrainians O
 seeking O
 entry O
 to O
@@ -138234,7 +138235,7 @@ in O
 the O
 US B-LOC
 . O
-Ukrainian B-MISC
+Ukrainian O
 applicants O
 are O
 considered O
@@ -138281,7 +138282,7 @@ people O
 agreeing O
 to O
 support O
-Ukrainian B-MISC
+Ukrainian O
 citizens O
 or O
 their O
@@ -138291,9 +138292,9 @@ members O
 as O
 part O
 of O
-Uniting B-MISC
+Uniting O
 for O
-Ukraine B-MISC
+Ukraine O
 . O
 Through O
 the O
@@ -138302,7 +138303,7 @@ program O
 more O
 than O
 62,000 O
-Ukrainians B-MISC
+Ukrainians O
 have O
 been O
 authorized O
@@ -138341,7 +138342,7 @@ agency O
 About O
 71,000 O
 additional O
-Ukrainians B-MISC
+Ukrainians O
 have O
 been O
 processed O
@@ -138349,7 +138350,7 @@ into O
 the O
 US B-LOC
 since O
-March B-MISC
+March O
 24 O
 through O
 other O
@@ -138363,11 +138364,11 @@ Since O
 Russia’s B-LOC
 invasion O
 of O
-Ukraine B-MISC
+Ukraine O
 began O
 in O
 late O
-February B-MISC
+February O
 , O
 millions O
 of O
@@ -138424,7 +138425,7 @@ the O
 state’s O
 full O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 this O
 week O
@@ -138619,11 +138620,11 @@ effective O
 start O
 date O
 from O
-September B-MISC
-1 I-MISC
+September O
+1 O
 to O
-November B-MISC
-1 I-MISC
+November O
+1 O
 , O
 according O
 to O
@@ -138651,9 +138652,9 @@ US B-ORG
 Supreme I-ORG
 Court I-ORG
 overturned O
-Roe B-MISC
+Roe O
 v O
-Wade I-MISC
+Wade O
 , O
 ending O
 a O
@@ -138806,7 +138807,7 @@ anti-abortion O
 group O
 National B-ORG
 Right I-ORG
-to O
+to I-ORG
 Life I-ORG
 and O
 its O
@@ -138887,7 +138888,7 @@ consequences O
 ” O
 Indiana B-LOC
 Right I-ORG
-to O
+to I-ORG
 Life I-ORG
 said O
 in O
@@ -138906,9 +138907,9 @@ report O
 The O
 US B-ORG
 Department I-ORG
-of O
+of I-ORG
 Health I-ORG
-and O
+and I-ORG
 Human I-ORG
 Services I-ORG
 waited O
@@ -139077,7 +139078,7 @@ just O
 doses O
 of O
 the O
-Jynneos B-MISC
+Jynneos O
 vaccine O
 in O
 the O
@@ -139094,7 +139095,7 @@ Administration B-ORG
 for O
 Strategic B-ORG
 Preparedness I-ORG
-and O
+and I-ORG
 Response I-ORG
 ( O
 ASPR B-ORG
@@ -139111,7 +139112,7 @@ ordered O
 of O
 doses O
 of O
-Jynneos B-MISC
+Jynneos O
 vaccines O
 – O
 which O
@@ -139319,7 +139320,7 @@ amounts O
 of O
 the O
 frozen O
-Jynneos B-MISC
+Jynneos O
 vaccines O
 be O
 bottled O
@@ -139399,7 +139400,7 @@ Northwestern B-ORG
 University I-ORG
 Feinberg I-ORG
 School I-ORG
-of O
+of I-ORG
 Medicine I-ORG
 , O
 told O
@@ -140652,8 +140653,8 @@ monument O
 , O
 but O
 the O
-Great B-MISC
-Depression I-MISC
+Great O
+Depression O
 slowed O
 down O
 its O
@@ -140823,7 +140824,7 @@ a O
 public O
 tool O
 called O
-Botometer B-MISC
+Botometer O
 created O
 by O
 researchers O
@@ -140874,7 +140875,7 @@ the O
 first O
 week O
 of O
-July B-MISC
+July O
 , O
 spam O
 bots O
@@ -142731,10 +142732,10 @@ used O
 an O
 app O
 called O
-BleachBit B-MISC
+BleachBit O
 . O
 In O
-Trumpworld B-MISC
+Trumpworld O
 , O
 she O
 poured O
@@ -142870,7 +142871,7 @@ a O
 longtime O
 source O
 in O
-Republican B-MISC
+Republican O
 politics O
 who O
 has O
@@ -143197,7 +143198,7 @@ Ramis B-PER
 who O
 directed O
 “ O
-Caddyshack B-MISC
+Caddyshack O
 , O
 “ O
 National B-ORG
@@ -143206,18 +143207,18 @@ Vacation I-ORG
 ” O
 and O
 “ O
-Groundhog B-MISC
-Day I-MISC
+Groundhog O
+Day O
 ,” O
 and O
 costarred O
 in O
 “ O
-Ghostbusters B-MISC
+Ghostbusters O
 ” O
 and O
 “ O
-Stripes B-MISC
+Stripes O
 ,” O
 died O
 at O
@@ -144120,7 +144121,7 @@ the O
 first O
 year O
 of O
-Trump’s I-PER
+Trump’s O
 presidency O
 , O
 and O
@@ -144129,7 +144130,7 @@ the O
 State O
 Department O
 for O
-Trump’s I-PER
+Trump’s O
 final O
 three O
 years O
@@ -144405,7 +144406,7 @@ a O
 key O
 figure O
 in O
-Trump B-MISC
+Trump O
 ’s O
 effort O
 to O
@@ -144435,7 +144436,7 @@ the O
 election O
 , O
 where O
-Trump B-MISC
+Trump O
 and O
 his O
 then O
@@ -144455,7 +144456,7 @@ chartered O
 buses O
 to O
 bring O
-Trump B-MISC
+Trump O
 supporters O
 to O
 Washington B-LOC
@@ -144588,7 +144589,7 @@ additional O
 context O
 . O
 Several O
-Trump B-MISC
+Trump O
 Cabinet O
 officials O
 have O
@@ -144702,9 +144703,9 @@ against O
 the O
 procedure O
 since O
-Roe B-MISC
-v. I-MISC
-Wade I-MISC
+Roe O
+v. O
+Wade O
 was O
 overturned O
 this O
@@ -145107,7 +145108,7 @@ colleagues O
 to O
 repent O
 before O
-God B-MISC
+God O
 . O
 Democratic O
 Rep O
@@ -145564,7 +145565,7 @@ Social I-ORG
 owner O
 Trump B-PER
 Media B-ORG
-& O
+& I-ORG
 Technology I-ORG
 Group I-ORG
 . O
@@ -145684,7 +145685,7 @@ Justice B-ORG
 Department I-ORG
 and O
 Securities B-ORG
-and O
+and I-ORG
 Exchange I-ORG
 Commission I-ORG
 are O
@@ -145906,7 +145907,7 @@ along O
 to O
 help O
 the O
-SPAC B-MISC
+SPAC O
 , O
 ” O
 Kennedy B-PER
@@ -146065,7 +146066,7 @@ line O
 ,” O
 saying O
 the O
-Chinese B-MISC
+Chinese O
 military O
 would O
 “ O
@@ -146157,7 +146158,7 @@ a O
 live-streamed O
 welcome O
 by O
-Taiwanese B-MISC
+Taiwanese O
 officials O
 while O
 the O
@@ -146167,7 +146168,7 @@ Taipei B-LOC
 skyscraper O
 flashed O
 “ O
-US-Taiwan B-MISC
+US-Taiwan O
 friendship O
 forever O
 ” O
@@ -146496,7 +146497,7 @@ Global B-ORG
 Times I-ORG
 editor. O
 “The O
-Chinese B-MISC
+Chinese O
 government O
 has O
 indeed O
@@ -146534,12 +146535,12 @@ on O
 the O
 evening O
 of O
-August B-MISC
+August O
 2 O
 , O
 when O
 the O
-Chinese B-MISC
+Chinese O
 government O
 and O
 official O
@@ -146799,14 +146800,14 @@ Lee B-ORG
 Kuan I-ORG
 Yew I-ORG
 School I-ORG
-of O
+of I-ORG
 Public I-ORG
 Policy I-ORG
 at O
 the O
 National B-ORG
 University I-ORG
-of O
+of I-ORG
 Singapore I-ORG
 . O
 However O
@@ -146842,8 +146843,8 @@ Wu B-PER
 said O
 . O
 ‘ O
-Wolf B-MISC
-warriors I-MISC
+Wolf O
+warriors O
 ’ O
 sometimes O
 need O
@@ -146970,7 +146971,7 @@ That’s O
 good O
 news O
 for O
-American B-MISC
+American O
 tourists O
 gallivanting O
 around O
@@ -147059,7 +147060,7 @@ inflation O
 
 That’s O
 made O
-American B-MISC
+American O
 investments O
 more O
 attractive O
@@ -147862,7 +147863,7 @@ Setser I-PER
 of O
 the O
 Council B-ORG
-on O
+on I-ORG
 Foreign I-ORG
 Relations I-ORG
 wrote O
@@ -148083,7 +148084,7 @@ Reserve I-ORG
 or O
 the O
 Bank B-ORG
-of O
+of I-ORG
 England I-ORG
 . O
 Brazil B-LOC
@@ -148170,7 +148171,7 @@ chief O
 economist O
 at O
 Institute B-ORG
-of O
+of I-ORG
 International I-ORG
 Finance I-ORG
 . O
@@ -148475,7 +148476,7 @@ management O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Punjab I-ORG
 in O
 Pakistan B-LOC
@@ -148557,7 +148558,7 @@ death O
 , O
 President O
 Garnett B-PER
-S. O
+S. I-PER
 Stokes I-PER
 said O
 in O
@@ -148778,8 +148779,8 @@ stands O
 strongly O
 with O
 the O
-Muslim B-MISC
-community I-MISC
+Muslim O
+community O
 , O
 ” O
 Biden B-PER
@@ -148804,8 +148805,8 @@ support O
 for O
 New B-LOC
 Mexico’s I-LOC
-Muslim B-MISC
-community I-MISC
+Muslim O
+community O
 , O
 with O
 the O
@@ -148872,8 +148873,8 @@ said O
 Speaking O
 to O
 the O
-Muslim B-MISC
-community I-MISC
+Muslim O
+community O
 in O
 Albuquerque B-LOC
 and O
@@ -149113,7 +149114,7 @@ The O
 victim O
 , O
 a O
-Muslim B-MISC
+Muslim O
 man O
 believed O
 to O
@@ -149192,8 +149193,8 @@ we O
 are O
 asking O
 the O
-Muslim B-MISC
-community I-MISC
+Muslim O
+community O
 especially O
 , O
 to O
@@ -149230,7 +149231,7 @@ not O
 prevail O
 . O
 The O
-Muslim B-MISC
+Muslim O
 community O
 is O
 living O
@@ -149390,7 +149391,7 @@ both O
 protect O
 the O
 Albuquerque B-LOC
-Muslim B-MISC
+Muslim O
 community O
 and O
 stop O
@@ -149586,7 +149587,7 @@ tough O
 national O
 environment O
 for O
-Democrats B-MISC
+Democrats O
 . O
 Greitens B-PER
 , O
@@ -149631,7 +149632,7 @@ Greitens B-PER
 losing O
 to O
 a O
-Democrat B-MISC
+Democrat O
 – O
 or O
 perhaps O
@@ -149746,7 +149747,7 @@ conversations O
 with O
 about O
 45 O
-Missourians B-MISC
+Missourians O
 across O
 the O
 state O
@@ -149969,7 +149970,7 @@ their O
 St O
 . O
 
-Louis B-MISC
+Louis O
 home O
 on O
 his O
@@ -150248,8 +150249,8 @@ blackmail O
 . O
 The O
 former O
-Navy B-MISC
-SEAL I-MISC
+Navy O
+SEAL O
 was O
 separately O
 charged O
@@ -150406,7 +150407,7 @@ and O
 her O
 . O
 The O
-anti-Greitens B-MISC
+anti-Greitens O
 group O
 , O
 Show B-ORG
@@ -150501,10 +150502,10 @@ Brewer I-PER
 said O
 at O
 the O
-Ozark B-LOC
-Distillery I-LOC
-and O
-Brewery I-LOC
+Ozark B-ORG
+Distillery I-ORG
+and I-ORG
+Brewery I-ORG
 in O
 Osage B-LOC
 Beach I-LOC
@@ -150635,8 +150636,8 @@ one O
 woman O
 at O
 the O
-Watermelon B-MISC
-Feed I-MISC
+Watermelon O
+Feed O
 in O
 Neosho B-LOC
 put O
@@ -150682,8 +150683,8 @@ Seneca B-LOC
 said O
 at O
 the O
-Watermelon B-MISC
-Feed I-MISC
+Watermelon O
+Feed O
 that O
 he O
 was O
@@ -150870,7 +150871,7 @@ Trump B-PER
 had O
 previously O
 praised O
-Senate B-MISC
+Senate O
 hopeful O
 Billy B-PER
 Long I-PER
@@ -150952,7 +150953,7 @@ didn’t O
 seem O
 to O
 concern O
-GOP B-MISC
+GOP O
 voters O
 , O
 even O
@@ -151188,7 +151189,7 @@ morning O
 after O
 Schmitt’s B-PER
 comments. O
-Democrats B-MISC
+Democrats O
 vie O
 for O
 a O
@@ -151712,11 +151713,11 @@ the O
 boy O
 wearing O
 a O
-Minecraft B-MISC
+Minecraft O
 shirt O
 and O
 a O
-Spider-Man B-MISC
+Spider-Man O
 blanket O
 . O
 Cooper B-PER
@@ -152146,7 +152147,7 @@ is O
 pretty O
 sure O
 most O
-Americans B-MISC
+Americans O
 don’t O
 really O
 care O
@@ -152166,7 +152167,7 @@ disaster O
 relief O
 to O
 get O
-Kentuckians B-MISC
+Kentuckians O
 back O
 on O
 their O
@@ -152231,7 +152232,7 @@ things O
 . O
 “ O
 The O
-American B-MISC
+American O
 people O
 are O
 clear O
@@ -152262,7 +152263,7 @@ the O
 bill O
 . O
 “ O
-Americans B-MISC
+Americans O
 want O
 solutions O
 for O
@@ -152509,7 +152510,7 @@ be O
 connected O
 for O
 more O
-Americans B-MISC
+Americans O
 . O
 About O
 half O
@@ -152526,7 +152527,7 @@ them O
 A O
 majority O
 of O
-Americans B-MISC
+Americans O
 acknowledge O
 that O
 climate O
@@ -152792,9 +152793,9 @@ conducted O
 by O
 SSRS B-ORG
 in O
-June B-MISC
+June O
 and O
-July B-MISC
+July O
 , O
 only O
 about O
@@ -152824,24 +152825,24 @@ includes O
 about O
 half O
 of O
-Democrats B-MISC
+Democrats O
 and O
-Democratic-leaning B-MISC
+Democratic-leaning O
 voters O
 and O
 just O
 13% O
 of O
-Republicans B-MISC
+Republicans O
 and O
-Republican-leaning B-MISC
+Republican-leaning O
 voters O
 . O
 To O
 McConnell’s B-PER
 point O
 about O
-Americans’ B-MISC
+Americans’ O
 concerns O
 , O
 the O
@@ -152861,7 +152862,7 @@ as O
 an O
 inflation O
 bill O
-Democrats B-MISC
+Democrats O
 decided O
 to O
 market O
@@ -152894,7 +152895,7 @@ inflation O
 That O
 doesn’t O
 mean O
-Democrats B-MISC
+Democrats O
 can’t O
 claim O
 to O
@@ -153117,8 +153118,8 @@ Tensley I-PER
 wrote O
 for O
 his O
-Race B-MISC
-Deconstructed I-MISC
+Race O
+Deconstructed O
 newsletter O
 that O
 climate O
@@ -153473,7 +153474,7 @@ unelectable O
 , O
 potentially O
 handing O
-Democrats B-MISC
+Democrats O
 a O
 pickup O
 opportunity O
@@ -153559,7 +153560,7 @@ that O
 were O
 circulating O
 in O
-GOP B-MISC
+GOP O
 circles O
 . O
 During O
@@ -153658,7 +153659,7 @@ a O
 group O
 backing O
 Georgia B-LOC
-GOP B-MISC
+GOP O
 gubernatorial O
 hopeful O
 David B-PER
@@ -153672,7 +153673,7 @@ his O
 primary O
 against O
 incumbent O
-Gov B-MISC
+Gov O
 . O
 
 Brian B-PER
@@ -153828,7 +153829,7 @@ him O
 as O
 the O
 true O
-MAGA B-MISC
+MAGA O
 candidate O
 . O
 Longtime O
@@ -154431,7 +154432,7 @@ More O
 than O
 70 O
 million O
-Americans B-MISC
+Americans O
 are O
 under O
 heat O
@@ -154635,7 +154636,7 @@ While O
 swaths O
 of O
 the O
-US B-MISC
+US O
 bake O
 , O
 others O
@@ -155667,16 +155668,16 @@ you O
 must O
 decline O
 the O
-Collision B-MISC
-Damage I-MISC
-Waiver I-MISC
+Collision O
+Damage O
+Waiver O
 (CDW) O
 — O
 sometimes O
 called O
-Loss B-MISC
-Damage I-MISC
-Waiver I-MISC
+Loss O
+Damage O
+Waiver O
 (LDW) O
 — O
 in O
@@ -156259,8 +156260,8 @@ Hertz B-ORG
 Gold I-ORG
 Plus I-ORG
 Rewards I-ORG
-President’s B-MISC
-Circle I-MISC
+President’s O
+Circle O
 elite O
 status O
 . O
@@ -156339,8 +156340,8 @@ you O
 desire O
 in O
 the O
-President’s B-MISC
-Circle I-MISC
+President’s O
+Circle O
 aisle O
 . O
 At O
@@ -156731,9 +156732,9 @@ dollar O
 Frequent O
 flyer O
 website O
-The B-MISC
-Points I-MISC
-Guy I-MISC
+The O
+Points O
+Guy O
 values O
 Chase B-ORG
 Ultimate I-ORG
@@ -156782,9 +156783,9 @@ car O
 rental O
 reservations O
 . O
-The B-MISC
-Sapphire I-MISC
-Reserve I-MISC
+The O
+Sapphire O
+Reserve O
 card O
 comes O
 with O
@@ -156862,18 +156863,18 @@ in O
 statement O
 credits O
 for O
-Global B-MISC
-Entry I-MISC
+Global O
+Entry O
 or O
-TSA B-MISC
-PreCheck I-MISC
+TSA O
+PreCheck O
 and O
 much O
 more O
 . O
-The B-MISC
-Sapphire I-MISC
-Reserve I-MISC
+The O
+Sapphire O
+Reserve O
 currently O
 comes O
 with O
@@ -156915,10 +156916,10 @@ card O
 for O
 renting O
 cars O
-The B-MISC
-Chase I-MISC
-Sapphire I-MISC
-Preferred I-MISC
+The O
+Chase O
+Sapphire O
+Preferred O
 Card O
 will O
 also O
@@ -156951,13 +156952,13 @@ than O
 the O
 previously O
 mentioned O
-Sapphire I-MISC
-Reserve I-MISC
+Sapphire O
+Reserve O
 . O
-The B-MISC
-Chase I-MISC
-Sapphire I-MISC
-Preferred I-MISC
+The O
+Chase O
+Sapphire O
+Preferred O
 Card O
 is O
 just O
@@ -156980,7 +156981,7 @@ on O
 this O
 list O
 . O
-The B-MISC
+The O
 main O
 difference O
 when O
@@ -156996,8 +156997,8 @@ amount O
 With O
 the O
 lower-annual-fee O
-Sapphire I-MISC
-Preferred I-MISC
+Sapphire O
+Preferred O
 , O
 you’ll O
 be O
@@ -157082,10 +157083,10 @@ Chase B-ORG
 Ultimate I-ORG
 Rewards I-ORG
 . O
-The B-MISC
-Chase I-MISC
-Sapphire I-MISC
-Preferred I-MISC
+The O
+Chase O
+Sapphire O
+Preferred O
 also O
 earns O
 5 O
@@ -157457,7 +157458,7 @@ above O
 car O
 in O
 the O
-Executive B-MISC
+Executive O
 area O
 . O
 
@@ -157642,10 +157643,10 @@ coverage O
 you O
 can O
 purchase O
-“Premium B-MISC
-Car I-MISC
-Rental I-MISC
-Protection I-MISC
+“Premium O
+Car O
+Rental O
+Protection O
 .” O
 You’ll O
 pay O
@@ -157728,8 +157729,8 @@ Amex B-ORG
 Platinum I-ORG
 is O
 80,000 O
-Membership B-MISC
-Rewards I-MISC
+Membership O
+Rewards O
 points O
 after O
 spending O
@@ -158515,9 +158516,9 @@ US B-ORG
 Supreme I-ORG
 Court I-ORG
 overturned O
-Roe B-MISC
-v. I-MISC
-Wade I-MISC
+Roe O
+v. O
+Wade O
 last O
 month O
 . O
@@ -158567,7 +158568,7 @@ Last O
 week O
 , O
 Republican O
-Gov B-MISC
+Gov O
 . O
 
 Jim B-PER
@@ -159743,13 +159744,13 @@ worth O
 of O
 debt O
 in O
-June B-MISC
+June O
 , O
 the O
 Federal B-ORG
 Reserve I-ORG
 said O
-Friday B-MISC
+Friday O
 afternoon O
 . O
 The O
@@ -159762,7 +159763,7 @@ economists’ O
 forecasts O
 , O
 after O
-May’s B-MISC
+May’s O
 revised O
 total O
 of O
@@ -159775,19 +159776,19 @@ grew O
 by O
 10.5% O
 in O
-June B-MISC
+June O
 , O
 compared O
 to O
 6.3% O
 in O
-May B-MISC
+May O
 , O
 according O
 to O
 the O
 Fed’s B-ORG
-G.19 B-MISC
+G.19 O
 consumer O
 credit O
 report O
@@ -159812,7 +159813,7 @@ an O
 7.8% O
 increase O
 in O
-May B-MISC
+May O
 . O
 Non-revolving O
 debt O
@@ -159835,7 +159836,7 @@ a O
 5.8% O
 increase O
 in O
-May B-MISC
+May O
 . O
 These O
 figures O
@@ -159882,8 +159883,8 @@ separate O
 release O
 from O
 the O
-New B-LOC
-York I-LOC
+New B-ORG
+York I-ORG
 Fed I-ORG
 that O
 reported O
@@ -159922,7 +159923,7 @@ month O
 , O
 the O
 Bureau B-ORG
-of O
+of I-ORG
 Labor I-ORG
 Statistics I-ORG
 reported O
@@ -159999,7 +160000,7 @@ Orlando B-LOC
 Police B-ORG
 Chief O
 Eric B-PER
-D. O
+D. I-PER
 Smith I-PER
 said O
 . O
@@ -160144,7 +160145,7 @@ furnishings O
 retailer O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 , O
 (BBBY) O
@@ -160176,7 +160177,7 @@ days O
 while O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 shot O
 up O
@@ -160316,7 +160317,7 @@ GameStop B-ORG
 . O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 just O
 ousted O
@@ -160337,7 +160338,7 @@ reported O
 lousy O
 results O
 in O
-June B-MISC
+June O
 . O
 But O
 none O
@@ -160348,7 +160349,7 @@ to O
 the O
 “apes” O
 on O
-Reddit B-MISC
+Reddit O
 , O
 a O
 nickname O
@@ -160393,10 +160394,10 @@ GameStop B-ORG
 announced O
 a O
 new O
-NFT B-MISC
+NFT O
 marketplace O
 in O
-July B-MISC
+July O
 that O
 the O
 “left O
@@ -160439,7 +160440,7 @@ stake O
 in O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 . O
 
@@ -160615,7 +160616,7 @@ year O
 . O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 is O
 still O
@@ -160938,7 +160939,7 @@ well O
 as O
 members O
 of O
-Congress B-MISC
+Congress O
 and O
 former O
 officials O
@@ -161457,7 +161458,7 @@ Ricketts B-PER
 said O
 in O
 an O
-April B-MISC
+April O
 press O
 conference O
 , O
@@ -161779,11 +161780,11 @@ fall O
 and O
 winter O
 between O
-October B-MISC
-15 I-MISC
+October O
+15 O
 and O
-April B-MISC
-1 I-MISC
+April O
+1 O
 . O
 However O
 , O
@@ -161798,11 +161799,11 @@ and O
 summer O
 , O
 from O
-April B-MISC
-1 I-MISC
+April O
+1 O
 and O
-October B-MISC
-15 I-MISC
+October O
+15 O
 , O
 Nebraska’s B-LOC
 allotment O
@@ -162005,12 +162006,12 @@ Colorado B-LOC
 . O
 There’s O
 the O
-Pony B-MISC
-Express I-MISC
-Trail I-MISC
+Pony O
+Express O
+Trail O
 and O
-Fort B-MISC
-Sedgwick I-MISC
+Fort O
+Sedgwick O
 , O
 which O
 was O
@@ -162020,9 +162021,9 @@ the O
 1990 O
 movie O
 “ O
-Dances B-MISC
+Dances O
 with O
-Wolves I-MISC
+Wolves O
 .” O
 For O
 Jay B-PER
@@ -162967,7 +162968,7 @@ ironically O
 because O
 of O
 this O
-American B-MISC
+American O
 success O
 – O
 there O
@@ -163049,7 +163050,7 @@ Afghanistan B-LOC
 recently O
 . O
 In O
-May B-MISC
+May O
 last O
 year O
 , O
@@ -163230,7 +163231,7 @@ on O
 that O
 
 The O
-Haqqanis B-MISC
+Haqqanis O
 remain O
 perhaps O
 the O
@@ -163455,10 +163456,10 @@ and O
 seismic O
 grief O
 of O
-September B-MISC
-11 I-MISC
+September O
+11 O
 , O
-2001 I-MISC
+2001 O
 . O
 His O
 death O
@@ -163623,7 +163624,7 @@ where O
 for O
 twenty O
 years O
-Westerners B-MISC
+Westerners O
 and O
 connected O
 Afghan B-LOC
@@ -163708,7 +163709,7 @@ over O
 Hulu’s B-ORG
 new O
 series O
-“Mike,” B-MISC
+“Mike,” O
 which O
 debuts O
 on O
@@ -163721,7 +163722,7 @@ Rhodes I-PER
 , O
 from O
 2016’s O
-“Moonlight,” B-MISC
+“Moonlight,” O
 as O
 the O
 famed O
@@ -163967,14 +163968,6 @@ in O
 HBO’s B-ORG
 drama O
 series O
-“Winning O
-Time: O
-The O
-Rise O
-of O
-the O
-Lakers I-ORG
-Dynasty.” O
 Executive O
 and O
 former O
@@ -164063,7 +164056,7 @@ ride.” O
 "دربتهم O
 قوات O
 خاصة O
-أمريكية B-MISC
+أمريكية O
 " O
 - O
 CNN B-ORG
@@ -164098,7 +164091,7 @@ toward O
 final O
 passage O
 of O
-Democrats’ B-MISC
+Democrats’ O
 sweeping O
 health O
 care O
@@ -164304,7 +164297,7 @@ approved O
 by O
 the O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 before O
 President O
@@ -164828,7 +164821,7 @@ to O
 Medicare B-ORG
 , O
 a O
-Democratic B-MISC
+Democratic O
 aide O
 said O
 . O
@@ -164954,7 +164947,7 @@ major O
 long-fought O
 victory O
 for O
-Democrats B-MISC
+Democrats O
 . O
 The O
 nearly O
@@ -164985,9 +164978,9 @@ movement O
 since O
 the O
 landmark O
-Clean B-MISC
-Air I-MISC
-Act I-MISC
+Clean O
+Air O
+Act O
 . O
 
 It O
@@ -165152,7 +165145,7 @@ laws O
 of O
 physics O
 , O
-Democratic B-MISC
+Democratic O
 Sen O
 . O
 
@@ -165562,7 +165555,7 @@ billion O
 according O
 to O
 a O
-Democratic B-MISC
+Democratic O
 aide O
 . O
 This O
@@ -165811,7 +165804,7 @@ right-wing O
 anger O
 and O
 turned O
-Republican B-MISC
+Republican O
 primary O
 campaigns O
 up O
@@ -166133,7 +166126,7 @@ political O
 extremism O
 in O
 the O
-GOP B-MISC
+GOP O
 , O
 while O
 sparking O
@@ -166313,7 +166306,7 @@ an O
 issue O
 that O
 national O
-Democrats B-MISC
+Democrats O
 hope O
 will O
 energize O
@@ -166970,9 +166963,9 @@ the O
 criminal O
 probe O
 into O
-January B-MISC
-6 I-MISC
-2021 I-MISC
+January O
+6 O
+2021 O
 , O
 accelerates O
 , O
@@ -167032,8 +167025,8 @@ efforts O
 to O
 overturn O
 the O
-2020 B-MISC
-election I-MISC
+2020 O
+election O
 and O
 executing O
 searches O
@@ -167074,8 +167067,8 @@ investigation O
 and O
 its O
 top O
-January B-MISC
-6 I-MISC
+January O
+6 O
 prosecutor O
 Thomas B-PER
 Windom I-PER
@@ -167263,8 +167256,8 @@ in O
 the O
 state O
 ’s O
-2020 B-MISC
-election I-MISC
+2020 O
+election O
 results O
 . O
 Rolling B-ORG
@@ -167703,8 +167696,8 @@ about O
 Trump’s B-PER
 actions O
 on O
-January B-MISC
-6 I-MISC
+January O
+6 O
 during O
 her O
 public O
@@ -167714,7 +167707,7 @@ the O
 House B-ORG
 panel I-ORG
 in O
-June B-MISC
+June O
 . O
 Hutchinson B-PER
 is O
@@ -167778,7 +167771,7 @@ Terwilliger I-PER
 told O
 CNN B-ORG
 on O
-Thursday B-MISC
+Thursday O
 : O
 “All O
 of O
@@ -167834,7 +167827,7 @@ public O
 testimony O
 during O
 the O
-Watergate B-MISC
+Watergate O
 hearings O
 . O
 “The O
@@ -168211,9 +168204,9 @@ Kennedy I-PER
 said O
 of O
 the O
-Bay B-MISC
-of I-MISC
-Pigs I-MISC
+Bay O
+of O
+Pigs O
 fiasco O
 , O
 “Victory O
@@ -168295,7 +168288,7 @@ the O
 longest O
 war O
 in O
-American B-MISC
+American O
 history O
 . O
 
@@ -168350,7 +168343,7 @@ Taliban B-ORG
 regime O
 harbored O
 Osama B-PER
-bin O
+bin I-PER
 Laden I-PER
 , O
 giving O
@@ -168370,7 +168363,7 @@ which O
 killed O
 almost O
 3,000 O
-Americans B-MISC
+Americans O
 . O
 As O
 US B-ORG
@@ -168482,7 +168475,7 @@ the O
 entire O
 country O
 on O
-August B-MISC
+August O
 15 O
 , O
 2021 O
@@ -168643,7 +168636,7 @@ leaders O
 claimed O
 they O
 would. O
-Pashtuns B-MISC
+Pashtuns O
 make O
 up O
 almost O
@@ -168662,10 +168655,10 @@ Afghanistan B-LOC
 such O
 as O
 the O
-Hazaras, B-MISC
-Tajiks B-MISC
+Hazaras, O
+Tajiks O
 and O
-Uzbeks B-MISC
+Uzbeks O
 are O
 almost O
 entirely O
@@ -168819,7 +168812,7 @@ tweeted O
 “#Taliban O
 basically O
 asserting O
-Doha B-MISC
+Doha O
 agreement O
 allows O
 them O
@@ -168854,7 +168847,7 @@ coming O
 from O
 a O
 senior O
-American B-MISC
+American O
 official O
 who O
 was O
@@ -169000,7 +168993,7 @@ system O
 in O
 which O
 all O
-Afghans B-MISC
+Afghans O
 have O
 equal O
 rights, O
@@ -169013,7 +169006,7 @@ that O
 are O
 granted O
 by O
-Islam B-MISC
+Islam O
 – O
 from O
 the O
@@ -169279,7 +169272,7 @@ total O
 American B-ORG
 withdrawal O
 in O
-April B-MISC
+April O
 2021 O
 . O
 Why O
@@ -169357,7 +169350,7 @@ of O
 the O
 Joint B-ORG
 Chiefs I-ORG
-of O
+of I-ORG
 Staff I-ORG
 Gen B-PER
 
@@ -169390,7 +169383,7 @@ in O
 Afghanistan B-LOC
 , O
 the O
-Afghan B-MISC
+Afghan O
 military O
 would O
 collapse O
@@ -169400,8 +169393,8 @@ it O
 did O
 
 The O
-“Taliban B-MISC
-2.0” I-MISC
+“Taliban O
+2.0” O
 delusion O
 The O
 publication O
@@ -169410,8 +169403,8 @@ Haqqani’s B-PER
 op-ed O
 in O
 The O
-New B-LOC
-York I-LOC
+New B-ORG
+York I-ORG
 Times I-ORG
 was O
 emblematic O
@@ -169421,7 +169414,7 @@ wishful O
 thinking O
 about O
 the O
-Taliban B-MISC
+Taliban O
 in O
 the O
 US B-LOC
@@ -169435,7 +169428,7 @@ In O
 this O
 view O
 the O
-Taliban B-MISC
+Taliban O
 were O
 just O
 a O
@@ -169489,7 +169482,7 @@ the O
 belief O
 that O
 the O
-Taliban B-MISC
+Taliban O
 would O
 do O
 the O
@@ -169497,7 +169490,7 @@ rational O
 things O
 some O
 gullible O
-Americans B-MISC
+Americans O
 expected O
 them O
 to O
@@ -169554,7 +169547,7 @@ the O
 view O
 that O
 the O
-Taliban B-MISC
+Taliban O
 would O
 change O
 if O
@@ -169591,7 +169584,7 @@ the O
 United B-ORG
 States I-ORG
 Institute I-ORG
-of O
+of I-ORG
 Peace I-ORG
 in O
 March O
@@ -169605,7 +169598,7 @@ the O
 leverage O
 that O
 the O
-Taliban’s B-MISC
+Taliban’s O
 quest O
 for O
 sanctions O
@@ -169628,7 +169621,7 @@ overestimated O
 how O
 much O
 the O
-Taliban B-MISC
+Taliban O
 cared O
 about O
 sanctions O
@@ -169681,7 +169674,7 @@ was O
 exactly O
 how O
 the O
-Taliban B-MISC
+Taliban O
 had O
 ruled O
 the O
@@ -169903,9 +169896,9 @@ be O
 needed, O
 but O
 the O
-“Vice B-MISC
+“Vice O
 and O
-Virtue” I-MISC
+Virtue” O
 police O
 would O
 have O
@@ -169989,11 +169982,11 @@ ride O
 into O
 battle O
 with O
-American B-MISC
+American O
 armored O
 vehicles O
 and O
-M-16 B-MISC
+M-16 O
 rifles O
 that O
 were O
@@ -170029,7 +170022,7 @@ case O
 for O
 the O
 pre-9/11 O
-Taliban I-ORG
+Taliban B-ORG
 . O
 Signaling O
 weakness O
@@ -170042,7 +170035,7 @@ Biden B-PER
 spoke O
 to O
 the O
-American B-MISC
+American O
 people O
 on O
 Aug. O
@@ -170056,7 +170049,7 @@ last O
 US B-ORG
 soldiers O
 departed O
-Afghanistan I-LOC
+Afghanistan B-LOC
 , O
 he O
 framed O
@@ -170068,7 +170061,7 @@ way O
 of O
 positioning O
 the O
-US I-ORG
+US B-ORG
 to O
 compete O
 better O
@@ -170086,7 +170079,7 @@ a O
 serious O
 competition O
 with O
-China I-LOC
+China B-LOC
 . O
 We’re O
 dealing O
@@ -170097,14 +170090,14 @@ on O
 multiple O
 fronts O
 with O
-Russia I-LOC
+Russia B-LOC
 … O
 And O
 there’s O
 nothing O
-China I-LOC
+China B-LOC
 or O
-Russia I-LOC
+Russia B-LOC
 would O
 rather O
 have O
@@ -170126,7 +170119,7 @@ down O
 another O
 decade O
 in O
-Afghanistan I-LOC
+Afghanistan B-LOC
 . O
 This O
 was O
@@ -170137,24 +170130,24 @@ rationale O
 For O
 years O
 both O
-China I-LOC
+China B-LOC
 and O
-Russia I-LOC
+Russia B-LOC
 had O
 hoped O
 to O
 push O
-American B-MISC
+American O
 forces O
 out O
 of O
-Afghanistan I-LOC
+Afghanistan B-LOC
 because O
 the O
 country O
 borders O
 both O
-China I-LOC
+China B-LOC
 and O
 the O
 republics O
@@ -170169,7 +170162,7 @@ had O
 covertly O
 supported O
 the O
-Taliban I-ORG
+Taliban B-ORG
 , O
 according O
 to O
@@ -170179,13 +170172,13 @@ military O
 , O
 while O
 the O
-Chinese B-MISC
+Chinese O
 had O
 drawn O
 closer O
 to O
 the O
-Taliban I-ORG
+Taliban B-ORG
 in O
 recent O
 years O
@@ -170195,7 +170188,7 @@ they O
 pulled O
 out O
 of O
-Afghanistan I-LOC
+Afghanistan B-LOC
 , O
 the O
 Americans O
@@ -170225,9 +170218,9 @@ in O
 competition O
 with O
 either O
-China I-LOC
+China B-LOC
 or O
-Russia I-LOC
+Russia B-LOC
 is O
 hard O
 to O
@@ -170249,7 +170242,7 @@ US B-ORG
 ignominiously O
 retreated O
 from O
-Afghanistan I-LOC
+Afghanistan B-LOC
 , O
 which O
 seemed O
@@ -170313,7 +170306,7 @@ We O
 could O
 see O
 in O
-Afghanistan I-LOC
+Afghanistan B-LOC
 a O
 remix O
 of O
@@ -170359,7 +170352,7 @@ be O
 accurate O
 ; O
 the O
-American B-MISC
+American O
 pullout O
 from O
 Saigon B-LOC
@@ -170493,7 +170486,7 @@ released O
 in O
 February O
 by O
-Republican B-MISC
+Republican O
 senators O
 sitting O
 on O
@@ -170923,7 +170916,7 @@ privilege O
 to O
 engage O
 with O
-American B-MISC
+American O
 heroes O
 in O
 uniform O
@@ -170943,7 +170936,7 @@ Commander O
 , O
 U.S. B-ORG
 Forces I-ORG
-Korea I-LOC
+Korea B-LOC
 . O
 During O
 visits O
@@ -170970,7 +170963,7 @@ the O
 Congress B-ORG
 and O
 the O
-Country B-MISC
+Country O
 for O
 the O
 patriotic O
@@ -170984,7 +170977,7 @@ stand O
 as O
 sentinels O
 of O
-Democracy B-MISC
+Democracy O
 on O
 the O
 Korean B-LOC
@@ -171135,7 +171128,7 @@ our O
 commitment O
 to O
 . O
-U.S.-Korea B-MISC
+U.S.-Korea O
 alliance O
 ” O
 and O
@@ -171214,7 +171207,7 @@ Taiwan B-LOC
 amid O
 threats O
 of O
-Chinese B-MISC
+Chinese O
 retaliation O
 . O
 Pelosi B-PER
@@ -171261,7 +171254,7 @@ a O
 low O
 point O
 in O
-US-China B-MISC
+US-China O
 relations O
 and O
 despite O
@@ -171473,8 +171466,8 @@ its O
 best O
 month O
 since O
-November B-MISC
-2020 I-MISC
+November O
+2020 O
 , O
 and O
 financial O
@@ -171658,7 +171651,7 @@ job O
 openings O
 fell O
 in O
-June B-MISC
+June O
 , O
 the O
 US B-LOC
@@ -171674,10 +171667,10 @@ pace O
 . O
 A O
 blowout O
-July B-MISC
+July O
 report O
 released O
-Friday B-MISC
+Friday O
 showed O
 a O
 gain O
@@ -171807,7 +171800,7 @@ three-quarter-point O
 rate O
 hike O
 in O
-September B-MISC
+September O
 , O
 according O
 to O
@@ -171843,9 +171836,9 @@ data O
 release O
 is O
 the O
-Consumer B-MISC
-Price I-MISC
-Index I-MISC
+Consumer O
+Price O
+Index O
 , O
 which O
 is O
@@ -171870,12 +171863,12 @@ in O
 the O
 year O
 to O
-July B-MISC
+July O
 , O
 down O
 slightly O
 from O
-June B-MISC
+June O
 . O
 
 But O
@@ -172309,7 +172302,7 @@ UK B-LOC
 GDP O
 ; O
 University B-ORG
-of O
+of I-ORG
 Michigan I-ORG
 consumer O
 sentiment O
@@ -172411,9 +172404,9 @@ of O
 million O
 that O
 the O
-Chinese B-MISC
-Communist I-MISC
-Party I-MISC
+Chinese O
+Communist O
+Party O
 regards O
 as O
 its O
@@ -172504,7 +172497,7 @@ Thompson B-PER
 said O
 of O
 the O
-Chinese B-MISC
+Chinese O
 exercises O
 . O
 “ O
@@ -172538,7 +172531,7 @@ announcing O
 Friday O
 that O
 multiple O
-Chinese B-MISC
+Chinese O
 warships O
 and O
 jets O
@@ -172645,14 +172638,14 @@ under O
 the O
 seabed O
 . O
-Japanese B-MISC
+Japanese O
 Prime O
 Minister O
 Fumio B-PER
 Kishida I-PER
 said O
 the O
-Chinese B-MISC
+Chinese O
 drills O
 were O
 “ O
@@ -172821,7 +172814,7 @@ continue O
 and O
 that O
 the O
-Chinese B-MISC
+Chinese O
 will O
 continue O
 to O
@@ -172981,7 +172974,7 @@ the O
 outlines O
 of O
 the O
-Chinese B-MISC
+Chinese O
 military O
 exercises O
 were O
@@ -172997,7 +172990,7 @@ the O
 actions O
 set O
 by O
-April B-MISC
+April O
 . O
 Parts O
 of O
@@ -173116,11 +173109,11 @@ at O
 the O
 rhetoric O
 from O
-January B-MISC
+January O
 to O
-April B-MISC
+April O
 , O
-(Chinese B-MISC
+(Chinese O
 President O
 Xi B-PER
 Jinping) I-PER
@@ -173167,7 +173160,7 @@ policy O
 published O
 in O
 late O
-July B-MISC
+July O
 , O
 called O
 out O
@@ -173241,7 +173234,7 @@ Taiwanese B-LOC
 think O
 tank O
 last O
-December B-MISC
+December O
 , O
 the O
 late O
@@ -173377,7 +173370,7 @@ is O
 a O
 bedrock O
 of O
-Chinese B-MISC
+Chinese O
 policy O
 . O
 On O
@@ -173392,7 +173385,7 @@ military O
 intimidation O
 unabated O
 . O
-Taiwanese B-MISC
+Taiwanese O
 Premier O
 Su B-PER
 Tseng-chang I-PER
@@ -174953,7 +174946,7 @@ the O
 first O
 year O
 of O
-Trump’s I-PER
+Trump’s O
 presidency O
 , O
 and O
@@ -174962,7 +174955,7 @@ the O
 State O
 Department O
 for O
-Trump’s I-PER
+Trump’s O
 final O
 three O
 years O
@@ -175238,7 +175231,7 @@ a O
 key O
 figure O
 in O
-Trump B-MISC
+Trump O
 ’s O
 effort O
 to O
@@ -175268,7 +175261,7 @@ the O
 election O
 , O
 where O
-Trump B-MISC
+Trump O
 and O
 his O
 then O
@@ -175289,7 +175282,7 @@ chartered O
 buses O
 to O
 bring O
-Trump B-MISC
+Trump O
 supporters O
 to O
 Washington B-LOC
@@ -175422,7 +175415,7 @@ additional O
 context O
 . O
 Several O
-Trump B-MISC
+Trump O
 Cabinet O
 officials O
 have O
@@ -176111,7 +176104,7 @@ over O
 since O
 Taipei B-LOC
 welcomed O
-US B-MISC
+US O
 House B-ORG
 Speaker O
 Nancy B-PER
@@ -176125,7 +176118,7 @@ Taiwan’s B-LOC
 defense O
 ministry O
 said O
-Chinese B-MISC
+Chinese O
 warships O
 and O
 aircraft O
@@ -176139,7 +176132,7 @@ island O
 , O
 adding O
 that O
-Chinese B-MISC
+Chinese O
 People’s B-ORG
 Liberation I-ORG
 Army I-ORG
@@ -176217,7 +176210,7 @@ ministry O
 added O
 . O
 Two O
-Chinese B-MISC
+Chinese O
 drones O
 also O
 flew O
@@ -176249,7 +176242,7 @@ statement O
 from O
 Tokyo’s B-LOC
 Ministry B-ORG
-of O
+of I-ORG
 Defense I-ORG
 on O
 Friday O
@@ -176266,7 +176259,7 @@ defense O
 identification O
 zone O
 ( O
-ADIZ B-MISC
+ADIZ O
 ) O
 , O
 Taiwan’s B-LOC
@@ -176446,7 +176439,7 @@ Exclusive O
 Economic O
 Zone O
 ( O
-EEZ B-MISC
+EEZ O
 ) O
 . O
 The O
@@ -176478,7 +176471,7 @@ where O
 she O
 met O
 with O
-Japanese B-MISC
+Japanese O
 Prime O
 Minister O
 Fumio B-PER
@@ -176504,9 +176497,9 @@ of O
 million O
 that O
 the O
-Chinese B-MISC
-Communist I-MISC
-Party I-MISC
+Chinese O
+Communist O
+Party O
 regards O
 as O
 its O
@@ -176611,7 +176604,7 @@ continue O
 and O
 that O
 the O
-Chinese B-MISC
+Chinese O
 will O
 continue O
 to O
@@ -176651,7 +176644,7 @@ Friday O
 Kishida B-PER
 said O
 the O
-Chinese B-MISC
+Chinese O
 military O
 drills O
 were O
@@ -176826,7 +176819,7 @@ after O
 Pelosi’s B-PER
 departure. O
 A O
-Chinese B-MISC
+Chinese O
 military O
 expert O
 confirmed O
@@ -176847,7 +176840,7 @@ including O
 airspace O
 covered O
 by O
-Taiwanese B-MISC
+Taiwanese O
 defense O
 missiles. O
 
@@ -176867,7 +176860,7 @@ system O
 which O
 means O
 the O
-Chinese B-MISC
+Chinese O
 military O
 has O
 solved O
@@ -177060,7 +177053,7 @@ line O
 It O
 follows O
 similar O
-Chinese B-MISC
+Chinese O
 incursions O
 a O
 day O
@@ -177076,18 +177069,18 @@ were O
 made O
 by O
 12 O
-Su-30 B-MISC
+Su-30 O
 fighter O
 jets O
 , O
 eight O
-J-11 B-MISC
+J-11 O
 fighter O
 jets O
 , O
 and O
 two O
-J-16 B-MISC
+J-16 O
 fighter O
 jets O
 , O
@@ -177732,7 +177725,7 @@ realities O
 of O
 what O
 most O
-Americans B-MISC
+Americans O
 are O
 experiencing O
 in O
@@ -178428,7 +178421,7 @@ Brazilian B-LOC
 corruption O
 investigation O
 involving O
-Gripen B-MISC
+Gripen O
 fighter O
 jets O
 . O
@@ -179748,10 +179741,10 @@ Sign O
 up O
 for O
 CNN’s B-ORG
-Stress B-MISC
+Stress O
 , O
-But B-MISC
-Less I-MISC
+But O
+Less O
 newsletter O
 . O
 Our O
@@ -179874,7 +179867,7 @@ still O
 strong O
 among O
 Republicans B-ORG
-Political B-MISC
+Political O
 analysts O
 have O
 long O
@@ -179964,7 +179957,7 @@ reckoned O
 with O
 in O
 the O
-GOP B-MISC
+GOP O
 . O
 Trump B-PER
 - O
@@ -180056,8 +180049,8 @@ Trump B-PER
 last O
 year O
 after O
-January B-MISC
-6 I-MISC
+January O
+6 O
 , O
 went O
 down O
@@ -180069,14 +180062,14 @@ GOP B-ORG
 primary O
 to O
 another O
-Trump-backed B-MISC
+Trump-backed O
 election O
 denier O
 in O
 the O
 3rd O
-Congressional B-MISC
-District I-MISC
+Congressional O
+District O
 . O
 Trump’s B-PER
 pick O
@@ -180194,8 +180187,8 @@ open O
 primary O
 for O
 Washington’s B-LOC
-4th O
-District I-MISC
+4th I-LOC
+District I-LOC
 . O
 
 GOP O
@@ -180644,8 +180637,8 @@ picture O
 three O
 months O
 before O
-Election B-MISC
-Day I-MISC
+Election O
+Day O
 Before O
 we O
 get O
@@ -180874,7 +180867,7 @@ i.e. O
 , O
 the O
 money O
-Americans B-MISC
+Americans O
 have O
 to O
 spend O
@@ -180921,7 +180914,7 @@ are O
 down O
 from O
 their O
-June B-MISC
+June O
 peak O
 . O
 
@@ -180955,7 +180948,7 @@ economy O
 , O
 but O
 more O
-Americans B-MISC
+Americans O
 than O
 at O
 any O
@@ -181159,8 +181152,8 @@ the O
 Jacksonville B-LOC
 Jaguars I-ORG
 and O
-Las B-LOC
-Vegas I-LOC
+Las B-ORG
+Vegas I-ORG
 Raiders I-ORG
 broadcast O
 nationally O
@@ -181450,7 +181443,7 @@ of O
 Banana B-ORG
 Boat I-ORG
 Hair I-ORG
-& O
+& I-ORG
 Scalp I-ORG
 Sunscreen I-ORG
 Spray I-ORG
@@ -181687,7 +181680,7 @@ Iraq B-LOC
 and O
 Afghanistan B-LOC
 Veterans B-ORG
-of O
+of I-ORG
 America I-ORG
 . O
 What’s O
@@ -181820,12 +181813,12 @@ text O
 With O
 the O
 title O
-“Cost B-MISC
-of I-MISC
-War I-MISC
-Toxic I-MISC
-Exposures I-MISC
-Fund,” I-MISC
+“Cost O
+of O
+War O
+Toxic O
+Exposures O
+Fund,” O
 the O
 language O
 makes O
@@ -181837,7 +181830,7 @@ amount O
 appropriated O
 to O
 the O
-Fund B-MISC
+Fund O
 in O
 fiscal O
 year O
@@ -181888,10 +181881,10 @@ explained O
 his O
 position O
 on O
-“State B-MISC
-of I-MISC
-the I-MISC
-Union” I-MISC
+“State O
+of O
+the O
+Union” O
 on O
 Sunday O
 , O
@@ -182140,7 +182133,7 @@ Iraq B-LOC
 and O
 Afghanistan B-LOC
 Veterans B-ORG
-of O
+of I-ORG
 America I-ORG
 , O
 told O
@@ -182452,10 +182445,10 @@ for O
 the O
 rest O
 of O
-August B-MISC
+August O
 since O
 the O
-November B-MISC
+November O
 midterm O
 election O
 is O
@@ -182598,7 +182591,7 @@ calls O
 and O
 meetings O
 between O
-Chinese B-MISC
+Chinese O
 and O
 US B-LOC
 defense O
@@ -182622,7 +182615,7 @@ naval O
 meetings O
 under O
 the O
-China-US B-MISC
+China-US O
 military O
 maritime O
 consultation O
@@ -182841,7 +182834,7 @@ seriously O
 trampling O
 on O
 the O
-one-China B-MISC
+one-China O
 principle O
 , O
 and O
@@ -182947,7 +182940,7 @@ last O
 stop O
 of O
 her O
-Asia B-MISC
+Asia O
 tour O
 , O
 Pelosi B-PER
@@ -183011,7 +183004,7 @@ House I-ORG
 summoned O
 the O
 
-Chinese B-MISC
+Chinese O
 ambassador O
 to O
 the O
@@ -183103,7 +183096,7 @@ a.m. O
 Friday O
 , O
 several O
-Chinese B-MISC
+Chinese O
 military O
 jets O
 and O
@@ -183187,7 +183180,7 @@ countries O
 including O
 from O
 the O
-G7 B-MISC
+G7 O
 grouping O
 of O
 some O
@@ -183244,7 +183237,7 @@ Relations O
 Act O
 , O
 the O
-US-China B-MISC
+US-China O
 policy O
 , O
 all O
@@ -183326,7 +183319,7 @@ economy O
 and O
 relatively O
 progressive O
-LGBTQ B-MISC
+LGBTQ O
 rights O
 . O
 “ O
@@ -183370,7 +183363,7 @@ mainland O
 China B-LOC
 . O
 Meanwhile O
-Japanese B-MISC
+Japanese O
 Prime O
 Minister O
 Fumio B-PER
@@ -183412,7 +183405,7 @@ formal O
 complaint O
 after O
 five O
-Chinese B-MISC
+Chinese O
 missiles O
 landed O
 in O
@@ -183432,9 +183425,9 @@ planned O
 meeting O
 between O
 the O
-Chinese B-MISC
+Chinese O
 and O
-Japanese B-MISC
+Japanese O
 foreign O
 ministers O
 . O
@@ -183613,7 +183606,7 @@ the O
 forthcoming O
 independent O
 film O
-“Alina B-MISC
+“Alina O
 of O
 Cuba.” B-LOC
 “James B-PER
@@ -183755,9 +183748,7 @@ between O
 Cuban-born B-LOC
 socialite O
 Natalia B-PER
-“ O
-Naty I-PER
-” O
+“Naty” I-PER
 Revuelta I-PER
 and O
 Castro B-PER
@@ -183888,7 +183879,7 @@ by O
 her O
 office O
 on O
-Sunday B-MISC
+Sunday O
 . O
 The O
 statement O
@@ -184183,7 +184174,7 @@ a O
 free O
 and O
 flourishing O
-Indo-Pacific B-MISC
+Indo-Pacific O
 is O
 crucial O
 to O
@@ -184428,7 +184419,7 @@ The O
 search O
 began O
 early O
-Monday B-MISC
+Monday O
 morning O
 and O
 was O
@@ -184717,7 +184708,7 @@ alleged O
 that O
 the O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 “ O
 has O
@@ -184763,7 +184754,7 @@ the O
 midterm O
 elections O
 this O
-November B-MISC
+November O
 . O
 This O
 story O
@@ -185476,7 +185467,7 @@ economist O
 , O
 Bernard B-PER
 Pettingill I-PER
-, O
+, I-PER
 Jr. I-PER
 , O
 who O
@@ -185495,7 +185486,7 @@ $270 O
 million O
 . O
 Pettingill B-PER
-, O
+, I-PER
 Jr. I-PER
 , O
 who O
@@ -185546,7 +185537,7 @@ was O
 not O
 , O
 Pettingill B-PER
-, O
+, I-PER
 Jr. I-PER
 testified O
 . O
@@ -185580,7 +185571,7 @@ that O
 money O
 , O
 Pettingill B-PER
-, O
+, I-PER
 Jr. I-PER
 said O
 . O
@@ -185602,7 +185593,7 @@ company’s O
 money O
 , O
 Pettingill B-PER
-, O
+, I-PER
 Jr. I-PER
 said O
 “ O
@@ -185667,7 +185658,7 @@ Infowars B-ORG
 sells O
 . O
 Pettingill B-PER
-, O
+, I-PER
 Jr. I-PER
 
 said O
@@ -185716,7 +185707,7 @@ monetized O
 that O
 , O
 Pettingill B-PER
-, O
+, I-PER
 Jr. I-PER
 said O
 on O
@@ -185781,7 +185772,7 @@ reflect O
 that O
 , O
 Pettingill B-PER
-, O
+, I-PER
 Jr I-PER
 said O
 . O
@@ -186149,7 +186140,7 @@ from O
 the O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 for O
@@ -186231,7 +186222,7 @@ but O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
 and I-ORG
@@ -186636,7 +186627,7 @@ have O
 flourished O
 in O
 the O
-Covid B-MISC
+Covid O
 era O
 . O
 A O
@@ -186769,7 +186760,7 @@ but O
 , O
 um O
 , O
-Millennials B-MISC
+Millennials O
 got O
 pretty O
 well O
@@ -186777,15 +186768,15 @@ screwed O
 out O
 of O
 the O
-Homeownership B-MISC
-Dream I-MISC
+Homeownership O
+Dream O
 , O
 let O
 alone O
 the O
 Second O
-Homeownership B-MISC
-Dream I-MISC
+Homeownership O
+Dream O
 or O
 the O
 Let’s O
@@ -186993,8 +186984,8 @@ that O
 trades O
 on O
 the O
-New B-LOC
-York I-LOC
+New B-ORG
+York I-ORG
 Stock I-ORG
 Exchange I-ORG
 saw O
@@ -187075,7 +187066,7 @@ Here’s O
 the O
 deal: O
 The O
-Reddit B-MISC
+Reddit O
 army O
 is O
 back O
@@ -187143,7 +187134,7 @@ a O
 virtual O
 bank O
 called O
-Airstar B-MISC
+Airstar O
 . O
 With O
 all O
@@ -187319,7 +187310,7 @@ is O
 firmly O
 on O
 the O
-Reddit B-MISC
+Reddit O
 crowd O
 , O
 but O
@@ -187411,7 +187402,7 @@ relative O
 obscurity O
 . O
 Enjoying O
-Nightcap B-MISC
+Nightcap O
 ? O
 Sign O
 up O
@@ -187484,7 +187475,7 @@ A O
 near-Earth O
 asteroid O
 named O
-Bennu B-MISC
+Bennu O
 has O
 turned O
 out O
@@ -187535,7 +187526,7 @@ from O
 the O
 asteroid O
 in O
-October B-MISC
+October O
 2020 O
 . O
 
@@ -187568,7 +187559,7 @@ asteroid O
 . O
 Apparently O
 , O
-Bennu’s B-MISC
+Bennu’s O
 exterior O
 is O
 made O
@@ -187681,16 +187672,16 @@ released O
 in O
 the O
 journals O
-Science B-MISC
+Science O
 and O
-Science B-MISC
-Advances I-MISC
+Science O
+Advances O
 about O
 the O
 discovery O
 . O
 
-Bennu B-MISC
+Bennu O
 is O
 a O
 rubble-pile O
@@ -187827,9 +187818,9 @@ at O
 the O
 Centre B-ORG
 National I-ORG
-de O
-la O
-Recherche O
+de I-ORG
+la I-ORG
+Recherche I-ORG
 Scientifique I-ORG
 at O
 Côte B-LOC
@@ -187862,8 +187853,8 @@ due O
 to O
 land O
 in O
-September B-MISC
-2023 I-MISC
+September O
+2023 O
 . O
 Bennu B-LOC
 defies O
@@ -187875,8 +187866,8 @@ arrived O
 at O
 Bennu B-LOC
 in O
-December B-MISC
-2018 I-MISC
+December O
+2018 O
 , O
 the O
 OSIRIS-Rex B-ORG
@@ -187943,7 +187934,7 @@ OSIRIS-REx B-ORG
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Arizona I-ORG
 , O
 Tucson B-LOC
@@ -188033,10 +188024,10 @@ Cosmochemistry O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Arizona’s I-ORG
 Lunar B-ORG
-and O
+and I-ORG
 Planetary I-ORG
 Laboratory I-ORG
 . O
@@ -188175,7 +188166,7 @@ maker O
 Understanding O
 more O
 about O
-Bennu’s B-MISC
+Bennu’s O
 composition O
 can O
 help O
@@ -188206,7 +188197,7 @@ rocks O
 An O
 asteroid O
 like O
-Bennu B-MISC
+Bennu O
 , O
 barely O
 holding O
@@ -188328,7 +188319,7 @@ spacecraft O
 to O
 date O
 . O
-Bennu B-MISC
+Bennu O
 is O
 the O
 smallest O
@@ -188343,7 +188334,7 @@ The O
 spacecraft’s O
 souvenir O
 from O
-Bennu B-MISC
+Bennu O
 is O
 the O
 largest O
@@ -188727,8 +188718,8 @@ treaty O
 on O
 non-proliferation O
 of O
-Nuclear B-MISC
-Weapons I-MISC
+Nuclear O
+Weapons O
 as O
 much O
 as O
@@ -189053,7 +189044,7 @@ escalation O
 forgoing O
 previously O
 scheduled O
-ICBM B-MISC
+ICBM O
 tests O
 and O
 not O
@@ -189144,11 +189135,11 @@ mutual O
 compliance O
 with O
 the O
-JCPOA, B-MISC
+JCPOA, O
 the O
-Joint B-MISC
-Comprehensive I-MISC
-Plan I-MISC
+Joint O
+Comprehensive O
+Plan O
 of O
 Action, O
 since O
@@ -189175,7 +189166,7 @@ said. O
 back O
 to O
 the O
-JCPOA B-MISC
+JCPOA O
 remains O
 the O
 best O
@@ -190023,8 +190014,8 @@ Eadie I-PER
 EMS B-ORG
 manager O
 for O
-Happy B-LOC
-Camp I-LOC
+Happy B-ORG
+Camp I-ORG
 Ambulance I-ORG
 . O
 About O
@@ -190089,8 +190080,8 @@ structures O
 damaged O
 by O
 the O
-McKinney B-MISC
-Fire I-MISC
+McKinney O
+Fire O
 , O
 though O
 Stokesberry B-PER
@@ -190119,8 +190110,8 @@ Crest I-LOC
 Trail I-LOC
 as O
 the O
-McKinney B-MISC
-Fire I-MISC
+McKinney O
+Fire O
 approached O
 , O
 the O
@@ -190229,7 +190220,7 @@ calls O
 and O
 meetings O
 between O
-Chinese B-MISC
+Chinese O
 and O
 US B-LOC
 defense O
@@ -190253,7 +190244,7 @@ naval O
 meetings O
 under O
 the O
-China-US B-MISC
+China-US O
 military O
 maritime O
 consultation O
@@ -190472,7 +190463,7 @@ seriously O
 trampling O
 on O
 the O
-one-China B-MISC
+one-China O
 principle O
 , O
 and O
@@ -190578,7 +190569,7 @@ last O
 stop O
 of O
 her O
-Asia B-MISC
+Asia O
 tour O
 , O
 Pelosi B-PER
@@ -190641,7 +190632,7 @@ House I-ORG
 summoned O
 the O
 
-Chinese B-MISC
+Chinese O
 ambassador O
 to O
 the O
@@ -190733,7 +190724,7 @@ a.m. O
 Friday O
 , O
 several O
-Chinese B-MISC
+Chinese O
 military O
 jets O
 and O
@@ -190817,7 +190808,7 @@ countries O
 including O
 from O
 the O
-G7 B-MISC
+G7 O
 grouping O
 of O
 some O
@@ -190956,7 +190947,7 @@ economy O
 and O
 relatively O
 progressive O
-LGBTQ B-MISC
+LGBTQ O
 rights O
 . O
 “ O
@@ -190999,7 +190990,7 @@ mainland O
 China B-LOC
 . O
 Meanwhile O
-Japanese B-MISC
+Japanese O
 Prime O
 Minister O
 Fumio B-PER
@@ -191041,7 +191032,7 @@ formal O
 complaint O
 after O
 five O
-Chinese B-MISC
+Chinese O
 missiles O
 landed O
 in O
@@ -191061,9 +191052,9 @@ planned O
 meeting O
 between O
 the O
-Chinese B-MISC
+Chinese O
 and O
-Japanese B-MISC
+Japanese O
 foreign O
 ministers O
 . O
@@ -191282,7 +191273,7 @@ at O
 a O
 Parkland B-LOC
 , O
-Florida I-LOC
+Florida B-LOC
 , O
 high O
 school O
@@ -192507,7 +192498,7 @@ Editor’s O
 Note: O
 “United B-ORG
 Shades I-ORG
-of O
+of I-ORG
 America I-ORG
 with O
 W. O
@@ -192528,8 +192519,8 @@ episode O
 for O
 more O
 on O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 representation O
 in O
 the O
@@ -192550,7 +192541,7 @@ child O
 raised O
 by O
 a O
-Chinese B-MISC
+Chinese O
 immigrant O
 mother O
 in O
@@ -192836,7 +192827,7 @@ swaps O
 And O
 as O
 Asian O
-Americans B-MISC
+Americans O
 in O
 New B-LOC
 York I-LOC
@@ -192935,8 +192926,8 @@ which O
 happened O
 to O
 include O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 authors O
 . O
 
@@ -192953,8 +192944,8 @@ because O
 of O
 Yu’s B-PER
 own O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 identity O
 , O
 perhaps O
@@ -192971,8 +192962,8 @@ of O
 a O
 hunger O
 among O
-Asian B-MISC
-Americans I-MISC
+Asian O
+Americans O
 for O
 authentic O
 depictions O
@@ -192990,8 +192981,8 @@ become O
 a O
 go-to O
 for O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 readers O
 hoping O
 to O
@@ -193017,8 +193008,8 @@ been O
 pushed O
 into O
 the O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 bookstores O
 lane O
 , O
@@ -193032,8 +193023,8 @@ that O
 if O
 I O
 weren’t O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 , O
 I O
 may O
@@ -193056,8 +193047,8 @@ is O
 familiar O
 for O
 many O
-Asian B-MISC
-Americans I-MISC
+Asian O
+Americans O
 , O
 whether O
 they O
@@ -193079,8 +193070,8 @@ For O
 so O
 long O
 , O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 representation O
 in O
 creative O
@@ -193090,8 +193081,8 @@ been O
 scarce O
 , O
 while O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 depictions O
 in O
 popular O
@@ -193150,8 +193141,8 @@ demand O
 for O
 books O
 by O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 authors O
 . O
 Most O
@@ -193161,8 +193152,8 @@ inventory O
 now O
 skews O
 toward O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 books O
 , O
 she O
@@ -193231,8 +193222,8 @@ love O
 and O
 desire O
 for O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 books O
 and O
 representation O
@@ -193264,7 +193255,7 @@ Min B-PER
 Jin I-PER
 Lee’s O
 “ O
-Pachinko B-MISC
+Pachinko O
 ” O
 and O
 Michelle B-PER
@@ -193299,8 +193290,8 @@ and O
 poetry O
 volumes O
 by O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 authors O
 – O
 and O
@@ -193417,8 +193408,8 @@ breadth O
 of O
 works O
 that O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 writers O
 have O
 produced O
@@ -193451,8 +193442,8 @@ can O
 that O
 outside O
 the O
-Asian B-MISC
-American I-MISC
+Asian O
+American O
 experience O
 , O
 there’s O
@@ -193669,7 +193660,7 @@ invasive O
 species O
 known O
 as O
-Burmese B-MISC
+Burmese O
 pythons O
 . O
 To O
@@ -193691,8 +193682,8 @@ hundreds O
 for O
 the O
 Florida B-LOC
-Python B-MISC
-Challenge I-MISC
+Python O
+Challenge O
 . O
 The O
 event O
@@ -193702,7 +193693,7 @@ by O
 the O
 Florida B-LOC
 Fish B-ORG
-and O
+and I-ORG
 Wildlife I-ORG
 Conservation I-ORG
 Commission I-ORG
@@ -194419,8 +194410,8 @@ results O
 of O
 this O
 year’s O
-Python B-MISC
-Challenge I-MISC
+Python O
+Challenge O
 . O
 In O
 fact O
@@ -194675,8 +194666,8 @@ episode O
 of O
 her O
 podcast O
-“Better B-MISC
-Together” I-MISC
+“Better O
+Together” O
 was O
 released O
 but O
@@ -195119,7 +195110,7 @@ he O
 said O
 . O
 Teigen B-PER
-and O
+and I-PER
 Legend I-PER
 announced O
 that O
@@ -195154,7 +195145,7 @@ they O
 had O
 started O
 calling O
-Jack B-MISC
+Jack O
 . O
 Teigen B-PER
 was O
@@ -195181,14 +195172,14 @@ two O
 are O
 parents O
 to O
-Luna B-MISC
+Luna O
 and O
-Miles B-MISC
+Miles O
 , O
 both O
 conceived O
 through O
-IVF B-MISC
+IVF O
 , O
 and O
 announced O
@@ -195365,7 +195356,7 @@ prison O
 for O
 assaulting O
 an O
-Asian B-MISC
+Asian O
 family O
 he O
 blamed O
@@ -195410,7 +195401,7 @@ comment O
 Gomez B-PER
 saw O
 a O
-Burmese B-MISC
+Burmese O
 family O
 with O
 three O
@@ -195434,7 +195425,7 @@ and O
 believing O
 they O
 were O
-Chinese B-MISC
+Chinese O
 , O
 followed O
 them O
@@ -195543,7 +195534,7 @@ he O
 yelled O
 to O
 the O
-Asian B-MISC
+Asian O
 family O
 – O
 “Get O
@@ -195620,7 +195611,7 @@ pandemic O
 including O
 attacks O
 on O
-Asian B-MISC
+Asian O
 Americans O
 , O
 who O
@@ -195698,7 +195689,7 @@ civil O
 rights O
 of O
 all O
-Americans B-MISC
+Americans O
 are O
 protected O
 . O
@@ -195797,7 +195788,7 @@ Centers I-ORG
 for O
 Disease B-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 and O
 isolate O
@@ -195985,7 +195976,7 @@ Centers I-ORG
 for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 says O
 older O
@@ -196050,7 +196041,7 @@ of O
 the O
 antiviral O
 drug O
-Paxlovid B-MISC
+Paxlovid O
 , O
 which O
 is O
@@ -196063,7 +196054,7 @@ from O
 the O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 for O
@@ -196453,8 +196444,8 @@ Reed B-PER
 said. O
 For O
 instance, O
-Hurricane B-MISC
-Harvey I-MISC
+Hurricane O
+Harvey O
 in O
 2017 O
 dumped O
@@ -196483,7 +196474,7 @@ said O
 climate O
 change O
 made O
-Harvey’s B-MISC
+Harvey’s O
 rainfall O
 more O
 extreme. O
@@ -196651,7 +196642,7 @@ of O
 flood O
 database O
 Cloud B-ORG
-to O
+to I-ORG
 Street I-ORG
 and O
 assistant O
@@ -197252,7 +197243,7 @@ a O
 period O
 earlier O
 in O
-July B-MISC
+July O
 , O
 with O
 46% O
@@ -197351,7 +197342,7 @@ UK B-LOC
 Centre B-ORG
 for O
 Ecology B-ORG
-and O
+and I-ORG
 Hydrology I-ORG
 suggested O
 that O
@@ -197602,7 +197593,7 @@ in O
 many O
 areas O
 during O
-July B-MISC
+July O
 may O
 have O
 adverse O
@@ -197626,7 +197617,7 @@ with O
 little O
 rain O
 In O
-July B-MISC
+July O
 , O
 water O
 reservoirs O
@@ -197656,7 +197647,7 @@ England I-LOC
 experienced O
 its O
 driest O
-July B-MISC
+July O
 since O
 records O
 began O
@@ -197673,7 +197664,7 @@ Kingdom I-LOC
 was O
 the O
 driest O
-July B-MISC
+July O
 in O
 more O
 than O
@@ -197709,12 +197700,12 @@ with O
 the O
 exception O
 of O
-February B-MISC
+February O
 . O
 In O
 France B-LOC
 , O
-July B-MISC
+July O
 saw O
 a O
 total O
@@ -197727,7 +197718,7 @@ made O
 it O
 the O
 driest O
-July B-MISC
+July O
 there O
 since O
 records O
@@ -197807,7 +197798,7 @@ production, O
 agriculture O
 and O
 transport. O
-Copernicus B-MISC
+Copernicus O
 said O
 the O
 situation O
@@ -197864,7 +197855,7 @@ sixth-hottest O
 July O
 in O
 Europe, B-LOC
-Copernicus B-MISC
+Copernicus O
 said. O
 Spain, B-LOC
 France B-LOC
@@ -198017,7 +198008,7 @@ ambush-style O
 shootings O
 of O
 three O
-Muslim B-MISC
+Muslim O
 men O
 and O
 the O
@@ -198032,7 +198023,7 @@ have O
 alarmed O
 the O
 city’s O
-Muslim B-MISC
+Muslim O
 community O
 , O
 leaving O
@@ -198084,7 +198075,7 @@ the O
 victims O
 were O
 all O
-Muslim B-MISC
+Muslim O
 and O
 of O
 South B-LOC
@@ -198133,13 +198124,13 @@ an O
 unsolved O
 homicide O
 from O
-November B-MISC
-2021 I-MISC
+November O
+2021 O
 . O
 Albuquerque B-LOC
 police O
 announced O
-Tuesday B-MISC
+Tuesday O
 they O
 had O
 arrested O
@@ -198187,16 +198178,16 @@ the O
 homicides O
 : O
 the O
-July B-MISC
-26 I-MISC
+July O
+26 O
 killing O
 of O
 Aftab B-PER
 Hussein I-PER
 and O
 the O
-August B-MISC
-1 I-MISC
+August O
+1 O
 killing O
 of O
 Muhammad B-PER
@@ -198279,7 +198270,7 @@ these O
 three O
 men O
 were O
-Muslim B-MISC
+Muslim O
 and O
 of O
 similar O
@@ -198378,7 +198369,7 @@ three O
 previous O
 killings O
 of O
-Muslim B-MISC
+Muslim O
 men O
 from O
 South B-LOC
@@ -198427,7 +198418,7 @@ Hussein I-PER
 , O
 were O
 both O
-Pakistani B-MISC
+Pakistani O
 men O
 and O
 were O
@@ -198611,7 +198602,7 @@ Mohammad B-PER
 Ahmadi I-PER
 , O
 a O
-Muslim B-MISC
+Muslim O
 man O
 from O
 Afghanistan B-LOC
@@ -198652,8 +198643,8 @@ fleeing O
 persecution O
 as O
 a O
-Shia B-MISC
-Muslim I-MISC
+Shia O
+Muslim O
 – O
 and O
 had O
@@ -198752,7 +198743,7 @@ management O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Punjab I-ORG
 in O
 Pakistan B-LOC
@@ -198927,7 +198918,7 @@ recent O
 homicides O
 of O
 4 O
-Muslim B-MISC
+Muslim O
 men.” O
 “We O
 have O
@@ -199242,7 +199233,7 @@ Meanwhile, O
 local O
 and O
 national O
-Muslim B-MISC
+Muslim O
 groups O
 had O
 warned O
@@ -199431,14 +199422,14 @@ Taherzadeh I-PER
 , O
 a O
 Washington B-LOC
-, O
+, I-LOC
 DC I-LOC
 man O
 who O
 impersonated O
 a O
 Department B-ORG
-of O
+of I-ORG
 Homeland I-ORG
 Security I-ORG
 agent O
@@ -199964,7 +199955,7 @@ before O
 the O
 court O
 in O
-November B-MISC
+November O
 for O
 a O
 status O
@@ -200077,7 +200068,7 @@ arms O
 around O
 our O
 fellow O
-Kentuckians B-MISC
+Kentuckians O
 . O
 The O
 death O
@@ -201946,7 +201937,7 @@ to O
 determine O
 when O
 the O
-Tesla B-MISC
+Tesla O
 CEO O
 decided O
 to O
@@ -201984,8 +201975,8 @@ Governance O
 at O
 the O
 University B-ORG
-of O
-Delaware I-LOC
+of I-ORG
+Delaware I-ORG
 , O
 told O
 CNN B-ORG
@@ -202237,7 +202228,7 @@ Friday O
 Over O
 100 O
 million O
-Americans B-MISC
+Americans O
 have O
 been O
 under O
@@ -202553,9 +202544,9 @@ Sunday O
 at O
 Boston B-LOC
 Centers B-ORG
-for O
+for I-ORG
 Youth I-ORG
-& O
+& I-ORG
 Families I-ORG
 ( O
 BCYF B-ORG
@@ -202912,8 +202903,8 @@ lot O
 bigger O
 . O
 “ O
-Conspiracy B-MISC
-culture I-MISC
+Conspiracy O
+culture O
 is O
 something O
 that O
@@ -203009,8 +203000,8 @@ doing O
 and O
 why O
 these O
-conspiracy B-MISC
-narratives I-MISC
+conspiracy O
+narratives O
 exist O
 . O
 
@@ -203220,7 +203211,7 @@ with O
 . O
 
 An O
-American B-MISC
+American O
 dentist O
 and O
 big-game O
@@ -203239,7 +203230,7 @@ his O
 wife O
 on O
 an O
-African B-MISC
+African O
 safari O
 . O
 Lawrence B-PER
@@ -204499,9 +204490,9 @@ month O
 found O
 75% O
 of O
-Democratic B-MISC
+Democratic O
 and O
-Democratic-leaning B-MISC
+Democratic-leaning O
 voters O
 want O
 the O
@@ -204525,7 +204516,7 @@ earlier O
 this O
 year O
 . O
-Democratic B-MISC
+Democratic O
 Rep O
 . O
 
@@ -204653,7 +204644,7 @@ compelling O
 well-prepared O
 , O
 dynamic O
-Democrats B-MISC
+Democrats O
 to O
 step O
 up O
@@ -204907,8 +204898,8 @@ network O
 carried O
 out O
 the O
-September B-MISC
-11 I-MISC
+September O
+11 O
 attacks O
 in O
 New B-LOC
@@ -204971,8 +204962,8 @@ UK B-LOC
 According O
 to O
 the O
-Sunday B-MISC
-Times I-MISC
+Sunday O
+Times O
 report O
 , O
 Prince B-PER
@@ -205012,8 +205003,8 @@ also O
 responded O
 to O
 the O
-Sunday B-MISC
-Times’ I-MISC
+Sunday O
+Times’ O
 report O
 saying O
 that O
@@ -205058,8 +205049,8 @@ that O
 they O
 disputed O
 The O
-Sunday B-MISC
-Times’ I-MISC
+Sunday O
+Times’ O
 claims O
 that O
 Prince B-PER
@@ -205126,8 +205117,8 @@ whole O
 family O
 . O
 The O
-Sunday B-MISC
-Times I-MISC
+Sunday O
+Times O
 reported O
 in O
 June O
@@ -205691,7 +205682,7 @@ shows O
 a O
 Texas B-LOC
 Department B-ORG
-of O
+of I-ORG
 Public I-ORG
 Safety I-ORG
 trooper O
@@ -206135,12 +206126,12 @@ the O
 on-scene O
 commander O
 , O
-Uvalde B-LOC
-School I-LOC
+Uvalde B-ORG
+School I-ORG
 Police I-ORG
 Chief O
 Pedro B-PER
-“Pete” O
+“Pete” I-PER
 Arredondo I-PER
 . O
 “The O
@@ -206698,7 +206689,7 @@ astronaut O
 mission O
 to O
 the O
-ISS B-MISC
+ISS O
 that O
 took O
 place O
@@ -206760,7 +206751,7 @@ the O
 mission O
 , O
 dubbed O
-AX-1 B-MISC
+AX-1 O
 , O
 the O
 four-member O
@@ -206823,7 +206814,7 @@ private O
 missions O
 to O
 the O
-ISS B-MISC
+ISS O
 is O
 that O
 “upcoming O
@@ -206897,7 +206888,7 @@ between O
 residents O
 on O
 the O
-ISS B-MISC
+ISS O
 and O
 the O
 private O
@@ -206911,7 +206902,7 @@ said O
 risk O
 ” O
 to O
-ISS B-MISC
+ISS O
 operations O
 and O
 safety O
@@ -206923,7 +206914,7 @@ year O
 SpaceX B-ORG
 launched O
 the O
-Inspiration4 B-MISC
+Inspiration4 O
 mission O
 , O
 which O
@@ -206972,7 +206963,7 @@ not O
 dock O
 at O
 the O
-ISS B-MISC
+ISS O
 . O
 Axiom B-ORG
 has O
@@ -206986,10 +206977,10 @@ astronaut O
 mission O
 to O
 the O
-ISS B-MISC
+ISS O
 , O
 dubbed O
-AX-2 B-MISC
+AX-2 O
 and O
 expected O
 to O
@@ -207034,7 +207025,7 @@ mission O
 commander O
 for O
 the O
-AX-1 B-MISC
+AX-1 O
 flight O
 , O
 saying O
@@ -207150,7 +207141,7 @@ information O
 learned O
 from O
 the O
-AX-1 B-MISC
+AX-1 O
 mission O
 . O
 Future O
@@ -207173,7 +207164,7 @@ floating O
 environment O
 of O
 the O
-ISS B-MISC
+ISS O
 can O
 often O
 induce O
@@ -207196,7 +207187,7 @@ introducing O
 clarifications O
 to O
 the O
-ISS B-MISC
+ISS O
 code O
 of O
 conduct O
@@ -208841,7 +208832,7 @@ January O
 6 O
 following O
 former O
-Trump B-MISC
+Trump O
 White B-ORG
 House I-ORG
 aide O
@@ -208874,7 +208865,7 @@ take O
 him O
 to O
 the O
-Capitol I-LOC
+Capitol B-LOC
 as O
 Congress B-ORG
 worked O
@@ -209062,7 +209053,7 @@ with O
 respect O
 to O
 ongoing O
-Congressional B-MISC
+Congressional O
 and O
 other O
 inquiries O
@@ -209675,7 +209666,7 @@ is O
 made O
 from O
 100% O
-European B-MISC
+European O
 flax O
 in O
 a O
@@ -209844,9 +209835,9 @@ too O
 . O
 Cozy B-ORG
 Earth I-ORG
-Bamboo B-MISC
-Sheet I-MISC
-Set I-MISC
+Bamboo O
+Sheet O
+Set O
 $319 O
 From O
 $255.20 O
@@ -209921,9 +209912,9 @@ another O
 set O
 . O
 Buffy B-ORG
-Eucalyptus B-MISC
-Sheet I-MISC
-Set I-MISC
+Eucalyptus O
+Sheet O
+Set O
 $149 O
 From O
 $126.65 O
@@ -209992,12 +209983,12 @@ pillows O
 for O
 hot O
 sleepers O
-Weekender B-MISC
-Ventilated I-MISC
-Gel I-MISC
-Memory I-MISC
-Foam I-MISC
-Pillow I-MISC
+Weekender O
+Ventilated O
+Gel O
+Memory O
+Foam O
+Pillow O
 From O
 $34.99 O
 at O
@@ -210445,10 +210436,10 @@ it’s O
 made O
 from O
 moisture-wicking O
-Tencel B-MISC
+Tencel O
 that O
 uses O
-eucalyptus B-MISC
+eucalyptus O
 fiber, O
 a O
 material O
@@ -211264,11 +211255,11 @@ partner O
 ” O
 Classic B-ORG
 Brands I-ORG
-Cool B-MISC
-Gel I-MISC
-Chill I-MISC
-Memory I-MISC
-Foam I-MISC
+Cool O
+Gel O
+Chill O
+Memory O
+Foam O
 14-Inch O
 Mattress O
 From O
@@ -211287,17 +211278,17 @@ different O
 cooling O
 options O
 — O
-cool B-MISC
-gel I-MISC
-chill I-MISC
+cool O
+gel O
+chill O
 , O
-cool B-MISC
-gel I-MISC
-cloud I-MISC
+cool O
+gel O
+cloud O
 and O
-cool B-MISC
-gel I-MISC
-ice I-MISC
+cool O
+gel O
+ice O
 — O
 each O
 with O

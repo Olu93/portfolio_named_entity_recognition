@@ -1,6 +1,7 @@
 bert-ner-model
 pretrained/
 models/
+ft_ner_*/
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,visualstudiocode
