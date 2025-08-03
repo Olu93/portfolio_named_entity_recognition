@@ -111,9 +111,8 @@ def align_target(labels, word_ids):
     # Define a mapping from beginning (B-) labels to inside (I-) labels
     begin2inside = {
         1: 2,  # B-LOC -> I-LOC
-        3: 4,  # B-MISC -> I-MISC
-        5: 6,  # B-ORG -> I-ORG
-        7: 8    # B-PER -> I-PER
+        3: 4,  # B-ORG -> I-ORG
+        5: 6    # B-PER -> I-PER
     }
 
     # Initialize an empty list to store aligned labels and a variable to track the last word
