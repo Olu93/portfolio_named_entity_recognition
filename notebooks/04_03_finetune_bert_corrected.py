@@ -16,24 +16,22 @@ from transformers import (
     TrainingArguments, 
     Trainer,
     DataCollatorForTokenClassification,
-    AutoConfig
+    AutoConfig,
+    EarlyStoppingCallback,
+    AutoModelForTokenClassification as TokenClassifier
 )
 from sklearn.model_selection import train_test_split
 import json
-from transformers import EarlyStoppingCallback
-# Removed problematic import that converts B- to I- tags incorrectly
-# from notebooks.notebook_finetune_utils import DistilBertWithHingeLoss as TokenClassifier
-from transformers import AutoModelForTokenClassification as TokenClassifier
+import pandas as pd
+from evaluate import load
+import matplotlib.pyplot as plt
 
 # Try to import seqeval for better evaluation metrics
 try:
     from seqeval.metrics import precision_score, recall_score, f1_score
-    SEQEVAL_AVAILABLE = True
     print("✓ seqeval available for advanced NER metrics")
 except ImportError:
     print("⚠ seqeval not available. Install with: pip install seqeval")
-    print("   Falling back to simple accuracy metrics")
-    SEQEVAL_AVAILABLE = False
 
 # %% [markdown]
 # ## Define BIO Tag Label Mapping
@@ -264,8 +262,6 @@ print(f"Using tokenizer: {model_name}")
 def tokenize_and_align_labels(texts, labels, tokenizer, label2id):
     """Tokenize texts and align labels with subword tokens"""
 
-    assert len(texts) == len(labels)
-
     tokenized_inputs = tokenizer(
         texts,
         truncation=True,
@@ -285,18 +281,8 @@ def tokenize_and_align_labels(texts, labels, tokenizer, label2id):
             previous_word_id = None
             label_ids = []
             # Get the actual token strings for this sentence
-            
-            # print(f"Sentence {sent_idx}:")
-            # print(f"Input IDs: {sent_word_ids}")
-            # print(f"Labels: {sent_labels}")
-            # print(f"Token IDs: {sent_token_ids}")
             sent_tokens = tokenizer.convert_ids_to_tokens(sent_token_ids)
-            # print(f"Tokens: {sent_tokens}")
 
-            # print(f"Input IDs length: {len(sent_word_ids)}")
-            # print(f"Labels length: {len(sent_labels)}")
-            # print(f"Token IDs length: {len(sent_token_ids)}")
-            # print(f"Tokens length: {len(sent_tokens)}")
 
 
             for word_idx, word_id in enumerate(sent_word_ids):
@@ -316,16 +302,7 @@ def tokenize_and_align_labels(texts, labels, tokenizer, label2id):
             aligned_labels.append(label_ids)
             token_strings.append(sent_tokens)
     except Exception as e:
-        print()
-        print("--------------------------------")
         print(f"Error processing sentence {sent_idx}: {e}")
-        print(f"Sentence: {texts[sent_idx]}")
-        print(f"Sentence labels: {sent_labels}")
-        print(f"Sentence word ids: {sent_word_ids}")
-        print(f"Sentence token ids: {sent_token_ids}")
-        print(f"Sentence tokens: {sent_tokens}")
-        print(f"Word: {word_idx}")
-        print(f"Word Id: {word_id}")
 
         raise e
     
@@ -516,6 +493,9 @@ data_collator = DataCollatorForTokenClassification(tokenizer)
 # %%
 # %%
 
+# Load the seqeval metric which can evaluate NER and other sequence tasks
+metric = load("seqeval")
+
 # Compute metrics function for evaluation
 def compute_metrics(pred):
     """Compute precision, recall, and F1 score for NER"""
@@ -532,28 +512,17 @@ def compute_metrics(pred):
         for label in labels
     ]
     
-    if SEQEVAL_AVAILABLE:
-        precision = precision_score(true_labels, true_predictions, average="weighted")
-        recall = recall_score(true_labels, true_predictions, average="weighted")
-        f1 = f1_score(true_labels, true_predictions, average="weighted")
-        
-        return {
-            "precision": precision,
-            "recall": recall,
-            "f1": f1,
-        }
-    else:
-        # Fallback to simple accuracy
-        correct = 0
-        total = 0
-        for true_pred, true_label in zip(true_predictions, true_labels):
-            for p, l in zip(true_pred, true_label):
-                if p == l:
-                    correct += 1
-                total += 1
-        
-        accuracy = correct / total if total > 0 else 0
-        return {"accuracy": accuracy}
+    precision = metric.compute(predictions=true_predictions, references=true_labels)["overall_precision"]
+    recall = metric.compute(predictions=true_predictions, references=true_labels)["overall_recall"]
+    f1 = metric.compute(predictions=true_predictions, references=true_labels)["overall_f1"]
+    accuracy = metric.compute(predictions=true_predictions, references=true_labels)["overall_accuracy"]
+    
+    return {
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+        "accuracy": accuracy
+    }
 
 # %% [markdown]
 # ## Configure Advanced Training Arguments
@@ -592,8 +561,8 @@ training_args = TrainingArguments(
     logging_steps=10,  # More frequent logging
     save_strategy="epoch",
     load_best_model_at_end=True,
-    metric_for_best_model="f1" if SEQEVAL_AVAILABLE else "eval_loss",
-    greater_is_better=True if SEQEVAL_AVAILABLE else False,
+    metric_for_best_model="f1",
+    greater_is_better=True,
     push_to_hub=False,
     fp16=True,  # Mixed precision training for speed and memory
     gradient_accumulation_steps=1,  # No gradient accumulation needed with larger batch size
@@ -638,7 +607,7 @@ trainer = Trainer(
     tokenizer=tokenizer,
     data_collator=data_collator,
     compute_metrics=compute_metrics,
-    # callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
+    callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
 )
 
 # %% [markdown]
@@ -784,7 +753,7 @@ for text in test_texts:
 # %%
 
 # Save the model and tokenizer properly
-model_save_path = FILES_DIR / "pretrained" / "dslim_bert_ner_finetuned"
+model_save_path = FILES_DIR / "pretrained" / "distilbert_ner_finetuned"
 trainer.save_model(str(model_save_path))
 tokenizer.save_pretrained(str(model_save_path))
 
@@ -906,6 +875,7 @@ except Exception as e:
 
 # Convert to DataFrame
 df_history = pd.DataFrame(train_log_history)
+df_history.to_csv(model_save_path_results / "bert_training_log_history.csv", index=False)
 
 print(f"Training history contains {len(df_history)} log entries")
 print(f"Columns: {list(df_history.columns)}")
@@ -977,7 +947,7 @@ if available_metrics:
         ax2.set_title('Validation Metrics Progression (F1, Precision, Recall)', fontsize=14, fontweight='bold')
         ax2.legend()
         ax2.grid(True, alpha=0.3)
-        ax2.set_ylim(0, 0.5)  # Adjust based on your data range
+        ax2.set_ylim(0.75, 1)  # Adjust based on your data range
         
         # Add annotations for final values
         for i, metric in enumerate(available_metrics):
@@ -1102,3 +1072,5 @@ else:
 print("\n" + "="*80)
 
 
+
+# %%
