@@ -59,8 +59,7 @@ label2id = {
     'O': 0,
     'B-PER': 1, 'I-PER': 2,
     'B-ORG': 3, 'I-ORG': 4,
-    'B-LOC': 5, 'I-LOC': 6,
-    'B-MISC': 7, 'I-MISC': 8
+    'B-LOC': 5, 'I-LOC': 6
 }
 
 id2label = {v: k for k, v in label2id.items()}
@@ -239,8 +238,7 @@ label_dist = analyze_label_distribution(labels)
 
 # Initialize tokenizer - use cased for better NER performance
 # model_name = "bert-base-cased"  # Changed from uncased for better NER
-# model_name = "distilbert-base-cased"  # Use untrained base model
-model_name = "dslim/distilbert-NER"  # Use untrained base model
+model_name = "distilbert-base-cased"  # Use untrained base model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 # from notebooks.notebook_finetune_utils import DistilBertWithHingeLoss as TokenClassifier
 
@@ -551,7 +549,7 @@ total_steps = len(train_dataset) // 16 * 5  # Approximate total steps for 5 epoc
 warmup_steps = int(0.1 * total_steps)  # 10% warmup
 
 training_args = TrainingArguments(
-    output_dir="./ft_ner_dslim",
+    output_dir="./ft_ner_corrected",
     eval_strategy="epoch",
     learning_rate=2e-5,  # Reduced learning rate for stable fine-tuning
     per_device_train_batch_size=8,  # Smaller batch size for better small dataset training
@@ -755,7 +753,7 @@ for text in test_texts:
 # %%
 
 # Save the model and tokenizer properly
-model_save_path = FILES_DIR / "pretrained" / "dslim_distilbert_ner_finetuned"
+model_save_path = FILES_DIR / "pretrained" / "distilbert_ner_finetuned"
 trainer.save_model(str(model_save_path))
 tokenizer.save_pretrained(str(model_save_path))
 
