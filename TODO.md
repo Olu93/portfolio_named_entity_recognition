@@ -50,5 +50,9 @@
 
 
 # Zero Hour
-[] README with install guide, .env variable description, and run guide
-[] Test python `notebooks/07_train_and_save.py`
+[x] README with install guide, .env variable description, and run guide
+[ ] Make 07_train_and_save as script instead of a notebook
+[ ] Add pytests
+[ ] Create 04_03_finetune
+[ ] Reclaim previous py files
+[ ] 
