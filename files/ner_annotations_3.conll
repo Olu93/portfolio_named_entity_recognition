@@ -1291,8 +1291,8 @@ Federation I-LOC
 Boykov B-PER
 , O
 of O
-Moscow B-LOC
-Legal B-ORG
+Moscow B-ORG
+Legal I-ORG
 Center I-ORG
 , O
 has O
@@ -17084,8 +17084,8 @@ shoots O
 to O
 watch O
 a O
-Chicago B-LOC
-Cubs B-ORG
+Chicago B-ORG
+Cubs I-ORG
 baseball O
 game O
 on O
@@ -19123,8 +19123,8 @@ in O
 2004 O
 
 The O
-UK B-LOC
-Home B-ORG
+UK B-ORG
+Home I-ORG
 Office I-ORG
 last O
 month O
@@ -20709,8 +20709,8 @@ of O
 Integrative O
 Studies I-ORG
 at O
-Singapore B-LOC
-Management B-ORG
+Singapore B-ORG
+Management I-ORG
 University. I-ORG
 
 Restricting O
@@ -22657,8 +22657,8 @@ weekend O
 , O
 according O
 to O
-Montana B-LOC
-Fire B-ORG
+Montana B-ORG
+Fire I-ORG
 , O
 Wildlife I-ORG
 & I-ORG
@@ -23972,8 +23972,8 @@ wildlife O
 officers O
 with O
 the O
-Arkansas B-LOC
-Game B-ORG
+Arkansas B-ORG
+Game I-ORG
 and I-ORG
 Fish I-ORG
 Commission I-ORG
@@ -24115,8 +24115,8 @@ by O
 our O
 deputies O
 and O
-Arkansas B-LOC
-Game B-ORG
+Arkansas B-ORG
+Game I-ORG
 and I-ORG
 Fish I-ORG
 Wildlife I-ORG
@@ -27290,7 +27290,7 @@ Emergency I-ORG
 Management I-ORG
 Agency I-ORG
 ( O
-FEMA I-ORG
+FEMA B-ORG
 ) O
 have O
 been O
@@ -28240,8 +28240,8 @@ of O
 military O
 exercises O
 the O
-Taiwanese B-LOC
-Defense B-ORG
+Taiwanese B-ORG
+Defense I-ORG
 Ministry I-ORG
 likened O
 to O
@@ -28678,8 +28678,8 @@ fighter O
 jets O
 , O
 the O
-Taiwanese B-LOC
-Defense B-ORG
+Taiwanese B-ORG
+Defense I-ORG
 Ministry I-ORG
 said O
 in O
@@ -32937,8 +32937,8 @@ primary O
 challengers O
 , O
 including O
-Milwaukee B-LOC
-Bucks B-ORG
+Milwaukee B-ORG
+Bucks I-ORG
 executive O
 Alex B-PER
 Lasry I-PER
@@ -47070,9 +47070,9 @@ Since O
 the O
 overturn O
 of O
-Roe B-ORG
-v. O
-Wade I-ORG
+Roe B-PER
+v. I-PER
+Wade I-PER
 , O
 there O
 are O
@@ -53236,8 +53236,8 @@ keep O
 control O
 of O
 the O
-US B-LOC
-House B-ORG
+US B-ORG
+House I-ORG
 and O
 the O
 Senate B-ORG
@@ -54164,8 +54164,8 @@ Chamber B-ORG
 of I-ORG
 Commerce I-ORG
 and O
-Michigan B-LOC
-Right B-ORG
+Michigan B-ORG
+Right I-ORG
 to I-ORG
 Life I-ORG
 . O
