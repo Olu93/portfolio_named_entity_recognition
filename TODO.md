@@ -55,4 +55,8 @@
 [ ] Add pytests
 [ ] Create 04_03_finetune
 [ ] Reclaim previous py files
-[ ] 
+[ ] Fix bulk open-ai calls
+[ ] Chunk by sentence endings
+[ ] Update report data prep section.
+[ ] Explain context rot
+[ ] Describe that you need to call `poetry run python -m train --no-prepare-serialization` for CPU Docker deployment

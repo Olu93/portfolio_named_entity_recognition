@@ -240,14 +240,8 @@ The notebooks follow a sequential data processing. Notebooks 02, 03 and 04 are f
 
 ## Performance Testing (Locust)
 
-We ran Locust against `http://localhost:8000` with **100 concurrent users** to validate throughput and stability. Results:
-
-| Endpoint               | Requests | Failures | Median (ms) | 90th (ms) | 99th (ms) | Avg Latency (ms) | Fail Rate |
-|------------------------|---------:|---------:|------------:|----------:|----------:|-----------------:|----------:|
-| `GET /healthz`         |       10 |        3 |       7 900 |     79 000 |     79 000 |           16 826 |    30%    |
-| `POST /predict/single` |      112 |       20 |      13 000 |     70 000 |    118 000 |           25 085 |    18%    |
-| **Total**              |      122 |       23 |      13 000 |     70 000 |    118 000 |           24 408 |    19%    |
-
+We ran Locust against `http://localhost:8000` with **100 concurrent users** to validate throughput and stability. 
+Results are in [REPORT](./load-test-report.html)
 ---
 
 ### Bottlenecks & CPU Constraints
