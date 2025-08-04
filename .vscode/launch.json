@@ -29,6 +29,14 @@
             "cwd": "${workspaceFolder}/src"
         },
         {
+            "name": "Run Preprocessing",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "utils.preprocessing",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/src"
+        },
+        {
             "name": "Run Sliding Window",
             "type": "debugpy",
             "request": "launch",

@@ -2,10 +2,12 @@ from utils.preprocessing import SpacySentenceSplitter
 from utils.typings import TextInput
 from port.entity_extractor import SingleEntityExtractor
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
+from collections import defaultdict
 import torch
 import logging
 import pathlib
 import sys
+from datasets import Dataset
 
 # Add the project root to the path
 sys.path.append(str(pathlib.Path(__file__).parent.parent.parent.parent))
@@ -19,6 +21,12 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
     """
     Entity extractor using a fine-tuned BERT model for NER.
     """
+    MAP = {
+            "persons": {"PER", "B-PER", "I-PER"},
+            "organizations": {"ORG", "B-ORG", "I-ORG"},
+            "locations": {"LOC", "B-LOC", "I-LOC"},
+        }
+
 
     def __init__(
         self,
@@ -28,6 +36,7 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
         aggregation_strategy: str = "first",
         chunk_size: int = 500,
         chunk_overlap: int = 0,
+        batch_size: int = 100,
         *args,
         **kwargs
     ):
@@ -52,7 +61,7 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
         self.model = None
         self.tokenizer = None
         self.ner_pipeline = None
-        
+        self.batch_size = batch_size
         # Check CUDA availability
         if torch.cuda.is_available():
             logger.info(f"CUDA is available. Using GPU: {torch.cuda.get_device_name(0)}")
@@ -76,7 +85,8 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
                 model=self.model,
                 tokenizer=self.tokenizer,
                 aggregation_strategy=self.aggregation_strategy,
-                device=self.device
+                device=self.device,
+                batch_size=self.batch_size
             )
             
             logger.info("Model loaded successfully")
@@ -95,40 +105,33 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
         """Extract entities from texts using the fine-tuned model"""
         if self.ner_pipeline is None:
             self._load_model()
-        
-        output = []
-        
-        for text in X:
-            try:
-                # Split text into chunks
-                chunks = self.text_splitter.split_text(text)
-                
-                # Extract entities from all chunks
-                all_entities = []
-                spans_list = self.ner_pipeline(chunks)
-                all_entities = [span["word"] for spans  in spans_list for span in spans if self._is_valid_entity(span["entity_group"], span["word"])]
-                
-                output.append(all_entities)
-                
-                
-            except Exception as e:
-                logger.warning(f"Error processing text: {e}")
-                output.append([])
-        
+        valid_groups = self.MAP.get(self.label, set())
+
+        # split → flat list + reverse map
+        all_chunks, mapping = [], []
+        for i, txt in enumerate(X):
+            chunks = self.text_splitter.split_text(txt)
+            all_chunks += chunks
+            mapping += [i] * len(chunks)
+
+        # pipeline on list directly, batched
+        spans_list = self.ner_pipeline(
+            all_chunks
+        )
+
+        # collect
+        output = [[] for _ in X]
+        for spans, idx in zip(spans_list, mapping):
+            for s in spans:
+                if s["entity_group"] in valid_groups:
+                    if not self.require_full_name or len(s["word"].split()) > 1:
+                        output[idx].append(s["word"])
         return output
 
     def _is_valid_entity(self, entity_group: str, entity_text: str) -> bool:
         """Check if entity is valid based on label type and requirements"""
-        
-        # Map label types to entity groups
-        label_mapping = {
-            "persons": ["PER", "B-PER", "I-PER"],
-            "organizations": ["ORG", "B-ORG", "I-ORG"],
-            "locations": ["LOC", "B-LOC", "I-LOC"],
-        }
-        
         # Check if entity group matches the label type
-        valid_groups = label_mapping.get(self.label, [])
+        valid_groups = self.MAP.get(self.label, set())
         if entity_group not in valid_groups:
             return False
         
@@ -155,6 +158,18 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
         self.ner_pipeline.model.to("cpu")
         self.ner.device = torch.device("cpu")
         return self
+
+
+class PretrainedBertEntityExtractorPure(PretrainedBERTEntityExtractor):
+
+    def _predict(self, X: TextInput):
+        # Predict without splitting
+        spans_list = self.ner_pipeline(X)
+        return [
+            [span["word"] for span in spans if self._is_valid_entity(span["entity_group"], span["word"])]
+            for spans in spans_list
+        ]
+
 
 
 if __name__ == "__main__":

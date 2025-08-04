@@ -1,5 +1,5 @@
 from .values import FILES_DIR
-from adapter.finetuning.pretrained import PretrainedBERTEntityExtractor
+from adapter.finetuning.pretrained import PretrainedBERTEntityExtractor, PretrainedBertEntityExtractorPure
 from adapter.ootb.huggingface import HuggingFaceEntityExtractor
 from adapter.ootb.spacy import SpacyEntityExtractor
 from adapter.ootb.llm import LangChainEntityExtractor
@@ -29,7 +29,42 @@ MODEL_CONFIGS = [
     #     },
     # },
     {
-        "name": "PretrainedBERTEntityExtractor",
+        "name": "PretrainedBertEntityExtractorPure",
+        "extra_info": {
+            "description": "Pretrained BERT model for entity extraction",
+            "model": "distilbert_ner_finetuned",
+            "type": "transformer",
+        },
+        "persons": {
+            "extractor": PretrainedBertEntityExtractorPure,
+            "params": {
+                "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
+                "label": "persons",
+                "batch_size": None,
+                "aggregation_strategy": "first",
+            },
+        },
+        "organizations": {
+            "extractor": PretrainedBertEntityExtractorPure,
+            "params": {
+                "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
+                "label": "organizations",
+                "batch_size": None,
+                "aggregation_strategy": "first",
+            },
+        },
+        "locations": {
+            "extractor": PretrainedBertEntityExtractorPure,
+            "params": {
+                "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
+                "label": "locations",
+                "batch_size": None,
+                "aggregation_strategy": "first",
+            },
+        },
+    },
+    {
+        "name": "PretrainedBertEntityExtractor",
         "extra_info": {
             "description": "Pretrained BERT model for entity extraction",
             "model": "distilbert_ner_finetuned",
@@ -40,6 +75,8 @@ MODEL_CONFIGS = [
             "params": {
                 "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
                 "label": "persons",
+                "batch_size": 500,
+                "aggregation_strategy": "first",
             },
         },
         "organizations": {
@@ -47,6 +84,8 @@ MODEL_CONFIGS = [
             "params": {
                 "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
                 "label": "organizations",
+                "batch_size": 500,
+                "aggregation_strategy": "first",
             },
         },
         "locations": {
@@ -54,6 +93,8 @@ MODEL_CONFIGS = [
             "params": {
                 "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
                 "label": "locations",
+                "batch_size": 500,
+                "aggregation_strategy": "first",
             },
         },
     },
@@ -67,15 +108,27 @@ MODEL_CONFIGS = [
         },
         "persons": {
             "extractor": HuggingFaceEntityExtractor,
-            "params": {"model": "dslim/bert-base-NER", "label": "persons"},
+            "params": {
+                "model": "dslim/bert-base-NER",
+                "label": "persons",
+                "aggregation_strategy": "simple",
+            },
         },
         "organizations": {
             "extractor": HuggingFaceEntityExtractor,
-            "params": {"model": "dslim/bert-base-NER", "label": "organizations"},
+            "params": {
+                "model": "dslim/bert-base-NER",
+                "label": "organizations",
+                "aggregation_strategy": "simple",
+            },
         },
         "locations": {
             "extractor": HuggingFaceEntityExtractor,
-            "params": {"model": "dslim/bert-base-NER", "label": "locations"},
+            "params": {
+                "model": "dslim/bert-base-NER",
+                "label": "locations",
+                "aggregation_strategy": "simple",
+            },
         },
     },
     {
@@ -88,47 +141,59 @@ MODEL_CONFIGS = [
         },
         "persons": {
             "extractor": HuggingFaceEntityExtractor,
-            "params": {"model": "dslim/distilbert-NER", "label": "persons"},
-        },
-        "organizations": {
-            "extractor": HuggingFaceEntityExtractor,
-            "params": {"model": "dslim/distilbert-NER", "label": "organizations"},
-        },
-        "locations": {
-            "extractor": HuggingFaceEntityExtractor,
-            "params": {"model": "dslim/distilbert-NER", "label": "locations"},
-        },
-    },
-    {
-        "name": "HuggingFaceEntityExtractor",
-        "extra_info": {
-            "description": "BERT-large model fine-tuned on CoNLL-2003 English dataset",
-            "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
-            "type": "transformer",
-            "paper": "https://arxiv.org/abs/1810.04805",
-        },
-        "persons": {
-            "extractor": HuggingFaceEntityExtractor,
             "params": {
-                "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
+                "model": "dslim/distilbert-NER",
                 "label": "persons",
+                "aggregation_strategy": "simple",
             },
         },
         "organizations": {
             "extractor": HuggingFaceEntityExtractor,
             "params": {
-                "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
+                "model": "dslim/distilbert-NER",
                 "label": "organizations",
+                "aggregation_strategy": "simple",
             },
         },
         "locations": {
             "extractor": HuggingFaceEntityExtractor,
             "params": {
-                "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
+                "model": "dslim/distilbert-NER",
                 "label": "locations",
+                "aggregation_strategy": "simple",
             },
         },
     },
+    # {
+    #     "name": "HuggingFaceEntityExtractor",
+    #     "extra_info": {
+    #         "description": "BERT-large model fine-tuned on CoNLL-2003 English dataset",
+    #         "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
+    #         "type": "transformer",
+    #         "paper": "https://arxiv.org/abs/1810.04805",
+    #     },
+    #     "persons": {
+    #         "extractor": HuggingFaceEntityExtractor,
+    #         "params": {
+    #             "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
+    #             "label": "persons",
+    #         },
+    #     },
+    #     "organizations": {
+    #         "extractor": HuggingFaceEntityExtractor,
+    #         "params": {
+    #             "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
+    #             "label": "organizations",
+    #         },
+    #     },
+    #     "locations": {
+    #         "extractor": HuggingFaceEntityExtractor,
+    #         "params": {
+    #             "model": "dbmdz/bert-large-cased-finetuned-conll03-english",
+    #             "label": "locations",
+    #         },
+    #     },
+    # },
     # {
     #     "name": "HuggingFaceEntityExtractor",
     #     "extra_info": {
@@ -211,26 +276,25 @@ MODEL_CONFIGS = [
             "params": {"model": "en_core_web_md", "label": "locations"},
         },
     },
-    {
-        "name": "SpacyEntityExtractor",
-        "extra_info": {
-            "description": "SpaCy large English model for NER",
-            "model": "en_core_web_lg",
-            "type": "rule-based",
-            "paper": "https://spacy.io/models/en",
-        },
-        "persons": {
-            "extractor": SpacyEntityExtractor,
-            "params": {"model": "en_core_web_lg", "label": "persons"},
-        },
-        "organizations": {
-            "extractor": SpacyEntityExtractor,
-            "params": {"model": "en_core_web_lg", "label": "organizations"},
-        },
-        "locations": {
-            "extractor": SpacyEntityExtractor,
-            "params": {"model": "en_core_web_lg", "label": "locations"},
-        },
-    },
-    
-] 
+    # {
+    #     "name": "SpacyEntityExtractor",
+    #     "extra_info": {
+    #         "description": "SpaCy large English model for NER",
+    #         "model": "en_core_web_lg",
+    #         "type": "rule-based",
+    #         "paper": "https://spacy.io/models/en",
+    #     },
+    #     "persons": {
+    #         "extractor": SpacyEntityExtractor,
+    #         "params": {"model": "en_core_web_lg", "label": "persons"},
+    #     },
+    #     "organizations": {
+    #         "extractor": SpacyEntityExtractor,
+    #         "params": {"model": "en_core_web_lg", "label": "organizations"},
+    #     },
+    #     "locations": {
+    #         "extractor": SpacyEntityExtractor,
+    #         "params": {"model": "en_core_web_lg", "label": "locations"},
+    #     },
+    # },
+]

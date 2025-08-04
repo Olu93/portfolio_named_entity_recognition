@@ -90,7 +90,7 @@ The available models are defined in `src/constants/model_config.py`. Each model 
    ```bash
    poetry run python -m spacy download en_core_web_sm
    poetry run python -m spacy download en_core_web_md
-   poetry run python -m spacy download en_core_web_lg
+   poetry run python -m spacy download en_core_web_lg # Optional
    ```
 
 5. **Set up environment variables**
@@ -200,16 +200,19 @@ take-home-assignment/
 │   │   └── ootb/          # Out-of-the-box model adapters
 │   ├── constants/         # Configuration constants and model configs
 │   ├── port/              # Entity extraction interface
-│   └── utils/             # Utility functions (logging, preprocessing, etc.)
+│   ├── utils/             # Utility functions (logging, preprocessing, etc.)
+│   ├── main.py            # Runs fastapi interface
+│   └── train.py           # Used to train a model and pickle it
 ├── notebooks/             # Jupyter notebooks for data processing and training
-│   ├── 00_data_exploration.py          # Initial dataset analysis and exploration
-│   ├── 01_data_preparation.py          # Data cleaning and preprocessing pipeline
-│   ├── 02_data_splitting.py            # Semantic chunking and text splitting
-│   ├── 03_data_ner_conversion.py       # CoNLL-2003 format conversion using LLM
-│   ├── 04_finetune_bert.py             # BERT model fine-tuning for NER
-│   ├── 05_evaluation_multi_pass.py  # Multi-pass model evaluation
-│   ├── 06_result_analysis.py           # Comprehensive performance analysis
-│   ├── 07_train_and_save.py            # Model training and serialization
+│   ├── 00_data_exploration.ipynb          # Initial dataset analysis and exploration
+│   ├── 01_data_preparation.ipynb          # Data cleaning and preprocessing pipeline
+│   ├── 02_data_splitting.ipynb            # Semantic chunking and text splitting
+│   ├── 03_data_ner_conversion.ipynb       # CoNLL-2003 format conversion using LLM
+│   ├── 04_finetune_bert.ipynb             # BERT model fine-tuning for NER
+│   ├── 05_evaluation_multi_pass.ipynb  # Multi-pass model evaluation
+│   ├── 06_result_analysis.ipynb           # Comprehensive performance analysis
+│   ├── notebook_finetune_utils.py           # Comprehensive performance analysis
+│   ├── notebook_config.py           # Comprehensive performance analysis
 │   └── generate_example.py             # Example generation utilities for testing
 ├── files/                 # Data files and models
 │   ├── datasets/          # Raw and processed datasets
@@ -236,22 +239,18 @@ The notebooks follow a sequential data processing. Notebooks 02, 03 and 04 are f
 5. **`04_finetune_bert.ipynb`** - BERT model fine-tuning with custom loss functions and advanced training optimizations
 8. **`05_evaluation_multi_pass.ipynb`** - Multi-pass evaluation with detailed performance metrics
 9. **`06_result_analysis.ipynb`** - Comprehensive analysis of model performance, efficiency metrics, and comparative evaluation
-10. **`07_train_and_save.py`** - Final model training and serialization for API deployment
 
 ## Performance Testing (Locust)
 
-We ran Locust against `http://localhost:8000` with **100 concurrent users** to validate throughput and stability. 
+We ran Locust against `http://localhost:8000` with **200 concurrent users** to validate throughput and stability. 
 Results are in [REPORT](./load-test-report.html)
 ---
 
 ### Bottlenecks & CPU Constraints
 
-- **Transformer on CPU**  
-  BERT‑style inference on a single CPU core is inherently slow (hundreds of ms per request), and under load this accumulates into tens of seconds.
 - **Blocking Calls & GIL**  
-  Synchronous inference blocks the event loop and is further constrained by Python’s GIL, limiting true parallelism.
-- **Cold Model Loads**  
-  If the model is reloaded or the tokenizer reinitialized per request, it adds significant overhead.
+  Synchronous inference blocks the event loop and is further constrained by Python’s GIL, limiting true parallelism. This is relevant as only 1 worker is used for the API.
+
 
 ---
 
@@ -259,16 +258,14 @@ Results are in [REPORT](./load-test-report.html)
 
 1. **Model Optimization**  
    - **Quantization**: Convert to 8‑bit or dynamic quantization to reduce inference time on CPU.  
-   - **Distillation / Smaller Models**: Swap to DistilBERT or a smaller transformer variant (e.g. `distilbert-base-cased`) for 2–3× speedup.  
+   - **Distillation / Smaller Models**: Swap to even smaller transformer variant for speedup.  
    - **ONNX Runtime**: Export to ONNX and run with ONNX Runtime Optimizations (e.g. OpenVINO) for further CPU acceleration.
-
 
 3. **Concurrency Tuning**  
    - **Gunicorn + Uvicorn Workers**: Deploy with multiple worker processes (e.g. `--workers 4`) to leverage multiple CPU cores.  
    - **Use messaging system**: Save all requests in a messaging bus such as Kafka.
 
 4. **Resource Management**  
-   - **Model Warmup**: Keep the model loaded in memory on startup; avoid per-request loading.  
    - **Cache Results**: For repeated inputs, use an in‑memory cache (LRU) to return results instantly.
 
 5. **Horizontal Scaling**  

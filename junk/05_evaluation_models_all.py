@@ -44,6 +44,7 @@ results = []
 runs = 5
 for run in range(runs):
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+    train_df = train_df.sample(frac=0.3)
     for config in tqdm(MODEL_CONFIGS, desc="Testing models"):
         model_name = config['name']
         model_info = config['extra_info']
@@ -112,8 +113,8 @@ for run in range(runs):
                 'predictions_file': None
             })
         
-    results_df = pd.json_normalize(results)
-    results_df.to_csv(EXPERIMENTAL_RESULTS_DIR / 'model_evaluation_results_multi_pass.csv', index=False)
+        results_df = pd.json_normalize(results)
+        results_df.to_csv(EXPERIMENTAL_RESULTS_DIR / 'model_evaluation_results_multi_pass.csv', index=False)
 
 # %%
 # Save results to CSV
