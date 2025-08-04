@@ -1557,7 +1557,7 @@ for O
 Integrated B-ORG
 Public I-ORG
 Alert I-ORG
-& O
+& I-ORG
 Warning I-ORG
 System, I-ORG
 the O
@@ -2023,8 +2023,8 @@ an O
 employee O
 of O
 a O
-Hawaii B-LOC
-Emergency B-ORG
+Hawaii B-ORG
+Emergency I-ORG
 Management I-ORG
 Agency I-ORG
 was O
@@ -2179,7 +2179,7 @@ from O
 the O
 Palestinian B-ORG
 Ministry I-ORG
-of O
+of I-ORG
 Health I-ORG
 . O
 
@@ -5354,7 +5354,7 @@ was O
 found O
 in O
 Town B-LOC
-and O
+and I-LOC
 Country I-LOC
 in O
 July O
@@ -5750,8 +5750,8 @@ jail O
 stay O
 , O
 The O
-Florida B-LOC
-Innocence B-ORG
+Florida B-ORG
+Innocence I-ORG
 Project I-ORG
 said O
 . O
@@ -7776,12 +7776,12 @@ area O
 According O
 to O
 the O
-US B-LOC
-Centers B-ORG
-for O
+US B-ORG
+Centers I-ORG
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 , O
 “People O
@@ -8245,7 +8245,7 @@ countries O
 . O
 
 The O
-US B-LOC
+US B-ORG
 Environmental I-ORG
 Protection I-ORG
 Agency I-ORG
@@ -8717,7 +8717,7 @@ Electronics I-ORG
 Recycling I-ORG
 International I-ORG
 ( O
-SERI I-ORG
+SERI B-ORG
 ) O
 , O
 he O
@@ -9809,7 +9809,7 @@ additional O
 crews O
 and O
 the O
-Dayton B-LOC
+Dayton B-ORG
 Police I-ORG
 Bomb B-ORG
 Squad I-ORG
@@ -10276,7 +10276,7 @@ hotspots O
 In O
 the O
 Horn B-LOC
-of O
+of I-LOC
 Africa I-LOC
 , O
 a O
@@ -11214,7 +11214,7 @@ economist O
 of O
 the O
 Food B-ORG
-and O
+and I-ORG
 Agriculture I-ORG
 Organization I-ORG
 ( O
@@ -12135,8 +12135,8 @@ for O
 the O
 suspect, O
 the O
-Lawrence B-LOC
-Police B-ORG
+Lawrence B-ORG
+Police I-ORG
 Department I-ORG
 said O
 in O
@@ -12541,8 +12541,8 @@ this O
 time O
 from O
 the O
-California B-LOC
-Department B-ORG
+California B-ORG
+Department I-ORG
 of O
 Motor B-ORG
 Vehicles I-ORG
@@ -12672,8 +12672,8 @@ Another O
 claim O
 that O
 the O
-California B-LOC
-DMV B-ORG
+California B-ORG
+DMV I-ORG
 alleged O
 was O
 misleading O
@@ -13020,11 +13020,11 @@ Applied O
 Mechanics O
 of O
 the O
-Russian B-LOC
-Academy B-ORG
-of O
-Sciences’ O
-Siberian B-LOC
+Russian B-ORG
+Academy I-ORG
+of I-ORG
+Sciences’ I-ORG
+Siberian I-ORG
 Branch I-ORG
 , O
 is O
@@ -13155,9 +13155,9 @@ Siberian B-ORG
 Branch I-ORG
 of O
 the O
-Russian B-LOC
+Russian B-ORG
 Academy I-ORG
-of O
+of I-ORG
 Sciences I-ORG
 . O
 
@@ -13389,10 +13389,10 @@ from O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 and O
 isolate O
@@ -13576,7 +13576,7 @@ Centers I-ORG
 for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 says O
 older O
@@ -13653,9 +13653,9 @@ use O
 authorization O
 from O
 the O
-US B-LOC
-Food B-ORG
-and O
+US B-ORG
+Food I-ORG
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 for O
@@ -15537,8 +15537,8 @@ broadcaster O
 CCTV B-ORG
 . O
 
-China’s B-LOC
-Communist B-ORG
+China’s B-ORG
+Communist I-ORG
 Party I-ORG
 views O
 democratic O
@@ -15876,15 +15876,15 @@ fellow O
 at O
 the O
 Center B-ORG
-for O
+for I-ORG
 Strategic I-ORG
-and O
+and I-ORG
 International I-ORG
 Studies I-ORG
 and O
 former O
-Australian B-LOC
-Army B-ORG
+Australian B-ORG
+Army I-ORG
 general O
 , O
 wrote O
@@ -16248,8 +16248,8 @@ Ryan B-PER
 , O
 the O
 former O
-Australian B-LOC
-Army B-ORG
+Australian B-ORG
+Army I-ORG
 general O
 , O
 wrote O
@@ -17822,7 +17822,7 @@ to O
 pass O
 the O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 . O
 
@@ -18284,9 +18284,9 @@ to O
 a O
 statement O
 from O
-Tokyo’s B-LOC
-Ministry B-ORG
-of O
+Tokyo’s B-ORG
+Ministry I-ORG
+of I-ORG
 Defense I-ORG
 . O
 
@@ -18327,14 +18327,14 @@ recognizes O
 the O
 People’s O
 Republic B-LOC
-of O
+of I-LOC
 China I-LOC
 as O
 the O
 sole O
 legitimate O
 government O
-of O
+of I-LOC
 China I-LOC
 
 We O
@@ -18648,7 +18648,7 @@ Austin I-PER
 directed O
 the O
 Department B-ORG
-of O
+of I-ORG
 Defense I-ORG
 to O
 postpone O
@@ -19168,10 +19168,10 @@ by O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 on O
 Friday O
@@ -19888,8 +19888,8 @@ Tuesday O
 appealed O
 to O
 the O
-Kentucky B-LOC
-Supreme B-ORG
+Kentucky B-ORG
+Supreme I-ORG
 Court I-ORG
 for O
 emergency O
@@ -20828,7 +20828,7 @@ opponent O
 , O
 while O
 Winning B-ORG
-for O
+for I-ORG
 Women I-ORG
 Action I-ORG
 Fund I-ORG
@@ -22405,10 +22405,10 @@ by O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 at O
 the O
@@ -24010,8 +24010,8 @@ four O
 Muslim O
 men O
 , O
-Albuquerque B-LOC
-Police B-ORG
+Albuquerque B-ORG
+Police I-ORG
 Chief O
 Harold B-PER
 Medina I-PER
@@ -24443,7 +24443,7 @@ Torrez B-PER
 said O
 . O
 
-Albuquerque B-LOC
+Albuquerque B-ORG
 Police I-ORG
 , O
 the O
@@ -25902,7 +25902,7 @@ Kaishian B-PER
 recently O
 told O
 City B-ORG
-& O
+& I-ORG
 State I-ORG
 . O
 
@@ -26210,7 +26210,7 @@ at O
 SMU B-ORG
 Dedman I-ORG
 School I-ORG
-of O
+of I-ORG
 Law I-ORG
 and O
 a O
@@ -26219,7 +26219,7 @@ at O
 the O
 Brennan B-ORG
 Center I-ORG
-for O
+for I-ORG
 Justice I-ORG
 , O
 told O
@@ -26282,7 +26282,7 @@ serving O
 in O
 the O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 and O
 who O
@@ -26436,10 +26436,10 @@ from O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 , O
 red O
@@ -27856,9 +27856,9 @@ Seiden I-PER
 president O
 of O
 the O
-Arizona B-LOC
-Chamber B-ORG
-of O
+Arizona B-ORG
+Chamber I-ORG
+of I-ORG
 Commerce I-ORG
 , O
 who O
@@ -28378,7 +28378,7 @@ Seiden O
 said O
 National B-ORG
 Association I-ORG
-of O
+of I-ORG
 Manufacturers I-ORG
 president O
 Jay B-PER
@@ -28650,8 +28650,8 @@ tax O
 code O
 , O
 the O
-Arizona B-LOC
-Chamber B-ORG
+Arizona B-ORG
+Chamber I-ORG
 president O
 argued O
 that O
@@ -28896,9 +28896,9 @@ April O
 Sinema B-PER
 told O
 the O
-Arizona B-LOC
-Chamber B-ORG
-of O
+Arizona B-ORG
+Chamber I-ORG
+of I-ORG
 Commerce I-ORG
 , O
 “ O
@@ -29242,13 +29242,13 @@ FBI B-ORG
 and O
 the O
 Bureau B-ORG
-of O
+of I-ORG
 Alcohol I-ORG
 , O
 Tobacco I-ORG
 , O
 Firearms I-ORG
-and O
+and I-ORG
 Explosives I-ORG
 . O
 
@@ -29365,8 +29365,8 @@ while O
 testifying O
 before O
 the O
-Texas B-LOC
-Senate B-ORG
+Texas B-ORG
+Senate I-ORG
 . O
 
 The O
@@ -29588,10 +29588,10 @@ Enforcement I-ORG
 Rapid I-ORG
 Response I-ORG
 Training I-ORG
-( O
-ALERRT I-ORG
-) O
 Center I-ORG
+( O
+ALERRT B-ORG
+) O
 , O
 an O
 active O
@@ -31174,7 +31174,7 @@ collision O
 report O
 from O
 the O
-California B-LOC
+California B-ORG
 Highway I-ORG
 Patrol I-ORG
 . O
@@ -31359,7 +31359,7 @@ criminal O
 complaint O
 noted O
 that O
-California B-LOC
+California B-ORG
 Highway I-ORG
 Patrol I-ORG
 determined O
@@ -31982,7 +31982,7 @@ taxes, O
 the O
 state’s O
 Department B-ORG
-of O
+of I-ORG
 Revenue I-ORG
 announced O
 this O
@@ -32034,7 +32034,7 @@ landmark O
 decision O
 overturning O
 Roe B-PER
-v. O
+v. I-PER
 Wade I-PER
 , O
 eliminating O
@@ -32054,7 +32054,7 @@ the O
 11th O
 Circuit B-ORG
 Court I-ORG
-of O
+of I-ORG
 Appeals I-ORG
 that O
 allowed O
@@ -32131,9 +32131,9 @@ it O
 However O
 , O
 after O
-Roe B-LOC
-v. O
-Wade I-LOC
+Roe B-PER
+v. I-PER
+Wade I-PER
 was O
 overturned O
 , O
@@ -32208,7 +32208,7 @@ ruling O
 , O
 the O
 Department B-ORG
-of O
+of I-ORG
 Revenue I-ORG
 said O
 . O
@@ -32865,7 +32865,7 @@ the O
 Joint B-ORG
 Comprehensive I-ORG
 Plan I-ORG
-of O
+of I-ORG
 Action I-ORG
 , O
 in O
@@ -34010,8 +34010,8 @@ with O
 members O
 of O
 the O
-Vermont B-LOC
-Progressive B-ORG
+Vermont B-ORG
+Progressive I-ORG
 Party I-ORG
 , O
 that O
@@ -34270,10 +34270,10 @@ but O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 says O
 if O
@@ -34493,7 +34493,7 @@ from O
 the O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 for O
@@ -34587,9 +34587,9 @@ illness O
 
 National B-ORG
 Institute I-ORG
-of O
+of I-ORG
 Allergy I-ORG
-and O
+and I-ORG
 Infectious I-ORG
 Diseases I-ORG
 Director O
@@ -36348,8 +36348,8 @@ alertness O
 On O
 Thursday O
 , O
-Taiwan’s B-LOC
-Defense B-ORG
+Taiwan’s B-ORG
+Defense I-ORG
 Ministry I-ORG
 said O
 its O
@@ -36713,7 +36713,7 @@ days O
 Taiwan B-LOC
 ’s O
 Maritime B-ORG
-and O
+and I-ORG
 Port I-ORG
 Bureau I-ORG
 said O
@@ -37575,12 +37575,12 @@ Speaking O
 at O
 the O
 Association B-ORG
-of O
-Southeast B-LOC
-Asian I-LOC
+of I-ORG
+Southeast I-ORG
+Asian I-ORG
 Nations I-ORG
 ( O
-ASEAN I-ORG
+ASEAN B-ORG
 ) O
 -US O
 Ministerial O
@@ -37903,8 +37903,8 @@ earlier O
 this O
 year O
 from O
-Michigan B-LOC
-Republican B-ORG
+Michigan B-ORG
+Republican I-ORG
 Party I-ORG
 activists O
 , O
@@ -38254,7 +38254,7 @@ machine O
 breaches O
 
 The O
-Detroit B-LOC
+Detroit B-ORG
 News I-ORG
 first O
 reported O
@@ -38732,7 +38732,7 @@ elections O
 
 The O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 has O
 reached O
@@ -39439,7 +39439,7 @@ Garland B-PER
 and O
 the O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 should O
 already O
@@ -39604,7 +39604,7 @@ clear O
 that O
 the O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 must O
 fully O
@@ -39974,7 +39974,7 @@ Freedom I-ORG
 Fund I-ORG
 and O
 Americans B-ORG
-for O
+for I-ORG
 Prosperity I-ORG
 , O
 received O
@@ -40182,8 +40182,8 @@ year O
 , O
 after O
 the O
-Tennessee B-LOC
-Republican B-ORG
+Tennessee B-ORG
+Republican I-ORG
 Party I-ORG
 voted O
 to O
@@ -40763,7 +40763,7 @@ while O
 the O
 Great B-ORG
 Atlantic I-ORG
-& O
+& I-ORG
 Pacific I-ORG
 Tea I-ORG
 Co. I-ORG
@@ -40919,7 +40919,7 @@ Soup I-ORG
 (CPB) O
 and O
 Johnson B-PER
-& O
+& I-PER
 Johnson I-PER
 (JNJ) O
 had O
@@ -42314,7 +42314,7 @@ for O
 the O
 Northern B-LOC
 District I-LOC
-of O
+of I-LOC
 Georgia I-LOC
 , O
 was O
@@ -43267,7 +43267,7 @@ by O
 the O
 online O
 newspaper O
-Uvalde B-LOC
+Uvalde B-ORG
 Hesperian I-ORG
 , O
 citing O
@@ -43892,7 +43892,7 @@ to O
 according O
 to O
 the O
-Uvalde B-LOC
+Uvalde B-ORG
 Hesperian I-ORG
 report O
 
@@ -43931,9 +43931,9 @@ school O
 district O
 and O
 the O
-Texas B-LOC
+Texas B-ORG
 Department I-ORG
-of O
+of I-ORG
 Public I-ORG
 Safety I-ORG
 for O
@@ -43957,7 +43957,7 @@ a O
 report O
 from O
 a O
-Texas B-LOC
+Texas B-ORG
 House I-ORG
 Investigative I-ORG
 Committee I-ORG
@@ -44036,9 +44036,9 @@ a O
 timeline O
 from O
 the O
-Texas B-LOC
+Texas B-ORG
 Department I-ORG
-of O
+of I-ORG
 Public I-ORG
 Safety I-ORG
 ( O
@@ -45953,14 +45953,14 @@ with O
 the O
 Federal B-ORG
 Bureau I-ORG
-of O
+of I-ORG
 Prisons I-ORG
 rather O
 than O
 the O
-Georgia B-LOC
-Department B-ORG
-of O
+Georgia B-ORG
+Department I-ORG
+of I-ORG
 Corrections I-ORG
 . O
 
@@ -46398,7 +46398,7 @@ Michael B-PER
 John I-PER
 of O
 the O
-Cincinnati B-LOC
+Cincinnati B-ORG
 Police I-ORG
 Department I-ORG
 said O
@@ -48116,7 +48116,7 @@ assault O
 on O
 the O
 US B-ORG
-Capitol I-LOC
+Capitol I-ORG
 have O
 laid O
 bare O
@@ -48887,7 +48887,7 @@ a O
 co-founder O
 of O
 Cowboys B-ORG
-for O
+for I-ORG
 Trump I-ORG
 , O
 has O
@@ -49410,7 +49410,7 @@ Senate B-ORG
 agenda O
 Though O
 Graham B-PER
-and O
+and I-PER
 Blumenthal I-PER
 were O
 split O
@@ -50515,7 +50515,7 @@ complaints O
 to O
 the O
 Department B-ORG
-of O
+of I-ORG
 Transportation I-ORG
 have O
 soared O
@@ -50549,7 +50549,7 @@ industry O
 
 The O
 Department B-ORG
-of O
+of I-ORG
 Transportation I-ORG
 announced O
 new O
@@ -51266,8 +51266,8 @@ Peoria B-LOC
 Arizona B-LOC
 . O
 
-Arizona B-LOC
-GOP B-ORG
+Arizona B-ORG
+GOP I-ORG
 could O
 pick O
 full O
@@ -51281,8 +51281,8 @@ governor’s O
 office O
 , O
 the O
-Arizona B-LOC
-GOP B-ORG
+Arizona B-ORG
+GOP I-ORG
 could O
 be O
 poised O
@@ -52894,9 +52894,9 @@ briefing O
 with O
 the O
 Department B-ORG
-of O
+of I-ORG
 Health I-ORG
-and O
+and I-ORG
 Human I-ORG
 Services I-ORG
 . O
@@ -53132,10 +53132,10 @@ Daskalakis I-PER
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention’s I-ORG
 director O
 of O
@@ -53456,7 +53456,7 @@ spread O
 , O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 Commissioner O
@@ -53810,7 +53810,7 @@ the O
 Federal B-ORG
 Reserve’s I-ORG
 Board I-ORG
-of O
+of I-ORG
 Governors I-ORG
 as O
 an O
@@ -53822,11 +53822,11 @@ economist O
 Lecturer O
 at O
 the O
-London B-LOC
+London B-ORG
 School I-ORG
-of O
+of I-ORG
 Economics I-ORG
-and O
+and I-ORG
 Political I-ORG
 Science I-ORG
 . O
@@ -53840,7 +53840,7 @@ member O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 California I-ORG
 at O
 Berkeley I-LOC
@@ -53893,7 +53893,7 @@ Organization B-ORG
 for O
 Economic O
 Cooperation O
-and O
+and I-ORG
 Development I-ORG
 . O
 
@@ -53987,7 +53987,7 @@ chair O
 of O
 the O
 Board B-ORG
-of O
+of I-ORG
 Governors I-ORG
 of O
 the O
@@ -54019,7 +54019,7 @@ president O
 of O
 the O
 Institute B-ORG
-for O
+for I-ORG
 Women’s I-ORG
 Policy I-ORG
 Research I-ORG
@@ -54261,7 +54261,7 @@ the O
 Federal B-ORG
 Reserve’s I-ORG
 Board I-ORG
-of O
+of I-ORG
 Governors I-ORG
 when O
 her O
@@ -55497,8 +55497,8 @@ residency O
 at O
 the O
 Flamingo B-ORG
-Las B-LOC
-Vegas I-LOC
+Las I-ORG
+Vegas I-ORG
 and O
 a O
 dance-club O
@@ -56233,7 +56233,7 @@ a O
 spokesperson O
 at O
 HCA B-ORG
-Florida I-LOC
+Florida I-ORG
 Lawnwood I-ORG
 Hospital I-ORG
 told O
@@ -58668,8 +58668,8 @@ for O
 the O
 suspect, O
 the O
-Lawrence B-LOC
-Police B-ORG
+Lawrence B-ORG
+Police I-ORG
 Department I-ORG
 said O
 in O
@@ -60549,8 +60549,8 @@ keep O
 control O
 of O
 the O
-US B-LOC
-House B-ORG
+US B-ORG
+House I-ORG
 and O
 the O
 Senate B-ORG
@@ -62647,8 +62647,8 @@ descent O
 deputy O
 commander O
 of O
-Albuquerque B-LOC
-Police B-ORG
+Albuquerque B-ORG
+Police I-ORG
 Department’s I-ORG
 Criminal B-ORG
 Investigations I-ORG
@@ -63128,7 +63128,7 @@ management O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Punjab I-ORG
 in O
 Pakistan B-LOC
@@ -63433,7 +63433,7 @@ be O
 submitted O
 to O
 the O
-Albuquerque B-LOC
+Albuquerque B-ORG
 Metro I-ORG
 CrimeStoppers I-ORG
 website O
@@ -64209,7 +64209,7 @@ Drag B-ORG
 Queen I-ORG
 Story I-ORG
 Hour I-ORG
-UK B-LOC
+UK I-ORG
 , O
 an O
 event O
@@ -64578,7 +64578,7 @@ director O
 at O
 the O
 Institute B-ORG
-for O
+for I-ORG
 Strategic I-ORG
 Dialogue I-ORG
 ( O
@@ -64700,8 +64700,8 @@ gender O
 marker O
 . O
 
-Britain’s B-LOC
-Conservative B-ORG
+Britain’s B-ORG
+Conservative I-ORG
 leadership O
 contest O
 has O
@@ -67456,7 +67456,7 @@ the O
 US B-LOC
 Northern B-LOC
 District I-LOC
-of O
+of I-LOC
 California I-LOC
 . O
 
@@ -67790,7 +67790,7 @@ members O
 of O
 the O
 “House B-ORG
-of O
+of I-ORG
 Cards” I-ORG
 production O
 staff O
@@ -68792,7 +68792,7 @@ Phoenix B-ORG
 Mercury I-ORG
 and O
 the O
-Connecticut B-LOC
+Connecticut B-ORG
 Sun I-ORG
 , O
 members O
@@ -69117,7 +69117,7 @@ it O
 
 When O
 Manchin B-PER
-and O
+and I-PER
 Schumer I-PER
 , O
 a O
@@ -70722,7 +70722,7 @@ to O
 the O
 National B-ORG
 Archives I-ORG
-and O
+and I-ORG
 Records I-ORG
 Administration I-ORG
 in O
@@ -73228,7 +73228,7 @@ of O
 Programs O
 from O
 Women B-ORG
-for O
+for I-ORG
 Women I-ORG
 International I-ORG
 , O
@@ -73613,7 +73613,7 @@ Angelina B-PER
 Ajonye I-PER
 with O
 Women B-ORG
-for O
+for I-ORG
 Women I-ORG
 International I-ORG
 in O
@@ -73857,7 +73857,7 @@ that O
 has O
 the O
 Horn B-LOC
-of O
+of I-LOC
 Africa I-LOC
 on O
 the O
@@ -73893,7 +73893,7 @@ Wafaa B-PER
 Saeed I-PER
 , O
 UNICEF B-ORG
-Somalia B-LOC
+Somalia I-ORG
 Representative O
 said O
 the O
@@ -74223,7 +74223,7 @@ Marie B-PER
 Clarke I-PER
 from O
 Women B-ORG
-for O
+for I-ORG
 Women I-ORG
 International I-ORG
 said O
@@ -75499,8 +75499,8 @@ according O
 to O
 accounts O
 from O
-Taiwan’s B-LOC
-Defense B-ORG
+Taiwan’s B-ORG
+Defense I-ORG
 Ministry I-ORG
 . O
 
@@ -76391,7 +76391,7 @@ scholarship O
 to O
 the O
 University B-ORG
-of O
+of I-ORG
 Indianapolis I-ORG
 at O
 the O
@@ -83430,7 +83430,7 @@ by O
 the O
 online O
 newspaper O
-Uvalde B-LOC
+Uvalde B-ORG
 Hesperian I-ORG
 , O
 citing O
@@ -84055,7 +84055,7 @@ to O
 according O
 to O
 the O
-Uvalde B-LOC
+Uvalde B-ORG
 Hesperian I-ORG
 report O
 . O
@@ -84095,9 +84095,9 @@ school O
 district O
 and O
 the O
-Texas B-LOC
+Texas B-ORG
 Department I-ORG
-of O
+of I-ORG
 Public I-ORG
 Safety I-ORG
 for O
@@ -84121,7 +84121,7 @@ a O
 report O
 from O
 a O
-Texas B-LOC
+Texas B-ORG
 House I-ORG
 Investigative I-ORG
 Committee I-ORG
@@ -84200,10 +84200,10 @@ a O
 timeline O
 from O
 the O
-Texas B-LOC
+Texas B-ORG
 Department I-ORG
-of O
-Public B-ORG
+of I-ORG
+Public I-ORG
 Safety I-ORG
 ( O
 DPS B-ORG
@@ -84886,7 +84886,7 @@ Supreme B-ORG
 Court’s I-ORG
 1973 O
 Roe B-PER
-v. O
+v. I-PER
 Wade I-PER
 ruling O
 that O
@@ -85065,7 +85065,7 @@ for O
 Politico B-ORG
 , O
 John B-PER
-F. O
+F. I-PER
 Harris I-PER
 suggested O
 that O
@@ -85678,7 +85678,7 @@ by O
 the O
 People’s B-ORG
 Republic I-ORG
-of O
+of I-ORG
 China I-ORG
 for O
 nearly O
@@ -86447,7 +86447,7 @@ attack O
 on O
 the O
 US B-ORG
-Capitol I-LOC
+Capitol I-ORG
 . O
 
 His O
@@ -87188,7 +87188,7 @@ school O
 this O
 year O
 David B-PER
-A. O
+A. I-PER
 Andelman I-PER
 : O
 One O
@@ -88678,13 +88678,13 @@ and O
 progressives O
 
 The O
-American O
-Israel B-ORG
+American B-ORG
+Israel I-ORG
 Public I-ORG
 Affairs I-ORG
 Committee I-ORG
 ( O
-AIPAC I-ORG
+AIPAC B-ORG
 ) O
 had O
 backed O
@@ -89040,10 +89040,10 @@ though O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 suggests O
 that O
@@ -91503,8 +91503,8 @@ for O
 monkeypox O
 , O
 the O
-Illinois B-LOC
-Department B-ORG
+Illinois B-ORG
+Department I-ORG
 of O
 Public B-ORG
 Health I-ORG
@@ -91603,7 +91603,7 @@ said O
 the O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 has O
@@ -91730,8 +91730,8 @@ a O
 call O
 from O
 the O
-Champaign-Urbana B-LOC
-Public B-ORG
+Champaign-Urbana B-ORG
+Public I-ORG
 Health I-ORG
 District I-ORG
 . O
@@ -91850,10 +91850,10 @@ to O
 the O
 US O
 Centers B-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 . O
 
@@ -94362,8 +94362,8 @@ the O
 shooting O
 , O
 the O
-Baltimore B-LOC
-Police B-ORG
+Baltimore B-ORG
+Police I-ORG
 Department I-ORG
 said O
 in O
@@ -94683,7 +94683,7 @@ system O
 The O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 commissioner O
@@ -95388,7 +95388,7 @@ shortage O
 The O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 eased O
@@ -95505,7 +95505,7 @@ of O
 the O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 , O
@@ -95790,7 +95790,7 @@ week O
 the O
 US B-ORG
 Department I-ORG
-of O
+of I-ORG
 Agriculture I-ORG
 told O
 states O
@@ -95852,7 +95852,7 @@ the O
 nonprofit O
 Food B-ORG
 Research I-ORG
-& O
+& I-ORG
 Action I-ORG
 Center I-ORG
 in O
@@ -97565,7 +97565,7 @@ by O
 the O
 National B-ORG
 Oceanic I-ORG
-and O
+and I-ORG
 Atmospheric I-ORG
 Administration I-ORG
 and O
@@ -99003,9 +99003,9 @@ Court’s I-ORG
 decision O
 to O
 overturn O
-Roe B-ORG
-v. O
-Wade I-ORG
+Roe B-PER
+v. I-PER
+Wade I-PER
 , O
 which O
 established O
@@ -99448,7 +99448,7 @@ Supreme B-ORG
 Court I-ORG
 overturned O
 Roe B-PER
-v. O
+v. I-PER
 Wade I-PER
 at O
 the O
@@ -100223,9 +100223,9 @@ previewing O
 the O
 overturning O
 of O
-Roe B-ORG
-v. O
-Wade I-ORG
+Roe B-PER
+v. I-PER
+Wade I-PER
 was O
 published O
 in O
@@ -100838,7 +100838,7 @@ in O
 according O
 to O
 the O
-Boston B-LOC
+Boston B-ORG
 Globe I-ORG
 . O
 
@@ -100980,7 +100980,7 @@ age O
 22, O
 as O
 the O
-Boston B-LOC
+Boston B-ORG
 Globe I-ORG
 reported O
 last O
@@ -101498,7 +101498,7 @@ Gap B-ORG
 Target B-ORG
 , O
 Bath B-ORG
-& O
+& I-ORG
 Body I-ORG
 Works I-ORG
 and O
@@ -101679,7 +101679,7 @@ retail O
 analyst O
 at O
 Oppenheimer B-ORG
-& O
+& I-ORG
 Co. I-ORG
 “In O
 certain O
@@ -101881,7 +101881,7 @@ quarter O
 , O
 while O
 Bath B-ORG
-& O
+& I-ORG
 Body I-ORG
 Works I-ORG
 said O
@@ -102159,7 +102159,7 @@ visit O
 of O
 US O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 Speaker O
 Nancy B-PER
@@ -102598,7 +102598,7 @@ raiser O
 at O
 the O
 Hall B-LOC
-of O
+of I-LOC
 Fame I-LOC
 game O
 , O
@@ -102703,7 +102703,7 @@ the O
 Tom B-ORG
 Benson I-ORG
 Hall I-ORG
-of O
+of I-ORG
 Fame I-ORG
 Stadium I-ORG
 where O
@@ -105273,7 +105273,7 @@ you O
 by O
 CNN B-ORG
 Space I-ORG
-and O
+and I-ORG
 Science I-ORG
 writers O
 Ashley B-PER
@@ -105752,8 +105752,8 @@ said O
 . O
 
 How O
-Senate B-LOC
-Democrats B-ORG
+Senate B-ORG
+Democrats I-ORG
 passed O
 the O
 bill O
@@ -105761,8 +105761,8 @@ on O
 a O
 party-line O
 vote O
-Senate B-LOC
-Democrats B-ORG
+Senate B-ORG
+Democrats I-ORG
 have O
 long O
 hoped O
@@ -106712,7 +106712,7 @@ pharmacy O
 
 The O
 Health B-ORG
-and O
+and I-ORG
 Human I-ORG
 Services I-ORG
 secretary O
@@ -108562,7 +108562,7 @@ home O
 ahead O
 of O
 the O
-Louisville B-LOC
+Louisville B-ORG
 Metropolitan I-ORG
 Police I-ORG
 Department’s I-ORG
@@ -109874,7 +109874,7 @@ Cannabis B-ORG
 Policy I-ORG
 , O
 Research I-ORG
-and O
+and I-ORG
 Outreach I-ORG
 at O
 Washington B-LOC
@@ -110018,10 +110018,10 @@ to O
 the O
 US B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 . O
 
@@ -110223,7 +110223,7 @@ Tuesday O
 in O
 the O
 Journal B-ORG
-of O
+of I-ORG
 Clinical I-ORG
 Toxicology I-ORG
 , O
@@ -110811,8 +110811,8 @@ medicine O
 at O
 the O
 University B-ORG
-of O
-Toronto I-LOC
+of I-ORG
+Toronto I-ORG
 
 There O
 are O
@@ -111258,7 +111258,7 @@ Association I-ORG
 for O
 the O
 Study O
-of O
+of I-ORG
 Dreams I-ORG
 . O
 
@@ -112250,7 +112250,7 @@ decision O
 to O
 reverse O
 Roe B-PER
-v. O
+v. I-PER
 Wade I-PER
 and O
 end O
@@ -112413,7 +112413,7 @@ decided O
 to O
 overturn O
 Roe B-PER
-v. O
+v. I-PER
 Wade I-PER
 . O
 
@@ -112923,9 +112923,9 @@ former O
 member O
 of O
 the O
-Arizona B-LOC
-Board B-ORG
-of O
+Arizona B-ORG
+Board I-ORG
+of I-ORG
 Regents I-ORG
 who O
 is O
@@ -114135,10 +114135,10 @@ The O
 United B-LOC
 States’ I-LOC
 Centers B-ORG
-for O
+for I-ORG
 Disease I-ORG
 Control I-ORG
-and O
+and I-ORG
 Prevention I-ORG
 ( O
 CDC O
@@ -114772,11 +114772,11 @@ health O
 agencies O
 , O
 the O
-US B-LOC
-Department B-ORG
-of O
+US B-ORG
+Department I-ORG
+of I-ORG
 Health I-ORG
-and O
+and I-ORG
 Human I-ORG
 Services I-ORG
 said O
@@ -114786,7 +114786,7 @@ Friday O
 The O
 US B-ORG
 Food I-ORG
-and O
+and I-ORG
 Drug I-ORG
 Administration I-ORG
 advised O
@@ -115209,7 +115209,7 @@ science O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 California I-ORG
 , O
 Santa B-LOC
@@ -115948,9 +115948,9 @@ administered O
 by O
 the O
 Department B-ORG
-of O
+of I-ORG
 Housing I-ORG
-and O
+and I-ORG
 Urban I-ORG
 Development I-ORG
 to O
@@ -120968,10 +120968,10 @@ Wildlife I-ORG
 Fund I-ORG
 . O
 
-Nepal’s B-LOC
-National B-ORG
+Nepal’s B-ORG
+National I-ORG
 Tiger I-ORG
-and O
+and I-ORG
 Prey I-ORG
 Survey I-ORG
 2022 O
@@ -121929,7 +121929,7 @@ Wake B-ORG
 Forest I-ORG
 University I-ORG
 School I-ORG
-of O
+of I-ORG
 Medicine I-ORG
 in O
 Winston-Salem B-LOC
@@ -122140,7 +122140,7 @@ aging O
 research O
 unit O
 at O
-Massachusetts B-LOC
+Massachusetts B-ORG
 General I-ORG
 Hospital I-ORG
 in O
@@ -124707,7 +124707,7 @@ said O
 . O
 
 Friends B-ORG
-of O
+of I-ORG
 NRA I-ORG
 event O
 loses O
@@ -125439,7 +125439,7 @@ Assistant O
 Attorney O
 General O
 Kenneth B-PER
-A. O
+A. I-PER
 Polite I-PER
 , O
 Jr. O
@@ -125921,14 +125921,14 @@ election O
 initiatives O
 at O
 Cybersecurity B-ORG
-and O
+and I-ORG
 Infrastructure I-ORG
 Security I-ORG
 Agency I-ORG
 , O
 the O
 Department B-ORG
-of O
+of I-ORG
 Homeland I-ORG
 Security I-ORG
 ’s O
@@ -126070,7 +126070,7 @@ centers O
 
 The O
 Department B-ORG
-of O
+of I-ORG
 Justice I-ORG
 is O
 not O
@@ -126254,7 +126254,7 @@ administrators O
 The O
 US B-ORG
 Cybersecurity I-ORG
-and O
+and I-ORG
 Infrastructure I-ORG
 Security I-ORG
 Agency I-ORG
@@ -126402,7 +126402,7 @@ program O
 , O
 the O
 Office B-ORG
-of O
+of I-ORG
 Justice I-ORG
 Programs I-ORG
 , O
@@ -126791,7 +126791,7 @@ A O
 hearing O
 on O
 Ben B-ORG
-& O
+& I-ORG
 Jerry’s I-ORG
 request O
 to O
@@ -127546,7 +127546,7 @@ officials O
 
 US O
 Citizenship B-ORG
-and O
+and I-ORG
 Immigration I-ORG
 Services I-ORG
 says O
@@ -128016,7 +128016,7 @@ the O
 state’s O
 full O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 this O
 week O
@@ -128244,7 +128244,7 @@ Supreme I-ORG
 Court I-ORG
 overturned O
 Roe B-PER
-v. O
+v. I-PER
 Wade I-PER
 , O
 ending O
@@ -128400,7 +128400,7 @@ anti-abortion O
 group O
 National B-ORG
 Right I-ORG
-to O
+to I-ORG
 Life I-ORG
 and O
 its O
@@ -128481,9 +128481,9 @@ criminal O
 consequences O
 , O
 ” O
-Indiana B-LOC
-Right B-ORG
-to O
+Indiana B-ORG
+Right I-ORG
+to I-ORG
 Life I-ORG
 said O
 in O
@@ -128504,9 +128504,9 @@ report O
 The O
 US B-ORG
 Department I-ORG
-of O
+of I-ORG
 Health I-ORG
-and O
+and I-ORG
 Human I-ORG
 Services I-ORG
 waited O
@@ -128694,10 +128694,10 @@ Administration B-ORG
 for O
 Strategic O
 Preparedness O
-and O
+and I-ORG
 Response I-ORG
 ( O
-ASPR I-ORG
+ASPR B-ORG
 ) O
 , O
 an O
@@ -129004,7 +129004,7 @@ Northwestern B-ORG
 University I-ORG
 Feinberg I-ORG
 School I-ORG
-of O
+of I-ORG
 Medicine I-ORG
 , O
 told O
@@ -132071,7 +132071,7 @@ if O
 Attorney O
 General O
 Merrick B-PER
-B. O
+B. I-PER
 Garland I-PER
 approved O
 of O
@@ -132419,7 +132419,7 @@ Schorsch I-PER
 the O
 publisher O
 of O
-Florida B-LOC
+Florida B-ORG
 Politics I-ORG
 , O
 a O
@@ -132919,7 +132919,7 @@ to O
 the O
 National B-ORG
 Institutes I-ORG
-of O
+of I-ORG
 Health I-ORG
 . O
 
@@ -134035,8 +134035,8 @@ On O
 Thursday O
 , O
 the O
-Indiana B-LOC
-House B-ORG
+Indiana B-ORG
+House I-ORG
 rejected O
 Republican-sponsored O
 amendments O
@@ -134722,9 +134722,9 @@ of O
 Truth B-ORG
 Social I-ORG
 owner O
-Trump B-PER
+Trump B-ORG
 Media I-ORG
-& O
+& I-ORG
 Technology I-ORG
 Group I-ORG
 . O
@@ -134845,7 +134845,7 @@ Justice B-ORG
 Department I-ORG
 and O
 Securities B-ORG
-and O
+and I-ORG
 Exchange I-ORG
 Commission I-ORG
 are O
@@ -136470,7 +136470,7 @@ Reserve I-ORG
 or O
 the O
 Bank B-ORG
-of O
+of I-ORG
 England I-ORG
 . O
 
@@ -136558,7 +136558,7 @@ chief O
 economist O
 at O
 Institute B-ORG
-of O
+of I-ORG
 International I-ORG
 Finance I-ORG
 . O
@@ -136730,8 +136730,8 @@ connected O
 to O
 the O
 murders, O
-Albuquerque B-LOC
-Police B-ORG
+Albuquerque B-ORG
+Police I-ORG
 Department I-ORG
 Deputy O
 Chief O
@@ -136868,7 +136868,7 @@ management O
 at O
 the O
 University B-ORG
-of O
+of I-ORG
 Punjab I-ORG
 in O
 Pakistan B-LOC
@@ -137383,8 +137383,8 @@ news O
 release O
 from O
 the O
-Albuquerque B-LOC
-Police B-ORG
+Albuquerque B-ORG
+Police I-ORG
 Department I-ORG
 , O
 which O
@@ -138374,9 +138374,9 @@ Brewer I-PER
 said O
 at O
 the O
-Ozark B-LOC
+Ozark B-ORG
 Distillery I-ORG
-and O
+and I-ORG
 Brewery I-ORG
 in O
 Osage B-LOC
@@ -141080,12 +141080,12 @@ at O
 the O
 National B-ORG
 Oceanic I-ORG
-and O
+and I-ORG
 Atmospheric I-ORG
 Administration’s I-ORG
 National B-ORG
 Centers I-ORG
-for O
+for I-ORG
 Environmental I-ORG
 Information I-ORG
 . O
@@ -142119,8 +142119,8 @@ railing O
 according O
 to O
 the O
-Denver B-LOC
-Police B-ORG
+Denver B-ORG
+Police I-ORG
 Department I-ORG
 . O
 
@@ -142260,7 +142260,7 @@ Chesney’s B-PER
 concert O
 , O
 the O
-Denver B-LOC
+Denver B-ORG
 Post I-ORG
 reported O
 . O
@@ -147960,7 +147960,7 @@ month O
 , O
 the O
 Bureau B-ORG
-of O
+of I-ORG
 Labor I-ORG
 Statistics I-ORG
 reported O
@@ -148034,11 +148034,11 @@ fight O
 broke O
 out O
 , O
-Orlando B-LOC
-Police B-ORG
+Orlando B-ORG
+Police I-ORG
 Chief O
 Eric B-PER
-D. O
+D. I-PER
 Smith I-PER
 said O
 . O
@@ -148184,7 +148184,7 @@ furnishings O
 retailer O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 , O
 soared O
@@ -148216,7 +148216,7 @@ days O
 while O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 shot O
 up O
@@ -148358,7 +148358,7 @@ GameStop B-ORG
 
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 just O
 ousted O
@@ -148485,7 +148485,7 @@ stake O
 in O
 Bed B-ORG
 Bath I-ORG
-& O
+& I-ORG
 Beyond I-ORG
 . O
 
@@ -149297,7 +149297,7 @@ approved O
 by O
 the O
 House B-ORG
-of O
+of I-ORG
 Representatives I-ORG
 before O
 President O
