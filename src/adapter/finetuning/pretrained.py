@@ -1,8 +1,7 @@
-from port.entity_extractor import SingleEntityExtractor
-from utils.develop import test_extractor
+from utils.preprocessing import SpacySentenceSplitter
 from utils.typings import TextInput
+from port.entity_extractor import SingleEntityExtractor
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
-from langchain.text_splitter import TokenTextSplitter
 import torch
 import logging
 import pathlib
@@ -36,15 +35,15 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
         
         # Set default model path if not provided
         if model_path is None:
-            model_path = str(FILES_DIR / "pretrained" / "bert_ner_finetuned")
+            model_path = str(FILES_DIR / "pretrained" / "distilbert_ner_finetuned")
         
         self.model_path = model_path
         self.require_full_name = require_full_name
         self.aggregation_strategy = aggregation_strategy
         
         # Initialize text splitter
-        self.text_splitter = TokenTextSplitter(
-            model_name="gpt-4o",
+        self.text_splitter = SpacySentenceSplitter(
+            model="en_core_web_sm",
             chunk_size=chunk_size,
             chunk_overlap=chunk_overlap
         )
@@ -106,28 +105,11 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
                 
                 # Extract entities from all chunks
                 all_entities = []
-                for chunk in chunks:
-                    # Get NER predictions for this chunk
-                    spans = self.ner_pipeline(chunk)
-                    
-                    # Extract entities based on label type
-                    for span in spans:
-                        entity_text = span["word"]
-                        entity_group = span["entity_group"]
-                        
-                        # Filter by entity type based on label
-                        if self._is_valid_entity(entity_group, entity_text):
-                            all_entities.append(entity_text)
-                
-                # # Remove duplicates while preserving order
-                # unique_entities = []
-                # seen = set()
-                # for entity in all_entities:
-                #     if entity not in seen:
-                #         unique_entities.append(entity)
-                #         seen.add(entity)
+                spans_list = self.ner_pipeline(chunks)
+                all_entities = [span["word"] for spans  in spans_list for span in spans if self._is_valid_entity(span["entity_group"], span["word"])]
                 
                 output.append(all_entities)
+                
                 
             except Exception as e:
                 logger.warning(f"Error processing text: {e}")
@@ -143,7 +125,6 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
             "persons": ["PER", "B-PER", "I-PER"],
             "organizations": ["ORG", "B-ORG", "I-ORG"],
             "locations": ["LOC", "B-LOC", "I-LOC"],
-            "misc": ["MISC", "B-MISC", "I-MISC"]
         }
         
         # Check if entity group matches the label type
@@ -178,7 +159,7 @@ class PretrainedBERTEntityExtractor(SingleEntityExtractor):
 
 if __name__ == "__main__":
     # Test the extractor
-    
+    from utils.develop import test_extractor
     
     # Test single entity type extractor
     test_extractor(

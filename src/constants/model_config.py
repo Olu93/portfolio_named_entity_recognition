@@ -32,56 +32,27 @@ MODEL_CONFIGS = [
         "name": "PretrainedBERTEntityExtractor",
         "extra_info": {
             "description": "Pretrained BERT model for entity extraction",
-            "model": "bert-base-cased-finetuned",
+            "model": "distilbert_ner_finetuned",
             "type": "transformer",
         },
         "persons": {
             "extractor": PretrainedBERTEntityExtractor,
             "params": {
-                "model_path": FILES_DIR / "pretrained" / "bert_ner_finetuned",
+                "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
                 "label": "persons",
             },
         },
         "organizations": {
             "extractor": PretrainedBERTEntityExtractor,
             "params": {
-                "model_path": FILES_DIR / "pretrained" / "bert_ner_finetuned",
+                "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
                 "label": "organizations",
             },
         },
         "locations": {
             "extractor": PretrainedBERTEntityExtractor,
             "params": {
-                "model_path": FILES_DIR / "pretrained" / "bert_ner_finetuned",
-                "label": "locations",
-            },
-        },
-    },
-    {
-        "name": "PretrainedBERTEntityExtractor",
-        "extra_info": {
-            "description": "Pretrained BERT model for entity extraction",
-            "model": "dslim-bert-base-cased-finetuned",
-            "type": "transformer",
-        },
-        "persons": {
-            "extractor": PretrainedBERTEntityExtractor,
-            "params": {
-                "model_path": FILES_DIR / "pretrained" / "dslim_bert_ner_finetuned",
-                "label": "persons",
-            },
-        },
-        "organizations": {
-            "extractor": PretrainedBERTEntityExtractor,
-            "params": {
-                "model_path": FILES_DIR / "pretrained" / "dslim_bert_ner_finetuned",
-                "label": "organizations",
-            },
-        },
-        "locations": {
-            "extractor": PretrainedBERTEntityExtractor,
-            "params": {
-                "model_path": FILES_DIR / "pretrained" / "dslim_bert_ner_finetuned",
+                "model_path": FILES_DIR / "pretrained" / "distilbert_ner_finetuned",
                 "label": "locations",
             },
         },
